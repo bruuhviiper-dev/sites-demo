@@ -94,12 +94,17 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:700; line-height:1.08; lett
 .burger span:nth-child(1){ top:17px; } .burger span:nth-child(2){ top:25px; }
 .burger.open span:nth-child(1){ top:21px; transform:rotate(45deg); }
 .burger.open span:nth-child(2){ top:21px; transform:rotate(-45deg); }
+/* menu mobile: overlay anexado ao body (fora do backdrop-filter do pill) */
+.mobile-menu{ display:none; }
 @media (max-width:920px){
   .burger{ display:grid; place-items:center; }
-  .nav-links{ position:fixed; inset:0; flex-direction:column; justify-content:center; gap:14px; background:var(--bg); transform:translateY(-100%); transition:transform .5s var(--ease); }
-  .nav-links.open{ transform:none; }
-  .nav-links a{ font-size:1.5rem; padding:10px 24px; }
+  .nav-links{ display:none; }
   .nav-right .btn-solid{ display:none; }
+  .mobile-menu{ display:flex; position:fixed; inset:0; z-index:990; flex-direction:column; align-items:center; justify-content:center; gap:6px; padding:90px 24px 40px; background:var(--bg); opacity:0; visibility:hidden; transform:translateY(-14px); transition:opacity .38s var(--ease), transform .38s var(--ease), visibility .38s; }
+  .mobile-menu.open{ opacity:1; visibility:visible; transform:none; }
+  .mobile-menu a{ font-family:var(--display); font-weight:700; font-size:1.7rem; color:var(--ink); padding:11px 24px; }
+  .mobile-menu a:hover{ color:var(--accent); }
+  .mobile-menu .btn{ margin-top:20px; font-size:1.02rem; }
 }
 
 /* ---------- HERO ---------- */
@@ -357,6 +362,12 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:700; line-height:1.08; lett
     '<div class="nav-right"><a href="'+esc(waLink)+'" target="_blank" rel="noopener" class="btn btn-solid">'+WA_BTN+esc(ctaLabel)+'</a>'+
     '<button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button></div></div></div>';
 
+  /* menu mobile anexado ao body (escapa do backdrop-filter do pill) */
+  var mm=document.createElement('nav'); mm.className='mobile-menu'; mm.id='mobileMenu';
+  mm.innerHTML=nav.map(function(n){return '<a href="#'+n.id+'">'+esc(n.label)+'</a>';}).join('')+
+    '<a href="'+esc(waLink)+'" target="_blank" rel="noopener" class="btn btn-wpp">'+WA_BTN+esc(ctaLabel)+'</a>';
+  document.body.appendChild(mm);
+
   var html='';
   var h=S.hero||{};
 
@@ -512,10 +523,10 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:700; line-height:1.08; lett
   var header=document.getElementById('header');
   addEventListener('scroll',function(){ header.classList.toggle('scrolled',scrollY>30); },{passive:true});
 
-  var burger=document.getElementById('burger'), navLinks=document.getElementById('navLinks');
-  function tm(f){ var o=f!==undefined?f:!navLinks.classList.contains('open'); navLinks.classList.toggle('open',o); burger.classList.toggle('open',o); document.body.style.overflow=o?'hidden':''; }
+  var burger=document.getElementById('burger'), mobileMenu=document.getElementById('mobileMenu');
+  function tm(f){ var o=f!==undefined?f:!mobileMenu.classList.contains('open'); mobileMenu.classList.toggle('open',o); burger.classList.toggle('open',o); document.body.style.overflow=o?'hidden':''; }
   burger.addEventListener('click',function(){ tm(); });
-  navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ tm(false); }); });
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ tm(false); }); });
 
   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('[data-rev]').forEach(function(el){ io.observe(el); });
