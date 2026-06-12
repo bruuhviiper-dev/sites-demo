@@ -1,0 +1,57 @@
+{
+  "categoria": "Escritório de contabilidade",
+  "estilo": "clean-editorial",
+  "slug": "escritorio-maanaim",
+
+  "brand": {
+    "name": "Escritório Maanaim",
+    "tagline": "Contabilidade · CRC SP-XXXXXX",
+    "nameHtml": "Escritório <b>Maanaim</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Contabilidade · São José do Rio Preto",
+    "titleHtml": "Sua empresa em dia, sua <em>mente tranquila</em>",
+    "sub": "Cuidamos da burocracia, dos impostos e das obrigações para você focar no que importa: o crescimento do seu negócio.",
+    "badge": "★ 5,0 no Google",
+    "imageLabel": "Foto do escritório aqui",
+    "ctaPrimary": { "label": "Solicitar atendimento", "href": "#contato" },
+    "ctaGhost": { "label": "Nossos serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o escritório",
+    "titleHtml": "Contabilidade <em>próxima</em> e de confiança",
+    "paragraphs": [
+      "O Escritório Maanaim cuida da contabilidade da sua empresa com atenção aos detalhes e um atendimento humano e próximo.",
+      "Da abertura ao dia a dia, mantemos suas obrigações em ordem para que você tenha segurança nas decisões e tranquilidade para crescer."
+    ],
+    "stats": [
+      { "num": 5, "suffix": ",0", "label": "Avaliação no Google" },
+      { "num": 100, "suffix": "%", "label": "Obrigações em dia" }
+    ],
+    "certs": [
+      { "label": "CRC SP-XXXXXX" },
+      { "label": "Empresas, MEI e Simples Nacional" },
+      { "label": "Atendimento presencial e online" },
+      { "label": "Suporte próximo e humano" }
+    ]
+  },
+
+  "products": { "show": false },
+  "testimonials": { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale conosco",
+    "titleHtml": "Vamos cuidar da sua <em>contabilidade</em>",
+    "address": "R. Visc. de Ouro Preto, 1211 - Vila Boa Esperança, São José do Rio Preto - SP, 15030-300",
+    "hours": "Seg a Sex · até 18h",
+    "cidade": "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Visc.+de+Ouro+Preto,+1211+-+Vila+Boa+Esperan%C3%A7a,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15030-300&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Números organizados, decisões seguras."
+  }
+}

@@ -10,6 +10,7 @@
   "porNicho": {
     "tatuagem":    ["ink-bold"],
     "psicologia":  ["clean-editorial"],
+    "contabilidade": ["clean-editorial", "dark-luxury"],
     "estetica":    ["clean-editorial", "dark-luxury"],
     "barbearia":   ["dark-luxury", "ink-bold"],
     "restaurante": ["clean-editorial", "dark-luxury"],
