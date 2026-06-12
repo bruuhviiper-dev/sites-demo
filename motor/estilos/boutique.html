@@ -61,16 +61,16 @@ nav {
   position: relative;
 }
 .hero-copy {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: clamp(48px,8vw,96px) clamp(32px,5vw,72px) calc(clamp(48px,8vw,96px) + 52px);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: clamp(52px,6vw,80px) clamp(40px,6vw,88px) calc(clamp(40px,5vw,64px) + 52px);
 }
 .hero-eyebrow {
-  font-size: .68rem; letter-spacing: .32em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 20px;
+  font-size: .66rem; letter-spacing: .32em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 22px;
 }
 .hero-title {
   font-family: var(--font-d); font-style: italic; font-weight: 400;
-  font-size: clamp(3rem, 5.5vw, 5.2rem); line-height: 1.05;
+  font-size: clamp(3.4rem, 6.5vw, 7rem); line-height: 1.02;
   color: var(--text); margin-bottom: 28px;
 }
 .hero-title em { color: var(--accent); font-style: italic; }
@@ -106,33 +106,32 @@ nav {
   overflow: hidden;
   min-height: calc(100vh - var(--nav-h));
 }
-.hero-visual-inner {
+/* Monograma gigante — marca d'água decorativa */
+.hero-monogram {
   position: absolute; inset: 0;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 16px;
-}
-.hero-img-frame {
-  width: 54%; max-width: 240px; aspect-ratio: 3/4;
-  border: 1.5px solid rgba(var(--text-rgb, 26,18,16), .14);
   display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-d); font-style: italic; font-weight: 400;
+  font-size: clamp(10rem, 22vw, 28rem); line-height: 1;
+  color: var(--text); opacity: .045;
+  user-select: none; pointer-events: none; letter-spacing: -.02em;
+}
+/* Quadro interno — dá estrutura visual ao espaço de imagem */
+.hero-visual-frame {
+  position: absolute;
+  inset: clamp(28px,4vw,52px);
+  border: 1px solid rgba(26,18,16,.10);
+  display: flex; align-items: flex-end; justify-content: flex-start;
+  padding: 20px 24px;
 }
 .hero-img-label {
-  font-family: var(--font-d); font-style: italic;
-  font-size: clamp(.8rem,1.2vw,1rem); color: var(--muted); opacity: .45;
-  text-align: center; padding: 8px;
+  font-size: .64rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--muted); opacity: .5;
 }
 .hero-tag {
   position: absolute; top: 28px; right: 28px;
   background: var(--accent); color: #fff;
-  font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+  font-size: .6rem; letter-spacing: .2em; text-transform: uppercase;
   padding: 8px 14px;
-}
-/* acento decorativo — faixa diagonal no canto inferior */
-.hero-deco {
-  position: absolute; bottom: 52px; left: 0; right: 0;
-  text-align: center;
-  font-family: var(--font-d); font-style: italic; font-size: .82rem;
-  color: var(--muted); opacity: .28; letter-spacing: .08em;
 }
 
 /* Marquee */
@@ -171,14 +170,15 @@ nav {
 .stat:first-child { padding-left: 0; border-left: none; }
 .stat-n { font-family: var(--font-d); font-size: 2.6rem; font-weight: 400; color: var(--text); line-height: 1; }
 .stat-l { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
-.certs { display: flex; flex-direction: column; gap: 0; }
+.certs { display: flex; flex-direction: column; gap: 10px; }
 .cert {
-  display: flex; align-items: flex-start; gap: 16px;
-  padding: 20px 0; border-bottom: 1px solid var(--border);
-  font-size: .92rem; color: var(--text); line-height: 1.4;
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px;
+  border-left: 2px solid var(--accent2);
+  background: var(--bg);
+  font-size: .9rem; color: var(--text); line-height: 1.4;
 }
-.cert:first-child { padding-top: 4px; }
-.cert-ico { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.cert-ico { color: var(--accent); flex-shrink: 0; }
 
 /* ═══ COLEÇÕES ═══ */
 #colecoes { padding: 0; background: var(--bg); }
@@ -316,13 +316,11 @@ footer {
     <div class="ctas" id="h-ctas"></div>
   </div>
   <div class="hero-visual">
-    <div class="hero-visual-inner">
-      <div class="hero-img-frame">
-        <span class="hero-img-label" id="h-img-label"></span>
-      </div>
+    <div class="hero-monogram" id="h-monogram"></div>
+    <div class="hero-visual-frame">
+      <span class="hero-img-label" id="h-img-label">Foto do espaço</span>
     </div>
     <div class="hero-tag" id="h-tag"></div>
-    <div class="hero-deco" id="h-deco"></div>
   </div>
   <div class="marquee-wrap">
     <div class="marquee-track" id="marquee"></div>
@@ -353,7 +351,7 @@ footer {
       <div class="eyebrow" id="sv-eyebrow"></div>
       <div class="section-title" id="sv-title"></div>
     </div>
-    <a class="col-ver-link" href="#contato" id="sv-link">Fale conosco →</a>
+    <a class="col-ver-link" href="#contato">Ver todas →</a>
   </div>
   <div class="col-grid" id="col-grid"></div>
 </section>
@@ -444,9 +442,12 @@ footer {
   if(g('h-title'))   g('h-title').innerHTML     = h.titleHtml || h.title || niH.title || '';
   if(g('h-sub'))     g('h-sub').textContent     = h.sub || niH.sub || '';
   if(g('h-badge') && h.badge) g('h-badge').innerHTML = '<span style="color:var(--accent)">★</span>&nbsp;<strong>'+h.badge+'</strong>';
-  if(g('h-img-label')) g('h-img-label').textContent = bName;
+  // Monograma: iniciais da marca (até 2 chars)
+  if(g('h-monogram')){
+    var initials = bName.split(/\s+/).slice(0,2).map(function(w){ return w[0]||''; }).join('');
+    g('h-monogram').textContent = initials || bName.slice(0,2);
+  }
   if(g('h-tag') && h.badge){ g('h-tag').textContent = h.badge; } else if(g('h-tag')){ g('h-tag').style.display='none'; }
-  if(g('h-deco')) g('h-deco').textContent = bName;
   if(g('h-ctas')){
     var c='';
     if(h.ctaPrimary) c+='<a class="btn-fill" href="'+(h.ctaPrimary.href||'#contato')+'">'+h.ctaPrimary.label+' →</a>';
@@ -474,7 +475,10 @@ footer {
   }
   if(g('ab-stats') && ab.stats && ab.stats.length){
     g('ab-stats').innerHTML = ab.stats.map(function(st){
-      return '<div class="stat rv"><div class="stat-n" data-target="'+(st.num||0)+'">'+(st.num||'')+(st.suffix||'')+'</div><div class="stat-l">'+(st.label||'')+'</div></div>';
+      // só anima se o sufixo for puramente não-numérico simples (ex: "+", "%"); sufixos com vírgula (ex: ",0") ficam estáticos
+      var canAnim = /^[+%]?$/.test(String(st.suffix||''));
+      var numAttr = canAnim ? ' data-target="'+(st.num||0)+'"' : '';
+      return '<div class="stat rv"><div class="stat-n"'+numAttr+'>'+(st.num||'')+(st.suffix||'')+'</div><div class="stat-l">'+(st.label||'')+'</div></div>';
     }).join('');
   }
   if(g('ab-certs') && ab.certs && ab.certs.length){
