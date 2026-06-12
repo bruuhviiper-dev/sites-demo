@@ -128,12 +128,13 @@
   },
 
   "petshop": {
-    "fonts": { "display": "\"Poppins\", sans-serif", "body": "\"Jost\", sans-serif" },
-    "fontsGoogle": ["Poppins:wght@400;500;600;700", "Jost:wght@300;400;500;600"],
-    "design": { "hero": "centered", "shape": "round", "display": "modern" },
+    "fonts": { "display": "\"Poppins\", sans-serif", "body": "\"Nunito\", sans-serif" },
+    "fontsGoogle": ["Poppins:wght@500;600;700;800", "Nunito:wght@400;500;600;700;800"],
+    "design": { "hero": "split-right", "shape": "round", "display": "modern" },
     "schemes": [
-      { "bg":"#0F0C16", "bgAlt":"#15101F", "surface":"#1B1528", "accent":"#B08CFF", "accent2":"#E0D2FF", "text":"#F1ECF8", "muted":"#9C92AE", "border":"#2A2238" },
-      { "bg":"#0C1015", "bgAlt":"#0F141B", "surface":"#141B24", "accent":"#3FB6E0", "accent2":"#A9E2F2", "text":"#E9F4F9", "muted":"#88a0ad", "border":"#1B2A33" }
+      { "bg":"#FBFAF8", "bgAlt":"#F1F6FC", "surface":"#FFFFFF", "accent":"#2E86DE", "accent2":"#FFB23E", "text":"#1E2A36", "muted":"#7C8893", "border":"#EAEEF2" },
+      { "bg":"#FAFBF9", "bgAlt":"#EDF8F3", "surface":"#FFFFFF", "accent":"#15A98C", "accent2":"#FF7E6B", "text":"#17302A", "muted":"#74877F", "border":"#E7EFEA" },
+      { "bg":"#FBFAFD", "bgAlt":"#F3EFFC", "surface":"#FFFFFF", "accent":"#7C5CFF", "accent2":"#FF9EC4", "text":"#241E36", "muted":"#867E97", "border":"#ECE8F2" }
     ],
     "hero": { "eyebrow":"Pet Shop & Bem-estar", "title":"Tudo que o seu pet precisa, num só lugar", "sub":"Produtos, banho, tosa e muito carinho. O melhor para o seu melhor amigo." },
     "services": { "eyebrow":"O que fazemos", "title":"Nossos Serviços",

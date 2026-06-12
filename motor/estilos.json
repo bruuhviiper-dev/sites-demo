@@ -6,7 +6,8 @@
     "clean-editorial": { "arquivo": "clean-editorial.html", "desc": "Claro, arejado, editorial natural — muito espaço em branco, tipografia grande, serviços em lista-revista." },
     "ink-bold":        { "arquivo": "ink-bold.html",        "desc": "Bruto, alto contraste, tipografia Anton gigante, faixa marquee e galeria de trabalhos como protagonista." },
     "corporate":       { "arquivo": "corporate.html",       "desc": "Premium corporativo: azul-marinho, estrutura em grid, sinais de confiança, seção de processo. Para contabilidade/consultoria/advocacia." },
-    "boutique":        { "arquivo": "boutique.html",        "desc": "Moda editorial: único template de fundo claro (creme), Playfair Display itálico, grid de coleções estilo lookbook com overlay, marquee de categorias. Para moda, vestuário e boutiques." }
+    "boutique":        { "arquivo": "boutique.html",        "desc": "Moda editorial: único template de fundo claro (creme), Playfair Display itálico, grid de coleções estilo lookbook com overlay, marquee de categorias. Para moda, vestuário e boutiques." },
+    "petshop-modern":  { "arquivo": "petshop-modern.html",  "desc": "Pet shop moderno e amigável (DNA Petz/Cobasi/Petlove): fundo claro, cantos arredondados, sombras suaves, azul + acento quente, faixa de benefícios (entrega/leva-e-traz/retirada), cards de categorias com ícones, patinhas decorativas. Para pet shop e petstore." }
   },
 
   "porNicho": {
@@ -18,7 +19,7 @@
     "restaurante": ["clean-editorial", "dark-luxury"],
     "odontologia": ["clean-editorial"],
     "veterinaria": ["clean-editorial"],
-    "petshop":     ["clean-editorial"],
+    "petshop":     ["petshop-modern"],
     "automotivo":  ["dark-luxury"],
     "academia":    ["dark-luxury"],
     "moda":        ["boutique"],
