@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Portfólio de sites — demonstrações criadas para negócios locais." />
+<title>Portfólio de Sites — Demonstrações</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{ --bg:#0C0C0E; --surface:#161618; --line:#26262B; --ink:#F2F0EC; --muted:#928D86; --gold:#C9A96E; --ease:cubic-bezier(.16,.84,.34,1); }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--bg); color:var(--ink); font-family:"Jost",sans-serif; font-weight:300; line-height:1.7; }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:1100px; margin:0 auto; padding:clamp(40px,8vw,90px) clamp(20px,5vw,48px); }
+  header{ text-align:center; margin-bottom:clamp(40px,7vw,70px); }
+  .eyebrow{ font-size:.72rem; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+  h1{ font-family:"Cormorant Garamond",serif; font-weight:500; font-size:clamp(2.4rem,6vw,4rem); margin-top:14px; line-height:1.05; }
+  h1 em{ color:var(--gold); }
+  .sub{ color:var(--muted); margin-top:14px; max-width:540px; margin-inline:auto; }
+  .group-title{ font-family:"Cormorant Garamond",serif; font-size:1.5rem; color:var(--gold); margin:48px 0 18px; padding-bottom:10px; border-bottom:1px solid var(--line); }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; }
+  .card{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px; transition:transform .35s var(--ease), border-color .35s; display:flex; flex-direction:column; gap:8px; }
+  .card:hover{ transform:translateY(-5px); border-color:var(--gold); }
+  .card .tag{ font-size:.64rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+  .card h3{ font-family:"Cormorant Garamond",serif; font-weight:500; font-size:1.5rem; }
+  .card .style{ font-size:.78rem; color:var(--muted); }
+  .card .go{ margin-top:14px; font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); display:inline-flex; align-items:center; gap:8px; }
+  .card .go::after{ content:"→"; transition:transform .3s var(--ease); }
+  .card:hover .go::after{ transform:translateX(5px); }
+  footer{ text-align:center; color:var(--muted); font-size:.8rem; margin-top:60px; padding-top:24px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="eyebrow">Fábrica de Sites</span>
+      <h1>Demonstrações <em>de sites</em></h1>
+      <p class="sub">Modelos premium criados para negócios locais. Clique para abrir cada demonstração.</p>
+    </header>
+
+    <h2 class="group-title">Demonstrações novas</h2>
+    <div class="grid">
+      <a class="card" href="clientes/authentic-barbearia/authentic-barbearia.html" target="_blank" rel="noopener">
+        <span class="tag">Barbearia</span><h3>Authentic Barbearia</h3>
+        <span class="style">Estilo · dark-luxury</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="clientes/atelier-lumiere/atelier-lumiere.html" target="_blank" rel="noopener">
+        <span class="tag">Salão de Beleza</span><h3>Atelier Lumière</h3>
+        <span class="style">Estilo · clean-editorial</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="clientes/indio-tatoo-studio/indio-tatoo-studio.html" target="_blank" rel="noopener">
+        <span class="tag">Estúdio de Tatuagem</span><h3>Indío Tatoo Studio</h3>
+        <span class="style">Estilo · ink-bold</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="clientes/psicologa-leonarda-araujo/psicologa-leonarda-araujo.html" target="_blank" rel="noopener">
+        <span class="tag">Psicologia</span><h3>Leonarda Araújo</h3>
+        <span class="style">Estilo · clean-editorial</span><span class="go">Ver site</span>
+      </a>
+    </div>
+
+    <h2 class="group-title">Sites anteriores</h2>
+    <div class="grid">
+      <a class="card" href="_arquivo/sites-antigos/carol-garcia-dermatologia-veterinaria.html" target="_blank" rel="noopener">
+        <span class="tag">Veterinária</span><h3>Carol Garcia</h3><span class="style">Dermatologia Veterinária</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="_arquivo/sites-antigos/pet-shop-4-patas.html" target="_blank" rel="noopener">
+        <span class="tag">Pet Shop</span><h3>4 Patas</h3><span class="style">Pet Shop</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="_arquivo/sites-antigos/clinica-sthetizar.html" target="_blank" rel="noopener">
+        <span class="tag">Estética</span><h3>Clínica Sthetizar</h3><span class="style">Estética & Saúde</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="_arquivo/sites-antigos/clinica-hamonir.html" target="_blank" rel="noopener">
+        <span class="tag">Estética</span><h3>Clínica Hamonir</h3><span class="style">Saúde & Beleza</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="_arquivo/sites-antigos/carolina-mathias-estetica.html" target="_blank" rel="noopener">
+        <span class="tag">Estética</span><h3>Carolina Mathias</h3><span class="style">Estética Avançada</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="_arquivo/sites-antigos/sanso-studio-estetica-automotiva.html" target="_blank" rel="noopener">
+        <span class="tag">Automotivo</span><h3>Sanso Studio</h3><span class="style">Estética Automotiva</span><span class="go">Ver site</span>
+      </a>
+      <a class="card" href="_arquivo/sites-antigos/fany-diresta-estetica.html" target="_blank" rel="noopener">
+        <span class="tag">Estética</span><h3>Fany Diresta</h3><span class="style">Estética Facial & Corporal</span><span class="go">Ver site</span>
+      </a>
+    </div>
+
+    <footer>Sites de demonstração · conteúdo e dados sujeitos a alteração.</footer>
+  </div>
+</body>
+</html>

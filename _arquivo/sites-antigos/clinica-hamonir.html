@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica de Estética Hamonir em São José do Rio Preto — Centro de saúde e beleza com tratamentos faciais e corporais. R. Voluntários de São Paulo, 3044 — Centro.">
+    <title>Clínica Hamonir | Saúde &amp; Beleza — São José do Rio Preto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ============================================================
+           DESIGN TOKENS
+        ============================================================ */
+        :root {
+            --rose:          #8B3A52;
+            --rose-light:    #A85570;
+            --rose-dark:     #6B2A3E;
+            --rose-pale:     #F7E8ED;
+            --rose-muted:    #EECED7;
+
+            --champagne:     #C9986A;
+            --champagne-light: #DAAF87;
+            --champagne-dark:  #A87A4E;
+            --champagne-pale:  #F7EDDF;
+
+            --mauve:         #B5748A;
+            --mauve-pale:    #F0E0E7;
+
+            --white:         #FFFFFF;
+            --cream:         #FEFAF7;
+            --cream-mid:     #F5EFE8;
+            --cream-dark:    #EDE3D8;
+            --ink:           #1C1218;
+            --ink-mid:       #4A3840;
+            --ink-soft:      #8A7278;
+            --border:        #E8D8DF;
+            --border-soft:   #F0E4E9;
+
+            --font-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+            --font-sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+
+            --shadow-xs:    0 1px 4px  rgba(139,58,82,.05);
+            --shadow-sm:    0 2px 12px rgba(139,58,82,.08);
+            --shadow-md:    0 6px 28px rgba(139,58,82,.12);
+            --shadow-lg:    0 12px 48px rgba(139,58,82,.15);
+            --shadow-xl:    0 24px 64px rgba(139,58,82,.18);
+            --shadow-rose:  0 8px 28px rgba(139,58,82,.28);
+
+            --r-sm:   6px;
+            --r-md:   12px;
+            --r-lg:   20px;
+            --r-xl:   32px;
+            --r-full: 999px;
+
+            --ease-smooth: cubic-bezier(.4,0,.2,1);
+        }
+
+        /* ============================================================
+           RESET & BASE
+        ============================================================ */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        /* ============================================================
+           TYPOGRAPHY
+        ============================================================ */
+        h1, h2, h3 { font-family: var(--font-serif); line-height: 1.1; }
+
+        .section-eyebrow {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+            text-transform: uppercase; color: var(--champagne);
+            margin-bottom: 14px;
+        }
+        .section-eyebrow::before {
+            content: ''; width: 24px; height: 1px; background: var(--champagne);
+        }
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.9rem, 3.8vw, 3rem);
+            color: var(--rose-dark); margin-bottom: 16px;
+        }
+        .section-lead {
+            font-size: 1rem; color: var(--ink-mid);
+            max-width: 580px; line-height: 1.75;
+        }
+        .section-head { text-align: center; max-width: 660px; margin: 0 auto 60px; }
+        .section-head .section-lead { margin: 0 auto; }
+
+        /* ============================================================
+           LAYOUT
+        ============================================================ */
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 96px 0; }
+
+        /* ============================================================
+           BUTTONS
+        ============================================================ */
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 28px;
+            font-family: var(--font-sans); font-size: .86rem;
+            font-weight: 600; letter-spacing: .04em;
+            border-radius: var(--r-full); border: 2px solid transparent;
+            cursor: pointer;
+            transition: transform .25s var(--ease-smooth), box-shadow .25s, background .25s, border-color .25s, color .25s;
+        }
+        .btn-rose { background: var(--rose); color: var(--white); border-color: var(--rose); }
+        .btn-rose:hover { background: var(--rose-light); border-color: var(--rose-light); transform: translateY(-2px); box-shadow: var(--shadow-rose); }
+        .btn-champagne { background: var(--champagne); color: var(--white); border-color: var(--champagne); }
+        .btn-champagne:hover { background: var(--champagne-dark); border-color: var(--champagne-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-outline-rose { background: transparent; color: var(--rose); border-color: var(--rose); }
+        .btn-outline-rose:hover { background: var(--rose); color: var(--white); transform: translateY(-2px); }
+        .btn-outline-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+        .btn-outline-white:hover { background: rgba(255,255,255,.12); border-color: var(--white); transform: translateY(-2px); }
+        .btn-lg { padding: 16px 36px; font-size: .93rem; }
+
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        [data-reveal] {
+            opacity: 0; transform: translateY(26px);
+            transition: opacity .7s var(--ease-smooth), transform .7s var(--ease-smooth);
+        }
+        [data-reveal].is-visible { opacity: 1; transform: none; }
+        [data-delay="1"] { transition-delay: .12s; }
+        [data-delay="2"] { transition-delay: .24s; }
+        [data-delay="3"] { transition-delay: .36s; }
+        [data-delay="4"] { transition-delay: .48s; }
+        [data-delay="5"] { transition-delay: .60s; }
+
+        /* ============================================================
+           HEADER
+        ============================================================ */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 0 24px;
+            transition: background .35s, backdrop-filter .35s, box-shadow .35s;
+        }
+        .header.scrolled {
+            background: rgba(254,250,247,.93);
+            backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+            box-shadow: var(--shadow-sm);
+        }
+        .header-inner {
+            max-width: 1180px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 70px;
+        }
+        /* Logo — estado padrão (transparente sobre hero escuro) */
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            font-family: var(--font-serif); font-size: 1.5rem;
+            color: var(--white); transition: color .35s;
+        }
+        .logo-mark {
+            width: 38px; height: 38px; border-radius: 50%;
+            background: rgba(255,255,255,.18);
+            border: 1px solid rgba(255,255,255,.28);
+            display: flex; align-items: center; justify-content: center;
+            transition: background .35s, border-color .35s;
+        }
+        .logo-mark i { color: var(--champagne-light); font-size: .9rem; }
+        .logo-sub {
+            display: block; font-family: var(--font-sans);
+            font-size: .58rem; letter-spacing: .18em; text-transform: uppercase;
+            color: var(--champagne-light); font-weight: 600; margin-top: 2px;
+            transition: color .35s;
+        }
+
+        /* Logo — estado scrolled */
+        .header.scrolled .logo { color: var(--rose-dark); }
+        .header.scrolled .logo-mark { background: var(--rose); border-color: transparent; }
+        .header.scrolled .logo-mark i { color: var(--white); }
+        .header.scrolled .logo-sub { color: var(--champagne); }
+
+        /* Nav — estado padrão (sobre hero escuro) */
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a {
+            font-size: .8rem; font-weight: 600; letter-spacing: .06em;
+            text-transform: uppercase; color: rgba(255,255,255,.82);
+            position: relative; padding-bottom: 2px;
+            transition: color .3s;
+        }
+        .nav a::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 0; height: 1px; background: var(--champagne-light); transition: width .3s;
+        }
+        .nav a:hover { color: var(--champagne-light); }
+        .nav a:hover::after { width: 100%; }
+
+        /* Nav — estado scrolled */
+        .header.scrolled .nav a { color: var(--ink-mid); }
+        .header.scrolled .nav a:hover { color: var(--rose); }
+
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; background: none; border: none; padding: 4px;
+        }
+        .hamburger span {
+            display: block; width: 22px; height: 2px;
+            background: var(--white); border-radius: 2px; transition: all .3s;
+        }
+        .header.scrolled .hamburger span { background: var(--rose-dark); }
+        .mobile-menu {
+            display: none; position: fixed; inset: 0; z-index: 99;
+            background: var(--cream);
+            flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+        }
+        .mobile-menu.is-open { display: flex; }
+        .mobile-menu a.m-link { font-family: var(--font-serif); font-size: 2.2rem; color: var(--rose-dark); }
+        .mobile-menu-close {
+            position: absolute; top: 22px; right: 22px;
+            background: none; border: none; font-size: 1.4rem;
+            color: var(--rose-dark); cursor: pointer;
+        }
+
+        /* Sticky Bar */
+        .sticky-bar {
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 98;
+            background: var(--rose-dark); padding: 12px 24px;
+            display: flex; align-items: center; justify-content: center; gap: 20px;
+            transform: translateY(100%);
+            transition: transform .4s var(--ease-smooth);
+            box-shadow: 0 -4px 24px rgba(107,42,62,.3);
+        }
+        .sticky-bar.is-visible { transform: translateY(0); }
+        .sticky-bar-text { font-size: .83rem; color: rgba(255,255,255,.75); }
+        .sticky-bar-text strong { color: var(--white); }
+        .sticky-bar-close {
+            position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+            background: none; border: none; color: rgba(255,255,255,.4);
+            cursor: pointer; font-size: .95rem; padding: 4px;
+        }
+        .sticky-bar-close:hover { color: var(--white); }
+
+        /* ============================================================
+           HERO
+        ============================================================ */
+        .hero {
+            min-height: 100vh; background: var(--rose-dark);
+            display: flex; align-items: center;
+            position: relative; overflow: hidden; padding-top: 70px;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background:
+                radial-gradient(ellipse at 10% 85%, rgba(201,152,106,.14) 0%, transparent 55%),
+                radial-gradient(ellipse at 90% 10%, rgba(181,116,138,.18) 0%, transparent 55%);
+        }
+        .hero::after {
+            content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .4;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+        }
+        .hero-inner {
+            position: relative; z-index: 1;
+            max-width: 1180px; margin: 0 auto; padding: 80px 24px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(201,152,106,.16); border: 1px solid rgba(201,152,106,.3);
+            border-radius: var(--r-full); padding: 6px 16px; margin-bottom: 22px;
+            font-size: .7rem; letter-spacing: .15em; text-transform: uppercase;
+            color: var(--champagne-light); font-weight: 600;
+        }
+        .hero-badge i { color: var(--champagne); }
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.8rem, 5vw, 4.4rem);
+            color: var(--white); line-height: 1.08; margin-bottom: 22px;
+        }
+        .hero-title em { font-style: italic; color: var(--champagne-light); }
+        .hero-sub {
+            font-size: 1.05rem; color: rgba(255,255,255,.70);
+            line-height: 1.75; margin-bottom: 40px; max-width: 460px;
+        }
+        .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+        .hero-stats {
+            display: flex; gap: 32px; flex-wrap: wrap;
+            border-top: 1px solid rgba(255,255,255,.1); padding-top: 32px;
+        }
+        .hero-stat-num {
+            font-family: var(--font-serif); font-size: 2rem;
+            color: var(--champagne-light); display: block; line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: .72rem; color: rgba(255,255,255,.48);
+            letter-spacing: .1em; text-transform: uppercase;
+            margin-top: 5px; display: block;
+        }
+
+        /* Hero image */
+        .hero-img-col { position: relative; }
+        .hero-img-main {
+            border-radius: var(--r-xl); overflow: hidden;
+            aspect-ratio: 4 / 5; box-shadow: var(--shadow-xl);
+        }
+        .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-float {
+            position: absolute; background: var(--white);
+            border-radius: var(--r-lg); padding: 14px 18px;
+            box-shadow: var(--shadow-lg);
+            display: flex; align-items: center; gap: 12px;
+        }
+        .hero-float--tl { top: -16px; left: -28px; }
+        .hero-float--br { bottom: -16px; right: -28px; }
+        .hero-float-icon {
+            width: 38px; height: 38px; border-radius: var(--r-sm); flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .hero-float-icon--rose { background: var(--rose-pale); }
+        .hero-float-icon--rose i { color: var(--rose); }
+        .hero-float-icon--champ { background: var(--champagne-pale); }
+        .hero-float-icon--champ i { color: var(--champagne-dark); }
+        .hero-float-body b { font-size: .82rem; color: var(--ink); display: block; font-weight: 700; }
+        .hero-float-body span { font-size: .72rem; color: var(--ink-soft); }
+        .hero-float-stars { color: #F5B100; font-size: .75rem; margin-bottom: 2px; }
+
+        /* ============================================================
+           TRUST BAR
+        ============================================================ */
+        .trust-bar { background: var(--champagne); padding: 14px 0; }
+        .trust-bar-inner {
+            max-width: 1180px; margin: 0 auto; padding: 0 24px;
+            display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: center;
+        }
+        .trust-item {
+            display: flex; align-items: center; gap: 9px;
+            font-size: .74rem; font-weight: 600; letter-spacing: .1em;
+            text-transform: uppercase; color: rgba(255,255,255,.92); white-space: nowrap;
+        }
+        .trust-item i { color: var(--white); }
+        .trust-sep { color: rgba(255,255,255,.35); font-size: .65rem; }
+
+        /* ============================================================
+           SERVICES
+        ============================================================ */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+        }
+        .service-card {
+            background: var(--white); border-radius: var(--r-lg);
+            padding: 32px 26px; border: 1px solid var(--border-soft);
+            position: relative; overflow: hidden;
+            transition: box-shadow .3s, transform .3s, border-color .3s;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--rose), var(--mauve));
+            transform: scaleX(0); transform-origin: left;
+            transition: transform .4s var(--ease-smooth);
+        }
+        .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--rose-muted); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon-wrap {
+            width: 52px; height: 52px; background: var(--rose-pale);
+            border-radius: var(--r-md);
+            display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+            transition: background .3s;
+        }
+        .service-icon-wrap i { color: var(--rose); font-size: 1.2rem; transition: color .3s; }
+        .service-card:hover .service-icon-wrap { background: var(--rose); }
+        .service-card:hover .service-icon-wrap i { color: var(--white); }
+        .service-name { font-family: var(--font-serif); font-size: 1.25rem; color: var(--rose-dark); margin-bottom: 10px; }
+        .service-desc { font-size: .85rem; color: var(--ink-mid); line-height: 1.7; margin-bottom: 18px; }
+        .service-link {
+            font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+            color: var(--champagne-dark); display: inline-flex; align-items: center; gap: 6px;
+        }
+        .service-link i { font-size: .62rem; transition: transform .3s; }
+        .service-card:hover .service-link i { transform: translateX(4px); }
+
+        /* ============================================================
+           COMO FUNCIONA
+        ============================================================ */
+        .steps-section { background: var(--rose-dark); padding: 96px 0; }
+        .steps-section .section-eyebrow { color: var(--champagne-light); }
+        .steps-section .section-eyebrow::before { background: var(--champagne-light); }
+        .steps-section .section-title { color: var(--white); }
+        .steps-section .section-lead { color: rgba(255,255,255,.6); }
+        .steps-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;
+            position: relative;
+        }
+        .steps-grid::before {
+            content: ''; position: absolute;
+            top: 33px; left: calc(16.66% + 16px); right: calc(16.66% + 16px);
+            height: 1px; background: rgba(201,152,106,.25);
+        }
+        .step-item { text-align: center; position: relative; z-index: 1; }
+        .step-num {
+            width: 66px; height: 66px; border-radius: 50%;
+            background: rgba(201,152,106,.12); border: 1px solid rgba(201,152,106,.28);
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+        }
+        .step-num span { font-family: var(--font-serif); font-size: 1.5rem; color: var(--champagne-light); }
+        .step-icon { font-size: 1.15rem; color: var(--champagne-light); margin-bottom: 14px; display: block; }
+        .step-title { font-family: var(--font-serif); font-size: 1.2rem; color: var(--white); margin-bottom: 10px; }
+        .step-desc { font-size: .85rem; color: rgba(255,255,255,.55); line-height: 1.7; }
+
+        /* ============================================================
+           SOBRE
+        ============================================================ */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+        .about-img-col { position: relative; }
+        .about-img-wrap {
+            border-radius: var(--r-xl); overflow: hidden;
+            aspect-ratio: 4 / 5; box-shadow: var(--shadow-xl);
+        }
+        .about-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .about-accent-br {
+            position: absolute; bottom: -24px; right: -24px;
+            width: 120px; height: 120px; border-radius: var(--r-xl);
+            background: var(--champagne); z-index: -1;
+        }
+        .about-accent-tl {
+            position: absolute; top: -24px; left: -24px;
+            width: 72px; height: 72px; border-radius: var(--r-lg);
+            background: var(--rose-pale); z-index: -1;
+        }
+        .about-badge {
+            position: absolute; top: 24px; right: -22px;
+            background: var(--white); border-radius: var(--r-lg);
+            padding: 14px 18px; box-shadow: var(--shadow-md); text-align: center;
+        }
+        .about-badge-num {
+            font-family: var(--font-serif); font-size: 1.8rem;
+            color: var(--rose-dark); display: block; line-height: 1;
+        }
+        .about-badge-label { font-size: .64rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .1em; }
+        .about-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+        .about-pill {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: var(--rose-pale); color: var(--rose-dark);
+            border-radius: var(--r-full); padding: 6px 14px;
+            font-size: .75rem; font-weight: 600;
+        }
+        .about-pill i { font-size: .65rem; color: var(--champagne-dark); }
+
+        /* ============================================================
+           GOOGLE RATING BAND
+        ============================================================ */
+        .rating-band { background: var(--cream-mid); padding: 56px 0; }
+        .rating-inner {
+            max-width: 1180px; margin: 0 auto; padding: 0 24px;
+            display: flex; align-items: center; justify-content: center; gap: 64px;
+            flex-wrap: wrap; text-align: center;
+        }
+        .rating-score {
+            font-family: var(--font-serif); font-size: 4.5rem; color: var(--rose-dark); line-height: 1;
+        }
+        .rating-stars { color: #F5B100; font-size: 1.4rem; margin: 8px 0 4px; }
+        .rating-count { font-size: .84rem; color: var(--ink-soft); }
+        .rating-divider { width: 1px; height: 72px; background: var(--border); }
+        .rating-quote {
+            max-width: 420px; text-align: left;
+            font-family: var(--font-serif); font-size: 1.2rem; font-style: italic;
+            color: var(--ink-mid); line-height: 1.6;
+        }
+        .rating-quote cite { display: block; font-size: .8rem; font-style: normal; color: var(--ink-soft); margin-top: 12px; font-family: var(--font-sans); }
+
+        /* ============================================================
+           DEPOIMENTOS
+        ============================================================ */
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .review-card {
+            background: var(--white); border-radius: var(--r-lg); padding: 30px 26px;
+            border: 1px solid var(--border-soft); position: relative; overflow: hidden;
+            transition: box-shadow .3s;
+        }
+        .review-card:hover { box-shadow: var(--shadow-md); }
+        .review-card::before {
+            content: '\201C'; position: absolute; top: 10px; right: 20px;
+            font-family: var(--font-serif); font-size: 5rem; color: var(--rose-pale);
+            line-height: 1; font-weight: 400;
+        }
+        .review-stars { color: #F5B100; font-size: .88rem; margin-bottom: 14px; }
+        .review-text {
+            font-family: var(--font-serif); font-size: 1.02rem; font-style: italic;
+            color: var(--ink-mid); line-height: 1.65; margin-bottom: 22px;
+        }
+        .review-author { display: flex; align-items: center; gap: 12px; }
+        .review-avatar {
+            width: 40px; height: 40px; border-radius: 50%; background: var(--rose-pale);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-serif); font-size: .95rem; color: var(--rose); flex-shrink: 0;
+        }
+        .review-author-name { font-size: .86rem; font-weight: 700; color: var(--ink); }
+        .review-author-role { font-size: .74rem; color: var(--ink-soft); }
+        .review-google { margin-left: auto; }
+
+        /* ============================================================
+           AGENDAMENTO
+        ============================================================ */
+        .agenda-section { background: var(--rose-dark); padding: 96px 0; }
+        .agenda-section .section-eyebrow { color: var(--champagne-light); }
+        .agenda-section .section-eyebrow::before { background: var(--champagne-light); }
+        .agenda-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+        .agenda-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 14px; }
+        .agenda-title em { font-style: italic; color: var(--champagne-light); }
+        .agenda-lead { color: rgba(255,255,255,.65); font-size: 1rem; line-height: 1.75; margin-bottom: 30px; }
+        .agenda-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px; }
+
+        .agenda-info { display: flex; flex-direction: column; gap: 14px; }
+        .agenda-info-item { display: flex; align-items: flex-start; gap: 13px; }
+        .agenda-info-icon {
+            width: 35px; height: 35px; background: rgba(201,152,106,.14);
+            border-radius: var(--r-sm); flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .agenda-info-icon i { color: var(--champagne-light); font-size: .83rem; }
+        .agenda-info-body b { font-size: .83rem; color: var(--white); display: block; margin-bottom: 2px; }
+        .agenda-info-body span { font-size: .78rem; color: rgba(255,255,255,.5); line-height: 1.5; }
+        .agenda-info-body a { color: rgba(255,255,255,.5); }
+        .agenda-info-body a:hover { color: var(--champagne-light); }
+
+        /* Map */
+        .agenda-map-wrap {
+            border-radius: var(--r-xl); background: var(--cream-mid);
+            aspect-ratio: 4 / 3;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            gap: 12px; text-align: center; padding: 36px;
+            box-shadow: var(--shadow-xl);
+        }
+        .agenda-map-pin { font-size: 2.8rem; }
+        .agenda-map-addr {
+            font-family: var(--font-serif); font-size: 1.15rem;
+            color: var(--rose-dark); line-height: 1.45;
+        }
+        .agenda-map-city { font-size: .85rem; color: var(--ink-mid); }
+        .agenda-map-cep { font-size: .75rem; color: var(--ink-soft); margin-top: 2px; }
+
+        /* Hours */
+        .agenda-hours {
+            margin-top: 24px; background: rgba(201,152,106,.1);
+            border: 1px solid rgba(201,152,106,.22);
+            border-radius: var(--r-lg); padding: 20px 24px;
+        }
+        .agenda-hours-title {
+            font-size: .68rem; font-weight: 600; letter-spacing: .15em;
+            text-transform: uppercase; color: var(--champagne-light); margin-bottom: 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .hours-row {
+            display: flex; justify-content: space-between;
+            padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,.05);
+            font-size: .81rem;
+        }
+        .hours-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .hours-day { color: rgba(255,255,255,.5); }
+        .hours-time { color: var(--white); font-weight: 600; }
+        .hours-closed { color: rgba(255,255,255,.28); }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        .footer { background: #3A1220; padding: 60px 0 0; }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 44px;
+            padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+        .footer-logo {
+            display: flex; align-items: center; gap: 10px;
+            font-family: var(--font-serif); font-size: 1.2rem; color: var(--white); margin-bottom: 14px;
+        }
+        .footer-tagline { font-size: .82rem; color: rgba(255,255,255,.4); line-height: 1.7; max-width: 270px; margin-bottom: 22px; }
+        .footer-socials { display: flex; gap: 10px; }
+        .footer-social {
+            width: 36px; height: 36px; border-radius: var(--r-sm);
+            background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,.5); font-size: .88rem; transition: background .25s, color .25s;
+        }
+        .footer-social:hover { background: var(--champagne); color: var(--white); border-color: var(--champagne); }
+        .footer-col-title { font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--champagne-light); margin-bottom: 18px; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { font-size: .83rem; color: rgba(255,255,255,.42); transition: color .25s; }
+        .footer-links a:hover { color: var(--champagne-light); }
+        .footer-addr-item {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: .8rem; color: rgba(255,255,255,.42); line-height: 1.55; margin-bottom: 12px;
+        }
+        .footer-addr-item i { color: var(--champagne-light); margin-top: 2px; flex-shrink: 0; }
+        .footer-addr-item a:hover { color: var(--champagne-light); }
+        .footer-bottom {
+            padding: 18px 0;
+            display: flex; align-items: center; justify-content: space-between;
+            font-size: .73rem; color: rgba(255,255,255,.2);
+        }
+        .footer-bottom span { color: var(--champagne-light); }
+
+        /* Floating phone button */
+        .phone-float {
+            position: fixed; bottom: 24px; right: 24px; z-index: 90;
+            width: 56px; height: 56px; border-radius: 50%;
+            background: var(--rose);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 1.4rem;
+            box-shadow: 0 4px 20px rgba(139,58,82,.45);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .phone-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(139,58,82,.55); }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-img-col { display: none; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { grid-template-columns: 1fr; gap: 48px; }
+            .about-img-col { max-width: 460px; margin: 0 auto; }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .agenda-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .rating-divider { display: none; }
+            .rating-quote { text-align: center; }
+        }
+        @media (max-width: 768px) {
+            section { padding: 72px 0; }
+            .hero-inner { padding: 48px 24px; }
+            .nav, .header-cta-btn { display: none; }
+            .hamburger { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; gap: 36px; }
+            .steps-grid::before { display: none; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .trust-sep { display: none; }
+        }
+        @media (max-width: 480px) {
+            .hero-actions, .agenda-actions { flex-direction: column; }
+            .hero-actions .btn, .agenda-actions .btn { width: 100%; justify-content: center; }
+            .hero-stats { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         HEADER
+    ============================================================ -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo" aria-label="Clínica Hamonir">
+                <div class="logo-mark"><i class="fas fa-spa"></i></div>
+                <div>
+                    Hamonir
+                    <span class="logo-sub">Estética &amp; Saúde</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#avaliacoes">Avaliações</a>
+                <a href="#agendamento">Contato</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:10px;">
+                <a href="tel:+551732314425" class="btn btn-rose header-cta-btn">
+                    <i class="fas fa-phone"></i> (17) 3231-4425
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="menuClose"><i class="fas fa-times"></i></button>
+        <a href="#servicos"    class="m-link">Serviços</a>
+        <a href="#sobre"       class="m-link">Sobre</a>
+        <a href="#avaliacoes"  class="m-link">Avaliações</a>
+        <a href="#agendamento" class="m-link">Contato</a>
+        <a href="tel:+551732314425" class="btn btn-rose">
+            <i class="fas fa-phone"></i> Ligar agora
+        </a>
+    </div>
+
+    <!-- Sticky Bar -->
+    <div class="sticky-bar" id="stickyBar">
+        <p class="sticky-bar-text">
+            <strong>Clínica Hamonir</strong> — agende seu horário agora
+        </p>
+        <a href="tel:+551732314425" class="btn btn-champagne"
+           style="flex-shrink:0; padding:9px 20px; font-size:.78rem;">
+            <i class="fas fa-phone"></i> Ligar
+        </a>
+        <button class="sticky-bar-close" id="stickyClose" aria-label="Fechar">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-badge" data-reveal>
+                    <i class="fas fa-star"></i>
+                    Nota 4,1 · 47 avaliações no Google
+                </div>
+                <h1 class="hero-title" data-reveal data-delay="1">
+                    Beleza que<br>nasce do <em>cuidado</em><br>verdadeiro.
+                </h1>
+                <p class="hero-sub" data-reveal data-delay="2">
+                    Centro de saúde e beleza no coração de São José do Rio Preto.
+                    Tratamentos faciais e corporais com atenção personalizada
+                    para cada cliente.
+                </p>
+                <div class="hero-actions" data-reveal data-delay="3">
+                    <a href="tel:+551732314425" class="btn btn-champagne btn-lg">
+                        <i class="fas fa-phone"></i> Agendar pelo Telefone
+                    </a>
+                    <a href="#servicos" class="btn btn-outline-white btn-lg">
+                        Ver serviços <i class="fas fa-chevron-down" style="font-size:.75rem;"></i>
+                    </a>
+                </div>
+                <div class="hero-stats" data-reveal data-delay="4">
+                    <div>
+                        <span class="hero-stat-num" data-count="4.1">4,1</span>
+                        <span class="hero-stat-label">Nota Google</span>
+                    </div>
+                    <div>
+                        <span class="hero-stat-num" data-count="47" data-suffix="+">47+</span>
+                        <span class="hero-stat-label">Avaliações</span>
+                    </div>
+                    <div>
+                        <span class="hero-stat-num">Centro</span>
+                        <span class="hero-stat-label">São José do Rio Preto</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-img-col" data-reveal data-delay="2">
+                <div class="hero-float hero-float--tl">
+                    <div class="hero-float-icon hero-float-icon--rose">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="hero-float-body">
+                        <b>Profissionais Especializadas</b>
+                        <span>Atendimento personalizado</span>
+                    </div>
+                </div>
+                <div class="hero-img-main">
+                    <img src="https://placehold.co/600x750/8B3A52/D4A07A?text=Hamonir"
+                         alt="Clínica de Estética Hamonir — São José do Rio Preto" loading="eager">
+                </div>
+                <div class="hero-float hero-float--br">
+                    <div class="hero-float-body" style="text-align:right;">
+                        <div class="hero-float-stars">★★★★☆</div>
+                        <b>Nota 4,1 Google</b>
+                        <span>47 avaliações</span>
+                    </div>
+                    <div class="hero-float-icon hero-float-icon--champ">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item"><i class="fas fa-map-marker-alt"></i> Centro de São José do Rio Preto</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-spa"></i> Centro de Saúde e Beleza</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-star"></i> 4,1 Estrelas no Google</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-clock"></i> Seg–Sex até 19h</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-calendar-check"></i> Agendamento Rápido</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SERVIÇOS
+    ============================================================ -->
+    <section style="background: var(--white);" id="servicos">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-eyebrow" data-reveal>O que oferecemos</div>
+                <h2 class="section-title" data-reveal data-delay="1">Tratamentos para<br>cada necessidade</h2>
+                <p class="section-lead" data-reveal data-delay="2">
+                    Da limpeza de pele à modelagem corporal, nossos tratamentos são
+                    pensados para realçar sua beleza natural com cuidado e atenção.
+                </p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card" data-reveal>
+                    <div class="service-icon-wrap"><i class="fas fa-spa"></i></div>
+                    <div class="service-name">Limpeza de Pele</div>
+                    <p class="service-desc">Higienização profunda que remove impurezas, cravos e células mortas, devolvendo leveza, viço e luminosidade à sua pele.</p>
+                    <a href="tel:+551732314425" class="service-link">Agendar <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="1">
+                    <div class="service-icon-wrap"><i class="fas fa-leaf"></i></div>
+                    <div class="service-name">Peeling Facial</div>
+                    <p class="service-desc">Renovação celular com ácidos e técnicas seguras para tratar manchas, acne, poros dilatados e sinais de envelhecimento.</p>
+                    <a href="tel:+551732314425" class="service-link">Agendar <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="2">
+                    <div class="service-icon-wrap"><i class="fas fa-droplet"></i></div>
+                    <div class="service-name">Hidratação Facial</div>
+                    <p class="service-desc">Tratamento intensivo que restaura a hidratação profunda da pele, combatendo ressecamento e devolvendo maciez e brilho.</p>
+                    <a href="tel:+551732314425" class="service-link">Agendar <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="3">
+                    <div class="service-icon-wrap"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="service-name">Drenagem Linfática</div>
+                    <p class="service-desc">Massagem suave e ritmada que estimula o sistema linfático, reduzindo inchaço, retenção de líquidos e melhorando a circulação.</p>
+                    <a href="tel:+551732314425" class="service-link">Agendar <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="4">
+                    <div class="service-icon-wrap"><i class="fas fa-bolt-lightning"></i></div>
+                    <div class="service-name">Radiofrequência</div>
+                    <p class="service-desc">Tecnologia que estimula o colágeno, firmando a pele do rosto e do corpo com redução de flacidez e celulite de forma progressiva.</p>
+                    <a href="tel:+551732314425" class="service-link">Agendar <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="5">
+                    <div class="service-icon-wrap"><i class="fas fa-person"></i></div>
+                    <div class="service-name">Tratamentos Corporais</div>
+                    <p class="service-desc">Protocolos completos para modelagem corporal, redução de medidas e melhora da textura da pele com técnicas avançadas.</p>
+                    <a href="tel:+551732314425" class="service-link">Agendar <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         COMO FUNCIONA
+    ============================================================ -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-eyebrow" data-reveal>É simples assim</div>
+                <h2 class="section-title" data-reveal data-delay="1">Do agendamento<br>ao seu resultado</h2>
+                <p class="section-lead" data-reveal data-delay="2">
+                    Cuidamos de cada etapa para que sua experiência seja confortável,
+                    segura e transformadora.
+                </p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item" data-reveal>
+                    <div class="step-num"><span>01</span></div>
+                    <i class="step-icon fas fa-phone"></i>
+                    <div class="step-title">Ligue e Agende</div>
+                    <p class="step-desc">Entre em contato pelo telefone (17) 3231-4425 e agende seu horário. Atendimento rápido e acolhedor desde o primeiro contato.</p>
+                </div>
+                <div class="step-item" data-reveal data-delay="1">
+                    <div class="step-num"><span>02</span></div>
+                    <i class="step-icon fas fa-clipboard-list"></i>
+                    <div class="step-title">Avaliação Inicial</div>
+                    <p class="step-desc">Na sua chegada, fazemos uma avaliação completa para entender suas necessidades e indicar o melhor protocolo para você.</p>
+                </div>
+                <div class="step-item" data-reveal data-delay="2">
+                    <div class="step-num"><span>03</span></div>
+                    <i class="step-icon fas fa-wand-sparkles"></i>
+                    <div class="step-title">Beleza Renovada</div>
+                    <p class="step-desc">Tratamento realizado por profissionais especializadas, com produtos de qualidade e toda a atenção que você merece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE
+    ============================================================ -->
+    <section style="background: var(--cream);" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-col" data-reveal>
+                    <div class="about-accent-tl"></div>
+                    <div class="about-img-wrap">
+                        <img src="https://placehold.co/600x750/8B3A52/D4A07A?text=Hamonir+Estética"
+                             alt="Ambiente da Clínica Hamonir" loading="lazy">
+                    </div>
+                    <div class="about-accent-br"></div>
+                    <div class="about-badge">
+                        <span class="about-badge-num" data-count="47" data-suffix="+">47+</span>
+                        <span class="about-badge-label">Avaliações Google</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-eyebrow" data-reveal>Quem somos</div>
+                    <h2 class="section-title" data-reveal data-delay="1">
+                        Harmonizando beleza<br>e <em style="font-style:italic; color:var(--champagne-dark);">bem-estar</em>
+                    </h2>
+                    <p class="section-lead" data-reveal data-delay="2" style="margin-bottom:14px;">
+                        A Clínica Hamonir é um centro de saúde e beleza localizado no coração
+                        de São José do Rio Preto. Nossa missão é proporcionar experiências
+                        únicas de bem-estar, combinando técnicas eficazes com um atendimento
+                        verdadeiramente acolhedor.
+                    </p>
+                    <p class="section-lead" data-reveal data-delay="3" style="font-size:.92rem;">
+                        Acreditamos que beleza é saúde — e que cada pessoa merece
+                        um cuidado personalizado, respeitoso e transformador.
+                        Venha nos conhecer e descubra o que a Hamonir pode fazer por você.
+                    </p>
+                    <div class="about-pills" data-reveal data-delay="4">
+                        <div class="about-pill"><i class="fas fa-check"></i> Atendimento Personalizado</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Profissionais Especializadas</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Localização Central</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Ambiente Acolhedor</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Produtos de Qualidade</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         GOOGLE RATING BAND
+    ============================================================ -->
+    <section class="rating-band" id="avaliacoes" style="padding: 64px 0;">
+        <div class="rating-inner" data-reveal>
+            <div>
+                <div class="rating-score" data-count="4.1">4,1</div>
+                <div class="rating-stars">★★★★☆</div>
+                <div class="rating-count">47 avaliações verificadas no Google</div>
+            </div>
+            <div class="rating-divider"></div>
+            <div class="reviews-grid" style="max-width:900px;">
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Ambiente muito aconchegante e profissionais atenciosas. Fiz a limpeza de pele e adorei o resultado. Com certeza voltarei!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">LC</div>
+                        <div>
+                            <div class="review-author-name">Larissa Campos</div>
+                            <div class="review-author-role">Limpeza de Pele</div>
+                        </div>
+                        <div class="review-google"><i class="fab fa-google" style="color:#4285F4;"></i></div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Fiz a drenagem linfática e foi ótima! Me senti muito bem durante e após o procedimento. Recomendo muito a Clínica Hamonir!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">PR</div>
+                        <div>
+                            <div class="review-author-name">Patrícia Rocha</div>
+                            <div class="review-author-role">Drenagem Linfática</div>
+                        </div>
+                        <div class="review-google"><i class="fab fa-google" style="color:#4285F4;"></i></div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Lugar excelente, localização ótima no centro da cidade. Tratamento de peeling surpreendeu demais. Nota 10 para toda a equipe!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">SM</div>
+                        <div>
+                            <div class="review-author-name">Sandra Martins</div>
+                            <div class="review-author-role">Peeling Facial</div>
+                        </div>
+                        <div class="review-google"><i class="fab fa-google" style="color:#4285F4;"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         AGENDAMENTO
+    ============================================================ -->
+    <section class="agenda-section" id="agendamento">
+        <div class="container">
+            <div class="agenda-grid">
+                <div>
+                    <div class="section-eyebrow" data-reveal>Agende agora</div>
+                    <h2 class="agenda-title" data-reveal data-delay="1">
+                        Cuide da sua beleza<br><em>hoje mesmo.</em>
+                    </h2>
+                    <p class="agenda-lead" data-reveal data-delay="2">
+                        Ligue agora e garanta seu horário. Nossa equipe está pronta
+                        para atender você com toda a atenção que você merece.
+                    </p>
+                    <div class="agenda-actions" data-reveal data-delay="3">
+                        <a href="tel:+551732314425" class="btn btn-champagne btn-lg">
+                            <i class="fas fa-phone"></i> (17) 3231-4425
+                        </a>
+                        <a href="#servicos" class="btn btn-outline-white btn-lg">
+                            Ver serviços
+                        </a>
+                    </div>
+                    <div class="agenda-info" data-reveal data-delay="4">
+                        <div class="agenda-info-item">
+                            <div class="agenda-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="agenda-info-body">
+                                <b>Endereço</b>
+                                <span>R. Voluntários de São Paulo, 3044<br>Centro, São José do Rio Preto - SP<br>CEP 15015-200</span>
+                            </div>
+                        </div>
+                        <div class="agenda-info-item">
+                            <div class="agenda-info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="agenda-info-body">
+                                <b>Telefone</b>
+                                <span><a href="tel:+551732314425">(17) 3231-4425</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agenda-hours" data-reveal data-delay="5">
+                        <div class="agenda-hours-title"><i class="fas fa-clock"></i> Horário de Funcionamento</div>
+                        <div class="hours-row">
+                            <span class="hours-day">Segunda a Sexta</span>
+                            <span class="hours-time">9h às 19h</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-day">Sábado</span>
+                            <span class="hours-time">9h às 14h</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-day">Domingo</span>
+                            <span class="hours-closed">Fechado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-reveal data-delay="2">
+                    <div class="agenda-map-wrap">
+                        <div class="agenda-map-pin">📍</div>
+                        <div class="agenda-map-addr">R. Voluntários de São Paulo, 3044<br>Centro</div>
+                        <div class="agenda-map-city">São José do Rio Preto — SP</div>
+                        <div class="agenda-map-cep">CEP 15015-200</div>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a href="https://www.google.com/maps/search/?api=1&query=R.+Voluntarios+de+Sao+Paulo+3044+Centro+Sao+Jose+do+Rio+Preto+SP"
+                           class="btn btn-outline-white" target="_blank" rel="noopener noreferrer"
+                           style="width:100%; justify-content:center;">
+                            <i class="fas fa-directions"></i> Como chegar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="logo-mark" style="width:32px;height:32px;">
+                            <i class="fas fa-spa" style="font-size:.75rem;"></i>
+                        </div>
+                        <div>
+                            Hamonir
+                            <span class="logo-sub">Estética &amp; Saúde</span>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">Centro de saúde e beleza em São José do Rio Preto. Cuidando da sua beleza com dedicação e carinho em cada atendimento.</p>
+                    <div class="footer-socials">
+                        <a class="footer-social" href="tel:+551732314425" aria-label="Telefone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Serviços</div>
+                    <div class="footer-links">
+                        <a href="#servicos">Limpeza de Pele</a>
+                        <a href="#servicos">Peeling Facial</a>
+                        <a href="#servicos">Hidratação Facial</a>
+                        <a href="#servicos">Drenagem Linfática</a>
+                        <a href="#servicos">Radiofrequência</a>
+                        <a href="#servicos">Tratamentos Corporais</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Contato &amp; Local</div>
+                    <address style="font-style:normal;">
+                        <div class="footer-addr-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>R. Voluntários de São Paulo, 3044<br>Centro — São José do Rio Preto - SP<br>CEP 15015-200</span>
+                        </div>
+                        <div class="footer-addr-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+551732314425">(17) 3231-4425</a>
+                        </div>
+                        <div class="footer-addr-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Seg–Sex: 9h às 19h<br>Sáb: 9h às 14h</span>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Clínica de Estética Hamonir. Todos os direitos reservados.</p>
+                <p>Feito com <span>♥</span> em São José do Rio Preto - SP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating phone button -->
+    <a href="tel:+551732314425" class="phone-float" aria-label="Ligar para a Clínica Hamonir">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script>
+        /* Scroll Reveal */
+        const ro = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); ro.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('[data-reveal]').forEach(el => ro.observe(el));
+
+        /* Counter Animation */
+        function animateCounter(el, target, dur) {
+            const isFloat = String(target).includes('.');
+            const suffix  = el.dataset.suffix || '';
+            const t0 = performance.now();
+            (function tick(now) {
+                const p = Math.min((now - t0) / dur, 1);
+                const e = 1 - Math.pow(1 - p, 3);
+                el.textContent = (isFloat
+                    ? (e * target).toFixed(1).replace('.', ',')
+                    : Math.round(e * target)) + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+            })(performance.now());
+        }
+        const co = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target, parseFloat(e.target.dataset.count), 1600); co.unobserve(e.target); } });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+        /* Header */
+        const $hdr = document.getElementById('header');
+        window.addEventListener('scroll', () => $hdr.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+        /* Sticky Bar */
+        const $bar = document.getElementById('stickyBar');
+        const $hero = document.getElementById('home');
+        let dismissed = false;
+        new IntersectionObserver(entries => {
+            if (!dismissed) $bar.classList.toggle('is-visible', !entries[0].isIntersecting);
+        }, { threshold: 0 }).observe($hero);
+        document.getElementById('stickyClose').addEventListener('click', () => {
+            dismissed = true; $bar.classList.remove('is-visible');
+        });
+
+        /* Mobile Menu */
+        const $ham = document.getElementById('hamburger');
+        const $menu = document.getElementById('mobileMenu');
+        $ham.addEventListener('click', () => $menu.classList.add('is-open'));
+        document.getElementById('menuClose').addEventListener('click', () => $menu.classList.remove('is-open'));
+        $menu.querySelectorAll('.m-link, .btn').forEach(a => a.addEventListener('click', () => $menu.classList.remove('is-open')));
+    </script>
+
+</body>
+</html>

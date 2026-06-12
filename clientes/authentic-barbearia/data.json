@@ -1,0 +1,88 @@
+{
+  "categoria": "Barbearia",
+  "slug": "authentic-barbearia",
+
+  "brand": {
+    "name": "Authentic Barbearia",
+    "tagline": "Barbearia · Vila Redentora",
+    "nameHtml": "Authentic <b>Barbearia</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Barbearia · São José do Rio Preto",
+    "titleHtml": "Estilo e atitude no <span class=\"accent\">detalhe</span>",
+    "sub": "Cortes, barba e cuidados masculinos com ambiente acolhedor, cadeira de massagem, boa música e aquele cafézinho. Nota 5,0 com mais de 800 clientes.",
+    "badge": "<b>5,0</b> · +836 avaliações",
+    "ctaPrimary": { "label": "Agendar Online", "href": "#contato" },
+    "ctaGhost": { "label": "Ver Serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre nós",
+    "titleHtml": "Bem-vindo à <span class=\"accent\">Authentic</span>",
+    "paragraphs": [
+      "Mais que uma barbearia, um espaço pensado para o seu conforto: ambiente limpo, organizado e aconchegante, com cadeira de massagem, boa música e cafézinho enquanto você renova o visual.",
+      "Uma equipe de profissionais atenciosos e caprichosos, reconhecida pela excelência no atendimento. Aqui todos são bem-vindos — acolhemos com orgulho a comunidade LGBTQ+."
+    ],
+    "stats": [
+      { "num": 5, "suffix": ",0", "label": "Nota no Google" },
+      { "num": 836, "suffix": "+", "label": "Avaliações" },
+      { "num": 100, "suffix": "%", "label": "Clientes satisfeitos" }
+    ],
+    "certs": [
+      { "icon": "scissors", "label": "Profissionais especializados" },
+      { "icon": "heart", "label": "Ambiente acolhedor" },
+      { "icon": "star", "label": "Cadeira de massagem & café" },
+      { "icon": "check", "label": "Espaço LGBTQ+ friendly" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Serviços",
+    "titleHtml": "O que <span class=\"accent\">fazemos</span>",
+    "intro": "Atendimento de primeira, com capricho e cuidado em cada detalhe.",
+    "items": [
+      { "icon": "scissors", "name": "Corte Masculino", "desc": "Cortes clássicos e modernos sob medida para o seu estilo.", "price": "Sob consulta" },
+      { "icon": "cut", "name": "Barba", "desc": "Modelagem, toalha quente e finalização impecável.", "price": "Sob consulta" },
+      { "icon": "star", "name": "Corte + Barba", "desc": "O combo completo para um visual afiado de ponta a ponta.", "price": "Sob consulta" },
+      { "icon": "sparkle", "name": "Tratamentos", "desc": "Cuidados especiais para cabelo e barba sempre em ordem.", "price": "Sob consulta" },
+      { "icon": "heart", "name": "Penteado & Estilo", "desc": "Finalização e penteado para ocasiões especiais.", "price": "Sob consulta" },
+      { "icon": "check", "name": "Agendamento Online", "desc": "Marque seu horário pela internet, sem filas nem espera.", "price": "Grátis" }
+    ]
+  },
+
+  "products": { "show": false },
+
+  "testimonials": {
+    "eyebrow": "Quem confia",
+    "titleHtml": "O que dizem os <span class=\"accent\">clientes</span>",
+    "items": [
+      { "stars": 5, "quote": "Fui muito bem tratado desde o momento em que cheguei. Atendimento de primeira, equipe atenciosa e profissional. Serviço de excelente qualidade, com muito capricho e cuidado nos detalhes. Com certeza voltarei e recomendo a todos!", "name": "Carlos Eduardo Nascimento", "meta": "Local Guide · Google" },
+      { "stars": 5, "quote": "Excelentes profissionais, especialmente o Fabiano! Ambiente muito limpo e organizado, aconchegante. Maravilhosa atenção de todos os colaboradores com os clientes! Recomendo a experiência Authentic!", "name": "Maria de Lourdes Verni", "meta": "Avaliação Google" },
+      { "stars": 5, "quote": "Jeferson, ótimo profissional! Atendeu as expectativas do corte que eu precisava para meu filho. Estou muito satisfeita e o ambiente é muito agradável. Estão todos de parabéns!", "name": "Bruna Natiele", "meta": "Local Guide · Google" },
+      { "stars": 5, "quote": "Ambiente muito agradável, com cadeira de massagem, música boa e cafézinho! Ótimo profissional, atendimento excelente e preço no padrão. Virei cliente!", "name": "Cliente Google", "meta": "Avaliação Google" }
+    ]
+  },
+
+  "instagram": {
+    "show": true,
+    "handle": "@authenticbarbearia",
+    "url": "https://instagram.com",
+    "titleHtml": "Acompanhe o nosso <span class=\"accent\">dia a dia</span>"
+  },
+
+  "contact": {
+    "eyebrow": "Vamos marcar?",
+    "titleHtml": "Agende o seu <span class=\"accent\">horário</span>",
+    "whatsapp": "5517981116959",
+    "phoneDisplay": "(17) 98111-6959",
+    "instagramUrl": "https://instagram.com",
+    "address": "R. Bernardino de Campos, 4650 - Vila Redentora, São José do Rio Preto - SP, 15015-300",
+    "hours": "Aberto hoje · fecha às 19:30",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Bernardino+de+Campos,+4650+-+Vila+Redentora,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15015-300&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Onde o estilo encontra a tradição."
+  }
+}

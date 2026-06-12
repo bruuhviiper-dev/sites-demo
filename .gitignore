@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+
+# Materiais pesados de apresentação (vídeos/prints) — não vão pro site
+_arquivo/apresentacoes/
+_arquivo/imagens/
+_arquivo/tools/
+**/apresentacao/
+**/_preview/
+*.webm
+*.mp4
+
+# Sistema
+Thumbs.db
+.DS_Store

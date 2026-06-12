@@ -1,0 +1,89 @@
+{
+  "categoria": "Salão de Beleza",
+  "estilo": "clean-editorial",
+  "slug": "atelier-lumiere",
+
+  "brand": {
+    "name": "Atelier Lumière",
+    "tagline": "Salão de Beleza · São Paulo",
+    "nameHtml": "Atelier <b>Lumière</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Cabelo · Beleza · Bem-estar",
+    "titleHtml": "Beleza que <em>respira</em> naturalidade",
+    "sub": "Um ateliê de beleza onde técnica, cuidado e produtos naturais se encontram para revelar a sua melhor versão — com leveza.",
+    "badge": "Desde 2014",
+    "imageLabel": "Foto do salão aqui",
+    "ctaPrimary": { "label": "Agendar horário", "href": "#contato" },
+    "ctaGhost": { "label": "Nossos serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o ateliê",
+    "titleHtml": "Cuidado autoral, do fio à <em>autoestima</em>",
+    "paragraphs": [
+      "Mais que um salão, um espaço de respiro. Trabalhamos com tratamentos naturais e técnicas avançadas de coloração e corte, sempre respeitando a saúde do cabelo e o tempo de cada cliente.",
+      "Nossa equipe é formada por profissionais apaixonados, em constante atualização, para entregar resultados que parecem — e são — naturais."
+    ],
+    "stats": [
+      { "num": 10, "suffix": "+", "label": "Anos de história" },
+      { "num": 8, "suffix": "", "label": "Profissionais" },
+      { "num": 4900, "suffix": "+", "label": "Clientes atendidas" }
+    ],
+    "certs": [
+      { "label": "Coloração natural" },
+      { "label": "Tratamentos veganos" },
+      { "label": "Corte autoral" },
+      { "label": "Hair stylist premiada" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "O que fazemos",
+    "titleHtml": "Serviços & <em>experiências</em>",
+    "intro": "Cada serviço é um ritual pensado para o cuidado e a beleza dos seus fios.",
+    "items": [
+      { "icon": "cut", "name": "Corte Autoral", "desc": "Cortes desenhados para o seu rosto, estilo e rotina.", "price": "R$ 160" },
+      { "icon": "sparkle", "name": "Coloração Natural", "desc": "Cor saudável e luminosa com linhas livres de amônia.", "price": "R$ 320" },
+      { "icon": "leaf", "name": "Tratamento Reconstrutor", "desc": "Reconstrução profunda para fios fortes e brilhantes.", "price": "R$ 240" },
+      { "icon": "star", "name": "Mechas & Iluminado", "desc": "Loiros e iluminados sob medida, com técnica e cuidado.", "price": "R$ 450" },
+      { "icon": "heart", "name": "Escova & Penteado", "desc": "Finalização e penteados para o dia a dia ou eventos.", "price": "R$ 90" },
+      { "icon": "hand", "name": "Dia da Noiva", "desc": "Experiência completa para o seu grande dia.", "price": "Sob consulta" }
+    ]
+  },
+
+  "products": { "show": false },
+
+  "testimonials": {
+    "eyebrow": "Quem confia",
+    "titleHtml": "Palavras das nossas clientes",
+    "items": [
+      { "stars": 5, "quote": "Saio de lá sempre me sentindo mais bonita e leve. O cuidado com a saúde do cabelo faz toda a diferença.", "name": "Helena M.", "meta": "Cliente desde 2018" },
+      { "stars": 5, "quote": "A coloração natural mudou a minha relação com o cabelo. Resultado lindo e sem agredir os fios.", "name": "Renata C.", "meta": "Cliente desde 2020" },
+      { "stars": 5, "quote": "Ambiente acolhedor, equipe atenciosa e um resultado impecável. Recomendo de olhos fechados.", "name": "Beatriz L.", "meta": "Cliente desde 2016" }
+    ]
+  },
+
+  "instagram": {
+    "show": true,
+    "handle": "@atelierlumiere",
+    "url": "https://instagram.com",
+    "titleHtml": "Nosso <em>dia a dia</em>"
+  },
+
+  "contact": {
+    "eyebrow": "Agende",
+    "titleHtml": "Vamos cuidar de <em>você</em>",
+    "whatsapp": "5511999990000",
+    "phoneDisplay": "(11) 99999-0000",
+    "instagramUrl": "https://instagram.com",
+    "address": "Rua dos Pinheiros, 1200 - Pinheiros, São Paulo - SP",
+    "hours": "Ter a Sáb · 09h às 20h",
+    "cidade": "São Paulo — SP"
+  },
+
+  "footer": {
+    "tagline": "Beleza natural, cuidado de verdade."
+  }
+}

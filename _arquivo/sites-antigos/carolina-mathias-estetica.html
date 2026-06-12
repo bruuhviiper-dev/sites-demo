@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carolina Mathias Estética Avançada | São José do Rio Preto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* === TOKENS === */
+    :root {
+      --blush:         #5BA3C9;
+      --blush-light:   #89CFF0;
+      --blush-dark:    #2B6B9A;
+      --blush-pale:    #E8F4FC;
+      --sage:          #6B9080;
+      --sage-light:    #89ADA0;
+      --sage-dark:     #4E7060;
+      --sage-pale:     #EEF4F1;
+      --gold:          #C9A870;
+      --gold-light:    #DABC8A;
+      --cream:         #F7FAFC;
+      --cream-mid:     #E8F0F5;
+      --white:         #FFFFFF;
+      --ink:           #1A2C3A;
+      --ink-mid:       #3F5A6E;
+      --ink-soft:      #7090A8;
+      --font-serif:    'Playfair Display', Georgia, serif;
+      --font-sans:     'Nunito', system-ui, sans-serif;
+      --radius-sm:     6px;
+      --radius-md:     14px;
+      --radius-lg:     28px;
+      --shadow-sm:     0 2px 8px rgba(44,31,36,.06);
+      --shadow-md:     0 6px 24px rgba(44,31,36,.10);
+      --shadow-lg:     0 20px 60px rgba(44,31,36,.14);
+      --transition:    .35s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* === RESET === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--ink); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    h1,h2,h3,h4 { font-family: var(--font-serif); line-height: 1.2; }
+
+    /* === BUTTONS === */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: 50px; font-family: var(--font-sans);
+      font-weight: 700; font-size: .95rem; letter-spacing: .04em;
+      cursor: pointer; border: none; transition: var(--transition); white-space: nowrap;
+    }
+    .btn-primary { background: var(--blush); color: var(--white); }
+    .btn-primary:hover { background: var(--blush-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,.55); }
+    .btn-outline:hover { background: rgba(255,255,255,.12); border-color: var(--white); }
+    .btn-sage { background: var(--sage); color: var(--white); }
+    .btn-sage:hover { background: var(--sage-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    /* === LAYOUT === */
+    .section    { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+    .container  { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .section-tag   { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blush); margin-bottom: 12px; }
+    .section-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--ink); margin-bottom: 16px; }
+    .section-sub   { font-size: 1.1rem; color: var(--ink-mid); max-width: 560px; line-height: 1.8; }
+
+    /* === REVEAL === */
+    [data-reveal] { opacity: 0; transform: translateY(32px); transition: opacity .7s ease, transform .7s ease; }
+    [data-reveal].visible { opacity: 1; transform: none; }
+
+    /* ======================== HEADER ======================== */
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0; background: transparent;
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+    }
+    .header.scrolled {
+      background: rgba(250,250,247,.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(44,31,36,.08); padding: 12px 0;
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+
+    /* Logo */
+    .logo { display: flex; align-items: center; gap: 12px; color: var(--white); transition: color var(--transition); }
+    .logo-mark {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.30);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem; color: var(--white);
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .logo-name { font-family: var(--font-serif); font-size: 1rem; font-weight: 600; }
+    .logo-sub  { font-family: var(--font-sans); font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-light); transition: color var(--transition); }
+
+    .header.scrolled .logo        { color: var(--blush-dark); }
+    .header.scrolled .logo-mark   { background: var(--blush); border-color: transparent; color: var(--white); }
+    .header.scrolled .logo-sub    { color: var(--blush); }
+
+    /* Nav */
+    .nav { display: flex; align-items: center; gap: 36px; }
+    .nav a { font-family: var(--font-sans); font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.82); transition: color .3s; }
+    .nav a:hover { color: var(--gold-light); }
+    .header.scrolled .nav a       { color: var(--ink-mid); }
+    .header.scrolled .nav a:hover { color: var(--blush); }
+
+    .header-cta-btn {
+      background: var(--blush); color: var(--white);
+      padding: 10px 22px; border-radius: 50px;
+      font-family: var(--font-sans); font-size: .82rem; font-weight: 700; letter-spacing: .06em;
+      transition: var(--transition);
+    }
+    .header-cta-btn:hover { background: var(--blush-dark); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+    .header.scrolled .hamburger span { background: var(--blush-dark); }
+
+    /* Mobile menu */
+    .mobile-menu { display: none; position: fixed; inset: 0; z-index: 999; background: var(--blush-dark); flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-serif); font-size: 1.8rem; color: var(--white); font-style: italic; }
+    .mobile-menu-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+
+    /* ======================== STICKY BAR ======================== */
+    .sticky-bar {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 900;
+      background: var(--blush-dark); color: var(--white);
+      padding: 12px 20px; align-items: center; justify-content: space-between; gap: 12px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,.18);
+    }
+    .sticky-bar.visible { display: flex; }
+    .sticky-bar-text { font-family: var(--font-serif); font-size: .95rem; font-style: italic; flex: 1; }
+    .sticky-bar-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .sticky-bar .btn { padding: 9px 20px; font-size: .82rem; background: var(--white); color: var(--blush-dark); }
+    .sticky-bar .btn:hover { background: var(--cream); }
+    .sticky-close {
+      background: rgba(255,255,255,.15); border: none; color: var(--white);
+      width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; font-size: .9rem;
+      transition: background .25s; flex-shrink: 0;
+    }
+    .sticky-close:hover { background: rgba(255,255,255,.3); }
+
+    /* ======================== HERO ======================== */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--blush-dark) 0%, #1A5080 55%, #0D3252 100%);
+      position: relative; overflow: hidden; padding-top: 100px;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero::after {
+      content: ''; position: absolute; right: -100px; top: -100px;
+      width: 650px; height: 650px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,112,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(8px); border-radius: 50px;
+      padding: 8px 18px; margin-bottom: 24px;
+      font-size: .82rem; font-weight: 600; letter-spacing: .08em; color: var(--gold-light);
+    }
+    .hero-title { font-size: clamp(2.6rem, 5vw, 4.2rem); color: var(--white); line-height: 1.1; margin-bottom: 24px; }
+    .hero-title em { font-style: italic; color: var(--gold-light); display: block; }
+    .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,.78); line-height: 1.8; margin-bottom: 36px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-stats { display: flex; gap: 32px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.15); }
+    .hero-stat-num { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--white); line-height: 1; }
+    .hero-stat-label { font-size: .8rem; color: rgba(255,255,255,.6); margin-top: 4px; }
+
+    .hero-visual { position: relative; display: flex; justify-content: center; }
+    .hero-img-wrap {
+      width: 400px; height: 500px; border-radius: 200px 200px 180px 180px;
+      overflow: hidden; position: relative;
+      box-shadow: 0 40px 80px rgba(0,0,0,.3);
+    }
+    .hero-img-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(160deg, rgba(201,168,112,.25) 0%, rgba(107,144,128,.18) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-img-placeholder i { font-size: 5rem; color: rgba(255,255,255,.22); }
+
+    /* Floating rating card */
+    .hero-rating-card {
+      position: absolute; bottom: 36px; left: -16px;
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 14px 20px; box-shadow: var(--shadow-lg);
+      display: flex; align-items: center; gap: 12px; min-width: 190px;
+    }
+    .hero-rating-icon { width: 40px; height: 40px; border-radius: 50%; background: #FFF3E0; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .hero-rating-num   { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--ink); line-height: 1; }
+    .hero-rating-stars { color: #FFA500; font-size: .72rem; letter-spacing: 1px; }
+    .hero-rating-label { font-size: .72rem; color: var(--ink-soft); margin-top: 2px; }
+
+    /* ======================== TRUST BAR ======================== */
+    .trust-bar { background: var(--blush); padding: 20px 0; }
+    .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: var(--white); }
+    .trust-item i { font-size: 1.1rem; opacity: .85; }
+    .trust-item span { font-size: .88rem; font-weight: 600; letter-spacing: .04em; }
+    .trust-sep { width: 1px; height: 24px; background: rgba(255,255,255,.3); }
+
+    /* ======================== SERVIÇOS ======================== */
+    .services-section { background: var(--cream); }
+    .services-header  { text-align: center; margin-bottom: 56px; }
+    .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .service-card {
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 36px 28px; border: 1px solid transparent;
+      box-shadow: var(--shadow-sm); transition: var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--blush); transform: scaleX(0); transform-origin: left;
+      transition: transform .4s ease;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--blush-pale); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { width: 56px; height: 56px; border-radius: var(--radius-md); background: var(--blush-pale); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.4rem; color: var(--blush); transition: var(--transition); }
+    .service-card:hover .service-icon { background: var(--blush); color: var(--white); }
+    .service-card h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--ink); margin-bottom: 10px; }
+    .service-card p  { font-size: .92rem; color: var(--ink-mid); line-height: 1.7; }
+    .service-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--cream-mid); }
+    .service-price { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--blush-dark); }
+    .service-tag { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blush); }
+
+    /* === PRODUTOS === */
+    .produtos-section { background: var(--blush-pale); }
+    .produtos-header  { text-align: center; margin-bottom: 56px; }
+    .produtos-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .produto-card {
+      background: var(--white); border-radius: var(--radius-md);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .produto-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .produto-img {
+      height: 140px; background: linear-gradient(145deg, var(--blush-pale) 0%, var(--cream-mid) 100%);
+      display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
+    }
+    .produto-info { padding: 16px; }
+    .produto-name { font-family: var(--font-serif); font-size: .95rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; line-height: 1.3; }
+    .produto-vol  { font-size: .78rem; color: var(--ink-soft); margin-bottom: 10px; }
+    .produto-price { font-family: var(--font-serif); font-size: 1rem; font-weight: 700; color: var(--blush-dark); }
+    .produto-cta {
+      display: block; text-align: center; margin-top: 10px;
+      padding: 8px; border-radius: var(--radius-sm); font-size: .8rem; font-weight: 700;
+      background: var(--blush-pale); color: var(--blush-dark); transition: var(--transition);
+    }
+    .produto-cta:hover { background: var(--blush); color: var(--white); }
+
+    /* ======================== COMO FUNCIONA ======================== */
+    .steps-section { background: var(--blush-pale); }
+    .steps-header  { text-align: center; margin-bottom: 56px; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+    .step-card { text-align: center; }
+    .step-number {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--blush); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700;
+      margin: 0 auto 20px; box-shadow: 0 8px 24px rgba(91,163,201,.3);
+    }
+    .step-card h3 { font-family: var(--font-serif); font-size: 1.25rem; color: var(--ink); margin-bottom: 12px; }
+    .step-card p  { font-size: .95rem; color: var(--ink-mid); line-height: 1.8; max-width: 280px; margin: 0 auto; }
+
+    /* ======================== SOBRE ======================== */
+    .sobre-section { background: var(--white); }
+    .sobre-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .sobre-img-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; }
+    .sobre-img-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(160deg, var(--blush-pale) 0%, var(--sage-pale) 100%);
+      display: flex; align-items: center; justify-content: center; min-height: 420px;
+    }
+    .sobre-img-placeholder i { font-size: 4rem; color: var(--blush-light); }
+    .sobre-badge {
+      position: absolute; bottom: 28px; right: -24px;
+      background: var(--blush); color: var(--white); border-radius: var(--radius-md);
+      padding: 18px 24px; text-align: center; box-shadow: var(--shadow-lg);
+    }
+    .sobre-badge-num   { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; line-height: 1; }
+    .sobre-badge-label { font-size: .75rem; letter-spacing: .06em; opacity: .85; margin-top: 4px; }
+    .sobre-content     { display: flex; flex-direction: column; gap: 20px; }
+    .sobre-highlight { background: var(--blush-pale); border-left: 4px solid var(--blush); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 18px 20px; font-style: italic; color: var(--blush-dark); font-family: var(--font-serif); font-size: 1.05rem; }
+    .sobre-list { display: flex; flex-direction: column; gap: 10px; }
+    .sobre-list li { display: flex; align-items: center; gap: 10px; font-size: .95rem; color: var(--ink-mid); }
+    .sobre-list li i { color: var(--sage); font-size: .9rem; width: 16px; }
+
+    /* ======================== AVALIAÇÕES ======================== */
+    .reviews-section { background: var(--blush-dark); }
+    .reviews-header  { text-align: center; margin-bottom: 56px; }
+    .reviews-header .section-tag   { color: var(--gold-light); }
+    .reviews-header .section-title { color: var(--white); }
+    .rating-hero { display: flex; align-items: center; justify-content: center; gap: 32px; margin-bottom: 56px; flex-wrap: wrap; }
+    .rating-big-num    { font-family: var(--font-serif); font-size: 5rem; font-weight: 700; color: var(--white); line-height: 1; text-align: center; }
+    .rating-big-stars  { color: #FFA500; font-size: 1.4rem; letter-spacing: 3px; margin: 8px 0; text-align: center; }
+    .rating-big-count  { font-size: .9rem; color: rgba(255,255,255,.65); text-align: center; }
+    .rating-sep        { width: 1px; height: 80px; background: rgba(255,255,255,.2); }
+    .rating-features   { display: flex; flex-direction: column; gap: 14px; }
+    .rating-feature    { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.82); font-size: .95rem; }
+    .rating-feature i  { color: var(--gold-light); width: 20px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .review-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius-md); padding: 28px 24px; }
+    .review-stars  { color: #FFA500; font-size: .85rem; letter-spacing: 2px; margin-bottom: 14px; }
+    .review-text   { font-size: .95rem; color: rgba(255,255,255,.82); line-height: 1.8; margin-bottom: 18px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--blush); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-weight: 700; color: var(--white); font-size: .9rem; flex-shrink: 0; }
+    .review-name   { font-weight: 600; color: var(--white); font-size: .88rem; }
+    .review-date   { font-size: .75rem; color: rgba(255,255,255,.5); }
+
+    /* ======================== AGENDAMENTO ======================== */
+    .booking-section { background: var(--cream); }
+    .booking-inner   { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .booking-content { display: flex; flex-direction: column; gap: 28px; }
+    .booking-info-list { display: flex; flex-direction: column; gap: 16px; }
+    .booking-info-item { display: flex; align-items: flex-start; gap: 14px; }
+    .booking-info-icon { width: 42px; height: 42px; border-radius: 50%; background: var(--blush-pale); display: flex; align-items: center; justify-content: center; color: var(--blush); font-size: .95rem; flex-shrink: 0; }
+    .booking-info-text strong { display: block; font-weight: 700; font-size: .95rem; color: var(--ink); margin-bottom: 3px; }
+    .booking-info-text span   { font-size: .9rem; color: var(--ink-mid); }
+    .booking-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Mapa estilizado */
+    .map-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md); overflow: hidden;
+    }
+    .map-visual {
+      height: 200px; background: linear-gradient(145deg, #e8f0ed 0%, #d6e8df 100%);
+      position: relative; display: flex; align-items: center; justify-content: center;
+    }
+    /* Decorative grid lines simulating a map */
+    .map-visual::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(107,144,128,.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(107,144,128,.12) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .map-visual::after {
+      content: ''; position: absolute;
+      width: 180px; height: 3px; background: rgba(107,144,128,.25);
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      border-radius: 2px;
+    }
+    /* Ruas simuladas */
+    .map-road-h, .map-road-v {
+      position: absolute; background: rgba(255,255,255,.7);
+    }
+    .map-road-h { height: 10px; left: 0; right: 0; top: 50%; transform: translateY(-50%); border-radius: 0; }
+    .map-road-v { width: 10px; top: 0; bottom: 0; left: 40%; border-radius: 0; }
+    .map-pin {
+      position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center;
+    }
+    .map-pin-head {
+      width: 48px; height: 48px; border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg); background: var(--blush);
+      box-shadow: 0 8px 24px rgba(91,163,201,.45);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .map-pin-head i { transform: rotate(45deg); color: var(--white); font-size: 1.1rem; }
+    .map-pin-shadow {
+      width: 16px; height: 6px; background: rgba(0,0,0,.15);
+      border-radius: 50%; margin-top: 4px; filter: blur(2px);
+    }
+    .map-pulse {
+      position: absolute; width: 80px; height: 80px; border-radius: 50%;
+      border: 2px solid var(--blush); opacity: .4;
+      animation: pulse 2s ease-out infinite;
+    }
+    @keyframes pulse { 0% { transform: scale(.5); opacity: .6; } 100% { transform: scale(1.5); opacity: 0; } }
+
+    .map-info { padding: 24px 28px; }
+    .map-info-name { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+    .map-info-addr { font-size: .88rem; color: var(--ink-mid); line-height: 1.6; margin-bottom: 16px; }
+    .map-info-row  { display: flex; align-items: center; gap: 8px; font-size: .85rem; margin-bottom: 8px; }
+    .map-info-row i { color: var(--blush); width: 16px; flex-shrink: 0; }
+    .map-info-row .open-badge { background: #E6F7EE; color: #1A7A3C; font-size: .75rem; font-weight: 700; padding: 2px 8px; border-radius: 50px; }
+    .map-cta { display: flex; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--cream-mid); }
+    .map-cta a {
+      flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 10px 14px; border-radius: var(--radius-sm);
+      font-size: .82rem; font-weight: 700; transition: var(--transition);
+    }
+    .map-cta-route { background: var(--blush-pale); color: var(--blush-dark); }
+    .map-cta-route:hover { background: var(--blush); color: var(--white); }
+    .map-cta-wpp   { background: #E8F8EE; color: #1A7A3C; }
+    .map-cta-wpp:hover { background: #25D366; color: var(--white); }
+
+    /* Horários */
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px; }
+    .hours-row { display: flex; justify-content: space-between; font-size: .88rem; padding: 8px 12px; background: var(--white); border-radius: var(--radius-sm); border: 1px solid var(--cream-mid); }
+    .hours-row span:first-child { color: var(--ink-mid); }
+    .hours-row span:last-child  { font-weight: 700; color: var(--ink); }
+
+    /* ======================== FOOTER ======================== */
+    .footer { background: #0D2438; color: rgba(255,255,255,.72); padding: 64px 0 32px; }
+    .footer-inner  { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand  { display: flex; flex-direction: column; gap: 16px; }
+    .footer-logo   { font-family: var(--font-serif); font-size: 1.2rem; color: var(--white); font-weight: 600; line-height: 1.3; }
+    .footer-desc   { font-size: .9rem; line-height: 1.8; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: .9rem; transition: var(--transition); }
+    .footer-social a:hover { background: var(--blush); }
+    .footer-col h4  { font-family: var(--font-serif); font-size: 1rem; color: var(--white); margin-bottom: 16px; }
+    .footer-col li  { margin-bottom: 10px; font-size: .88rem; }
+    .footer-col a   { color: rgba(255,255,255,.65); transition: color .3s; }
+    .footer-col a:hover { color: var(--gold-light); }
+    .footer-contact li { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; margin-bottom: 12px; }
+    .footer-contact li i { color: var(--blush-light); margin-top: 3px; flex-shrink: 0; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: .82rem; }
+    .footer-bottom a { color: var(--blush-light); }
+
+    /* ======================== FLOAT BUTTON ======================== */
+    .float-btn {
+      position: fixed; bottom: 28px; right: 28px; z-index: 890;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25D366; color: var(--white);
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,.45); transition: var(--transition);
+    }
+    .float-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,.55); }
+
+    /* ======================== RESPONSIVE ======================== */
+    @media (max-width: 1024px) {
+      .services-grid  { grid-template-columns: 1fr; }
+      .produtos-grid  { grid-template-columns: repeat(2,1fr); }
+      .sobre-inner   { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-badge   { right: 20px; }
+      .booking-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav, .header-cta-btn { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner  { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+      .hero-visual { display: none; }
+      .hero-stats  { justify-content: center; }
+      .hero-actions { justify-content: center; }
+      .hero-badge  { margin: 0 auto 24px; width: fit-content; }
+      .hero-desc   { margin: 0 auto 36px; }
+      .trust-bar-inner { gap: 20px; }
+      .trust-sep   { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .produtos-grid { grid-template-columns: repeat(2,1fr); }
+      .steps-grid    { grid-template-columns: 1fr; }
+      .reviews-grid  { grid-template-columns: 1fr; }
+      .footer-inner  { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .rating-sep    { display: none; }
+    }
+    @media (max-width: 480px) {
+      .section { padding: 64px 0; }
+      .hours-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Carolina Mathias Estética Avançada">
+        <div class="logo-mark">C</div>
+        <div class="logo-text">
+          <span class="logo-name">Carolina Mathias</span>
+          <span class="logo-sub">Estética Avançada</span>
+        </div>
+      </a>
+      <nav class="nav" role="navigation">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#agendamento">Contato</a>
+      </nav>
+      <a href="https://wa.me/5517992179975?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação." class="header-cta-btn" target="_blank" rel="noopener">Agendar Consulta</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="menu-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#servicos"   class="menu-link">Serviços</a>
+  <a href="#sobre"      class="menu-link">Sobre</a>
+  <a href="#avaliacoes" class="menu-link">Avaliações</a>
+  <a href="#agendamento" class="menu-link">Contato</a>
+  <a href="https://wa.me/5517992179975?text=Olá!%20Gostaria%20de%20agendar." class="btn btn-outline" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="sticky-bar">
+  <span class="sticky-bar-text">Cuide da sua pele com quem entende.</span>
+  <div class="sticky-bar-actions">
+    <a href="https://wa.me/5517992179975?text=Olá!%20Gostaria%20de%20agendar%20um%20horário." class="btn" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Agendar agora
+    </a>
+    <button class="sticky-close" id="sticky-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge" data-reveal>
+          <i class="fa-solid fa-location-dot"></i>
+          Boa Vista · São José do Rio Preto
+        </div>
+        <h1 class="hero-title" data-reveal data-delay="100">
+          Pele saudável,<br>
+          <em>beleza que dura.</em>
+        </h1>
+        <p class="hero-desc" data-reveal data-delay="200">
+          Tratamentos estéticos avançados com protocolos personalizados para cada tipo de pele. Cuidado real, resultados visíveis.
+        </p>
+        <div class="hero-actions" data-reveal data-delay="300">
+          <a href="https://wa.me/5517992179975?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação%20gratuita." class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Agendar Avaliação
+          </a>
+          <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+        </div>
+        <div class="hero-stats" data-reveal data-delay="400">
+          <div>
+            <div class="hero-stat-num"><span data-count="5.0" data-suffix="">5,0</span> ★</div>
+            <div class="hero-stat-label">No Google</div>
+          </div>
+          <div>
+            <div class="hero-stat-num"><span data-count="51" data-suffix="+">51+</span></div>
+            <div class="hero-stat-label">Avaliações</div>
+          </div>
+          <div>
+            <div class="hero-stat-num"><span data-count="18" data-suffix="+">18+</span></div>
+            <div class="hero-stat-label">Anos de experiência</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal data-delay="150">
+        <div class="hero-img-wrap">
+          <div class="hero-img-placeholder">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+        </div>
+        <div class="hero-rating-card">
+          <div class="hero-rating-icon">⭐</div>
+          <div>
+            <div class="hero-rating-num">5,0</div>
+            <div class="hero-rating-stars">★★★★★</div>
+            <div class="hero-rating-label">51 avaliações Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><i class="fa-solid fa-star"></i><span>Nota 5,0 no Google</span></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span>Protocolos Certificados</span></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fa-solid fa-clock"></i><span>Ter–Sex 9h–18h · Sáb 9h–14h</span></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fa-brands fa-whatsapp"></i><span>(17) 99217-9975</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section class="section services-section" id="servicos">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-tag" data-reveal>Nossos Tratamentos</span>
+      <h2 class="section-title" data-reveal data-delay="100">Estética avançada<br>para cada necessidade</h2>
+      <p class="section-sub" style="margin:0 auto" data-reveal data-delay="200">Protocolos personalizados para realçar sua beleza natural com segurança e eficácia comprovada.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-reveal>
+        <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+        <h3>Limpeza de Pele</h3>
+        <p>Extração segura e profissional com vapor, remoção de cravos e hidratação pós-procedimento. Pele renovada em 1h.</p>
+        <div class="service-footer"><span class="service-tag">Mais pedido</span><span class="service-price">R$ 130</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>Peelings</h3>
+        <p>Renovação celular com ácidos controlados, uniformizando tom e textura. Resultado visível desde a primeira sessão.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 120</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="200">
+        <div class="service-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
+        <h3>Hidratação com Fios de Seda</h3>
+        <p>Técnica exclusiva com fios de seda que promove hidratação profunda e efeito luminoso imediato na pele.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 99</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="300">
+        <div class="service-icon"><i class="fa-solid fa-circle-dot"></i></div>
+        <h3>Microagulhamento Facial e Corporal</h3>
+        <p>Estimulação do colágeno com microcanais. Reduz marcas, cicatrizes e potencializa a absorção de ativos.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 199</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="400">
+        <div class="service-icon"><i class="fa-solid fa-hand-dots"></i></div>
+        <h3>Drenagem Linfática</h3>
+        <p>Técnica manual especializada para reduzir inchaços, melhorar circulação e proporcionar relaxamento profundo.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 79</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="500">
+        <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3>Detox Corporal</h3>
+        <p>Protocolo completo de desintoxicação que elimina toxinas, melhora o aspecto da pele e promove bem-estar geral.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 79</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+        <h3>Intradermoterapia</h3>
+        <p>Tratamento para gordura localizada com microinjeções de ativos lipolíticos diretamente na área desejada.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 250</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="200">
+        <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
+        <h3>Criolipólise</h3>
+        <p>Tecnologia de resfriamento localizado que elimina células de gordura de forma não invasiva e definitiva.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 350</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="300">
+        <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3>Detox + Drenagem + Radiofrequência</h3>
+        <p>Sessão combinada que une desintoxicação, drenagem e radiofrequência para resultados corporais completos.</p>
+        <div class="service-footer"><span class="service-tag">Combo</span><span class="service-price">R$ 149</span></div>
+      </div>
+      <div class="service-card" data-reveal data-delay="400">
+        <div class="service-icon"><i class="fa-solid fa-sparkles" style="font-family:inherit"></i><i class="fa-solid fa-star"></i></div>
+        <h3>Hidragloss</h3>
+        <p>Tratamento inovador que proporciona efeito gloss na pele, com hidratação intensa e acabamento luminoso duradouro.</p>
+        <div class="service-footer"><span class="service-tag"></span><span class="service-price">R$ 150</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="section produtos-section" id="produtos">
+  <div class="container">
+    <div class="produtos-header">
+      <span class="section-tag" data-reveal>Linha de Produtos</span>
+      <h2 class="section-title" data-reveal data-delay="100">Cosméticos de alta performance</h2>
+      <p class="section-sub" style="margin:0 auto" data-reveal data-delay="200">Produtos selecionados por Carolina Mathias para potencializar seus tratamentos e cuidados em casa.</p>
+    </div>
+    <div class="produtos-grid">
+      <div class="produto-card" data-reveal>
+        <div class="produto-img">☀️</div>
+        <div class="produto-info">
+          <div class="produto-name">Filtro Solar Clareador Translúcido</div>
+          <div class="produto-vol">45g</div>
+          <div class="produto-price">R$ 126</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20o%20Filtro%20Solar%20Clareador%20Translúcido." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+      <div class="produto-card" data-reveal data-delay="100">
+        <div class="produto-img">🍋</div>
+        <div class="produto-info">
+          <div class="produto-name">Filtro Solar com Vitamina C</div>
+          <div class="produto-vol">45g</div>
+          <div class="produto-price">R$ 127</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20o%20Filtro%20Solar%20com%20Vitamina%20C." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+      <div class="produto-card" data-reveal data-delay="200">
+        <div class="produto-img">🧼</div>
+        <div class="produto-info">
+          <div class="produto-name">Sabonete Facial Antiacne</div>
+          <div class="produto-vol">120ml</div>
+          <div class="produto-price">R$ 89</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20o%20Sabonete%20Facial%20Antiacne." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+      <div class="produto-card" data-reveal data-delay="300">
+        <div class="produto-img">✨</div>
+        <div class="produto-info">
+          <div class="produto-name">Bio-C Primer Uniformizador</div>
+          <div class="produto-vol">—</div>
+          <div class="produto-price">R$ 99</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20o%20Bio-C%20Primer." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+      <div class="produto-card" data-reveal data-delay="100">
+        <div class="produto-img">🍊</div>
+        <div class="produto-info">
+          <div class="produto-name">Vitamina C 20% em Creme</div>
+          <div class="produto-vol">—</div>
+          <div class="produto-price">R$ 199</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20a%20Vitamina%20C%2020%%20em%20Creme." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+      <div class="produto-card" data-reveal data-delay="200">
+        <div class="produto-img">💧</div>
+        <div class="produto-info">
+          <div class="produto-name">Lipo Redux Body Slim Mousse</div>
+          <div class="produto-vol">250ml</div>
+          <div class="produto-price">R$ 199</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20o%20Lipo%20Redux%20Body%20Slim." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+      <div class="produto-card" data-reveal data-delay="300">
+        <div class="produto-img">🫧</div>
+        <div class="produto-info">
+          <div class="produto-name">BIO-C Cleanser</div>
+          <div class="produto-vol">120ml</div>
+          <div class="produto-price">R$ 89</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20o%20BIO-C%20Cleanser." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+      <div class="produto-card" data-reveal data-delay="400">
+        <div class="produto-img">🛡️</div>
+        <div class="produto-info">
+          <div class="produto-name">Filtro Solar Antiacne</div>
+          <div class="produto-vol">45g</div>
+          <div class="produto-price">R$ 126</div>
+          <a href="https://wa.me/5517992179975?text=Olá!%20Quero%20o%20Filtro%20Solar%20Antiacne." class="produto-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pedir agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section steps-section" id="como-funciona">
+  <div class="container">
+    <div class="steps-header">
+      <span class="section-tag" data-reveal>Sua jornada conosco</span>
+      <h2 class="section-title" data-reveal data-delay="100">Como funciona</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card" data-reveal>
+        <div class="step-number">1</div>
+        <h3>Avaliação Inicial</h3>
+        <p>Analisamos seu tipo de pele, histórico e objetivos para criar um protocolo totalmente personalizado para você.</p>
+      </div>
+      <div class="step-card" data-reveal data-delay="150">
+        <div class="step-number">2</div>
+        <h3>Protocolo Personalizado</h3>
+        <p>Aplicamos o tratamento ideal com produtos de alta performance e técnicas avançadas, com segurança e eficácia.</p>
+      </div>
+      <div class="step-card" data-reveal data-delay="300">
+        <div class="step-number">3</div>
+        <h3>Acompanhamento</h3>
+        <p>Orientamos sobre cuidados em casa e acompanhamos sua evolução para garantir os melhores resultados duradouros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section sobre-section" id="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div class="sobre-img-wrap" data-reveal>
+        <div class="sobre-img-placeholder">
+          <i class="fa-solid fa-user-nurse"></i>
+        </div>
+        <div class="sobre-badge">
+          <div class="sobre-badge-num">5,0 ★</div>
+          <div class="sobre-badge-label">51 avaliações</div>
+        </div>
+      </div>
+      <div class="sobre-content" data-reveal data-delay="200">
+        <span class="section-tag">Quem somos</span>
+        <h2 class="section-title">Carolina Mathias<br><em style="font-style:italic;color:var(--blush)">Estética Avançada</em></h2>
+        <div class="sobre-highlight">
+          "Cada pele conta uma história. Meu trabalho é ajudá-la a contar a mais bonita versão dela."
+        </div>
+        <p class="section-sub" style="max-width:100%">
+          Com mais de 18 anos de experiência como esteticista e cosmetóloga, Carolina une ciência e sensibilidade em cada atendimento. Cada sessão é planejada individualmente, respeitando as necessidades únicas de cada cliente — com nota máxima comprovada.
+        </p>
+        <ul class="sobre-list">
+          <li><i class="fa-solid fa-check"></i> Formação técnica especializada em estética</li>
+          <li><i class="fa-solid fa-check"></i> Protocolos baseados em evidências científicas</li>
+          <li><i class="fa-solid fa-check"></i> Produtos de alta performance importados</li>
+          <li><i class="fa-solid fa-check"></i> Ambiente acolhedor e higienizado</li>
+          <li><i class="fa-solid fa-check"></i> 51 clientes com nota máxima no Google</li>
+        </ul>
+        <a href="https://wa.me/5517992179975?text=Olá%20Carolina!%20Gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos." class="btn btn-primary" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:8px">
+          <i class="fa-brands fa-whatsapp"></i> Falar com Carolina
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="section reviews-section" id="avaliacoes">
+  <div class="container">
+    <div class="reviews-header">
+      <span class="section-tag" data-reveal>O que dizem nossos clientes</span>
+      <h2 class="section-title" data-reveal data-delay="100">Nota máxima no Google</h2>
+    </div>
+    <div class="rating-hero" data-reveal>
+      <div class="rating-big">
+        <div class="rating-big-num">5,0</div>
+        <div class="rating-big-stars">★★★★★</div>
+        <div class="rating-big-count">51 avaliações verificadas</div>
+      </div>
+      <div class="rating-sep"></div>
+      <div class="rating-features">
+        <div class="rating-feature"><i class="fa-solid fa-circle-check"></i> Atendimento excelente</div>
+        <div class="rating-feature"><i class="fa-solid fa-circle-check"></i> Resultados visíveis</div>
+        <div class="rating-feature"><i class="fa-solid fa-circle-check"></i> Ambiente limpo e aconchegante</div>
+        <div class="rating-feature"><i class="fa-solid fa-circle-check"></i> Profissional atenciosa</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card" data-reveal>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"A Carolina é incrível! Fiz limpeza de pele e a diferença foi enorme. Pele renovada, sem nenhuma vermelhidão. Super indico!"</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Ana Paula S.</div>
+            <div class="review-date">Via Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card" data-reveal data-delay="150">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Melhor estética que já fui! A Carolina é muito atenciosa, explica todo o processo e o resultado fala por si. Minha pele nunca esteve tão bonita."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Maria Fernanda L.</div>
+            <div class="review-date">Via Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card" data-reveal data-delay="300">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Fiz o peeling e o microagulhamento. Resultados surpreendentes! Profissional dedicada, ambiente lindo e preço justo. Com certeza vou voltar!"</p>
+        <div class="review-author">
+          <div class="review-avatar">J</div>
+          <div>
+            <div class="review-name">Juliana R.</div>
+            <div class="review-date">Via Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAMENTO -->
+<section class="section booking-section" id="agendamento">
+  <div class="container">
+    <div class="booking-inner">
+      <div class="booking-content" data-reveal>
+        <span class="section-tag">Localização & Contato</span>
+        <h2 class="section-title">Vamos cuidar<br>da sua pele?</h2>
+        <p class="section-sub">Estamos no Boa Vista, de fácil acesso. Agende pelo WhatsApp e garanta seu horário!</p>
+        <div class="booking-info-list">
+          <div class="booking-info-item">
+            <div class="booking-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="booking-info-text">
+              <strong>Endereço</strong>
+              <span>R. Siqueira Campos, 2344 — Boa Vista<br>São José do Rio Preto - SP · CEP 15025-065</span>
+            </div>
+          </div>
+          <div class="booking-info-item">
+            <div class="booking-info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="booking-info-text">
+              <strong>WhatsApp</strong>
+              <span>(17) 99217-9975</span>
+            </div>
+          </div>
+          <div class="booking-info-item">
+            <div class="booking-info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="booking-info-text">
+              <strong>Horários de Funcionamento</strong>
+              <div class="hours-grid" style="margin-top:10px">
+                <div class="hours-row"><span>Segunda</span><span style="color:var(--ink-soft)">Fechado</span></div>
+                <div class="hours-row"><span>Terça</span><span>9h – 18h</span></div>
+                <div class="hours-row"><span>Quarta</span><span>9h – 18h</span></div>
+                <div class="hours-row"><span>Quinta</span><span>9h – 18h</span></div>
+                <div class="hours-row"><span>Sexta</span><span>9h – 18h</span></div>
+                <div class="hours-row"><span>Sábado</span><span>9h – 14h</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="booking-cta">
+          <a href="https://wa.me/5517992179975?text=Olá%20Carolina!%20Gostaria%20de%20agendar%20um%20horário." class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Agendar via WhatsApp
+          </a>
+          <a href="tel:+5517992179975" class="btn btn-sage">
+            <i class="fa-solid fa-phone"></i> Ligar agora
+          </a>
+        </div>
+      </div>
+
+      <!-- Mapa estilizado -->
+      <div data-reveal data-delay="200">
+        <div class="map-card">
+          <div class="map-visual">
+            <div class="map-road-h"></div>
+            <div class="map-road-v"></div>
+            <div class="map-pin">
+              <div class="map-pulse"></div>
+              <div class="map-pin-head"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="map-pin-shadow"></div>
+            </div>
+          </div>
+          <div class="map-info">
+            <div class="map-info-name">Carolina Mathias Estética Avançada</div>
+            <div class="map-info-addr">R. Siqueira Campos, 2344 — Boa Vista<br>São José do Rio Preto — SP · CEP 15025-065</div>
+            <div class="map-info-row"><i class="fa-solid fa-clock"></i> <span>Fecha às 18h</span> <span class="open-badge">Aberto</span></div>
+            <div class="map-info-row"><i class="fa-solid fa-star" style="color:#FFA500"></i> <span>5,0 · 51 avaliações no Google</span></div>
+            <div class="map-cta">
+              <a href="https://maps.google.com/?q=R.+Siqueira+Campos,+2344,+Boa+Vista,+São+José+do+Rio+Preto+SP" class="map-cta-route" target="_blank" rel="noopener">
+                <i class="fa-solid fa-diamond-turn-right"></i> Como chegar
+              </a>
+              <a href="https://wa.me/5517992179975?text=Olá!%20Vi%20o%20mapa%20e%20quero%20agendar." class="map-cta-wpp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand" data-reveal>
+        <div class="footer-logo">Carolina Mathias<br><small style="font-family:var(--font-sans);font-size:.72rem;font-weight:500;letter-spacing:.12em;opacity:.65;text-transform:uppercase">Estética Avançada</small></div>
+        <p class="footer-desc">Tratamentos estéticos personalizados em São José do Rio Preto. Pele saudável, beleza real, resultados que você vê.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/5517992179975" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://carolinamathias4.wixsite.com" target="_blank" rel="noopener" aria-label="Site"><i class="fa-solid fa-globe"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col" data-reveal data-delay="100">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Limpeza de Pele</a></li>
+          <li><a href="#servicos">Hidratação Facial</a></li>
+          <li><a href="#servicos">Peeling Químico</a></li>
+          <li><a href="#servicos">Microagulhamento</a></li>
+          <li><a href="#servicos">Drenagem Facial</a></li>
+          <li><a href="#servicos">Anti-idade</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-reveal data-delay="200">
+        <h4>Contato</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i><span>R. Siqueira Campos, 2344<br>Boa Vista · São José do Rio Preto - SP</span></li>
+          <li><i class="fa-brands fa-whatsapp"></i><span>(17) 99217-9975</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>carolina.mathias@hotmail.com</span></li>
+          <li><i class="fa-solid fa-clock"></i><span>Ter–Sex: 9h–18h | Sáb: 9h–14h</span></li>
+          <li><i class="fa-solid fa-star"></i><span>5,0 ★ no Google (51 avaliações)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-reveal>
+      <span>© 2025 Carolina Mathias Estética Avançada · São José do Rio Preto - SP</span>
+      <span>Desenvolvido com <i class="fa-solid fa-heart" style="color:var(--blush-light)"></i> para seu negócio</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT BUTTON -->
+<a href="https://wa.me/5517992179975?text=Olá%20Carolina!%20Vi%20o%20site%20e%20gostaria%20de%20agendar." class="float-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+/* HEADER STATE */
+const $hdr = document.getElementById('header');
+window.addEventListener('scroll', () => $hdr.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+/* STICKY BAR */
+const $sticky   = document.getElementById('sticky-bar');
+const $floatBtn = document.querySelector('.float-btn');
+let stickyClosed = false;
+const heroObs = new IntersectionObserver(([e]) => {
+  if (stickyClosed) return;
+  const show = !e.isIntersecting;
+  $sticky.classList.toggle('visible', show);
+  $floatBtn.style.bottom = show ? '76px' : '28px';
+}, { threshold: 0 });
+heroObs.observe(document.getElementById('hero'));
+document.getElementById('sticky-close').addEventListener('click', () => {
+  stickyClosed = true;
+  $sticky.classList.remove('visible');
+  $floatBtn.style.bottom = '28px';
+});
+
+/* MOBILE MENU */
+const $menu = document.getElementById('mobile-menu');
+document.getElementById('hamburger').addEventListener('click', () => $menu.classList.add('open'));
+document.getElementById('menu-close').addEventListener('click', () => $menu.classList.remove('open'));
+document.querySelectorAll('.menu-link').forEach(l => l.addEventListener('click', () => $menu.classList.remove('open')));
+
+/* SCROLL REVEAL */
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), +(e.target.dataset.delay || 0));
+      revObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('[data-reveal]').forEach(el => revObs.observe(el));
+
+/* COUNTERS */
+function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+function animateCounter(el) {
+  const raw = el.dataset.count, target = parseFloat(raw), suffix = el.dataset.suffix || '', isFloat = raw.includes('.');
+  const start = performance.now();
+  (function step(now) {
+    const t = Math.min((now - start) / 1500, 1), val = target * easeOut(t);
+    el.textContent = (isFloat ? val.toFixed(1).replace('.', ',') : Math.round(val)) + suffix;
+    if (t < 1) requestAnimationFrame(step);
+  })(performance.now());
+}
+const cntObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); cntObs.unobserve(e.target); } });
+}, { threshold: 0.3 });
+document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+</script>
+</body>
+</html>

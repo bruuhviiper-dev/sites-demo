@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Sthetizar em São José do Rio Preto — Limpeza de Pele, Drenagem Linfática, Radiofrequência, Peeling, Micropigmentação e Tratamentos Corporais no Edifício Onix Center Sul.">
+    <title>Clínica Sthetizar | Estética &amp; Saúde — São José do Rio Preto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ============================================================
+           DESIGN TOKENS
+           {{-- Blade: extrair para config/design.php --}}
+        ============================================================ */
+        :root {
+            --emerald:        #1B4332;
+            --emerald-light:  #2D6A4F;
+            --emerald-mid:    #40916C;
+            --emerald-pale:   #D8F3DC;
+            --emerald-muted:  #B7E4C7;
+
+            --gold:           #C9A96E;
+            --gold-light:     #D9BF8A;
+            --gold-dark:      #A8844A;
+            --gold-pale:      #F5EDD8;
+            --gold-muted:     #EAD9B5;
+
+            --white:          #FFFFFF;
+            --cream:          #FAFAF7;
+            --cream-mid:      #F2F0E8;
+            --cream-dark:     #E8E3D5;
+            --ink:            #1A1A1A;
+            --ink-mid:        #4A4A4A;
+            --ink-soft:       #7A7A7A;
+            --border:         #E0DDD0;
+            --border-soft:    #EDEAE0;
+
+            --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+            --font-sans:  'Lato', system-ui, -apple-system, sans-serif;
+
+            --shadow-xs:   0 1px 4px  rgba(27,67,50,.06);
+            --shadow-sm:   0 2px 12px rgba(27,67,50,.08);
+            --shadow-md:   0 6px 28px rgba(27,67,50,.12);
+            --shadow-lg:   0 12px 48px rgba(27,67,50,.15);
+            --shadow-xl:   0 24px 64px rgba(27,67,50,.18);
+            --shadow-gold: 0 8px 28px rgba(201,169,110,.30);
+
+            --r-sm:   6px;
+            --r-md:   12px;
+            --r-lg:   20px;
+            --r-xl:   32px;
+            --r-full: 999px;
+
+            --ease-smooth: cubic-bezier(.4,0,.2,1);
+            --ease-out:    cubic-bezier(.22,.68,0,1.1);
+        }
+
+        /* ============================================================
+           RESET & BASE
+        ============================================================ */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        /* ============================================================
+           TYPOGRAPHY
+        ============================================================ */
+        h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12; }
+
+        .section-eyebrow {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-size: .68rem; font-weight: 700; letter-spacing: .2em;
+            text-transform: uppercase; color: var(--gold);
+            margin-bottom: 16px;
+        }
+        .section-eyebrow::before {
+            content: ''; display: block;
+            width: 28px; height: 1px; background: var(--gold);
+        }
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 600; color: var(--emerald);
+            margin-bottom: 16px;
+        }
+        .section-lead {
+            font-size: 1rem; color: var(--ink-mid);
+            max-width: 600px; line-height: 1.75;
+        }
+        .section-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+        .section-head .section-lead { margin: 0 auto; }
+
+        /* ============================================================
+           LAYOUT
+        ============================================================ */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 100px 0; }
+
+        /* ============================================================
+           BUTTONS
+        ============================================================ */
+        .btn {
+            display: inline-flex; align-items: center; gap: 9px;
+            padding: 13px 28px;
+            font-family: var(--font-sans);
+            font-size: .85rem; font-weight: 700; letter-spacing: .06em;
+            border-radius: var(--r-full);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: transform .25s var(--ease-smooth), box-shadow .25s, background .25s, border-color .25s;
+            white-space: nowrap;
+        }
+        .btn-emerald { background: var(--emerald); color: var(--white); border-color: var(--emerald); }
+        .btn-emerald:hover { background: var(--emerald-light); border-color: var(--emerald-light); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
+        .btn-gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+        .btn-outline-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+        .btn-outline-white:hover { background: rgba(255,255,255,.1); border-color: var(--white); transform: translateY(-2px); }
+        .btn-outline-gold { background: transparent; color: var(--gold); border-color: var(--gold); }
+        .btn-outline-gold:hover { background: var(--gold); color: var(--white); transform: translateY(-2px); }
+        .btn-lg { padding: 16px 36px; font-size: .92rem; }
+
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        [data-reveal] {
+            opacity: 0; transform: translateY(28px);
+            transition: opacity .7s var(--ease-smooth), transform .7s var(--ease-smooth);
+        }
+        [data-reveal].is-visible { opacity: 1; transform: none; }
+        [data-delay="1"] { transition-delay: .12s; }
+        [data-delay="2"] { transition-delay: .24s; }
+        [data-delay="3"] { transition-delay: .36s; }
+        [data-delay="4"] { transition-delay: .48s; }
+        [data-delay="5"] { transition-delay: .60s; }
+        [data-delay="6"] { transition-delay: .72s; }
+
+        /* ============================================================
+           HEADER
+           {{-- Blade: @include('partials.header') --}}
+        ============================================================ */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 0 24px;
+            transition: background .35s, backdrop-filter .35s, box-shadow .35s;
+        }
+        .header.scrolled {
+            background: rgba(250,250,247,.93);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: var(--shadow-sm);
+        }
+        .header-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px;
+        }
+        /* Logo — estado padrão (header transparente sobre hero escuro) */
+        .logo {
+            display: flex; align-items: center; gap: 11px;
+            font-family: var(--font-serif);
+            font-size: 1.4rem; font-weight: 600; color: var(--white);
+            letter-spacing: .02em;
+            transition: color .35s;
+        }
+        .logo-mark {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,.18);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: var(--r-sm);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            transition: background .35s, border-color .35s;
+        }
+        .logo-mark i { color: var(--gold); font-size: 1rem; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1; }
+        .logo-name { font-size: 1.3rem; }
+        .logo-sub {
+            font-size: .58rem; font-family: var(--font-sans);
+            letter-spacing: .18em; text-transform: uppercase;
+            color: var(--gold-light); font-weight: 700; margin-top: 3px;
+            transition: color .35s;
+        }
+
+        /* Logo — estado scrolled (header com fundo claro) */
+        .header.scrolled .logo { color: var(--emerald); }
+        .header.scrolled .logo-mark { background: var(--emerald); border-color: transparent; }
+        .header.scrolled .logo-sub { color: var(--gold); }
+
+        /* Nav — estado padrão (sobre hero escuro) */
+        .nav { display: flex; align-items: center; gap: 32px; }
+        .nav a {
+            font-size: .78rem; font-weight: 700; letter-spacing: .1em;
+            text-transform: uppercase; color: rgba(255,255,255,.82);
+            position: relative; padding-bottom: 3px;
+            transition: color .3s;
+        }
+        .nav a::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 0; height: 1px; background: var(--gold);
+            transition: width .3s;
+        }
+        .nav a:hover { color: var(--gold-light); }
+        .nav a:hover::after { width: 100%; }
+
+        /* Nav — estado scrolled */
+        .header.scrolled .nav a { color: var(--ink-mid); }
+        .header.scrolled .nav a:hover { color: var(--emerald); }
+
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; padding: 4px; background: none; border: none;
+        }
+        .hamburger span {
+            display: block; width: 22px; height: 2px;
+            background: var(--white); border-radius: 2px;
+            transition: all .3s;
+        }
+        .header.scrolled .hamburger span { background: var(--emerald); }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none; position: fixed; inset: 0; z-index: 99;
+            background: var(--cream);
+            flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+        }
+        .mobile-menu.is-open { display: flex; }
+        .mobile-menu a.m-link {
+            font-family: var(--font-serif); font-size: 2.2rem; font-weight: 500;
+            color: var(--emerald);
+        }
+        .mobile-menu-close {
+            position: absolute; top: 22px; right: 22px;
+            font-size: 1.4rem; cursor: pointer; color: var(--emerald);
+            background: none; border: none;
+        }
+
+        /* ============================================================
+           STICKY BAR
+        ============================================================ */
+        .sticky-bar {
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 98;
+            background: var(--emerald);
+            padding: 12px 24px;
+            display: flex; align-items: center; justify-content: center; gap: 20px;
+            transform: translateY(100%);
+            transition: transform .4s var(--ease-smooth);
+            box-shadow: 0 -4px 24px rgba(27,67,50,.3);
+        }
+        .sticky-bar.is-visible { transform: translateY(0); }
+        .sticky-bar-text { font-size: .84rem; color: rgba(255,255,255,.75); }
+        .sticky-bar-text strong { color: var(--white); }
+        .sticky-bar-close {
+            position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+            background: none; border: none; color: rgba(255,255,255,.4);
+            cursor: pointer; font-size: .95rem; padding: 4px;
+        }
+        .sticky-bar-close:hover { color: var(--white); }
+
+        /* ============================================================
+           HERO
+           {{-- Blade: @section('hero') --}}
+        ============================================================ */
+        .hero {
+            min-height: 100vh;
+            background: var(--emerald);
+            display: flex; align-items: center;
+            position: relative; overflow: hidden;
+            padding-top: 72px;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background:
+                radial-gradient(ellipse at 15% 80%, rgba(201,169,110,.12) 0%, transparent 55%),
+                radial-gradient(ellipse at 85% 15%, rgba(64,145,108,.18) 0%, transparent 55%);
+        }
+        .hero::after {
+            content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+        }
+        .hero-inner {
+            position: relative; z-index: 1;
+            max-width: 1200px; margin: 0 auto; padding: 80px 24px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(201,169,110,.14);
+            border: 1px solid rgba(201,169,110,.28);
+            border-radius: var(--r-full); padding: 6px 16px;
+            font-size: .7rem; letter-spacing: .15em; text-transform: uppercase;
+            color: var(--gold-light); font-weight: 700; margin-bottom: 24px;
+        }
+        .hero-badge i { color: var(--gold); }
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.8rem, 5vw, 4.4rem);
+            font-weight: 600; color: var(--white);
+            line-height: 1.08; margin-bottom: 22px;
+        }
+        .hero-title em { font-style: italic; color: var(--gold); }
+        .hero-sub {
+            font-size: 1.05rem; color: rgba(255,255,255,.72);
+            line-height: 1.75; margin-bottom: 40px; max-width: 470px;
+        }
+        .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+        .hero-stats {
+            display: flex; gap: 36px; flex-wrap: wrap;
+            border-top: 1px solid rgba(255,255,255,.1); padding-top: 32px;
+        }
+        .hero-stat-num {
+            font-family: var(--font-serif);
+            font-size: 2.1rem; font-weight: 600; color: var(--gold);
+            display: block; line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: .72rem; color: rgba(255,255,255,.5);
+            letter-spacing: .1em; text-transform: uppercase;
+            margin-top: 5px; display: block;
+        }
+
+        /* Hero — image column */
+        .hero-img-col { position: relative; }
+        .hero-img-main {
+            border-radius: var(--r-xl); overflow: hidden;
+            aspect-ratio: 4 / 5; box-shadow: var(--shadow-xl);
+        }
+        .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+
+        .hero-float {
+            position: absolute; background: var(--white);
+            border-radius: var(--r-lg); padding: 14px 18px;
+            box-shadow: var(--shadow-lg);
+            display: flex; align-items: center; gap: 12px;
+        }
+        .hero-float--tl { top: -16px; left: -28px; }
+        .hero-float--br { bottom: -16px; right: -28px; }
+        .hero-float-icon {
+            width: 38px; height: 38px; border-radius: var(--r-sm);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .hero-float-icon--emerald { background: var(--emerald-pale); }
+        .hero-float-icon--emerald i { color: var(--emerald); }
+        .hero-float-icon--gold { background: var(--gold-pale); }
+        .hero-float-icon--gold i { color: var(--gold-dark); }
+        .hero-float-body b { font-size: .83rem; color: var(--ink); display: block; font-weight: 700; }
+        .hero-float-body span { font-size: .73rem; color: var(--ink-soft); }
+        .hero-float-stars { color: #F5B100; font-size: .75rem; margin-bottom: 2px; }
+
+        /* ============================================================
+           TRUST BAR
+        ============================================================ */
+        .trust-bar { background: var(--gold); padding: 15px 0; }
+        .trust-bar-inner {
+            max-width: 1200px; margin: 0 auto; padding: 0 24px;
+            display: flex; align-items: center; gap: 36px;
+            flex-wrap: wrap; justify-content: center;
+        }
+        .trust-item {
+            display: flex; align-items: center; gap: 9px;
+            font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+            text-transform: uppercase; color: rgba(255,255,255,.92); white-space: nowrap;
+        }
+        .trust-item i { color: var(--white); }
+        .trust-sep { color: rgba(255,255,255,.35); font-size: .7rem; }
+
+        /* ============================================================
+           SERVICES
+           {{-- Blade: @include('sections.services', ['items' => $services]) --}}
+        ============================================================ */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: var(--r-lg); padding: 36px 28px;
+            border: 1px solid var(--border-soft);
+            position: relative; overflow: hidden;
+            transition: box-shadow .3s, transform .3s, border-color .3s;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: scaleX(0); transform-origin: left;
+            transition: transform .4s var(--ease-smooth);
+        }
+        .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--gold-muted); }
+        .service-card:hover::before { transform: scaleX(1); }
+
+        .service-icon-wrap {
+            width: 54px; height: 54px; background: var(--emerald-pale);
+            border-radius: var(--r-md);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+            transition: background .3s;
+        }
+        .service-icon-wrap i { color: var(--emerald); font-size: 1.25rem; transition: color .3s; }
+        .service-card:hover .service-icon-wrap { background: var(--emerald); }
+        .service-card:hover .service-icon-wrap i { color: var(--gold); }
+
+        .service-name {
+            font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600;
+            color: var(--emerald); margin-bottom: 10px;
+        }
+        .service-desc { font-size: .86rem; color: var(--ink-mid); line-height: 1.7; margin-bottom: 20px; }
+        .service-link {
+            font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+            color: var(--gold); display: inline-flex; align-items: center; gap: 6px;
+        }
+        .service-link i { font-size: .62rem; transition: transform .3s; }
+        .service-card:hover .service-link i { transform: translateX(4px); }
+
+        /* ============================================================
+           COMO FUNCIONA
+        ============================================================ */
+        .steps-section { background: var(--emerald); padding: 100px 0; }
+        .steps-section .section-eyebrow { color: var(--gold); }
+        .steps-section .section-eyebrow::before { background: var(--gold); }
+        .steps-section .section-title { color: var(--white); }
+        .steps-section .section-lead { color: rgba(255,255,255,.6); }
+
+        .steps-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;
+            position: relative; margin-top: 0;
+        }
+        .steps-grid::before {
+            content: ''; position: absolute;
+            top: 34px; left: calc(16.66% + 16px); right: calc(16.66% + 16px);
+            height: 1px; background: rgba(201,169,110,.25); z-index: 0;
+        }
+        .step-item { text-align: center; position: relative; z-index: 1; }
+        .step-num {
+            width: 68px; height: 68px; border-radius: 50%;
+            background: rgba(201,169,110,.12);
+            border: 1px solid rgba(201,169,110,.28);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 22px;
+        }
+        .step-num span {
+            font-family: var(--font-serif); font-size: 1.6rem;
+            font-weight: 600; color: var(--gold);
+        }
+        .step-icon { font-size: 1.2rem; color: var(--gold); margin-bottom: 14px; display: block; }
+        .step-title {
+            font-family: var(--font-serif); font-size: 1.25rem;
+            font-weight: 600; color: var(--white); margin-bottom: 10px;
+        }
+        .step-desc { font-size: .86rem; color: rgba(255,255,255,.58); line-height: 1.7; }
+
+        /* ============================================================
+           SOBRE
+           {{-- Blade: @include('sections.about') --}}
+        ============================================================ */
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .about-img-col { position: relative; }
+        .about-img-wrap {
+            border-radius: var(--r-xl); overflow: hidden;
+            aspect-ratio: 4 / 5; box-shadow: var(--shadow-xl);
+        }
+        .about-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .about-accent-br {
+            position: absolute; bottom: -28px; right: -28px;
+            width: 130px; height: 130px; border-radius: var(--r-xl);
+            background: var(--gold); z-index: -1;
+        }
+        .about-accent-tl {
+            position: absolute; top: -28px; left: -28px;
+            width: 80px; height: 80px; border-radius: var(--r-lg);
+            background: var(--emerald-pale); z-index: -1;
+        }
+        .about-badge {
+            position: absolute; top: 28px; right: -24px;
+            background: var(--white); border-radius: var(--r-lg);
+            padding: 16px 20px; box-shadow: var(--shadow-md); text-align: center;
+        }
+        .about-badge-num {
+            font-family: var(--font-serif); font-size: 1.9rem;
+            font-weight: 600; color: var(--emerald); display: block; line-height: 1;
+        }
+        .about-badge-label { font-size: .66rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .1em; }
+
+        .about-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+        .about-pill {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: var(--emerald-pale); color: var(--emerald);
+            border-radius: var(--r-full); padding: 7px 15px;
+            font-size: .76rem; font-weight: 700;
+        }
+        .about-pill i { font-size: .68rem; color: var(--gold-dark); }
+
+        /* ============================================================
+           ESTRUTURA
+        ============================================================ */
+        .estrutura-section { background: var(--cream-mid); }
+        .estrutura-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+        }
+        .estrutura-img-wrap {
+            border-radius: var(--r-xl); overflow: hidden;
+            aspect-ratio: 3 / 2; box-shadow: var(--shadow-xl);
+        }
+        .estrutura-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+        .estrutura-building-tag {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: var(--emerald); border-radius: var(--r-full);
+            padding: 8px 20px; margin-bottom: 24px;
+        }
+        .estrutura-building-tag i { color: var(--gold); }
+        .estrutura-building-tag span {
+            font-size: .76rem; font-weight: 700; letter-spacing: .1em;
+            text-transform: uppercase; color: var(--white);
+        }
+        .estrutura-features { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+        .estrutura-feat {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 16px 18px; background: var(--white);
+            border-radius: var(--r-md); border: 1px solid var(--border-soft);
+            transition: box-shadow .25s;
+        }
+        .estrutura-feat:hover { box-shadow: var(--shadow-sm); }
+        .estrutura-feat-icon {
+            width: 36px; height: 36px; border-radius: var(--r-sm);
+            background: var(--gold-pale); flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .estrutura-feat-icon i { color: var(--gold-dark); font-size: .85rem; }
+        .estrutura-feat-body b { font-size: .87rem; color: var(--emerald); display: block; margin-bottom: 2px; }
+        .estrutura-feat-body span { font-size: .79rem; color: var(--ink-soft); }
+
+        /* ============================================================
+           DEPOIMENTOS
+        ============================================================ */
+        .reviews-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .review-card {
+            background: var(--white); border-radius: var(--r-lg);
+            padding: 32px 28px;
+            border: 1px solid var(--border-soft);
+            position: relative; overflow: hidden;
+            transition: box-shadow .3s;
+        }
+        .review-card:hover { box-shadow: var(--shadow-md); }
+        .review-card::before {
+            content: '\201C'; position: absolute; top: 12px; right: 22px;
+            font-family: var(--font-serif); font-size: 5rem; color: var(--emerald-pale);
+            line-height: 1; font-weight: 700;
+        }
+        .review-stars { color: #F5B100; font-size: .88rem; margin-bottom: 16px; }
+        .review-text {
+            font-family: var(--font-serif); font-size: 1.05rem;
+            font-style: italic; color: var(--ink-mid); line-height: 1.65; margin-bottom: 24px;
+        }
+        .review-author { display: flex; align-items: center; gap: 12px; }
+        .review-avatar {
+            width: 42px; height: 42px; border-radius: 50%;
+            background: var(--emerald-pale);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-serif); font-weight: 600;
+            font-size: 1rem; color: var(--emerald); flex-shrink: 0;
+        }
+        .review-author-name { font-size: .87rem; font-weight: 700; color: var(--ink); }
+        .review-author-role { font-size: .74rem; color: var(--ink-soft); }
+        .review-google-g { margin-left: auto; }
+
+        /* ============================================================
+           AGENDAMENTO / CTA
+           {{-- Blade: @include('sections.schedule') --}}
+        ============================================================ */
+        .agenda-section { background: var(--emerald); padding: 100px 0; }
+        .agenda-section .section-eyebrow { color: var(--gold); }
+        .agenda-section .section-eyebrow::before { background: var(--gold); }
+        .agenda-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+        }
+        .agenda-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 600;
+            color: var(--white); margin-bottom: 16px;
+        }
+        .agenda-title em { font-style: italic; color: var(--gold); }
+        .agenda-lead { color: rgba(255,255,255,.65); font-size: 1rem; line-height: 1.75; margin-bottom: 32px; }
+        .agenda-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 40px; }
+
+        .agenda-info { display: flex; flex-direction: column; gap: 16px; }
+        .agenda-info-item { display: flex; align-items: flex-start; gap: 14px; }
+        .agenda-info-icon {
+            width: 36px; height: 36px;
+            background: rgba(201,169,110,.14); border-radius: var(--r-sm);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .agenda-info-icon i { color: var(--gold); font-size: .85rem; }
+        .agenda-info-body b { font-size: .84rem; color: var(--white); display: block; margin-bottom: 2px; }
+        .agenda-info-body span { font-size: .79rem; color: rgba(255,255,255,.52); line-height: 1.55; }
+        .agenda-info-body a { color: rgba(255,255,255,.52); }
+        .agenda-info-body a:hover { color: var(--gold-light); }
+
+        /* Map placeholder */
+        .agenda-map-wrap {
+            border-radius: var(--r-xl); overflow: hidden;
+            background: var(--cream-mid);
+            aspect-ratio: 4 / 3;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            gap: 14px; text-align: center; padding: 40px;
+            box-shadow: var(--shadow-xl);
+        }
+        .agenda-map-pin { font-size: 3rem; }
+        .agenda-map-addr {
+            font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600;
+            color: var(--emerald); line-height: 1.45;
+        }
+        .agenda-map-city { font-size: .87rem; color: var(--ink-mid); }
+        .agenda-map-building {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--emerald-pale); border-radius: var(--r-full);
+            padding: 6px 14px; font-size: .73rem; font-weight: 700; color: var(--emerald);
+        }
+
+        /* Hours */
+        .agenda-hours {
+            margin-top: 28px;
+            background: rgba(201,169,110,.1);
+            border: 1px solid rgba(201,169,110,.22);
+            border-radius: var(--r-lg); padding: 22px 26px;
+        }
+        .agenda-hours-title {
+            font-size: .7rem; font-weight: 700; letter-spacing: .14em;
+            text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .hours-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.05);
+            font-size: .82rem;
+        }
+        .hours-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .hours-day { color: rgba(255,255,255,.55); }
+        .hours-time { color: var(--white); font-weight: 700; }
+        .hours-closed { color: rgba(255,255,255,.28); }
+
+        /* ============================================================
+           FOOTER
+           {{-- Blade: @include('partials.footer') --}}
+        ============================================================ */
+        .footer { background: #0F2419; padding: 64px 0 0; }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+        .footer-logo {
+            display: flex; align-items: center; gap: 10px;
+            font-family: var(--font-serif);
+            font-size: 1.25rem; font-weight: 600; color: var(--white);
+            margin-bottom: 16px;
+        }
+        .footer-tagline {
+            font-size: .84rem; color: rgba(255,255,255,.42);
+            line-height: 1.7; max-width: 280px; margin-bottom: 24px;
+        }
+        .footer-socials { display: flex; gap: 10px; }
+        .footer-social {
+            width: 38px; height: 38px; border-radius: var(--r-sm);
+            background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,.5); font-size: .9rem;
+            transition: background .25s, color .25s;
+        }
+        .footer-social:hover { background: var(--gold); color: var(--white); border-color: var(--gold); }
+        .footer-col-title {
+            font-size: .68rem; font-weight: 700; letter-spacing: .18em;
+            text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+        }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { font-size: .84rem; color: rgba(255,255,255,.45); transition: color .25s; }
+        .footer-links a:hover { color: var(--gold-light); }
+        .footer-addr-item {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: .81rem; color: rgba(255,255,255,.45); line-height: 1.55;
+            margin-bottom: 12px;
+        }
+        .footer-addr-item i { color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+        .footer-addr-item a:hover { color: var(--gold-light); }
+        .footer-addr-accent { color: var(--gold); font-style: normal; }
+        .footer-bottom {
+            padding: 20px 0;
+            display: flex; align-items: center; justify-content: space-between;
+            font-size: .74rem; color: rgba(255,255,255,.22);
+        }
+        .footer-bottom span { color: var(--gold); }
+
+        /* ============================================================
+           FLOATING WHATSAPP
+        ============================================================ */
+        .wa-float {
+            position: fixed; bottom: 24px; right: 24px; z-index: 90;
+            width: 56px; height: 56px; border-radius: 50%;
+            background: #25D366;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 1.5rem;
+            box-shadow: 0 4px 20px rgba(37,211,102,.45);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.55); }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-img-col { display: none; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { grid-template-columns: 1fr; gap: 48px; }
+            .about-img-col { max-width: 480px; margin: 0 auto; }
+            .estrutura-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .agenda-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            section { padding: 72px 0; }
+            .hero-inner { padding: 48px 24px; }
+            .nav, .header-cta-btn { display: none; }
+            .hamburger { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; gap: 36px; }
+            .steps-grid::before { display: none; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .trust-sep { display: none; }
+        }
+        @media (max-width: 480px) {
+            .hero-actions, .agenda-actions { flex-direction: column; }
+            .hero-actions .btn, .agenda-actions .btn { width: 100%; justify-content: center; }
+            .hero-stats { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         HEADER
+    ============================================================ -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo" aria-label="Clínica Sthetizar">
+                <div class="logo-mark"><i class="fas fa-leaf"></i></div>
+                <div class="logo-text">
+                    <span class="logo-name">Sthetizar</span>
+                    <span class="logo-sub">Clínica · Estética &amp; Saúde</span>
+                </div>
+            </a>
+
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#estrutura">Estrutura</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#agendamento">Contato</a>
+            </nav>
+
+            <div style="display:flex; align-items:center; gap:12px;">
+                <a href="https://wa.me/5517997581080?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20gratuita%20na%20Clínica%20Sthetizar."
+                   class="btn btn-gold header-cta-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Agendar Avaliação
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Fechar menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#servicos"     class="m-link">Serviços</a>
+        <a href="#sobre"        class="m-link">Sobre</a>
+        <a href="#estrutura"    class="m-link">Estrutura</a>
+        <a href="#depoimentos"  class="m-link">Depoimentos</a>
+        <a href="#agendamento"  class="m-link">Contato</a>
+        <a href="https://wa.me/5517997581080" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Agendar
+        </a>
+    </div>
+
+    <!-- Sticky Bar -->
+    <div class="sticky-bar" id="stickyBar" role="complementary">
+        <p class="sticky-bar-text">
+            <strong>Avaliação gratuita disponível</strong> — agende agora pelo WhatsApp
+        </p>
+        <a href="https://wa.me/5517997581080?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20gratuita%20na%20Clínica%20Sthetizar."
+           class="btn btn-gold" target="_blank" rel="noopener noreferrer"
+           style="flex-shrink:0; padding:9px 20px; font-size:.78rem;">
+            <i class="fab fa-whatsapp"></i> Agendar
+        </a>
+        <button class="sticky-bar-close" id="stickyClose" aria-label="Fechar">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- ============================================================
+         HERO
+         {{-- Blade: @section('hero') --}}
+    ============================================================ -->
+    <section class="hero" id="home" aria-label="Apresentação">
+        <div class="hero-inner">
+
+            <!-- Copy -->
+            <div>
+                <div class="hero-badge" data-reveal>
+                    <i class="fas fa-building"></i>
+                    Edifício Onix Center Sul · São José do Rio Preto
+                </div>
+                <h1 class="hero-title" data-reveal data-delay="1">
+                    Saúde, cuidado<br>e <em>beleza</em> que<br>transforma.
+                </h1>
+                <p class="hero-sub" data-reveal data-delay="2">
+                    Tratamentos estéticos avançados com protocolos personalizados e
+                    tecnologia de ponta. Venha descobrir o melhor de você.
+                </p>
+                <div class="hero-actions" data-reveal data-delay="3">
+                    <a href="https://wa.me/5517997581080?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20gratuita%20na%20Clínica%20Sthetizar."
+                       class="btn btn-gold btn-lg" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Agendar Avaliação Gratuita
+                    </a>
+                    <a href="#servicos" class="btn btn-outline-white btn-lg">
+                        Ver serviços <i class="fas fa-chevron-down" style="font-size:.75rem;"></i>
+                    </a>
+                </div>
+                <div class="hero-stats" data-reveal data-delay="4">
+                    <div>
+                        <span class="hero-stat-num" data-count="500" data-suffix="+">500+</span>
+                        <span class="hero-stat-label">Clientes atendidas</span>
+                    </div>
+                    <div>
+                        <span class="hero-stat-num" data-count="6" data-suffix="+">6+</span>
+                        <span class="hero-stat-label">Tratamentos</span>
+                    </div>
+                    <div>
+                        <span class="hero-stat-num" data-count="5.0">5,0</span>
+                        <span class="hero-stat-label">Nota Google</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="hero-img-col" data-reveal data-delay="2">
+                <div class="hero-float hero-float--tl">
+                    <div class="hero-float-icon hero-float-icon--emerald">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="hero-float-body">
+                        <b>Profissionais Certificadas</b>
+                        <span>Equipamentos homologados</span>
+                    </div>
+                </div>
+
+                <div class="hero-img-main">
+                    <img src="https://placehold.co/600x750/2D6A4F/D9BF8A?text=Clínica+Sthetizar"
+                         alt="Clínica Sthetizar — ambiente profissional e acolhedor"
+                         loading="eager">
+                </div>
+
+                <div class="hero-float hero-float--br">
+                    <div class="hero-float-body" style="text-align:right;">
+                        <div class="hero-float-stars">★★★★★</div>
+                        <b>Nota 5,0 Google</b>
+                        <span>Clientes satisfeitas</span>
+                    </div>
+                    <div class="hero-float-icon hero-float-icon--gold">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item"><i class="fas fa-certificate"></i> Profissionais Certificadas</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-shield-halved"></i> Equipamentos Homologados</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-building"></i> Edifício Onix Center Sul</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-star"></i> Nota 5,0 no Google</div>
+            <div class="trust-sep">·</div>
+            <div class="trust-item"><i class="fas fa-calendar-check"></i> Avaliação Gratuita</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SERVIÇOS
+         {{-- Blade: @include('sections.services', ['items' => $services]) --}}
+    ============================================================ -->
+    <section style="background: var(--white);" id="servicos">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-eyebrow" data-reveal>O que oferecemos</div>
+                <h2 class="section-title" data-reveal data-delay="1">
+                    Tratamentos para<br>realçar sua beleza
+                </h2>
+                <p class="section-lead" data-reveal data-delay="2">
+                    Cada procedimento é planejado individualmente, com protocolos personalizados
+                    para entregar resultados reais e duradouros.
+                </p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card" data-reveal>
+                    <div class="service-icon-wrap"><i class="fas fa-spa"></i></div>
+                    <div class="service-name">Limpeza de Pele</div>
+                    <p class="service-desc">Higienização profunda que remove impurezas, cravos e células mortas, devolvendo leveza e luminosidade para todos os tipos de pele.</p>
+                    <a href="https://wa.me/5517997581080?text=Olá!%20Tenho%20interesse%20na%20Limpeza%20de%20Pele." class="service-link" target="_blank" rel="noopener noreferrer">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="1">
+                    <div class="service-icon-wrap"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="service-name">Drenagem Linfática</div>
+                    <p class="service-desc">Técnica manual que estimula o sistema linfático, reduzindo inchaço, retenção hídrica e melhorando a circulação e o bem-estar geral.</p>
+                    <a href="https://wa.me/5517997581080?text=Olá!%20Tenho%20interesse%20em%20Drenagem%20Linfática." class="service-link" target="_blank" rel="noopener noreferrer">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="2">
+                    <div class="service-icon-wrap"><i class="fas fa-bolt-lightning"></i></div>
+                    <div class="service-name">Radiofrequência</div>
+                    <p class="service-desc">Tecnologia que estimula a produção de colágeno, firmando a pele e reduzindo rugas, flacidez e celulite com resultados progressivos.</p>
+                    <a href="https://wa.me/5517997581080?text=Olá!%20Tenho%20interesse%20em%20Radiofrequência." class="service-link" target="_blank" rel="noopener noreferrer">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="3">
+                    <div class="service-icon-wrap"><i class="fas fa-leaf"></i></div>
+                    <div class="service-name">Peeling</div>
+                    <p class="service-desc">Renovação celular através de ácidos ou cristais, tratando manchas, acne, poros dilatados e envelhecimento precoce com segurança.</p>
+                    <a href="https://wa.me/5517997581080?text=Olá!%20Tenho%20interesse%20em%20Peeling." class="service-link" target="_blank" rel="noopener noreferrer">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="4">
+                    <div class="service-icon-wrap"><i class="fas fa-pen-nib"></i></div>
+                    <div class="service-name">Micropigmentação</div>
+                    <p class="service-desc">Técnica semipermanente para sobrancelhas e lábios, proporcionando um visual natural e definido com durabilidade e alta precisão.</p>
+                    <a href="https://wa.me/5517997581080?text=Olá!%20Tenho%20interesse%20em%20Micropigmentação." class="service-link" target="_blank" rel="noopener noreferrer">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-reveal data-delay="5">
+                    <div class="service-icon-wrap"><i class="fas fa-person"></i></div>
+                    <div class="service-name">Tratamentos Corporais</div>
+                    <p class="service-desc">Protocolos completos para modelagem, redução de medidas e melhora da textura corporal, combinando técnicas e tecnologias avançadas.</p>
+                    <a href="https://wa.me/5517997581080?text=Olá!%20Tenho%20interesse%20em%20Tratamentos%20Corporais." class="service-link" target="_blank" rel="noopener noreferrer">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         COMO FUNCIONA
+    ============================================================ -->
+    <section class="steps-section" id="como-funciona">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-eyebrow" data-reveal>Simples assim</div>
+                <h2 class="section-title" data-reveal data-delay="1">
+                    Do primeiro contato<br>ao seu resultado
+                </h2>
+                <p class="section-lead" data-reveal data-delay="2">
+                    Cuidamos de cada detalhe para que sua jornada seja completa,
+                    segura e transformadora.
+                </p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item" data-reveal>
+                    <div class="step-num"><span>01</span></div>
+                    <i class="step-icon fas fa-calendar-check"></i>
+                    <div class="step-title">Avaliação Gratuita</div>
+                    <p class="step-desc">Agende pelo WhatsApp e venha à clínica sem custo. Analisamos sua pele e escutamos seus objetivos com total atenção.</p>
+                </div>
+                <div class="step-item" data-reveal data-delay="1">
+                    <div class="step-num"><span>02</span></div>
+                    <i class="step-icon fas fa-clipboard-list"></i>
+                    <div class="step-title">Protocolo Personalizado</div>
+                    <p class="step-desc">Montamos um protocolo exclusivo para você, combinando os melhores tratamentos para alcançar os resultados que deseja.</p>
+                </div>
+                <div class="step-item" data-reveal data-delay="2">
+                    <div class="step-num"><span>03</span></div>
+                    <i class="step-icon fas fa-wand-sparkles"></i>
+                    <div class="step-title">Resultados Reais</div>
+                    <p class="step-desc">Acompanhamento contínuo, suporte pós-procedimento e evolução visível. Sua satisfação é nossa prioridade em cada etapa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE
+         {{-- Blade: @include('sections.about') --}}
+    ============================================================ -->
+    <section style="background: var(--cream);" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+
+                <div class="about-img-col" data-reveal>
+                    <div class="about-accent-tl"></div>
+                    <div class="about-img-wrap">
+                        <img src="https://placehold.co/600x750/1B4332/C9A96E?text=Sthetizar"
+                             alt="Ambiente da Clínica Sthetizar — sofisticado e acolhedor"
+                             loading="lazy">
+                    </div>
+                    <div class="about-accent-br"></div>
+                    <div class="about-badge">
+                        <span class="about-badge-num" data-count="500" data-suffix="+">500+</span>
+                        <span class="about-badge-label">Clientes satisfeitas</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-eyebrow" data-reveal>Nossa missão</div>
+                    <h2 class="section-title" data-reveal data-delay="1">
+                        Cuidado que vai<br><em style="font-style:italic; color:var(--gold); font-family:var(--font-serif);">além da superfície</em>
+                    </h2>
+                    <p class="section-lead" data-reveal data-delay="2" style="margin-bottom:16px;">
+                        A Clínica Sthetizar nasceu da crença de que saúde e beleza são inseparáveis.
+                        Cada tratamento é pensado para ir além do estético — elevando sua autoestima
+                        e bem-estar de forma genuína e duradoura.
+                    </p>
+                    <p class="section-lead" data-reveal data-delay="3" style="font-size:.93rem;">
+                        Localizada no Edifício Onix Center Sul, nossa clínica foi projetada para
+                        transmitir acolhimento e profissionalismo. Aqui, você é o centro de
+                        todo o nosso cuidado — sempre.
+                    </p>
+                    <div class="about-pills" data-reveal data-delay="4">
+                        <div class="about-pill"><i class="fas fa-check"></i> Atendimento Personalizado</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Profissionais Certificadas</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Ambiente Climatizado</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Protocolos Exclusivos</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Sigilo Total</div>
+                        <div class="about-pill"><i class="fas fa-check"></i> Pós-procedimento Completo</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ESTRUTURA — Edifício Onix Center Sul
+    ============================================================ -->
+    <section class="estrutura-section" id="estrutura">
+        <div class="container">
+            <div class="estrutura-grid">
+
+                <div data-reveal>
+                    <div class="estrutura-building-tag">
+                        <i class="fas fa-building"></i>
+                        <span>Edifício Onix Center Sul</span>
+                    </div>
+                    <h2 class="section-title">
+                        Um espaço à altura<br>do seu cuidado
+                    </h2>
+                    <p class="section-lead" style="margin-bottom:0;">
+                        Localizada na Sala 73, a Clínica Sthetizar ocupa um espaço moderno
+                        projetado para oferecer conforto, privacidade e toda a infraestrutura
+                        que você merece em cada visita.
+                    </p>
+                    <div class="estrutura-features">
+                        <div class="estrutura-feat" data-reveal data-delay="1">
+                            <div class="estrutura-feat-icon"><i class="fas fa-elevator"></i></div>
+                            <div class="estrutura-feat-body">
+                                <b>Acesso facilitado com elevador</b>
+                                <span>Acessibilidade completa e fácil localização no edifício</span>
+                            </div>
+                        </div>
+                        <div class="estrutura-feat" data-reveal data-delay="2">
+                            <div class="estrutura-feat-icon"><i class="fas fa-car"></i></div>
+                            <div class="estrutura-feat-body">
+                                <b>Estacionamento disponível</b>
+                                <span>Vagas no edifício para maior comodidade da sua visita</span>
+                            </div>
+                        </div>
+                        <div class="estrutura-feat" data-reveal data-delay="3">
+                            <div class="estrutura-feat-icon"><i class="fas fa-snowflake"></i></div>
+                            <div class="estrutura-feat-body">
+                                <b>Ambiente climatizado</b>
+                                <span>Temperatura ideal para seu conforto durante os procedimentos</span>
+                            </div>
+                        </div>
+                        <div class="estrutura-feat" data-reveal data-delay="4">
+                            <div class="estrutura-feat-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="estrutura-feat-body">
+                                <b>R. Antonio José Martins Filho, 300 — Sala 73</b>
+                                <span>Jardim Maracanã, São José do Rio Preto — SP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-reveal data-delay="2">
+                    <div class="estrutura-img-wrap">
+                        <img src="https://placehold.co/700x500/1B4332/C9A96E?text=Onix+Center+Sul"
+                             alt="Edifício Onix Center Sul — sede da Clínica Sthetizar"
+                             loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         DEPOIMENTOS
+    ============================================================ -->
+    <section style="background: var(--cream);" id="depoimentos">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-eyebrow" data-reveal>Depoimentos</div>
+                <h2 class="section-title" data-reveal data-delay="1">
+                    O que dizem nossas clientes
+                </h2>
+                <p class="section-lead" data-reveal data-delay="2">
+                    Resultados reais, histórias verdadeiras. A satisfação de cada cliente
+                    é o nosso maior reconhecimento.
+                </p>
+            </div>
+            <div class="reviews-grid">
+
+                <div class="review-card" data-reveal>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        "Fiz a limpeza de pele e ficou simplesmente incrível. A profissional
+                        é muito atenciosa, explicou cada passo do procedimento e o resultado
+                        foi imediato. Minha pele nunca esteve tão bonita!"
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">AC</div>
+                        <div>
+                            <div class="review-author-name">Ana Carolina Mendes</div>
+                            <div class="review-author-role">Cliente · Limpeza de Pele</div>
+                        </div>
+                        <div class="review-google-g"><i class="fab fa-google" style="color:#4285F4;"></i></div>
+                    </div>
+                </div>
+
+                <div class="review-card" data-reveal data-delay="1">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        "A drenagem linfática foi transformadora. Perdi o inchaço que
+                        me incomodava há meses. O ambiente é sofisticado e aconchegante,
+                        e a clínica é muito bem localizada — fácil de chegar."
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">FO</div>
+                        <div>
+                            <div class="review-author-name">Fernanda Oliveira</div>
+                            <div class="review-author-role">Cliente · Drenagem Linfática</div>
+                        </div>
+                        <div class="review-google-g"><i class="fab fa-google" style="color:#4285F4;"></i></div>
+                    </div>
+                </div>
+
+                <div class="review-card" data-reveal data-delay="2">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        "Fiz a micropigmentação de sobrancelha e amei o resultado —
+                        naturalíssima, exatamente como eu queria. Profissional
+                        extremamente habilidosa e clínica muito bem estruturada."
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">MS</div>
+                        <div>
+                            <div class="review-author-name">Márcia Santos</div>
+                            <div class="review-author-role">Cliente · Micropigmentação</div>
+                        </div>
+                        <div class="review-google-g"><i class="fab fa-google" style="color:#4285F4;"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         AGENDAMENTO
+         {{-- Blade: @include('sections.schedule') --}}
+    ============================================================ -->
+    <section class="agenda-section" id="agendamento">
+        <div class="container">
+            <div class="agenda-grid">
+
+                <!-- Left: copy + info -->
+                <div>
+                    <div class="section-eyebrow" data-reveal>Agende agora</div>
+                    <h2 class="agenda-title" data-reveal data-delay="1">
+                        Comece sua<br><em>transformação</em><br>hoje mesmo.
+                    </h2>
+                    <p class="agenda-lead" data-reveal data-delay="2">
+                        A avaliação inicial é gratuita e sem compromisso. Entre em contato
+                        pelo WhatsApp e descubra o protocolo ideal para você.
+                    </p>
+                    <div class="agenda-actions" data-reveal data-delay="3">
+                        <a href="https://wa.me/5517997581080?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20gratuita%20na%20Clínica%20Sthetizar."
+                           class="btn btn-gold btn-lg" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/sthetizar"
+                           class="btn btn-outline-white btn-lg" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i> Ver no Instagram
+                        </a>
+                    </div>
+
+                    <div class="agenda-info" data-reveal data-delay="4">
+                        <div class="agenda-info-item">
+                            <div class="agenda-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="agenda-info-body">
+                                <b>Endereço</b>
+                                <span>
+                                    R. Antonio José Martins Filho, 300 — Sala 73<br>
+                                    Jardim Maracanã, São José do Rio Preto - SP<br>
+                                    <em style="color:var(--gold); font-style:normal;">Edifício Onix Center Sul</em>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="agenda-info-item">
+                            <div class="agenda-info-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="agenda-info-body">
+                                <b>WhatsApp</b>
+                                <span><a href="https://wa.me/5517997581080">(17) 99758-1080</a></span>
+                            </div>
+                        </div>
+                        <div class="agenda-info-item">
+                            <div class="agenda-info-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="agenda-info-body">
+                                <b>Instagram</b>
+                                <span>
+                                    <a href="https://www.instagram.com/sthetizar" target="_blank" rel="noopener noreferrer">
+                                        @sthetizar
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agenda-hours" data-reveal data-delay="5">
+                        <div class="agenda-hours-title">
+                            <i class="fas fa-clock"></i> Horário de Funcionamento
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-day">Segunda a Sexta</span>
+                            <span class="hours-time">9h às 18h</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-day">Sábado</span>
+                            <span class="hours-time">9h às 14h</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-day">Domingo</span>
+                            <span class="hours-closed">Fechado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: map -->
+                <div data-reveal data-delay="2">
+                    <div class="agenda-map-wrap">
+                        <div class="agenda-map-pin">📍</div>
+                        <div class="agenda-map-addr">
+                            R. Antonio José Martins Filho, 300<br>Sala 73 — Jardim Maracanã
+                        </div>
+                        <div class="agenda-map-city">São José do Rio Preto — SP</div>
+                        <div class="agenda-map-building">
+                            <i class="fas fa-building"></i> Edifício Onix Center Sul
+                        </div>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a href="https://www.google.com/maps/search/?api=1&query=R.+Antonio+Jose+Martins+Filho+300+Jardim+Maracana+Sao+Jose+do+Rio+Preto+SP"
+                           class="btn btn-outline-white" target="_blank" rel="noopener noreferrer"
+                           style="width:100%; justify-content:center;">
+                            <i class="fas fa-directions"></i> Como chegar
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         {{-- Blade: @include('partials.footer') --}}
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div>
+                    <div class="footer-logo">
+                        <div class="logo-mark" style="width:34px;height:34px;">
+                            <i class="fas fa-leaf" style="font-size:.8rem;"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-name" style="font-size:1.15rem;">Sthetizar</span>
+                            <span class="logo-sub">Clínica · Estética &amp; Saúde</span>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">
+                        Cuidando da sua saúde e beleza com dedicação, tecnologia
+                        e um toque especial em cada atendimento.
+                    </p>
+                    <div class="footer-socials">
+                        <a class="footer-social" href="https://www.instagram.com/sthetizar"
+                           aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="footer-social" href="https://wa.me/5517997581080"
+                           aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Serviços</div>
+                    <div class="footer-links">
+                        <a href="#servicos">Limpeza de Pele</a>
+                        <a href="#servicos">Drenagem Linfática</a>
+                        <a href="#servicos">Radiofrequência</a>
+                        <a href="#servicos">Peeling</a>
+                        <a href="#servicos">Micropigmentação</a>
+                        <a href="#servicos">Tratamentos Corporais</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Contato &amp; Local</div>
+                    <address style="font-style:normal;">
+                        <div class="footer-addr-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>
+                                R. Antonio José Martins Filho, 300<br>
+                                Sala 73 — Jardim Maracanã<br>
+                                São José do Rio Preto - SP<br>
+                                <em class="footer-addr-accent">Edifício Onix Center Sul</em>
+                            </span>
+                        </div>
+                        <div class="footer-addr-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/5517997581080">(17) 99758-1080</a>
+                        </div>
+                        <div class="footer-addr-item">
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/sthetizar" target="_blank" rel="noopener noreferrer">
+                                @sthetizar
+                            </a>
+                        </div>
+                    </address>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Clínica Sthetizar. Todos os direitos reservados.</p>
+                <p>Feito com <span>♥</span> em São José do Rio Preto - SP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5517997581080?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20Clínica%20Sthetizar."
+       class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        /* ============================================================
+           SCROLL REVEAL — Intersection Observer
+        ============================================================ */
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('is-visible');
+                    revealObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el));
+
+        /* ============================================================
+           COUNTER ANIMATION
+        ============================================================ */
+        function animateCounter(el, target, dur) {
+            const isFloat = String(target).includes('.');
+            const suffix  = el.dataset.suffix || '';
+            const t0 = performance.now();
+            (function tick(now) {
+                const p    = Math.min((now - t0) / dur, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                el.textContent = (isFloat
+                    ? (ease * target).toFixed(1).replace('.', ',')
+                    : Math.round(ease * target)) + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+            })(performance.now());
+        }
+        const cntObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    animateCounter(e.target, parseFloat(e.target.dataset.count), 1800);
+                    cntObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+
+        /* ============================================================
+           HEADER — glassmorphism on scroll
+        ============================================================ */
+        const $hdr = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            $hdr.classList.toggle('scrolled', window.scrollY > 40);
+        }, { passive: true });
+
+        /* ============================================================
+           STICKY BAR
+        ============================================================ */
+        const $bar    = document.getElementById('stickyBar');
+        const $hero   = document.getElementById('home');
+        const $close  = document.getElementById('stickyClose');
+        let dismissed = false;
+
+        new IntersectionObserver(entries => {
+            if (!dismissed) $bar.classList.toggle('is-visible', !entries[0].isIntersecting);
+        }, { threshold: 0 }).observe($hero);
+
+        $close.addEventListener('click', () => {
+            dismissed = true;
+            $bar.classList.remove('is-visible');
+        });
+
+        /* ============================================================
+           MOBILE MENU
+        ============================================================ */
+        const $ham   = document.getElementById('hamburger');
+        const $menu  = document.getElementById('mobileMenu');
+        const $mClose = document.getElementById('menuClose');
+
+        $ham.addEventListener('click',   () => $menu.classList.add('is-open'));
+        $mClose.addEventListener('click', () => $menu.classList.remove('is-open'));
+        $menu.querySelectorAll('.m-link, .btn').forEach(a =>
+            a.addEventListener('click', () => $menu.classList.remove('is-open'))
+        );
+    </script>
+
+</body>
+</html>

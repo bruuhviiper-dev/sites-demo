@@ -1,0 +1,238 @@
+{
+  "_doc": "Cada nicho tem DNA próprio (fonts + design + schemes de cor). O gerador detecta o nicho, escolhe 1 scheme de cor por 'semente' do nome (empresas do mesmo nicho saem diferentes) e aplica o layout do nicho. design.hero: split-right|split-left|centered. design.shape: soft|sharp|round. design.display: elegant|condensed|modern. Para criar nicho novo: copie um bloco e ajuste. O brief criativo de cada nicho fica em motor/prompts/<nicho>.md.",
+
+  "estetica": {
+    "fonts": { "display": "\"Cormorant Garamond\", serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "soft", "display": "elegant" },
+    "schemes": [
+      { "bg":"#0D0D0D", "bgAlt":"#111111", "surface":"#1A1A1A", "accent":"#C9A96E", "accent2":"#E8D5B7", "text":"#F5F0E8", "muted":"#A89F90", "border":"#2A2A2A" },
+      { "bg":"#100C0E", "bgAlt":"#150F12", "surface":"#1C151A", "accent":"#C98AA6", "accent2":"#EBC9D8", "text":"#F6EEF2", "muted":"#AC97A2", "border":"#2C222A" },
+      { "bg":"#0B0E0E", "bgAlt":"#0F1313", "surface":"#15191A", "accent":"#7FB7AE", "accent2":"#C7E6E1", "text":"#EEF5F4", "muted":"#94A6A4", "border":"#1F2829" }
+    ],
+    "hero": { "eyebrow":"Estética & Bem-estar", "title":"Sua beleza merece o melhor cuidado", "sub":"Tratamentos faciais e corporais personalizados, com técnica e sofisticação para realçar a sua beleza natural." },
+    "services": { "eyebrow":"O que oferecemos", "title":"Serviços & Tratamentos", "intro":"Protocolos personalizados que unem técnica e cuidado para resultados reais.",
+      "items":[
+        {"icon":"face","name":"Limpeza de Pele","desc":"Higienização profunda, extração e hidratação para uma pele renovada.","price":"R$ 180"},
+        {"icon":"leaf","name":"Peeling & Renovação","desc":"Tratamento de manchas, textura e viço com renovação celular.","price":"R$ 220"},
+        {"icon":"heart","name":"Massagem Modeladora","desc":"Técnica corporal para reduzir medidas e melhorar contornos.","price":"R$ 150"},
+        {"icon":"cut","name":"Design de Sobrancelhas","desc":"Mapeamento facial para um desenho harmônico e natural.","price":"R$ 70"},
+        {"icon":"hand","name":"Drenagem Linfática","desc":"Estímulo da circulação para reduzir inchaços e revitalizar.","price":"R$ 160"},
+        {"icon":"sparkle","name":"Consultoria de Skincare","desc":"Diagnóstico de pele e montagem de uma rotina eficaz.","price":"R$ 120"}
+      ]},
+    "footer": { "tagline": "Cuidar de você é a nossa forma de arte." }
+  },
+
+  "barbearia": {
+    "fonts": { "display": "\"Oswald\", sans-serif", "body": "\"Inter\", sans-serif" },
+    "fontsGoogle": ["Oswald:wght@300;400;500;600;700", "Inter:wght@300;400;500;600"],
+    "design": { "hero": "split-left", "shape": "sharp", "display": "condensed" },
+    "schemes": [
+      { "bg":"#0E0C0A", "bgAlt":"#13100D", "surface":"#191512", "accent":"#C8975A", "accent2":"#E5C99A", "text":"#F2ECE4", "muted":"#A0958A", "border":"#2A2420" },
+      { "bg":"#0C0D0F", "bgAlt":"#101216", "surface":"#16181C", "accent":"#C0392B", "accent2":"#E8A99F", "text":"#EEF0F3", "muted":"#9098A6", "border":"#232730" },
+      { "bg":"#0B0E0D", "bgAlt":"#0F1311", "surface":"#141917", "accent":"#9FB58C", "accent2":"#D2E3C5", "text":"#EEF2EC", "muted":"#94A398", "border":"#1F2823" }
+    ],
+    "hero": { "eyebrow":"Barbearia & Grooming", "title":"Estilo e atitude no detalhe", "sub":"Cortes, barba e cuidados masculinos com a tradição e a precisão que você merece." },
+    "services": { "eyebrow":"Serviços", "title":"O que fazemos",
+      "items":[
+        {"icon":"scissors","name":"Corte Masculino","desc":"Cortes clássicos e modernos sob medida para você.","price":"R$ 45"},
+        {"icon":"cut","name":"Barba","desc":"Modelagem, toalha quente e finalização impecável.","price":"R$ 35"},
+        {"icon":"star","name":"Combo Corte + Barba","desc":"O pacote completo para um visual afiado.","price":"R$ 70"},
+        {"icon":"sparkle","name":"Tratamentos","desc":"Hidratação, pigmentação e cuidados especiais.","price":"R$ 50"}
+      ]},
+    "footer": { "tagline": "Onde o estilo encontra a tradição." }
+  },
+
+  "restaurante": {
+    "fonts": { "display": "\"Playfair Display\", serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "centered", "shape": "round", "display": "elegant" },
+    "schemes": [
+      { "bg":"#100C0A", "bgAlt":"#16100D", "surface":"#1C1512", "accent":"#D98438", "accent2":"#F0B97D", "text":"#F4ECE3", "muted":"#A89384", "border":"#2C2220" },
+      { "bg":"#0E0B0B", "bgAlt":"#130E0E", "surface":"#1A1313", "accent":"#B23A3A", "accent2":"#E59A8C", "text":"#F4EAE6", "muted":"#A89089", "border":"#2A1F1E" },
+      { "bg":"#0C0E0B", "bgAlt":"#10130E", "surface":"#161A13", "accent":"#A4B24B", "accent2":"#D7E29A", "text":"#EFF2E6", "muted":"#9AA386", "border":"#222820" }
+    ],
+    "hero": { "eyebrow":"Gastronomia & Sabor", "title":"Uma experiência para todos os sentidos", "sub":"Pratos preparados com ingredientes selecionados e o carinho de quem ama cozinhar." },
+    "services": { "eyebrow":"Cardápio", "navLabel":"Cardápio", "title":"Nossas Especialidades", "ctaLabel":"Ver no cardápio",
+      "items":[
+        {"icon":"fork","name":"Pratos Executivos","desc":"Opções deliciosas para o seu almoço do dia a dia.","price":"R$ 39"},
+        {"icon":"star","name":"Especiais da Casa","desc":"Receitas exclusivas que são a cara do nosso restaurante.","price":"R$ 69"},
+        {"icon":"heart","name":"Sobremesas","desc":"O toque doce perfeito para fechar a refeição.","price":"R$ 22"},
+        {"icon":"sparkle","name":"Eventos & Reservas","desc":"Espaço para comemorar momentos especiais.","price":"Sob consulta"}
+      ]},
+    "footer": { "tagline": "Sabor que vira memória." }
+  },
+
+  "automotivo": {
+    "fonts": { "display": "\"Rajdhani\", sans-serif", "body": "\"Inter\", sans-serif" },
+    "fontsGoogle": ["Rajdhani:wght@400;500;600;700", "Inter:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "sharp", "display": "condensed" },
+    "schemes": [
+      { "bg":"#0A0C10", "bgAlt":"#0D1018", "surface":"#121620", "accent":"#E0322E", "accent2":"#FF7A6E", "text":"#EEF1F6", "muted":"#8B95A6", "border":"#1E2533" },
+      { "bg":"#0A0D0E", "bgAlt":"#0D1113", "surface":"#11171A", "accent":"#22B8C9", "accent2":"#8BE3EE", "text":"#EAF3F5", "muted":"#869AA0", "border":"#1B2A2E" },
+      { "bg":"#0C0B0A", "bgAlt":"#100E0C", "surface":"#171411", "accent":"#E8A22B", "accent2":"#FAD389", "text":"#F3EEE6", "muted":"#9C9284", "border":"#272019" }
+    ],
+    "hero": { "eyebrow":"Estética Automotiva Premium", "title":"Seu carro com brilho de showroom", "sub":"Lavagem detalhada, polimento e proteção. Cuidado profissional do volante ao para-choque." },
+    "services": { "eyebrow":"Nossos serviços", "title":"Serviços Premium", "intro":"Técnica e produtos profissionais para o seu veículo.",
+      "items":[
+        {"icon":"car","name":"Lavagem Detalhada","desc":"Limpeza completa interna e externa com produtos premium.","price":"R$ 90"},
+        {"icon":"sparkle","name":"Polimento","desc":"Remoção de riscos e brilho profundo na pintura.","price":"R$ 350"},
+        {"icon":"shield","name":"Vitrificação","desc":"Proteção duradoura contra sol, chuva e riscos.","price":"R$ 800"},
+        {"icon":"wrench","name":"Higienização Interna","desc":"Bancos, carpetes e ar renovados e sanitizados.","price":"R$ 250"},
+        {"icon":"drop","name":"Cristalização de Vidros","desc":"Visibilidade e segurança em dias de chuva.","price":"R$ 120"},
+        {"icon":"check","name":"Revisão Estética","desc":"Pacote completo para deixar seu carro impecável.","price":"Sob consulta"}
+      ]},
+    "footer": { "tagline": "Detalhes que fazem a diferença." }
+  },
+
+  "odontologia": {
+    "fonts": { "display": "\"Poppins\", sans-serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Poppins:wght@400;500;600;700", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "round", "display": "modern" },
+    "schemes": [
+      { "bg":"#0A0F14", "bgAlt":"#0D131A", "surface":"#111922", "accent":"#3FA9C9", "accent2":"#A9DEED", "text":"#EAF3F7", "muted":"#8497A2", "border":"#1C2730" },
+      { "bg":"#0A1212", "bgAlt":"#0D1717", "surface":"#101E1D", "accent":"#34BFA3", "accent2":"#A6E8D8", "text":"#E8F5F2", "muted":"#84A39B", "border":"#1A2E2A" }
+    ],
+    "hero": { "eyebrow":"Odontologia & Estética Dental", "title":"O sorriso que você sempre quis", "sub":"Tratamentos modernos, indolores e personalizados para uma saúde bucal completa." },
+    "services": { "eyebrow":"Tratamentos", "title":"Nossos Serviços",
+      "items":[
+        {"icon":"tooth","name":"Clínico Geral","desc":"Prevenção, limpeza e tratamento de cáries.","price":"R$ 150"},
+        {"icon":"sparkle","name":"Clareamento","desc":"Sorriso mais branco com segurança e conforto.","price":"R$ 600"},
+        {"icon":"star","name":"Lentes de Contato","desc":"Estética dental de alto padrão e naturalidade.","price":"Sob consulta"},
+        {"icon":"check","name":"Implantes","desc":"Recupere a função e a estética do seu sorriso.","price":"Sob consulta"},
+        {"icon":"shield","name":"Ortodontia","desc":"Aparelhos fixos e alinhadores invisíveis.","price":"Sob consulta"},
+        {"icon":"heart","name":"Odontopediatria","desc":"Cuidado gentil e acolhedor para os pequenos.","price":"R$ 130"}
+      ]},
+    "footer": { "tagline": "Cuidando do seu sorriso com excelência." }
+  },
+
+  "veterinaria": {
+    "fonts": { "display": "\"Poppins\", sans-serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Poppins:wght@400;500;600;700", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "round", "display": "modern" },
+    "schemes": [
+      { "bg":"#0C1410", "bgAlt":"#0F1A14", "surface":"#13211A", "accent":"#5FBF8F", "accent2":"#BFE8D2", "text":"#EAF5EE", "muted":"#8FA89A", "border":"#1E3328" },
+      { "bg":"#0B1014", "bgAlt":"#0E141A", "surface":"#121A22", "accent":"#4FA3D8", "accent2":"#B3DCF0", "text":"#E8F2F8", "muted":"#88a0ad", "border":"#1B2A33" }
+    ],
+    "hero": { "eyebrow":"Saúde & Bem-estar Animal", "title":"Cuidado completo para quem você ama", "sub":"Atendimento veterinário humanizado, com estrutura moderna e carinho em cada consulta." },
+    "services": { "eyebrow":"Nossos serviços", "title":"Cuidados Veterinários", "intro":"Estrutura completa para a saúde e o bem-estar do seu pet.",
+      "items":[
+        {"icon":"heart","name":"Consulta Clínica","desc":"Avaliação completa da saúde do seu pet com diagnóstico preciso.","price":"R$ 120"},
+        {"icon":"shield","name":"Vacinação","desc":"Calendário vacinal completo com imunizantes de qualidade.","price":"R$ 90"},
+        {"icon":"paw","name":"Banho & Tosa","desc":"Higiene e estética com produtos próprios para cada pelagem.","price":"R$ 60"},
+        {"icon":"check","name":"Exames Laboratoriais","desc":"Resultados rápidos e confiáveis para o melhor tratamento.","price":"R$ 80"},
+        {"icon":"home","name":"Internação","desc":"Acompanhamento 24h com monitoramento e conforto.","price":"Sob consulta"},
+        {"icon":"sparkle","name":"Cirurgias","desc":"Procedimentos com segurança e equipe especializada.","price":"Sob consulta"}
+      ]},
+    "footer": { "tagline": "Porque eles também são família." }
+  },
+
+  "petshop": {
+    "fonts": { "display": "\"Poppins\", sans-serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Poppins:wght@400;500;600;700", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "centered", "shape": "round", "display": "modern" },
+    "schemes": [
+      { "bg":"#0F0C16", "bgAlt":"#15101F", "surface":"#1B1528", "accent":"#B08CFF", "accent2":"#E0D2FF", "text":"#F1ECF8", "muted":"#9C92AE", "border":"#2A2238" },
+      { "bg":"#0C1015", "bgAlt":"#0F141B", "surface":"#141B24", "accent":"#3FB6E0", "accent2":"#A9E2F2", "text":"#E9F4F9", "muted":"#88a0ad", "border":"#1B2A33" }
+    ],
+    "hero": { "eyebrow":"Pet Shop & Bem-estar", "title":"Tudo que o seu pet precisa, num só lugar", "sub":"Produtos, banho, tosa e muito carinho. O melhor para o seu melhor amigo." },
+    "services": { "eyebrow":"O que fazemos", "title":"Nossos Serviços",
+      "items":[
+        {"icon":"paw","name":"Banho & Tosa","desc":"Higiene e beleza com todo o cuidado que o seu pet merece.","price":"R$ 55"},
+        {"icon":"heart","name":"Hotel & Creche","desc":"Hospedagem segura e divertida enquanto você viaja.","price":"R$ 80"},
+        {"icon":"check","name":"Leva e Traz","desc":"Buscamos e levamos o seu pet com toda a comodidade.","price":"R$ 25"},
+        {"icon":"sparkle","name":"Acessórios","desc":"Coleiras, brinquedos e roupinhas para todos os portes.","price":"A partir de R$ 19"}
+      ]},
+    "products": { "show": true, "eyebrow":"Loja", "title":"Produtos para o seu Pet", "intro":"Seleção de rações, petiscos e acessórios de qualidade.",
+      "items":[
+        {"cat":"racao","tag":"Ração","nome":"Ração Premium","desc":"Nutrição completa para cães adultos.","preco":"R$ 189"},
+        {"cat":"racao","tag":"Ração","nome":"Ração Filhotes","desc":"Energia e crescimento saudável.","preco":"R$ 159"},
+        {"cat":"brinquedos","tag":"Brinquedos","nome":"Kit Brinquedos","desc":"Diversão e saúde dental.","preco":"R$ 49"},
+        {"cat":"higiene","tag":"Higiene","nome":"Shampoo Pet","desc":"Pelos macios e cheirosos.","preco":"R$ 39"}
+      ]},
+    "footer": { "tagline": "Amor de quatro patas, cuidado de gente grande." }
+  },
+
+  "academia": {
+    "fonts": { "display": "\"Oswald\", sans-serif", "body": "\"Inter\", sans-serif" },
+    "fontsGoogle": ["Oswald:wght@300;400;500;600;700", "Inter:wght@300;400;500;600"],
+    "design": { "hero": "split-left", "shape": "sharp", "display": "condensed" },
+    "schemes": [
+      { "bg":"#0B0D0E", "bgAlt":"#0F1213", "surface":"#14181A", "accent":"#C6F24E", "accent2":"#E2FBA0", "text":"#EFF3F0", "muted":"#8C9690", "border":"#1F2528" },
+      { "bg":"#0C0B0F", "bgAlt":"#100E14", "surface":"#16131C", "accent":"#FF5C2B", "accent2":"#FFB199", "text":"#F2EEF0", "muted":"#968F9C", "border":"#241F2C" }
+    ],
+    "hero": { "eyebrow":"Academia & Performance", "title":"Sua melhor versão começa agora", "sub":"Estrutura completa, profissionais qualificados e o ambiente certo para você evoluir." },
+    "services": { "eyebrow":"Modalidades", "title":"O que oferecemos",
+      "items":[
+        {"icon":"dumbbell","name":"Musculação","desc":"Equipamentos modernos e acompanhamento profissional.","price":"R$ 99/mês"},
+        {"icon":"heart","name":"Aulas Coletivas","desc":"Energia em grupo: funcional, dança e muito mais.","price":"R$ 120/mês"},
+        {"icon":"check","name":"Personal Trainer","desc":"Treino 100% individualizado para os seus objetivos.","price":"Sob consulta"},
+        {"icon":"sparkle","name":"Avaliação Física","desc":"Acompanhe sua evolução com dados precisos.","price":"Grátis"}
+      ]},
+    "footer": { "tagline": "Supere seus limites todos os dias." }
+  },
+
+  "tatuagem": {
+    "fonts": { "display": "\"Anton\", sans-serif", "body": "\"Space Grotesk\", sans-serif" },
+    "fontsGoogle": ["Anton", "Space+Grotesk:wght@300;400;500;600;700"],
+    "design": { "hero": "split-left", "shape": "sharp", "display": "condensed" },
+    "schemes": [
+      { "bg":"#0A0A0A", "bgAlt":"#121212", "surface":"#161616", "accent":"#E5484D", "accent2":"#FF8A8E", "text":"#F2F2F0", "muted":"#8A8A86", "border":"#262626" },
+      { "bg":"#0A0A0A", "bgAlt":"#111111", "surface":"#161616", "accent":"#E0A82E", "accent2":"#F5CE6E", "text":"#F2F1EC", "muted":"#8A867C", "border":"#262420" },
+      { "bg":"#09090B", "bgAlt":"#101014", "surface":"#15151A", "accent":"#7C9CBF", "accent2":"#B9CFE3", "text":"#EEF0F2", "muted":"#82868E", "border":"#22232A" }
+    ],
+    "hero": { "eyebrow":"Estúdio de Tatuagem", "title":"Tinta que conta histórias", "sub":"Tatuagens autorais com técnica, segurança e identidade. Do primeiro traço à arte na sua pele." },
+    "services": { "eyebrow":"Estilos", "navLabel":"Estilos", "title":"O que tatuamos",
+      "items":[
+        {"icon":"sparkle","name":"Blackwork","desc":"Preto sólido, contrastes fortes e impacto visual.","price":"Sob orçamento"},
+        {"icon":"cut","name":"Fineline","desc":"Traço fino e delicado para desenhos minimalistas.","price":"Sob orçamento"},
+        {"icon":"star","name":"Realismo","desc":"Sombreados e detalhes para resultados realistas.","price":"Sob orçamento"},
+        {"icon":"shield","name":"Old School","desc":"Tradicional, com traço marcado e cores vivas.","price":"Sob orçamento"},
+        {"icon":"check","name":"Cobertura (Cover-up)","desc":"Transformamos tatuagens antigas em novas artes.","price":"Sob orçamento"},
+        {"icon":"heart","name":"Retrato & Autoral","desc":"Projetos exclusivos criados junto com você.","price":"Sob orçamento"}
+      ]},
+    "footer": { "tagline": "Sua história, eternizada na pele." }
+  },
+
+  "psicologia": {
+    "fonts": { "display": "\"Fraunces\", serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Fraunces:ital,wght@0,400;0,500;1,400", "Jost:wght@300;400;500"],
+    "design": { "hero": "split-right", "shape": "round", "display": "elegant" },
+    "schemes": [
+      { "bg":"#0F1311", "bgAlt":"#131815", "surface":"#18201B", "accent":"#5C8064", "accent2":"#9DBBA3", "text":"#EEF3EF", "muted":"#90A096", "border":"#222C26" },
+      { "bg":"#13100E", "bgAlt":"#181311", "surface":"#1E1714", "accent":"#B0704A", "accent2":"#DDA887", "text":"#F3EDE6", "muted":"#A2958A", "border":"#2A211C" },
+      { "bg":"#0E1114", "bgAlt":"#11151A", "surface":"#161B21", "accent":"#5E7C99", "accent2":"#9FB6CC", "text":"#EBF0F4", "muted":"#8A98A4", "border":"#202830" }
+    ],
+    "hero": { "eyebrow":"Psicologia & Acolhimento", "title":"Um espaço seguro para cuidar de você", "sub":"Atendimento psicológico humanizado, acolhedor e sem julgamentos. Um lugar para se ouvir, se entender e seguir em frente — no seu tempo." },
+    "services": { "eyebrow":"Como posso ajudar", "navLabel":"Atendimentos", "title":"Áreas de atendimento", "intro":"Cada processo é único. Caminhamos juntos, com escuta e cuidado.", "ctaLabel":"Conversar",
+      "items":[
+        {"icon":"hand","name":"Terapia Individual","desc":"Um espaço só seu para se conhecer e lidar com o que pesa.","price":"Sob consulta"},
+        {"icon":"heart","name":"Terapia de Casal","desc":"Diálogo e ferramentas para fortalecer a relação.","price":"Sob consulta"},
+        {"icon":"leaf","name":"Ansiedade & Estresse","desc":"Acolhimento e estratégias para retomar o equilíbrio.","price":"Sob consulta"},
+        {"icon":"sparkle","name":"Autoconhecimento","desc":"Um caminho de escuta para entender quem você é.","price":"Sob consulta"},
+        {"icon":"check","name":"Terapia Online","desc":"Atendimento por vídeo, de onde você estiver, com sigilo.","price":"Sob consulta"},
+        {"icon":"star","name":"Primeira Sessão","desc":"Uma conversa de acolhimento para nos conhecermos.","price":"Sob consulta"}
+      ]},
+    "testimonials": { "show": false },
+    "instagram": { "show": false },
+    "footer": { "tagline": "Cuidar da mente é um ato de coragem." }
+  },
+
+  "generico": {
+    "fonts": { "display": "\"Cormorant Garamond\", serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "soft", "display": "elegant" },
+    "schemes": [
+      { "bg":"#0D0D0F", "bgAlt":"#121214", "surface":"#19191C", "accent":"#C9A96E", "accent2":"#E8D5B7", "text":"#F2F0EC", "muted":"#9A958E", "border":"#27272B" },
+      { "bg":"#0B0D0F", "bgAlt":"#0F1114", "surface":"#15181C", "accent":"#6E92C9", "accent2":"#B7CDE8", "text":"#ECF0F5", "muted":"#8E96A2", "border":"#222730" }
+    ],
+    "hero": { "eyebrow":"Bem-vindo", "title":"Qualidade e confiança para você", "sub":"Atendimento de excelência e dedicação em cada detalhe do nosso trabalho." },
+    "services": { "eyebrow":"O que fazemos", "title":"Nossos Serviços",
+      "items":[
+        {"icon":"star","name":"Serviço 1","desc":"Descrição do serviço oferecido pela empresa.","price":"Sob consulta"},
+        {"icon":"sparkle","name":"Serviço 2","desc":"Descrição do serviço oferecido pela empresa.","price":"Sob consulta"},
+        {"icon":"check","name":"Serviço 3","desc":"Descrição do serviço oferecido pela empresa.","price":"Sob consulta"}
+      ]},
+    "footer": { "tagline": "Seu sucesso é o nosso compromisso." }
+  }
+}

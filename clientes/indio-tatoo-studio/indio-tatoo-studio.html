@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  ESTILO: INK BOLD  (bruto, alto contraste, editorial pesado)
+  Para estúdios de tatuagem / criativos. Tipografia Anton gigante,
+  faixa marquee, galeria de trabalhos como protagonista, cantos vivos,
+  textura de grão. Lê o MESMO window.SITE. A base (preto + Anton)
+  pertence ao ESTILO; só --accent vem do nicho.
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" id="meta-desc" content="" />
+<title id="meta-title"></title>
+<script id="site-data">window.SITE = {"fonts":{"display":"\"Anton\", sans-serif","body":"\"Space Grotesk\", sans-serif"},"fontsGoogle":["Anton","Space+Grotesk:wght@300;400;500;600;700"],"design":{"hero":"split-left","shape":"sharp","display":"condensed"},"hero":{"eyebrow":"Estúdio de Tatuagem · São José do Rio Preto","title":"Tinta que conta histórias","sub":"Tatuagens autorais com técnica, segurança e identidade. Nota 4,9 no Google — arte na pele que você leva pra vida.","titleHtml":"Tinta que conta \u003cspan class=\"ac\">histórias\u003c/span>","badge":"★ 4,9 · 89 avaliações","imageLabel":"Foto do estúdio aqui","ctaPrimary":{"label":"Fazer orçamento","href":"#contato"},"ctaGhost":{"label":"Ver trabalhos","href":"#galeria"}},"services":{"eyebrow":"Estilos","navLabel":"Estilos","title":"O que tatuamos","items":[{"icon":"sparkle","name":"Blackwork","desc":"Preto sólido, contrastes fortes e impacto visual.","price":"Sob orçamento"},{"icon":"cut","name":"Fineline","desc":"Traço fino e delicado para desenhos minimalistas.","price":"Sob orçamento"},{"icon":"star","name":"Realismo","desc":"Sombreados e detalhes para resultados realistas.","price":"Sob orçamento"},{"icon":"shield","name":"Old School","desc":"Tradicional, traço marcado e cores vivas.","price":"Sob orçamento"},{"icon":"check","name":"Cobertura (Cover-up)","desc":"Transformamos tatuagens antigas em novas artes.","price":"Sob orçamento"},{"icon":"heart","name":"Autoral & Retrato","desc":"Projetos exclusivos criados junto com você.","price":"Sob orçamento"}],"titleHtml":"O que \u003cspan class=\"ac\">tatuamos\u003c/span>","intro":"Do traço fino ao preto pesado — encontramos o estilo certo para a sua ideia."},"footer":{"tagline":"Sua história, eternizada na pele."},"categoria":"Estúdio de tatuagem","slug":"indio-tatoo-studio","brand":{"name":"Indío Tatoo Studio","tagline":"Estúdio de Tatuagem · Rio Preto","nameHtml":"Indío \u003cb>Tatoo\u003c/b>"},"about":{"eyebrow":"O estúdio","titleHtml":"Arte, segurança e \u003cspan class=\"ac\">identidade\u003c/span>","paragraphs":["O Indío Tatoo Studio é um espaço dedicado à arte na pele, onde cada projeto é desenvolvido junto com o cliente para traduzir a sua história em traço.","Trabalhamos com material 100% descartável e protocolos rígidos de biossegurança, num ambiente acolhedor e profissional. Nota 4,9 com quase 90 avaliações reflete o nosso cuidado."],"stats":[{"num":4,"suffix":",9","label":"Nota no Google"},{"num":89,"suffix":"+","label":"Avaliações"},{"num":100,"suffix":"%","label":"Material descartável"}],"certs":[{"label":"Biossegurança"},{"label":"Material descartável"},{"label":"Projetos autorais"},{"label":"Cobertura / Cover-up"}]},"products":{"show":false},"testimonials":{"eyebrow":"Depoimentos","titleHtml":"Quem confia","items":[{"stars":5,"quote":"Profissional excelente e ambiente impecável. Resultado ficou melhor do que eu imaginava.","name":"Cliente Google","meta":"Avaliação · 4,9 ★"},{"stars":5,"quote":"Atendimento atencioso do começo ao fim. Cuidado com a higiene e traço perfeito.","name":"Cliente Google","meta":"Avaliação · 4,9 ★"},{"stars":5,"quote":"Levei minha ideia e saí com uma arte única. Recomendo demais o estúdio.","name":"Cliente Google","meta":"Avaliação · 4,9 ★"}]},"instagram":{"show":true,"handle":"@indiotatoostudio","url":"https://instagram.com","titleHtml":"Nossos \u003cspan class=\"ac\">trabalhos\u003c/span>"},"contact":{"eyebrow":"Contato","titleHtml":"Bora marcar a \u003cspan class=\"ac\">sua\u003c/span>","facebookUrl":"https://facebook.com","facebookLabel":"Indío Tatoo Studio","instagramUrl":"https://instagram.com","address":"R. Maj. João Batista França, 1845 - Parque Industrial, São José do Rio Preto - SP, 15025-610","hours":"Aberto · fecha às 18:00","mapsEmbed":"https://www.google.com/maps?q=R.+Maj.+Jo%C3%A3o+Batista+Fran%C3%A7a,+1845+-+Parque+Industrial,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15025-610&output=embed"},"theme":{"bg":"#0A0A0A","bgAlt":"#121212","surface":"#161616","accent":"#E5484D","accent2":"#FF8A8E","text":"#F2F2F0","muted":"#8A8A86","border":"#262626"},"meta":{"title":"Indío Tatoo Studio — Estúdio de Tatuagem · Rio Preto","description":"Tatuagens autorais com técnica, segurança e identidade. Nota 4,9 no Google — arte na pele que você leva pra vida."}};</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --bg:#0A0A0A; --bg2:#121212; --surface:#161616; --ink:#F2F2F0; --muted:#8A8A86; --line:#262626;
+  --accent:#E5484D;
+  --disp:"Anton", sans-serif; --body:"Space Grotesk", sans-serif;
+  --maxw:1280px; --ease:cubic-bezier(.16,.84,.34,1);
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{ background:var(--bg); color:var(--ink); font-family:var(--body); font-weight:300; line-height:1.65; overflow-x:hidden; }
+/* textura de grão */
+body::after{ content:""; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.05; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; }
+h1,h2,h3{ font-family:var(--disp); font-weight:400; line-height:.92; letter-spacing:.01em; text-transform:uppercase; }
+::selection{ background:var(--accent); color:#000; }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+::-webkit-scrollbar{ width:9px; } ::-webkit-scrollbar-track{ background:#000; }
+::-webkit-scrollbar-thumb{ background:#333; } ::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
+
+.container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(20px,5vw,56px); }
+.section{ padding-block:clamp(70px,10vw,140px); position:relative; }
+.label{ font-family:var(--body); font-weight:600; font-size:.7rem; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); display:inline-flex; align-items:center; gap:10px; }
+.label::before{ content:"["; } .label::after{ content:"]"; }
+.sec-title{ font-size:clamp(2.6rem,8vw,6rem); margin-top:18px; }
+.sec-title .o{ color:transparent; -webkit-text-stroke:1.5px var(--ink); }
+.sec-title .ac{ color:var(--accent); }
+.sec-intro{ color:var(--muted); max-width:560px; margin-top:18px; font-size:1.02rem; }
+
+.btn{ font-family:var(--body); font-weight:600; font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; padding:17px 36px; background:var(--accent); color:#0A0A0A; border:none; display:inline-flex; align-items:center; gap:12px; transition:transform .3s var(--ease), background .3s; cursor:pointer; }
+.btn:hover{ transform:translate(-3px,-3px); box-shadow:6px 6px 0 var(--ink); }
+.btn--ghost{ background:none; color:var(--ink); border:1.5px solid var(--line); }
+.btn--ghost:hover{ border-color:var(--accent); box-shadow:6px 6px 0 var(--accent); }
+.btn svg{ width:16px; height:16px; }
+
+/* LOADER */
+#loader{ position:fixed; inset:0; z-index:9999; background:var(--bg); display:grid; place-items:center; transition:opacity .7s var(--ease), visibility .7s; }
+#loader.hidden{ opacity:0; visibility:hidden; }
+.ld{ font-family:var(--disp); font-size:clamp(3rem,10vw,6rem); color:var(--ink); position:relative; overflow:hidden; }
+.ld span{ display:inline-block; transform:translateY(110%); animation:ldu .8s var(--ease) forwards; }
+.ld span:nth-child(2){ animation-delay:.1s; color:var(--accent); }
+@keyframes ldu{ to{ transform:none; } }
+
+/* HEADER */
+.header{ position:fixed; top:0; left:0; width:100%; z-index:1000; transition:background .4s, border-color .4s, padding .4s; border-bottom:1px solid transparent; }
+.header.scrolled{ background:rgba(10,10,10,.85); backdrop-filter:blur(12px); border-bottom-color:var(--line); }
+.nav{ display:flex; align-items:center; justify-content:space-between; padding-block:22px; }
+.brand{ font-family:var(--disp); font-size:1.7rem; letter-spacing:.02em; text-transform:uppercase; }
+.brand b{ color:var(--accent); font-weight:400; }
+.brand .tag{ display:block; font-family:var(--body); font-size:.54rem; letter-spacing:.34em; color:var(--muted); margin-top:2px; font-weight:500; }
+.nav-links{ display:flex; align-items:center; gap:36px; }
+.nav-links a{ font-family:var(--body); font-size:.76rem; letter-spacing:.18em; text-transform:uppercase; font-weight:500; position:relative; }
+.nav-links a::after{ content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:var(--accent); transition:width .3s var(--ease); }
+.nav-links a:hover{ color:var(--accent); } .nav-links a:hover::after{ width:100%; }
+.nav-right{ display:flex; align-items:center; gap:22px; }
+.burger{ display:none; width:40px; height:40px; background:none; border:none; position:relative; z-index:1100; cursor:pointer; }
+.burger span{ position:absolute; left:8px; width:24px; height:2px; background:var(--ink); transition:.35s var(--ease); }
+.burger span:nth-child(1){ top:15px; } .burger span:nth-child(2){ top:22px; }
+.burger.open span:nth-child(1){ top:18px; transform:rotate(45deg); background:var(--accent); }
+.burger.open span:nth-child(2){ top:18px; transform:rotate(-45deg); background:var(--accent); }
+@media (max-width:900px){
+  .burger{ display:block; }
+  .nav-links{ position:fixed; inset:0; flex-direction:column; justify-content:center; gap:28px; background:var(--bg); transform:translateX(100%); transition:transform .5s var(--ease); }
+  .nav-links.open{ transform:none; }
+  .nav-links a{ font-family:var(--disp); font-size:2rem; letter-spacing:.02em; }
+  .nav-right .btn{ display:none; }
+}
+
+/* HERO */
+.hero{ padding-top:130px; padding-bottom:0; }
+.hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:46px; align-items:center; }
+.hero h1{ font-size:clamp(3.4rem,13vw,11rem); line-height:.84; margin:22px 0 26px; }
+.hero h1 .ac{ color:var(--accent); }
+.hero h1 .o{ color:transparent; -webkit-text-stroke:2px var(--ink); }
+.hero-sub{ color:var(--muted); font-size:1.12rem; max-width:440px; margin-bottom:34px; }
+.hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+.hero-visual{ position:relative; aspect-ratio:3/4; background:var(--surface); border:1.5px solid var(--line); overflow:hidden; }
+.hero-visual img{ width:100%; height:100%; object-fit:cover; }
+.hero-visual .vl{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--disp); color:#2a2a2a; font-size:2rem; text-align:center; }
+.hero-visual .badge{ position:absolute; top:0; right:0; background:var(--accent); color:#000; font-family:var(--body); font-weight:700; font-size:.8rem; letter-spacing:.08em; padding:10px 16px; }
+@media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } .hero-visual{ order:-1; aspect-ratio:4/3; max-height:60vh; } }
+
+/* MARQUEE */
+.marquee{ border-block:1.5px solid var(--line); overflow:hidden; white-space:nowrap; margin-top:clamp(40px,7vw,90px); padding-block:20px; }
+.marquee-in{ display:inline-block; animation:mq 26s linear infinite; }
+.marquee-in span{ font-family:var(--disp); font-size:clamp(1.6rem,4vw,3rem); text-transform:uppercase; color:var(--ink); }
+.marquee-in span i{ color:var(--accent); font-style:normal; margin:0 .5em; }
+.marquee:hover .marquee-in{ animation-play-state:paused; }
+@keyframes mq{ to{ transform:translateX(-50%); } }
+
+/* SOBRE */
+.about-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(36px,5vw,70px); align-items:center; }
+.about-text h2{ font-size:clamp(2.2rem,5vw,3.8rem); margin:16px 0 22px; }
+.about-text p{ color:var(--muted); margin-bottom:16px; max-width:520px; }
+.about-stats{ display:flex; flex-wrap:wrap; gap:clamp(20px,4vw,44px); margin-top:30px; }
+.about-stats .st .n{ font-family:var(--disp); font-size:clamp(2.6rem,6vw,4rem); color:var(--accent); line-height:1; }
+.about-stats .st .l{ font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:6px; }
+.about-tags{ display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+.about-tags span{ font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; padding:9px 15px; border:1px solid var(--line); color:var(--ink); }
+.about-media{ aspect-ratio:1; background:var(--surface); border:1.5px solid var(--line); position:relative; overflow:hidden; }
+.about-media img{ width:100%; height:100%; object-fit:cover; }
+.about-media .ml{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--disp); color:#2a2a2a; font-size:3.5rem; }
+@media (max-width:900px){ .about-grid{ grid-template-columns:1fr; gap:36px; } .about-media{ max-width:420px; } }
+
+/* SERVIÇOS / ESTILOS (cards brutalistas com nº gigante) */
+.sec-head{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px; margin-bottom:clamp(36px,5vw,60px); }
+.svc-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1.5px solid var(--line); }
+.svc-cell{ padding:clamp(26px,3vw,40px); border-right:1.5px solid var(--line); border-bottom:1.5px solid var(--line); position:relative; transition:background .35s var(--ease), color .35s; min-height:230px; display:flex; flex-direction:column; }
+.svc-grid .svc-cell:nth-child(3n){ border-right:none; }
+.svc-num{ font-family:var(--disp); font-size:2.2rem; color:var(--line); line-height:1; transition:color .35s; }
+.svc-cell h3{ font-size:1.7rem; margin:auto 0 10px; }
+.svc-cell p{ color:var(--muted); font-size:.9rem; transition:color .35s; }
+.svc-price{ margin-top:16px; font-family:var(--body); font-weight:600; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); transition:color .35s; }
+.svc-cell:hover{ background:var(--accent); color:#0A0A0A; }
+.svc-cell:hover .svc-num{ color:#0A0A0A; }
+.svc-cell:hover p,.svc-cell:hover .svc-price{ color:#0A0A0A; }
+@media (max-width:880px){ .svc-grid{ grid-template-columns:repeat(2,1fr); } .svc-grid .svc-cell:nth-child(3n){ border-right:1.5px solid var(--line); } .svc-grid .svc-cell:nth-child(2n){ border-right:none; } }
+@media (max-width:560px){ .svc-grid{ grid-template-columns:1fr; } .svc-cell{ border-right:none!important; } }
+
+/* GALERIA (protagonista) */
+.gallery{ background:var(--bg2); }
+.gal-grid{ display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:230px; gap:14px; margin-top:clamp(36px,5vw,56px); }
+.gal-item{ background:var(--surface); border:1px solid var(--line); position:relative; overflow:hidden; }
+.gal-item:nth-child(1){ grid-column:span 2; grid-row:span 2; }
+.gal-item:nth-child(4){ grid-row:span 2; }
+.gal-item img{ width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
+.gal-item .g{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--disp); color:#2a2a2a; font-size:2rem; }
+.gal-item .ov{ position:absolute; inset:0; background:rgba(10,10,10,.55); opacity:0; display:grid; place-items:center; transition:opacity .4s; }
+.gal-item:hover .ov{ opacity:1; } .gal-item:hover img{ transform:scale(1.06); }
+.gal-item .ov svg{ width:30px; height:30px; stroke:var(--accent); fill:none; }
+.gal-cta{ text-align:center; margin-top:44px; }
+@media (max-width:760px){ .gal-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:170px; } .gal-item:nth-child(1){ grid-column:span 2; grid-row:span 1; } .gal-item:nth-child(4){ grid-row:span 1; } }
+
+/* DEPOIMENTOS */
+.quotes{ border-top:1.5px solid var(--line); }
+.qwrap{ max-width:880px; margin:0 auto; text-align:center; }
+.qmark{ font-family:var(--disp); font-size:5rem; color:var(--accent); line-height:.5; }
+.qtrack{ overflow:hidden; }
+.qslides{ display:flex; transition:transform .7s var(--ease); }
+.qslide{ min-width:100%; }
+.qquote{ font-family:var(--disp); font-size:clamp(1.6rem,4vw,2.8rem); line-height:1.15; text-transform:uppercase; }
+.qauthor{ margin-top:26px; font-family:var(--body); font-weight:600; font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; }
+.qauthor span{ display:block; color:var(--muted); margin-top:5px; font-weight:400; letter-spacing:.1em; }
+.qdots{ display:flex; gap:10px; justify-content:center; margin-top:38px; }
+.qdots button{ width:10px; height:10px; border:none; background:var(--line); cursor:pointer; transition:.3s; }
+.qdots button.active{ background:var(--accent); width:30px; }
+
+/* CONTATO */
+.contact-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(36px,5vw,70px); margin-top:clamp(36px,5vw,56px); }
+.cform{ display:grid; gap:18px; }
+.fld label{ display:block; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.fld input,.fld select,.fld textarea{ width:100%; background:var(--surface); border:1.5px solid var(--line); padding:14px 16px; font-family:var(--body); font-size:.95rem; font-weight:300; color:var(--ink); transition:border-color .3s; }
+.fld input:focus,.fld select:focus,.fld textarea:focus{ outline:none; border-color:var(--accent); }
+.fld textarea{ resize:vertical; min-height:110px; }
+.frow{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.cmsg{ font-size:.86rem; color:var(--accent); min-height:18px; }
+.cinfo{ display:grid; gap:0; align-content:start; border:1.5px solid var(--line); }
+.cinfo .it{ padding:22px; border-bottom:1.5px solid var(--line); display:flex; gap:15px; align-items:flex-start; }
+.cinfo .it:last-child{ border-bottom:none; }
+.cinfo .it svg{ width:20px; height:20px; stroke:var(--accent); fill:none; flex-shrink:0; margin-top:3px; }
+.cinfo .it h4{ font-family:var(--body); font-weight:600; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+.cinfo .it p{ color:var(--ink); font-size:.98rem; }
+.cmap{ border-top:1.5px solid var(--line); }
+.cmap iframe{ width:100%; height:190px; border:0; display:block; filter:grayscale(1) invert(.92) contrast(.9); }
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } .frow{ grid-template-columns:1fr; } }
+
+.wa{ position:fixed; right:22px; bottom:22px; z-index:800; width:56px; height:56px; background:#25D366; display:grid; place-items:center; box-shadow:0 10px 26px -8px rgba(37,211,102,.55); transition:transform .3s; }
+.wa:hover{ transform:scale(1.08); } .wa svg{ width:28px; height:28px; fill:#fff; }
+
+/* FOOTER */
+.footer{ border-top:1.5px solid var(--line); padding-block:60px 28px; text-align:center; }
+.footer .fmark{ font-family:var(--disp); font-size:clamp(3rem,12vw,9rem); line-height:.9; }
+.footer .fmark .o{ color:transparent; -webkit-text-stroke:1.5px var(--ink); }
+.footer .ftag{ color:var(--muted); max-width:440px; margin:16px auto 28px; }
+.fnav{ display:flex; gap:26px; justify-content:center; flex-wrap:wrap; margin-bottom:26px; }
+.fnav a{ font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+.fnav a:hover{ color:var(--accent); }
+.fsoc{ display:flex; gap:12px; justify-content:center; margin-bottom:28px; }
+.fsoc a{ width:42px; height:42px; border:1.5px solid var(--line); display:grid; place-items:center; transition:.3s; }
+.fsoc a svg{ width:18px; height:18px; stroke:var(--muted); fill:none; }
+.fsoc a.fb svg{ fill:var(--muted); stroke:none; }
+.fsoc a:hover{ border-color:var(--accent); } .fsoc a:hover svg{ stroke:var(--accent); } .fsoc a.fb:hover svg{ fill:var(--accent); }
+.fcopy{ font-size:.74rem; color:var(--muted); border-top:1px solid var(--line); padding-top:22px; }
+
+[data-rev]{ opacity:0; transform:translateY(30px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
+[data-rev].in{ opacity:1; transform:none; }
+[data-rev][data-d="1"]{ transition-delay:.1s; } [data-rev][data-d="2"]{ transition-delay:.2s; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } [data-rev]{ opacity:1; transform:none; } }
+</style>
+</head>
+<body>
+  <div id="loader"><div class="ld"></div></div>
+  <header class="header" id="header"></header>
+  <main id="app"></main>
+  <footer class="footer" id="footer"></footer>
+  <a class="wa" id="wa" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:none"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.4a10 10 0 01-1.6-5.4C5.6 9.8 10.2 5.3 16 5.3s10.4 4.5 10.4 10.2S21.8 25.7 16 25.7zm5.7-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.3 8.3 0 01-2.4-1.5 9 9 0 01-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5a.5.5 0 000-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 00-.8.4 3.3 3.3 0 00-1 2.5c0 1.5 1.1 2.9 1.2 3.1s2.1 3.3 5.2 4.6c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.3-.2-.5-.4z"/></svg></a>
+
+<script>
+(function(){
+  "use strict";
+  var S=window.SITE;
+  if(!S){ document.body.innerHTML='<p style="padding:40px;font-family:sans-serif;color:#fff">Erro: SITE não injetado.</p>'; return; }
+  function esc(s){ return (s==null?'':String(s)).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function ini(n){ return (n||'').split(/\s+/).filter(Boolean).slice(0,2).map(function(w){return w[0];}).join('').toUpperCase()||'•'; }
+
+  var IGS='<svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>';
+  var WAS='<svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 12a9 9 0 01-13 8l-5 1 1-5a9 9 0 1117-4z"/></svg>';
+  var FBS='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>';
+  var MS='<svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>';
+  var PIN='<svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 21s-7-4.5-7-10a7 7 0 1114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>';
+  var CLK='<svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  var ARR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var EXP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg>';
+
+  var acc=(S.theme&&S.theme.accent)||'#E5484D';
+  document.documentElement.style.setProperty('--accent',acc);
+  document.getElementById('meta-title').textContent=(S.meta&&S.meta.title)||(S.brand&&S.brand.name)||'Site';
+  document.getElementById('meta-desc').setAttribute('content',(S.meta&&S.meta.description)||'');
+  if(S.meta&&S.meta.lang) document.documentElement.lang=S.meta.lang;
+
+  var b=S.brand||{};
+  document.querySelector('.ld').innerHTML=ini(b.name).split('').map(function(c){return '<span>'+esc(c)+'</span>';}).join('');
+
+  var nav=[{id:'inicio',label:'Início'}];
+  if(S.about) nav.push({id:'sobre',label:'Sobre'});
+  if(S.services) nav.push({id:'servicos',label:(S.services.navLabel||'Serviços')});
+  if(S.instagram&&S.instagram.show!==false&&S.instagram.url) nav.push({id:'galeria',label:'Trabalhos'});
+  nav.push({id:'contato',label:'Contato'});
+
+  var brandHtml='<a href="#inicio" class="brand">'+(b.nameHtml||esc(b.name))+(b.tagline?'<span class="tag">'+esc(b.tagline)+'</span>':'')+'</a>';
+  document.getElementById('header').innerHTML='<div class="container nav">'+brandHtml+
+    '<nav class="nav-links" id="navLinks">'+nav.map(function(n){return '<a href="#'+n.id+'">'+esc(n.label)+'</a>';}).join('')+'</nav>'+
+    '<div class="nav-right"><a href="#contato" class="btn">'+esc((S.hero&&S.hero.ctaAgendar)||'Orçamento')+'</a>'+
+    '<button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button></div></div>';
+
+  var html='', h=S.hero||{};
+  var heroImg=h.image?'<img loading="lazy" src="'+esc(h.image)+'" alt="'+esc(b.name)+'">':'<span class="vl">'+esc(h.imageLabel||'Foto do estúdio')+'</span>';
+  /* HERO */
+  html+='<section class="hero" id="inicio"><div class="container"><div class="hero-grid"><div class="hero-copy">'+
+    '<span class="label">'+esc(h.eyebrow||'Estúdio')+'</span>'+
+    '<h1>'+(h.titleHtml||esc(h.title||b.name))+'</h1>'+
+    (h.sub?'<p class="hero-sub">'+esc(h.sub)+'</p>':'')+
+    '<div class="hero-actions">'+
+      '<a href="'+esc((h.ctaPrimary&&h.ctaPrimary.href)||'#contato')+'" class="btn">'+esc((h.ctaPrimary&&h.ctaPrimary.label)||'Fazer orçamento')+' '+ARR+'</a>'+
+      (h.ctaGhost?'<a href="'+esc(h.ctaGhost.href||'#galeria')+'" class="btn btn--ghost">'+esc(h.ctaGhost.label)+'</a>':'')+
+    '</div></div>'+
+    '<div class="hero-visual">'+heroImg+(h.badge?'<span class="badge">'+h.badge+'</span>':'')+'</div>'+
+    '</div></div>';
+  /* MARQUEE a partir dos estilos/serviços */
+  var mqWords=(S.services&&S.services.items?S.services.items.map(function(i){return i.name;}):['Tattoo','Arte','Estúdio']);
+  var mqHtml=mqWords.map(function(w){return esc(w)+'<i>✦</i>';}).join('');
+  html+='<div class="marquee"><div class="marquee-in"><span>'+mqHtml+mqHtml+'</span></div></div></section>';
+
+  /* SOBRE */
+  if(S.about){
+    var a=S.about;
+    var media=a.image?'<img loading="lazy" src="'+esc(a.image)+'" alt="'+esc(b.name)+'">':'<span class="ml">'+esc(ini(b.name))+'</span>';
+    html+='<section class="section" id="sobre"><div class="container about-grid"><div class="about-text">'+
+      '<span class="label" data-rev>'+esc(a.eyebrow||'O estúdio')+'</span>'+
+      '<h2 data-rev data-d="1">'+(a.titleHtml||esc(a.title))+'</h2>'+
+      (a.paragraphs||[]).map(function(p){return '<p data-rev data-d="1">'+esc(p)+'</p>';}).join('')+
+      (a.stats&&a.stats.length?'<div class="about-stats" data-rev data-d="2">'+a.stats.map(function(s){return '<div class="st"><div class="n" data-count="'+esc(s.num)+'"'+(s.suffix?' data-suffix="'+esc(s.suffix)+'"':'')+'>0</div><div class="l">'+esc(s.label)+'</div></div>';}).join('')+'</div>':'')+
+      (a.certs&&a.certs.length?'<div class="about-tags" data-rev data-d="2">'+a.certs.map(function(c){return '<span>'+esc(c.label||c)+'</span>';}).join('')+'</div>':'')+
+      '</div><div class="about-media" data-rev data-d="1">'+media+'</div></div></section>';
+  }
+
+  /* SERVIÇOS / ESTILOS */
+  if(S.services){
+    var sv=S.services;
+    html+='<section class="section" id="servicos"><div class="container"><div class="sec-head"><div>'+
+      '<span class="label" data-rev>'+esc(sv.eyebrow||'Estilos')+'</span>'+
+      '<h2 class="sec-title" data-rev data-d="1">'+(sv.titleHtml||esc(sv.title))+'</h2></div>'+
+      (sv.intro?'<p class="sec-intro" data-rev data-d="1">'+esc(sv.intro)+'</p>':'')+'</div>'+
+      '<div class="svc-grid" data-rev>'+
+      (sv.items||[]).map(function(it,i){return '<div class="svc-cell"><span class="svc-num">'+('0'+(i+1)).slice(-2)+'</span>'+
+        '<h3>'+esc(it.name)+'</h3><p>'+esc(it.desc)+'</p>'+
+        (it.price?'<span class="svc-price">'+esc(it.price)+'</span>':'')+'</div>';}).join('')+
+      '</div></div></section>';
+  }
+
+  /* GALERIA / TRABALHOS */
+  if(S.instagram&&S.instagram.show!==false&&S.instagram.url){
+    var ig=S.instagram;
+    var cell='<a class="gal-item" href="'+esc(ig.url)+'" target="_blank" rel="noopener"><span class="g">'+esc(ini(b.name))+'</span><span class="ov">'+EXP+'</span></a>';
+    html+='<section class="section gallery" id="galeria"><div class="container"><div class="sec-head"><div>'+
+      '<span class="label" data-rev>'+esc(ig.handle||'Portfólio')+'</span>'+
+      '<h2 class="sec-title" data-rev data-d="1">'+(ig.titleHtml||esc(ig.title||'Trabalhos'))+'</h2></div></div>'+
+      '<div class="gal-grid" data-rev>'+Array(7).join(cell)+'</div>'+
+      '<div class="gal-cta" data-rev><a href="'+esc(ig.url)+'" target="_blank" rel="noopener" class="btn btn--ghost">Ver mais '+esc(ig.handle||'')+' '+ARR+'</a></div>'+
+      '</div></section>';
+  }
+
+  /* DEPOIMENTOS */
+  if(S.testimonials&&S.testimonials.show!==false&&S.testimonials.items&&S.testimonials.items.length){
+    var te=S.testimonials;
+    html+='<section class="section quotes" id="depoimentos"><div class="container qwrap">'+
+      '<span class="label" data-rev>'+esc(te.eyebrow||'Depoimentos')+'</span>'+
+      '<div class="qmark" data-rev>“</div>'+
+      '<div class="qtrack" data-rev data-d="1"><div class="qslides" id="qslides">'+
+      te.items.map(function(it){return '<div class="qslide"><p class="qquote">'+esc(it.quote)+'</p><div class="qauthor">'+esc(it.name)+'<span>'+esc(it.meta||'')+'</span></div></div>';}).join('')+
+      '</div></div><div class="qdots" id="qdots"></div></div></section>';
+  }
+
+  /* CONTATO */
+  var c=S.contact||{};
+  var waLink=c.whatsapp?'https://wa.me/'+String(c.whatsapp).replace(/\D/g,''):'#';
+  var info='';
+  if(c.whatsapp||c.phoneDisplay) info+='<a class="it" href="'+esc(waLink)+'" target="_blank" rel="noopener">'+WAS+'<div><h4>WhatsApp</h4><p>'+esc(c.phoneDisplay||c.whatsapp)+'</p></div></a>';
+  if(c.instagramUrl) info+='<a class="it" href="'+esc(c.instagramUrl)+'" target="_blank" rel="noopener">'+IGS+'<div><h4>Instagram</h4><p>'+esc((S.instagram&&S.instagram.handle)||c.instagramUrl)+'</p></div></a>';
+  if(c.facebookUrl) info+='<a class="it" href="'+esc(c.facebookUrl)+'" target="_blank" rel="noopener"><span style="color:var(--accent)">'+FBS+'</span><div><h4>Facebook</h4><p>'+esc(c.facebookLabel||'Nossa página')+'</p></div></a>';
+  if(c.address) info+='<div class="it">'+PIN+'<div><h4>Endereço</h4><p>'+esc(c.address)+'</p></div></div>';
+  if(c.hours) info+='<div class="it">'+CLK+'<div><h4>Horário</h4><p>'+esc(c.hours)+'</p></div></div>';
+  var map=c.mapsEmbed?'<div class="cmap"><iframe loading="lazy" src="'+esc(c.mapsEmbed)+'"></iframe></div>':'';
+  var svcOpts=(S.services&&S.services.items?S.services.items.map(function(i){return i.name;}):[]);
+  html+='<section class="section" id="contato"><div class="container">'+
+    '<span class="label" data-rev>'+esc(c.eyebrow||'Contato')+'</span>'+
+    '<h2 class="sec-title" data-rev data-d="1">'+(c.titleHtml||esc(c.title||'Bora marcar'))+'</h2>'+
+    '<div class="contact-grid">'+
+    '<form class="cform" id="cform" data-rev novalidate>'+
+      '<div class="fld"><label>Nome</label><input type="text" name="nome" placeholder="Seu nome" required></div>'+
+      '<div class="frow"><div class="fld"><label>WhatsApp</label><input type="tel" name="whats" placeholder="(00) 00000-0000" required></div>'+
+      '<div class="fld"><label>E-mail</label><input type="email" name="email" placeholder="voce@email.com"></div></div>'+
+      (svcOpts.length?'<div class="fld"><label>Estilo</label><select name="servico"><option value="">Selecione</option>'+svcOpts.map(function(o){return '<option>'+esc(o)+'</option>';}).join('')+'</select></div>':'')+
+      '<div class="fld"><label>Sua ideia</label><textarea name="msg" placeholder="Descreva a tatuagem que você quer (tema, tamanho, local do corpo)..."></textarea></div>'+
+      '<button type="submit" class="btn" id="cbtn" style="justify-self:start">Enviar '+ARR+'</button>'+
+      '<p class="cmsg" id="cmsg"></p></form>'+
+    '<div class="cinfo" data-rev data-d="1">'+info+map+'</div>'+
+    '</div></div></section>';
+
+  document.getElementById('app').innerHTML=html;
+
+  /* FOOTER */
+  var foot=S.footer||{};
+  var soc='';
+  if(S.instagram&&S.instagram.url) soc+='<a href="'+esc(S.instagram.url)+'" target="_blank" rel="noopener" aria-label="Instagram">'+IGS+'</a>';
+  if(c.facebookUrl) soc+='<a class="fb" href="'+esc(c.facebookUrl)+'" target="_blank" rel="noopener" aria-label="Facebook">'+FBS+'</a>';
+  if(c.whatsapp) soc+='<a href="'+esc(waLink)+'" target="_blank" rel="noopener" aria-label="WhatsApp">'+WAS+'</a>';
+  if(c.email) soc+='<a href="mailto:'+esc(c.email)+'" aria-label="E-mail">'+MS+'</a>';
+  document.getElementById('footer').innerHTML='<div class="container"><div class="fmark">'+(b.nameHtml||esc(b.name))+'</div>'+
+    (foot.tagline?'<p class="ftag">'+esc(foot.tagline)+'</p>':'')+
+    '<nav class="fnav">'+nav.map(function(n){return '<a href="#'+n.id+'">'+esc(n.label)+'</a>';}).join('')+'</nav>'+
+    (soc?'<div class="fsoc">'+soc+'</div>':'')+
+    '<p class="fcopy">© <span id="yr"></span> '+esc(b.name)+' · Todos os direitos reservados.</p></div>';
+
+  if(c.whatsapp){ var w=document.getElementById('wa'); w.href=waLink; w.style.display='grid'; }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* INTERAÇÕES */
+  window.addEventListener('load',function(){ setTimeout(function(){ document.getElementById('loader').classList.add('hidden'); },800); });
+  var header=document.getElementById('header');
+  addEventListener('scroll',function(){ header.classList.toggle('scrolled',scrollY>40); },{passive:true});
+  var burger=document.getElementById('burger'), navLinks=document.getElementById('navLinks');
+  function tm(f){ var o=f!==undefined?f:!navLinks.classList.contains('open'); navLinks.classList.toggle('open',o); burger.classList.toggle('open',o); document.body.style.overflow=o?'hidden':''; }
+  burger.addEventListener('click',function(){ tm(); });
+  navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ tm(false); }); });
+
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('[data-rev]').forEach(function(el){ io.observe(el); });
+  var cio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting)return; var el=e.target,t=+el.dataset.count,sf=el.dataset.suffix||'',st=performance.now(); (function tk(n){ var p=Math.min((n-st)/1500,1),k=1-Math.pow(1-p,3); el.textContent=Math.round(k*t)+sf; if(p<1)requestAnimationFrame(tk); })(st); cio.unobserve(el); }); },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(x){ cio.observe(x); });
+
+  var qs=document.getElementById('qslides');
+  if(qs&&qs.children.length){
+    var n=qs.children.length, dots=document.getElementById('qdots'), cur=0, tmr;
+    for(var i=0;i<n;i++){ var d=document.createElement('button'); d.className=i===0?'active':''; d.dataset.i=i; dots.appendChild(d); }
+    function go(k){ cur=(k+n)%n; qs.style.transform='translateX(-'+(cur*100)+'%)'; [].forEach.call(dots.children,function(x,j){ x.classList.toggle('active',j===cur); }); }
+    dots.addEventListener('click',function(e){ if(e.target.dataset.i!==undefined){ go(+e.target.dataset.i); rs(); } });
+    function au(){ tmr=setInterval(function(){ go(cur+1); },5200); } function rs(){ clearInterval(tmr); au(); } au();
+  }
+
+  var form=document.getElementById('cform');
+  if(form){ var btn=document.getElementById('cbtn'), msg=document.getElementById('cmsg');
+    form.addEventListener('submit',function(e){ e.preventDefault();
+      if(!form.nome.value.trim()||!form.whats.value.trim()){ msg.style.color='#E5484D'; msg.textContent='Preencha nome e WhatsApp.'; return; }
+      btn.textContent='Enviando...'; btn.disabled=true; msg.textContent='';
+      setTimeout(function(){ btn.innerHTML='Enviar'; btn.disabled=false; msg.style.color=acc;
+        if(c.whatsapp){ var t='Olá! Meu nome é '+form.nome.value+'.'+(form.servico&&form.servico.value?' Estilo: '+form.servico.value+'.':'')+(form.msg.value?' '+form.msg.value:''); window.open(waLink+'?text='+encodeURIComponent(t),'_blank'); msg.textContent='✓ Te levamos para o WhatsApp!'; }
+        else msg.textContent='✓ Mensagem enviada! Em breve entramos em contato.';
+        form.reset();
+      },1100);
+    });
+  }
+})();
+</script>
+</body>
+</html>

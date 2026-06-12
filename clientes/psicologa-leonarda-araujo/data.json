@@ -1,0 +1,75 @@
+{
+  "categoria": "Psicólogo",
+  "estilo": "clean-editorial",
+  "slug": "psicologa-leonarda-araujo",
+
+  "brand": {
+    "name": "Leonarda Araújo",
+    "tagline": "Psicóloga · CRP 06/XXXXXX",
+    "nameHtml": "Leonarda <b>Araújo</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Psicóloga · São José do Rio Preto",
+    "titleHtml": "Um espaço seguro para <em>cuidar de você</em>",
+    "sub": "Atendimento psicológico humanizado, acolhedor e sem julgamentos. Um lugar para se ouvir, se entender e seguir em frente — no seu tempo.",
+    "badge": "★ 5,0 no Google",
+    "imageLabel": "Sua foto aqui",
+    "ctaPrimary": { "label": "Agendar pelo WhatsApp", "href": "#contato" },
+    "ctaGhost": { "label": "Como posso ajudar", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre mim",
+    "titleHtml": "Acolher, escutar e <em>caminhar junto</em>",
+    "paragraphs": [
+      "Sou a Leonarda, psicóloga dedicada a oferecer um espaço de escuta sem julgamentos, onde você possa se sentir à vontade para falar sobre o que sente.",
+      "Acredito que cada pessoa tem o seu tempo. Meu papel é caminhar ao seu lado nesse processo, com sigilo, respeito e acolhimento — presencialmente ou online."
+    ],
+    "stats": [
+      { "num": 5, "suffix": ",0", "label": "Avaliação no Google" },
+      { "num": 100, "suffix": "%", "label": "Sigilo e acolhimento" }
+    ],
+    "certs": [
+      { "label": "CRP 06/XXXXXX" },
+      { "label": "Atendimento presencial e online" },
+      { "label": "Espaço seguro LGBTQ+" },
+      { "label": "Escuta sem julgamentos" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Como posso ajudar",
+    "navLabel": "Atendimentos",
+    "titleHtml": "Áreas de <em>atendimento</em>",
+    "intro": "Cada processo é único. Caminhamos juntos, com escuta e cuidado.",
+    "ctaLabel": "Conversar",
+    "items": [
+      { "icon": "hand", "name": "Terapia Individual", "desc": "Um espaço só seu para se conhecer e lidar com o que pesa.", "price": "Sob consulta" },
+      { "icon": "heart", "name": "Terapia de Casal", "desc": "Diálogo e ferramentas para fortalecer a relação.", "price": "Sob consulta" },
+      { "icon": "leaf", "name": "Ansiedade & Estresse", "desc": "Acolhimento e estratégias para retomar o equilíbrio.", "price": "Sob consulta" },
+      { "icon": "sparkle", "name": "Autoconhecimento", "desc": "Um caminho de escuta para entender quem você é.", "price": "Sob consulta" },
+      { "icon": "check", "name": "Terapia Online", "desc": "Atendimento por vídeo, de onde você estiver, com sigilo.", "price": "Sob consulta" },
+      { "icon": "star", "name": "Primeira Sessão", "desc": "Uma conversa de acolhimento para nos conhecermos.", "price": "Sob consulta" }
+    ]
+  },
+
+  "products": { "show": false },
+  "testimonials": { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Vamos conversar",
+    "titleHtml": "Dê o primeiro <em>passo</em>",
+    "whatsapp": "5517982276381",
+    "phoneDisplay": "(17) 98227-6381",
+    "address": "R. Ipiranga, 1055 - Boa Vista, São José do Rio Preto - SP, 15025-520",
+    "hours": "Atendimento com hora marcada · Seg a Sex, até 18h",
+    "cidade": "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Ipiranga,+1055+-+Boa+Vista,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15025-520&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Cuidar da mente é um ato de coragem."
+  }
+}

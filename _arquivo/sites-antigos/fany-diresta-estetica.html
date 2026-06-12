@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Fany Diresta — Estética facial e corporal. Tratamentos sofisticados, skincare premium e cuidados personalizados para realçar a sua beleza natural." />
+<title>Fany Diresta — Estética Facial & Corporal</title>
+
+<!-- ============================================================
+     GOOGLE FONTS
+     Cormorant Garamond (serif editorial) + Jost (sans moderno)
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   1. VARIÁVEIS / DESIGN TOKENS
+   Toda a paleta e medidas centralizadas — fácil de editar.
+   ============================================================ */
+:root{
+  /* Cores */
+  --bg:            #0D0D0D;   /* fundo principal           */
+  --bg-alt:        #111111;   /* fundo de seções alternadas*/
+  --surface:       #1A1A1A;   /* cards / superfícies       */
+  --gold:          #C9A96E;   /* destaque primário (luxo)  */
+  --pearl:         #E8D5B7;   /* destaque secundário       */
+  --text:          #F5F0E8;   /* texto principal off-white */
+  --muted:         #A89F90;   /* texto secundário/discreto */
+  --border:        #2A2A2A;   /* bordas e divisores        */
+  --gold-glow:     rgba(201,169,110,.35);
+
+  /* Tipografia */
+  --font-display: "Cormorant Garamond", serif;
+  --font-body:    "Jost", sans-serif;
+
+  /* Layout */
+  --maxw: 1240px;
+  --radius: 14px;
+  --ease: cubic-bezier(.16,.84,.34,1);
+}
+
+/* ============================================================
+   2. RESET / BASE
+   ============================================================ */
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+  cursor:none; /* substituído por cursor custom no desktop */
+}
+@media (max-width:1024px){ body{ cursor:auto; } }
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font-family:inherit; cursor:none; }
+@media (max-width:1024px){ button,a{ cursor:pointer; } }
+ul{ list-style:none; }
+
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:500; line-height:1.1; }
+
+/* Seleção de texto na cor da marca */
+::selection{ background:var(--gold); color:var(--bg); }
+
+/* Foco acessível em dourado */
+:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* Scrollbar dark */
+::-webkit-scrollbar{ width:10px; }
+::-webkit-scrollbar-track{ background:var(--bg); }
+::-webkit-scrollbar-thumb{ background:#2f2a22; border-radius:10px; }
+::-webkit-scrollbar-thumb:hover{ background:var(--gold); }
+
+/* ============================================================
+   3. UTILITÁRIOS
+   ============================================================ */
+.container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(20px,5vw,48px); }
+.section{ padding-block:clamp(70px,10vw,130px); position:relative; }
+
+.eyebrow{
+  font-family:var(--font-body);
+  font-weight:500;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  color:var(--gold);
+  display:inline-block;
+  margin-bottom:18px;
+}
+.section-title{
+  font-size:clamp(2.1rem,5vw,3.5rem);
+  letter-spacing:.01em;
+}
+.section-title .accent{ color:var(--gold); font-style:italic; }
+.section-intro{
+  color:var(--muted);
+  max-width:560px;
+  margin-top:16px;
+  font-size:1.02rem;
+}
+.center{ text-align:center; }
+.center .section-intro{ margin-inline:auto; }
+
+/* Divisor decorativo dourado */
+.divider{
+  width:60px; height:1px; background:var(--gold);
+  margin:22px 0; position:relative;
+}
+.center .divider{ margin-inline:auto; }
+.divider::after{
+  content:""; position:absolute; top:-3px; left:50%; transform:translateX(-50%);
+  width:7px; height:7px; background:var(--gold); border-radius:50%;
+}
+
+/* ============================================================
+   4. BOTÕES
+   ============================================================ */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--font-body); font-weight:500; font-size:.86rem;
+  letter-spacing:.12em; text-transform:uppercase;
+  padding:15px 32px; border-radius:50px;
+  border:1px solid var(--gold);
+  position:relative; overflow:hidden;
+  transition:color .4s var(--ease), transform .3s var(--ease);
+  white-space:nowrap;
+}
+.btn::before{
+  content:""; position:absolute; inset:0; background:var(--gold);
+  transform:scaleX(0); transform-origin:left; z-index:-1;
+  transition:transform .45s var(--ease);
+}
+.btn:hover::before{ transform:scaleX(1); }
+.btn:hover{ transform:translateY(-2px); }
+
+/* Primário: dourado preenchido */
+.btn--primary{ background:var(--gold); color:var(--bg); border-color:var(--gold); }
+.btn--primary::before{ background:var(--pearl); }
+.btn--primary:hover{ color:var(--bg); }
+
+/* Ghost: contorno, preenche no hover */
+.btn--ghost{ background:transparent; color:var(--text); }
+.btn--ghost:hover{ color:var(--bg); }
+
+.btn--sm{ padding:11px 22px; font-size:.74rem; }
+
+/* ============================================================
+   5. CURSOR CUSTOMIZADO (desktop)
+   ============================================================ */
+.cursor-dot,.cursor-ring{
+  position:fixed; top:0; left:0; border-radius:50%;
+  pointer-events:none; z-index:9999; mix-blend-mode:difference;
+}
+.cursor-dot{ width:7px; height:7px; background:var(--gold); transform:translate(-50%,-50%); }
+.cursor-ring{
+  width:34px; height:34px; border:1px solid var(--gold);
+  transform:translate(-50%,-50%);
+  transition:width .25s var(--ease),height .25s var(--ease),background .25s var(--ease);
+}
+.cursor-ring.is-active{ width:54px; height:54px; background:var(--gold-glow); border-color:transparent; }
+@media (max-width:1024px){ .cursor-dot,.cursor-ring{ display:none; } }
+
+/* ============================================================
+   6. LOADER DE ENTRADA
+   ============================================================ */
+#loader{
+  position:fixed; inset:0; z-index:10000;
+  background:var(--bg); display:grid; place-items:center;
+  transition:opacity .8s var(--ease), visibility .8s;
+}
+#loader.hidden{ opacity:0; visibility:hidden; }
+.loader-mark{
+  font-family:var(--font-display); font-size:clamp(3rem,9vw,5.5rem);
+  color:var(--gold); letter-spacing:.05em; position:relative;
+}
+.loader-mark span{ opacity:0; animation:loaderIn .7s var(--ease) forwards; }
+.loader-mark span:nth-child(2){ animation-delay:.18s; }
+.loader-line{
+  width:0; height:1px; background:var(--gold); margin:14px auto 0;
+  animation:loaderLine 1.4s .4s var(--ease) forwards;
+}
+@keyframes loaderIn{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+@keyframes loaderLine{ to{ width:120px; } }
+
+/* ============================================================
+   7. HEADER / NAV (glassmorphism dark)
+   ============================================================ */
+.header{
+  position:fixed; top:0; left:0; width:100%; z-index:1000;
+  transition:background .4s var(--ease), padding .4s var(--ease), border-color .4s;
+  border-bottom:1px solid transparent;
+}
+.header.scrolled{
+  background:rgba(13,13,13,.72);
+  backdrop-filter:blur(16px) saturate(140%);
+  -webkit-backdrop-filter:blur(16px) saturate(140%);
+  border-bottom-color:var(--border);
+}
+.nav{ display:flex; align-items:center; justify-content:space-between; padding-block:22px; }
+.header.scrolled .nav{ padding-block:14px; }
+
+.brand{ line-height:1; }
+.brand-name{ font-family:var(--font-display); font-size:1.6rem; letter-spacing:.06em; color:var(--text); }
+.brand-name b{ color:var(--gold); font-weight:500; }
+.brand-tag{
+  display:block; font-size:.58rem; letter-spacing:.42em;
+  text-transform:uppercase; color:var(--muted); margin-top:3px;
+}
+
+.nav-links{ display:flex; align-items:center; gap:38px; }
+.nav-links a{
+  font-size:.82rem; letter-spacing:.08em; text-transform:uppercase;
+  font-weight:400; color:var(--text); position:relative; padding-block:4px;
+}
+.nav-links a::after{
+  content:""; position:absolute; left:0; bottom:0; width:0; height:1px;
+  background:var(--gold); transition:width .35s var(--ease);
+}
+.nav-links a:hover{ color:var(--gold); }
+.nav-links a:hover::after{ width:100%; }
+
+.nav-cta{ display:flex; align-items:center; gap:18px; }
+
+/* Hamburguer */
+.burger{
+  display:none; width:42px; height:42px; background:none; border:none;
+  position:relative; z-index:1100;
+}
+.burger span{
+  position:absolute; left:9px; width:24px; height:2px; background:var(--text);
+  transition:transform .35s var(--ease), opacity .25s, top .35s var(--ease);
+}
+.burger span:nth-child(1){ top:14px; }
+.burger span:nth-child(2){ top:21px; }
+.burger span:nth-child(3){ top:28px; }
+.burger.open span:nth-child(1){ top:21px; transform:rotate(45deg); background:var(--gold); }
+.burger.open span:nth-child(2){ opacity:0; }
+.burger.open span:nth-child(3){ top:21px; transform:rotate(-45deg); background:var(--gold); }
+
+@media (max-width:920px){
+  .burger{ display:block; }
+  .nav-links{
+    position:fixed; inset:0; flex-direction:column; justify-content:center;
+    gap:34px; background:rgba(13,13,13,.97); backdrop-filter:blur(10px);
+    transform:translateX(100%); transition:transform .5s var(--ease);
+  }
+  .nav-links.open{ transform:translateX(0); }
+  .nav-links a{ font-size:1.3rem; font-family:var(--font-display); text-transform:none; letter-spacing:.04em; }
+  .nav-cta .btn{ display:none; }
+}
+
+/* ============================================================
+   8. HERO
+   ============================================================ */
+.hero{ min-height:100vh; display:flex; align-items:center; position:relative; padding-top:90px; overflow:hidden; }
+#hero-particles{ position:absolute; inset:0; z-index:0; }
+.hero-grid{
+  display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center;
+  position:relative; z-index:2;
+}
+.hero-copy .eyebrow{ margin-bottom:22px; }
+.hero h1{
+  font-size:clamp(2.8rem,7vw,5.3rem); line-height:1.02; letter-spacing:.005em;
+}
+.hero h1 .accent{ color:var(--gold); font-style:italic; }
+.hero-sub{
+  color:var(--muted); font-size:1.1rem; max-width:480px; margin:26px 0 38px;
+}
+.hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+
+/* Imagem placeholder do hero: gradiente + formas geométricas */
+.hero-visual{
+  position:relative; aspect-ratio:4/5; border-radius:var(--radius);
+  background:
+    radial-gradient(120% 100% at 20% 10%, #221d14 0%, transparent 55%),
+    radial-gradient(120% 120% at 90% 90%, #2a2014 0%, transparent 60%),
+    linear-gradient(160deg,#161310,#0c0b09);
+  border:1px solid var(--border); overflow:hidden;
+  box-shadow:0 40px 90px -40px rgba(0,0,0,.8);
+}
+.hero-visual::before{ /* círculo dourado translúcido */
+  content:""; position:absolute; width:60%; aspect-ratio:1; border-radius:50%;
+  top:12%; left:50%; transform:translateX(-50%);
+  background:radial-gradient(circle,var(--gold-glow),transparent 70%);
+  filter:blur(8px);
+}
+.hero-visual::after{ /* moldura geométrica */
+  content:""; position:absolute; inset:22px; border:1px solid rgba(201,169,110,.28);
+  border-radius:calc(var(--radius) - 4px);
+}
+.hero-visual .ring{
+  position:absolute; width:46%; aspect-ratio:1; border:1px solid rgba(232,213,183,.18);
+  border-radius:50%; bottom:14%; right:10%;
+}
+.hero-visual .label{
+  position:absolute; bottom:26px; left:0; width:100%; text-align:center;
+  font-family:var(--font-display); font-style:italic; color:var(--muted); font-size:1.05rem;
+}
+
+/* Floating badge */
+.floating-badge{
+  position:absolute; z-index:3; bottom:8%; left:-26px;
+  background:rgba(26,26,26,.92); border:1px solid var(--border);
+  backdrop-filter:blur(8px); border-radius:50px; padding:13px 22px;
+  display:flex; align-items:center; gap:10px; font-size:.85rem; color:var(--text);
+  box-shadow:0 20px 40px -20px rgba(0,0,0,.7);
+  animation:floaty 4s ease-in-out infinite;
+}
+.floating-badge b{ color:var(--gold); font-weight:600; }
+@keyframes floaty{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+/* Scroll hint */
+.scroll-hint{
+  position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+  z-index:2; font-size:.66rem; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--muted); display:flex; flex-direction:column; align-items:center; gap:10px;
+}
+.scroll-hint .line{ width:1px; height:42px; background:linear-gradient(var(--gold),transparent); animation:scrollLine 2s ease-in-out infinite; }
+@keyframes scrollLine{ 0%,100%{ transform:scaleY(.4); opacity:.4; } 50%{ transform:scaleY(1); opacity:1; } }
+
+@media (max-width:920px){
+  .hero-grid{ grid-template-columns:1fr; gap:40px; text-align:center; }
+  .hero-sub{ margin-inline:auto; }
+  .hero-actions{ justify-content:center; }
+  .hero-visual{ max-width:380px; margin-inline:auto; order:-1; }
+  .floating-badge{ left:50%; transform:translateX(-50%); }
+}
+
+/* ============================================================
+   9. SOBRE
+   ============================================================ */
+.about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:center; }
+.about-photo{
+  position:relative; aspect-ratio:1; border-radius:50%; max-width:420px; margin-inline:auto;
+  background:
+    radial-gradient(circle at 30% 25%, #2a2114, transparent 60%),
+    linear-gradient(160deg,#1d1810,#0d0c0a);
+  border:1px solid var(--border); display:grid; place-items:center; overflow:hidden;
+}
+.about-photo::before{
+  content:""; position:absolute; inset:-2px; border-radius:50%;
+  background:conic-gradient(from 0deg,var(--gold),transparent 25%,transparent 75%,var(--pearl));
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+          mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+  animation:spin 14s linear infinite;
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }
+.about-photo .initials{ font-family:var(--font-display); font-size:4.5rem; color:var(--gold); font-style:italic; }
+
+.about-text h2{ margin-bottom:6px; }
+.about-text p{ color:var(--muted); margin-bottom:18px; }
+
+/* Estatísticas com contador */
+.stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:34px 0; }
+.stat{ border-left:1px solid var(--border); padding-left:18px; }
+.stat .num{ font-family:var(--font-display); font-size:2.6rem; color:var(--gold); line-height:1; }
+.stat .lbl{ font-size:.78rem; letter-spacing:.05em; color:var(--muted); text-transform:uppercase; margin-top:6px; }
+
+/* Linha do tempo */
+.timeline{ margin-top:8px; position:relative; padding-left:26px; }
+.timeline::before{ content:""; position:absolute; left:4px; top:6px; bottom:6px; width:1px; background:var(--border); }
+.tl-item{ position:relative; padding-bottom:20px; }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-item::before{
+  content:""; position:absolute; left:-26px; top:6px; width:9px; height:9px;
+  background:var(--bg); border:1px solid var(--gold); border-radius:50%;
+}
+.tl-item .yr{ color:var(--gold); font-weight:500; font-size:.82rem; letter-spacing:.1em; }
+.tl-item .txt{ color:var(--text); font-size:.95rem; }
+
+/* Certificações */
+.certs{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:30px; }
+.cert{
+  display:flex; align-items:center; gap:12px; padding:14px 16px;
+  background:var(--surface); border:1px solid var(--border); border-radius:10px;
+  transition:border-color .3s, transform .3s var(--ease);
+}
+.cert:hover{ border-color:var(--gold); transform:translateY(-3px); }
+.cert svg{ width:22px; height:22px; flex-shrink:0; stroke:var(--gold); }
+.cert span{ font-size:.86rem; color:var(--text); }
+
+@media (max-width:920px){
+  .about-grid{ grid-template-columns:1fr; gap:40px; }
+  .stats{ gap:14px; }
+}
+@media (max-width:480px){
+  .certs{ grid-template-columns:1fr; }
+}
+
+/* ============================================================
+   10. SERVIÇOS
+   ============================================================ */
+.cards-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:54px; }
+.service-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:34px 30px; position:relative; overflow:hidden;
+  transition:transform .45s var(--ease), border-color .45s, box-shadow .45s;
+}
+.service-card::after{ /* glow no hover */
+  content:""; position:absolute; inset:0; opacity:0; transition:opacity .45s;
+  background:radial-gradient(120% 80% at 50% -10%, var(--gold-glow), transparent 60%);
+}
+.service-card:hover{ transform:translateY(-8px); border-color:var(--gold); box-shadow:0 30px 60px -30px rgba(0,0,0,.7); }
+.service-card:hover::after{ opacity:1; }
+.service-icon{
+  width:54px; height:54px; border-radius:12px; display:grid; place-items:center;
+  background:rgba(201,169,110,.1); border:1px solid rgba(201,169,110,.25); margin-bottom:22px;
+}
+.service-icon svg{ width:26px; height:26px; stroke:var(--gold); fill:none; }
+.service-card h3{ font-size:1.55rem; margin-bottom:10px; }
+.service-card p{ color:var(--muted); font-size:.92rem; margin-bottom:22px; min-height:48px; }
+.service-foot{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.price{ font-family:var(--font-display); color:var(--gold); }
+.price small{ display:block; font-family:var(--font-body); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.price b{ font-size:1.5rem; font-weight:500; }
+.link-more{ font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text); border-bottom:1px solid var(--gold); padding-bottom:3px; transition:color .3s; }
+.link-more:hover{ color:var(--gold); }
+
+@media (max-width:920px){ .cards-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:620px){ .cards-grid{ grid-template-columns:1fr; } }
+
+/* ============================================================
+   11. PRODUTOS
+   ============================================================ */
+.filters{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:40px; }
+.filter-btn{
+  background:transparent; color:var(--muted); border:1px solid var(--border);
+  padding:9px 22px; border-radius:50px; font-size:.78rem; letter-spacing:.08em;
+  text-transform:uppercase; transition:all .3s var(--ease);
+}
+.filter-btn:hover{ color:var(--text); border-color:var(--gold); }
+.filter-btn.active{ background:var(--gold); color:var(--bg); border-color:var(--gold); }
+
+.products-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:44px; }
+.product-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  overflow:hidden; transition:transform .45s var(--ease), box-shadow .45s, border-color .45s;
+}
+.product-card:hover{ transform:translateY(-6px) scale(1.015); box-shadow:0 30px 55px -28px var(--gold-glow); border-color:rgba(201,169,110,.4); }
+.product-thumb{
+  aspect-ratio:1; position:relative;
+  background:linear-gradient(150deg,#221c13,#100e0b); display:grid; place-items:center;
+}
+.product-thumb .glyph{ font-family:var(--font-display); font-size:3rem; color:rgba(201,169,110,.55); font-style:italic; }
+.badge-cat{
+  position:absolute; top:12px; left:12px; font-size:.62rem; letter-spacing:.14em;
+  text-transform:uppercase; padding:5px 12px; border-radius:50px;
+  background:rgba(13,13,13,.7); border:1px solid var(--border); color:var(--pearl);
+}
+.product-body{ padding:20px; }
+.product-body h4{ font-size:1.35rem; margin-bottom:5px; }
+.product-body p{ color:var(--muted); font-size:.84rem; margin-bottom:16px; min-height:38px; }
+.product-foot{ display:flex; align-items:center; justify-content:space-between; }
+.product-foot .price b{ font-size:1.25rem; }
+.btn-cart{
+  display:inline-flex; align-items:center; gap:7px; background:transparent;
+  border:1px solid var(--gold); color:var(--gold); padding:9px 16px; border-radius:50px;
+  font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; transition:all .3s var(--ease);
+}
+.btn-cart svg{ width:15px; height:15px; stroke:currentColor; fill:none; }
+.btn-cart:hover{ background:var(--gold); color:var(--bg); }
+
+@media (max-width:1024px){ .products-grid{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:768px){ .products-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:460px){ .products-grid{ grid-template-columns:1fr; } }
+
+/* ============================================================
+   12. DEPOIMENTOS (carousel)
+   ============================================================ */
+.testimonials{ background:var(--bg-alt); }
+.tcarousel{ max-width:760px; margin:54px auto 0; position:relative; overflow:hidden; }
+.ttrack{ display:flex; transition:transform .7s var(--ease); }
+.tslide{ min-width:100%; padding:8px; }
+.tcard{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:44px clamp(24px,5vw,52px); text-align:center;
+}
+.tstars{ color:var(--gold); letter-spacing:4px; margin-bottom:18px; font-size:1.05rem; }
+.tquote{ font-family:var(--font-display); font-size:clamp(1.3rem,3vw,1.8rem); font-style:italic; line-height:1.45; color:var(--text); }
+.tperson{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:28px; }
+.tavatar{
+  width:50px; height:50px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(140deg,var(--gold),#5e4d2f); display:grid; place-items:center;
+  font-family:var(--font-display); color:var(--bg); font-size:1.3rem;
+}
+.tname b{ display:block; font-family:var(--font-body); font-weight:500; color:var(--text); }
+.tname span{ font-size:.8rem; color:var(--muted); }
+
+.tdots{ display:flex; gap:10px; justify-content:center; margin-top:30px; }
+.tdot{ width:9px; height:9px; border-radius:50%; background:var(--border); border:none; transition:all .3s; }
+.tdot.active{ background:var(--gold); transform:scale(1.25); }
+
+/* ============================================================
+   13. INSTAGRAM FEED
+   ============================================================ */
+.ig-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:50px; }
+.ig-item{
+  aspect-ratio:1; border-radius:10px; overflow:hidden; position:relative; cursor:pointer;
+  background:linear-gradient(150deg,#221c13,#0e0d0b); border:1px solid var(--border);
+}
+.ig-item .glyph{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--font-display); font-style:italic; color:rgba(201,169,110,.4); font-size:1.6rem; }
+.ig-item .overlay{
+  position:absolute; inset:0; background:rgba(13,13,13,.7); display:grid; place-items:center;
+  opacity:0; transition:opacity .4s var(--ease);
+}
+.ig-item:hover .overlay{ opacity:1; }
+.ig-item:hover{ border-color:var(--gold); }
+.ig-item .overlay svg{ width:30px; height:30px; stroke:var(--gold); fill:none; transform:scale(.6); transition:transform .4s var(--ease); }
+.ig-item:hover .overlay svg{ transform:scale(1); }
+.ig-cta{ text-align:center; margin-top:40px; }
+
+@media (max-width:768px){ .ig-grid{ grid-template-columns:repeat(3,1fr); } }
+
+/* ============================================================
+   14. CONTATO
+   ============================================================ */
+.contact-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:50px; margin-top:54px; }
+.form{ display:grid; gap:18px; }
+.field{ position:relative; }
+.field label{ display:block; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.field input,.field select,.field textarea{
+  width:100%; background:var(--surface); border:1px solid var(--border); border-radius:10px;
+  padding:14px 16px; color:var(--text); font-family:var(--font-body); font-size:.95rem; font-weight:300;
+  transition:border-color .3s, box-shadow .3s; cursor:auto;
+}
+.field textarea{ resize:vertical; min-height:120px; }
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none; border-color:var(--gold); box-shadow:0 0 0 3px var(--gold-glow);
+}
+.field select{ appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23C9A96E' stroke-width='2'%3E%3Cpath d='M3 5l4 4 4-4'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.form .btn{ justify-content:center; }
+.form-msg{ font-size:.86rem; color:var(--gold); min-height:20px; }
+
+.contact-info{ display:grid; gap:16px; align-content:start; }
+.info-card{
+  display:flex; gap:16px; align-items:flex-start; padding:22px;
+  background:var(--surface); border:1px solid var(--border); border-radius:12px;
+  transition:border-color .3s, transform .3s var(--ease);
+}
+.info-card:hover{ border-color:var(--gold); transform:translateX(4px); }
+.info-card .ic{ width:44px; height:44px; flex-shrink:0; border-radius:10px; display:grid; place-items:center; background:rgba(201,169,110,.1); border:1px solid rgba(201,169,110,.25); }
+.info-card .ic svg{ width:20px; height:20px; stroke:var(--gold); fill:none; }
+.info-card h4{ font-family:var(--font-body); font-weight:500; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+.info-card p{ color:var(--text); font-size:.98rem; }
+
+@media (max-width:920px){
+  .contact-grid{ grid-template-columns:1fr; }
+  .form-row{ grid-template-columns:1fr; }
+}
+
+/* Botão flutuante WhatsApp */
+.wa-float{
+  position:fixed; right:24px; bottom:24px; z-index:900;
+  width:58px; height:58px; border-radius:50%; background:#25D366;
+  display:grid; place-items:center; box-shadow:0 12px 30px -8px rgba(37,211,102,.6);
+  transition:transform .3s var(--ease); animation:floaty 3.5s ease-in-out infinite;
+}
+.wa-float:hover{ transform:scale(1.1); }
+.wa-float svg{ width:30px; height:30px; fill:#fff; }
+
+/* ============================================================
+   15. FOOTER
+   ============================================================ */
+.footer{ background:var(--bg-alt); border-top:1px solid var(--border); padding-block:64px 30px; text-align:center; }
+.footer .brand-name{ font-size:2rem; }
+.footer-tag{ font-family:var(--font-display); font-style:italic; color:var(--muted); font-size:1.25rem; max-width:480px; margin:18px auto 30px; }
+.footer-nav{ display:flex; gap:28px; justify-content:center; flex-wrap:wrap; margin-bottom:30px; }
+.footer-nav a{ font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); transition:color .3s; }
+.footer-nav a:hover{ color:var(--gold); }
+.socials{ display:flex; gap:16px; justify-content:center; margin-bottom:32px; }
+.socials a{
+  width:42px; height:42px; border-radius:50%; border:1px solid var(--border);
+  display:grid; place-items:center; transition:all .3s var(--ease);
+}
+.socials a svg{ width:18px; height:18px; stroke:var(--muted); fill:none; transition:stroke .3s; }
+.socials a:hover{ border-color:var(--gold); transform:translateY(-3px); }
+.socials a:hover svg{ stroke:var(--gold); }
+.copyright{ font-size:.78rem; color:var(--muted); border-top:1px solid var(--border); padding-top:24px; }
+
+/* ============================================================
+   16. SCROLL REVEAL (estado inicial)
+   ============================================================ */
+[data-reveal]{ opacity:0; transform:translateY(34px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
+[data-reveal].visible{ opacity:1; transform:none; }
+[data-reveal][data-delay="1"]{ transition-delay:.12s; }
+[data-reveal][data-delay="2"]{ transition-delay:.24s; }
+[data-reveal][data-delay="3"]{ transition-delay:.36s; }
+
+/* Respeita preferências de movimento reduzido */
+@media (prefers-reduced-motion:reduce){
+  *{ animation:none !important; transition:none !important; }
+  [data-reveal]{ opacity:1; transform:none; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <span>F</span><span>D</span>
+    <div class="loader-line"></div>
+  </div>
+</div>
+
+<!-- ============ CURSOR CUSTOM ============ -->
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="#inicio" class="brand" aria-label="Fany Diresta — Início">
+      <span class="brand-name">Fany <b>Diresta</b></span>
+      <span class="brand-tag">Estética Facial &amp; Corporal</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="#contato" class="btn btn--ghost btn--sm">Agendar</a>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero section" id="inicio">
+  <canvas id="hero-particles" aria-hidden="true"></canvas>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" data-reveal>Estética &amp; Bem-estar</span>
+      <h1 data-reveal data-delay="1">Sua beleza merece o <span class="accent">melhor cuidado</span></h1>
+      <p class="hero-sub" data-reveal data-delay="2">
+        Tratamentos faciais e corporais personalizados, com técnica, sofisticação e
+        um olhar único para realçar o que você tem de mais natural — você mesma.
+      </p>
+      <div class="hero-actions" data-reveal data-delay="3">
+        <a href="#servicos" class="btn btn--primary">Ver Serviços</a>
+        <a href="#produtos" class="btn btn--ghost">Conhecer Produtos</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-reveal data-delay="2">
+      <span class="ring"></span>
+      <span class="label">Sua foto aqui</span>
+      <div class="floating-badge">⭐ <span><b>+500</b> clientes satisfeitas</span></div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Role</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="section" id="sobre">
+  <div class="container about-grid">
+    <div class="about-photo" data-reveal>
+      <span class="initials">FD</span>
+    </div>
+
+    <div class="about-text">
+      <span class="eyebrow" data-reveal>Sobre mim</span>
+      <h2 class="section-title" data-reveal data-delay="1">Prazer, eu sou a <span class="accent">Fany</span></h2>
+      <div class="divider" data-reveal data-delay="1"></div>
+      <p data-reveal data-delay="2">
+        Há mais de cinco anos dedico minha rotina a um propósito: ajudar mulheres a se
+        sentirem confiantes na própria pele. Especialista em estética facial e corporal,
+        uno técnica, ciência e sensibilidade para criar protocolos personalizados.
+      </p>
+      <p data-reveal data-delay="2">
+        Acredito que cuidado não é luxo — é autoestima. Por isso, cada atendimento é pensado
+        para a sua individualidade, do diagnóstico ao acompanhamento.
+      </p>
+
+      <!-- Estatísticas animadas -->
+      <div class="stats" data-reveal data-delay="2">
+        <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Anos de experiência</div></div>
+        <div class="stat"><div class="num" data-count="500" data-suffix="+">0</div><div class="lbl">Clientes atendidas</div></div>
+        <div class="stat"><div class="num" data-count="50" data-suffix="+">0</div><div class="lbl">Produtos curados</div></div>
+      </div>
+
+      <!-- Linha do tempo -->
+      <div class="timeline" data-reveal data-delay="2">
+        <div class="tl-item"><div class="yr">2019</div><div class="txt">Formação em Estética e Cosmetologia</div></div>
+        <div class="tl-item"><div class="yr">2021</div><div class="txt">Especialização em protocolos faciais avançados</div></div>
+        <div class="tl-item"><div class="yr">2023</div><div class="txt">Abertura do espaço próprio de atendimento</div></div>
+        <div class="tl-item"><div class="yr">2025</div><div class="txt">+500 clientes e curadoria de produtos premium</div></div>
+      </div>
+
+      <!-- Certificações -->
+      <div class="certs" data-reveal data-delay="2">
+        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2l2.6 6 6.4.5-4.9 4.2 1.5 6.3L12 16l-5.6 3 1.5-6.3L3 8.5 9.4 8z"/></svg><span>Estética Facial Avançada</span></div>
+        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg><span>Massoterapia Corporal</span></div>
+        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span>Limpeza de Pele Profunda</span></div>
+        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3v18M5 8l7-5 7 5"/></svg><span>Design de Sobrancelhas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section" id="servicos">
+  <div class="container center">
+    <span class="eyebrow" data-reveal>O que ofereço</span>
+    <h2 class="section-title" data-reveal data-delay="1">Serviços &amp; <span class="accent">Tratamentos</span></h2>
+    <div class="divider" data-reveal data-delay="1"></div>
+    <p class="section-intro" data-reveal data-delay="2">
+      Protocolos personalizados que unem técnica e cuidado para resultados reais,
+      sempre respeitando a sua pele e o seu tempo.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <article class="service-card" data-reveal>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 13s1 1.5 3 1.5 3-1.5 3-1.5"/><circle cx="9" cy="10" r=".5" fill="currentColor"/><circle cx="15" cy="10" r=".5" fill="currentColor"/></svg></div>
+        <h3>Limpeza de Pele Profunda</h3>
+        <p>Higienização, extração e hidratação para uma pele renovada, leve e luminosa.</p>
+        <div class="service-foot">
+          <div class="price"><small>A partir de</small><b>R$ 180</b></div>
+          <a href="#contato" class="link-more">Saiba mais</a>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="service-card" data-reveal data-delay="1">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 14c2-1 4-1 8-4s6-6 8-6c0 2-3 5-6 8s-3 6-4 8c-2-4-4-4-6-6z"/></svg></div>
+        <h3>Peeling &amp; Renovação</h3>
+        <p>Tratamento de manchas, textura e viço com protocolos de renovação celular.</p>
+        <div class="service-foot">
+          <div class="price"><small>A partir de</small><b>R$ 220</b></div>
+          <a href="#contato" class="link-more">Saiba mais</a>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="service-card" data-reveal data-delay="2">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Massagem Modeladora</h3>
+        <p>Técnica corporal que ajuda a reduzir medidas, melhorar contornos e relaxar.</p>
+        <div class="service-foot">
+          <div class="price"><small>A partir de</small><b>R$ 150</b></div>
+          <a href="#contato" class="link-more">Saiba mais</a>
+        </div>
+      </article>
+      <!-- Card 4 -->
+      <article class="service-card" data-reveal>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 15-4 18 0M3 12c3 4 15 4 18 0"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Design de Sobrancelhas</h3>
+        <p>Mapeamento facial para um desenho harmônico, natural e sob medida para você.</p>
+        <div class="service-foot">
+          <div class="price"><small>A partir de</small><b>R$ 70</b></div>
+          <a href="#contato" class="link-more">Saiba mais</a>
+        </div>
+      </article>
+      <!-- Card 5 -->
+      <article class="service-card" data-reveal data-delay="1">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M6 19c0-4 3-7 6-7s6 3 6 7"/><circle cx="12" cy="7" r="3"/></svg></div>
+        <h3>Drenagem Linfática</h3>
+        <p>Estímulo da circulação para reduzir inchaços, desintoxicar e revitalizar o corpo.</p>
+        <div class="service-foot">
+          <div class="price"><small>A partir de</small><b>R$ 160</b></div>
+          <a href="#contato" class="link-more">Saiba mais</a>
+        </div>
+      </article>
+      <!-- Card 6 -->
+      <article class="service-card" data-reveal data-delay="2">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 3l2 5 5 .5-4 3.5 1.5 5L12 14l-4.5 3 1.5-5-4-3.5 5-.5z"/></svg></div>
+        <h3>Consultoria de Skincare</h3>
+        <p>Diagnóstico de pele e montagem de uma rotina de cuidados realmente eficaz.</p>
+        <div class="service-foot">
+          <div class="price"><small>A partir de</small><b>R$ 120</b></div>
+          <a href="#contato" class="link-more">Saiba mais</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUTOS ============ -->
+<section class="section" id="produtos">
+  <div class="container center">
+    <span class="eyebrow" data-reveal>Curadoria</span>
+    <h2 class="section-title" data-reveal data-delay="1">Produtos que eu <span class="accent">recomendo e uso</span></h2>
+    <div class="divider" data-reveal data-delay="1"></div>
+    <p class="section-intro" data-reveal data-delay="2">
+      Seleção pessoal de itens testados e aprovados nos meus atendimentos. Qualidade que entrega resultado.
+    </p>
+
+    <!-- Filtros funcionais -->
+    <div class="filters" data-reveal data-delay="2">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="skincare">Skincare</button>
+      <button class="filter-btn" data-filter="maquiagem">Maquiagem</button>
+      <button class="filter-btn" data-filter="cabelos">Cabelos</button>
+      <button class="filter-btn" data-filter="perfumaria">Perfumaria</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="products-grid" id="productsGrid">
+      <!-- Produtos preenchidos via JS (facilita edição/filtragem) -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="section testimonials" id="depoimentos">
+  <div class="container center">
+    <span class="eyebrow" data-reveal>Quem confia</span>
+    <h2 class="section-title" data-reveal data-delay="1">O que dizem as <span class="accent">clientes</span></h2>
+    <div class="divider" data-reveal data-delay="1"></div>
+  </div>
+
+  <div class="container">
+    <div class="tcarousel" data-reveal data-delay="2" id="tcarousel">
+      <div class="ttrack" id="ttrack">
+        <!-- Slide -->
+        <div class="tslide">
+          <div class="tcard">
+            <div class="tstars">★★★★★</div>
+            <p class="tquote">"Saí de lá com a pele renovada e a autoestima lá em cima. A Fany tem mãos de fada e um olhar atento a cada detalhe."</p>
+            <div class="tperson"><div class="tavatar">M</div><div class="tname"><b>Mariana L.</b><span>Cliente desde 2022</span></div></div>
+          </div>
+        </div>
+        <div class="tslide">
+          <div class="tcard">
+            <div class="tstars">★★★★★</div>
+            <p class="tquote">"Profissional impecável. O ambiente é sofisticado e o atendimento é totalmente personalizado. Resultado que se vê e se sente."</p>
+            <div class="tperson"><div class="tavatar">C</div><div class="tname"><b>Camila R.</b><span>Cliente desde 2023</span></div></div>
+          </div>
+        </div>
+        <div class="tslide">
+          <div class="tcard">
+            <div class="tstars">★★★★★</div>
+            <p class="tquote">"Minha pele nunca esteve tão bem cuidada. A consultoria de skincare mudou completamente a minha rotina. Recomendo de olhos fechados."</p>
+            <div class="tperson"><div class="tavatar">J</div><div class="tname"><b>Juliana M.</b><span>Cliente desde 2021</span></div></div>
+          </div>
+        </div>
+        <div class="tslide">
+          <div class="tcard">
+            <div class="tstars">★★★★★</div>
+            <p class="tquote">"Além de talentosa, é extremamente acolhedora. Cada sessão é um momento de cuidado de verdade. Virei cliente fiel!"</p>
+            <div class="tperson"><div class="tavatar">P</div><div class="tname"><b>Patrícia S.</b><span>Cliente desde 2024</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tdots" id="tdots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="section" id="instagram">
+  <div class="container center">
+    <span class="eyebrow" data-reveal>@byfanydiresta</span>
+    <h2 class="section-title" data-reveal data-delay="1">Acompanhe o meu <span class="accent">dia a dia</span></h2>
+    <div class="divider" data-reveal data-delay="1"></div>
+  </div>
+
+  <div class="container">
+    <div class="ig-grid" data-reveal data-delay="2">
+      <!-- 6 placeholders -->
+      <a class="ig-item" href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><span class="glyph">FD</span><span class="overlay"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="ig-item" href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><span class="glyph">FD</span><span class="overlay"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="ig-item" href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><span class="glyph">FD</span><span class="overlay"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="ig-item" href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><span class="glyph">FD</span><span class="overlay"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="ig-item" href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><span class="glyph">FD</span><span class="overlay"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="ig-item" href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><span class="glyph">FD</span><span class="overlay"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+    </div>
+    <div class="ig-cta" data-reveal>
+      <a href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" class="btn btn--ghost">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+        Seguir @byfanydiresta
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="section" id="contato">
+  <div class="container center">
+    <span class="eyebrow" data-reveal>Vamos conversar</span>
+    <h2 class="section-title" data-reveal data-delay="1">Agende o seu <span class="accent">atendimento</span></h2>
+    <div class="divider" data-reveal data-delay="1"></div>
+  </div>
+
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Formulário -->
+      <form class="form" id="contactForm" data-reveal novalidate>
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="whats">WhatsApp</label>
+            <input type="tel" id="whats" name="whats" placeholder="(00) 00000-0000" required />
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="voce@email.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="servico">Serviço de interesse</label>
+          <select id="servico" name="servico">
+            <option value="">Selecione um serviço</option>
+            <option>Limpeza de Pele Profunda</option>
+            <option>Peeling &amp; Renovação</option>
+            <option>Massagem Modeladora</option>
+            <option>Design de Sobrancelhas</option>
+            <option>Drenagem Linfática</option>
+            <option>Consultoria de Skincare</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Mensagem</label>
+          <textarea id="msg" name="msg" placeholder="Conte um pouco sobre o que você procura..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary" id="submitBtn">Enviar Mensagem</button>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- Informações -->
+      <div class="contact-info" data-reveal data-delay="1">
+        <a class="info-card" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 12a9 9 0 01-13 8l-5 1 1-5a9 9 0 1117-4z"/></svg></span>
+          <div><h4>WhatsApp</h4><p>(00) 00000-0000</p></div>
+        </a>
+        <a class="info-card" href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div><h4>Instagram</h4><p>@byfanydiresta</p></div>
+        </a>
+        <div class="info-card">
+          <span class="ic"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 21s-7-4.5-7-10a7 7 0 1114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span>
+          <div><h4>Localização</h4><p>Sua cidade — atendimento com hora marcada</p></div>
+        </div>
+        <div class="info-card">
+          <span class="ic"><svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><h4>Horário</h4><p>Seg a Sáb — 09h às 19h</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <a href="#inicio" class="brand"><span class="brand-name">Fany <b>Diresta</b></span></a>
+    <p class="footer-tag">"Cuidar de você é a minha forma de arte."</p>
+    <nav class="footer-nav" aria-label="Navegação do rodapé">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="socials">
+      <a href="https://www.instagram.com/byfanydiresta/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 12a9 9 0 01-13 8l-5 1 1-5a9 9 0 1117-4z"/></svg></a>
+      <a href="mailto:contato@fanydiresta.com" aria-label="E-mail"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Fany Diresta · Estética Facial &amp; Corporal · Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLUTUANTE ============ -->
+<a class="wa-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.4a10 10 0 01-1.6-5.4C5.6 9.8 10.2 5.3 16 5.3s10.4 4.5 10.4 10.2S21.8 25.7 16 25.7zm5.7-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.3 8.3 0 01-2.4-1.5 9 9 0 01-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5a.5.5 0 000-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 00-.8.4 3.3 3.3 0 00-1 2.5c0 1.5 1.1 2.9 1.2 3.1s2.1 3.3 5.2 4.6c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.3-.2-.5-.4z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   JAVASCRIPT — modular e comentado
+   ============================================================ */
+(function(){
+  "use strict";
+
+  /* -------- 0. Ano dinâmico no rodapé -------- */
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* -------- 1. LOADER: esconde ao carregar -------- */
+  window.addEventListener("load", function(){
+    setTimeout(function(){ document.getElementById("loader").classList.add("hidden"); }, 900);
+  });
+
+  /* -------- 2. HEADER: muda no scroll -------- */
+  var header = document.getElementById("header");
+  function onScroll(){ header.classList.toggle("scrolled", window.scrollY > 40); }
+  window.addEventListener("scroll", onScroll, { passive:true });
+  onScroll();
+
+  /* -------- 3. MENU MOBILE (hamburguer -> X) -------- */
+  var burger = document.getElementById("burger");
+  var navLinks = document.getElementById("navLinks");
+  function toggleMenu(force){
+    var open = force !== undefined ? force : !navLinks.classList.contains("open");
+    navLinks.classList.toggle("open", open);
+    burger.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open);
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  burger.addEventListener("click", function(){ toggleMenu(); });
+  navLinks.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ toggleMenu(false); });
+  });
+
+  /* -------- 4. SCROLL REVEAL (Intersection Observer) -------- */
+  var revealEls = document.querySelectorAll("[data-reveal]");
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("visible"); io.unobserve(e.target); }
+    });
+  }, { threshold:.14, rootMargin:"0px 0px -40px 0px" });
+  revealEls.forEach(function(el){ io.observe(el); });
+
+  /* -------- 5. CONTADORES ANIMADOS -------- */
+  var counters = document.querySelectorAll("[data-count]");
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target, target = +el.dataset.count, suffix = el.dataset.suffix || "";
+      var dur = 1600, start = performance.now();
+      (function tick(now){
+        var p = Math.min((now - start)/dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+        el.textContent = Math.round(eased * target) + suffix;
+        if(p < 1) requestAnimationFrame(tick);
+      })(start);
+      cio.unobserve(el);
+    });
+  }, { threshold:.6 });
+  counters.forEach(function(c){ cio.observe(c); });
+
+  /* -------- 6. PRODUTOS + FILTRO (JS puro) -------- */
+  // Edite este array para trocar produtos, preços e categorias.
+  var products = [
+    { nome:"Sérum Vitamina C",      cat:"skincare",   tag:"Skincare",   desc:"Antioxidante para viço e uniformização.", preco:"R$ 129", glyph:"C" },
+    { nome:"Hidratante Facial",     cat:"skincare",   tag:"Skincare",   desc:"Hidratação profunda de longa duração.",   preco:"R$ 98",  glyph:"H" },
+    { nome:"Base Alta Cobertura",   cat:"maquiagem",  tag:"Maquiagem",  desc:"Acabamento natural e longa fixação.",      preco:"R$ 145", glyph:"B" },
+    { nome:"Paleta de Sombras",     cat:"maquiagem",  tag:"Maquiagem",  desc:"Tons neutros e atemporais do dia à noite.",preco:"R$ 169", glyph:"P" },
+    { nome:"Máscara de Nutrição",   cat:"cabelos",    tag:"Cabelos",    desc:"Reconstrução e brilho para fios secos.",   preco:"R$ 112", glyph:"M" },
+    { nome:"Óleo Capilar",          cat:"cabelos",    tag:"Cabelos",    desc:"Finalizador antifrizz com toque seco.",    preco:"R$ 79",  glyph:"O" },
+    { nome:"Eau de Parfum Âmbar",   cat:"perfumaria", tag:"Perfumaria", desc:"Notas quentes, marcantes e sofisticadas.", preco:"R$ 240", glyph:"A" },
+    { nome:"Bruma Corporal Floral", cat:"perfumaria", tag:"Perfumaria", desc:"Frescor delicado para o dia a dia.",       preco:"R$ 89",  glyph:"F" }
+  ];
+
+  var grid = document.getElementById("productsGrid");
+  var cartIcon = '<svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.5 12h11l2-8H7"/></svg>';
+
+  function renderProducts(filter){
+    grid.innerHTML = "";
+    products
+      .filter(function(p){ return filter === "todos" || p.cat === filter; })
+      .forEach(function(p){
+        var el = document.createElement("article");
+        el.className = "product-card";
+        el.innerHTML =
+          '<div class="product-thumb"><span class="badge-cat">'+p.tag+'</span><span class="glyph">'+p.glyph+'</span></div>'+
+          '<div class="product-body">'+
+            '<h4>'+p.nome+'</h4>'+
+            '<p>'+p.desc+'</p>'+
+            '<div class="product-foot">'+
+              '<div class="price"><b>'+p.preco+'</b></div>'+
+              '<button class="btn-cart" aria-label="Comprar '+p.nome+'">'+cartIcon+' Comprar</button>'+
+            '</div>'+
+          '</div>';
+        grid.appendChild(el);
+      });
+  }
+  renderProducts("todos");
+
+  document.querySelectorAll(".filter-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelector(".filter-btn.active").classList.remove("active");
+      btn.classList.add("active");
+      renderProducts(btn.dataset.filter);
+    });
+  });
+
+  /* -------- 7. CARROSSEL DE DEPOIMENTOS -------- */
+  var track = document.getElementById("ttrack");
+  var slides = track.children.length;
+  var dotsWrap = document.getElementById("tdots");
+  var current = 0, autoTimer;
+
+  for(var i=0;i<slides;i++){
+    var d = document.createElement("button");
+    d.className = "tdot" + (i===0 ? " active" : "");
+    d.setAttribute("aria-label", "Depoimento " + (i+1));
+    d.dataset.i = i;
+    dotsWrap.appendChild(d);
+  }
+  var dots = dotsWrap.children;
+
+  function goTo(n){
+    current = (n + slides) % slides;
+    track.style.transform = "translateX(-" + (current*100) + "%)";
+    for(var k=0;k<dots.length;k++) dots[k].classList.toggle("active", k===current);
+  }
+  dotsWrap.addEventListener("click", function(e){
+    if(e.target.dataset.i !== undefined){ goTo(+e.target.dataset.i); resetAuto(); }
+  });
+  function startAuto(){ autoTimer = setInterval(function(){ goTo(current+1); }, 5000); }
+  function resetAuto(){ clearInterval(autoTimer); startAuto(); }
+  startAuto();
+
+  var carousel = document.getElementById("tcarousel");
+  carousel.addEventListener("mouseenter", function(){ clearInterval(autoTimer); });
+  carousel.addEventListener("mouseleave", startAuto);
+
+  /* -------- 8. FORMULÁRIO com loading state -------- */
+  var form = document.getElementById("contactForm");
+  var submitBtn = document.getElementById("submitBtn");
+  var formMsg = document.getElementById("formMsg");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(!form.nome.value.trim() || !form.whats.value.trim()){
+      formMsg.style.color = "#E08A8A";
+      formMsg.textContent = "Preencha ao menos nome e WhatsApp.";
+      return;
+    }
+    submitBtn.textContent = "Enviando...";
+    submitBtn.disabled = true;
+    formMsg.textContent = "";
+    // Simulação de envio — troque por integração real (e-mail, WhatsApp API, etc.)
+    setTimeout(function(){
+      submitBtn.textContent = "Enviar Mensagem";
+      submitBtn.disabled = false;
+      formMsg.style.color = "var(--gold)";
+      formMsg.textContent = "✓ Mensagem enviada! Em breve entro em contato com você.";
+      form.reset();
+    }, 1500);
+  });
+
+  /* -------- 9. CURSOR CUSTOMIZADO (desktop) -------- */
+  if(window.matchMedia("(min-width:1025px)").matches && window.matchMedia("(pointer:fine)").matches){
+    var dot = document.querySelector(".cursor-dot");
+    var ring = document.querySelector(".cursor-ring");
+    var rx=0, ry=0, mx=0, my=0;
+    document.addEventListener("mousemove", function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform = "translate("+mx+"px,"+my+"px) translate(-50%,-50%)";
+    });
+    (function follow(){
+      rx += (mx-rx)*.18; ry += (my-ry)*.18;
+      ring.style.transform = "translate("+rx+"px,"+ry+"px) translate(-50%,-50%)";
+      requestAnimationFrame(follow);
+    })();
+    document.querySelectorAll("a,button,input,select,textarea,.service-card,.product-card,.ig-item").forEach(function(el){
+      el.addEventListener("mouseenter", function(){ ring.classList.add("is-active"); });
+      el.addEventListener("mouseleave", function(){ ring.classList.remove("is-active"); });
+    });
+  }
+
+  /* -------- 10. PARTÍCULAS DOURADAS NO HERO (canvas leve) -------- */
+  var canvas = document.getElementById("hero-particles");
+  if(canvas && !window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    var ctx = canvas.getContext("2d");
+    var particles = [], W, H;
+    function resize(){
+      W = canvas.width = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+    function makeParticles(){
+      particles = [];
+      var count = Math.min(48, Math.floor(W/26));
+      for(var i=0;i<count;i++){
+        particles.push({
+          x:Math.random()*W, y:Math.random()*H,
+          r:Math.random()*1.8+.4,
+          vy:Math.random()*.3+.05,
+          vx:(Math.random()-.5)*.2,
+          a:Math.random()*.5+.1
+        });
+      }
+    }
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      particles.forEach(function(p){
+        p.y -= p.vy; p.x += p.vx;
+        if(p.y < -5){ p.y = H+5; p.x = Math.random()*W; }
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle = "rgba(201,169,110,"+p.a+")";
+        ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    resize(); makeParticles(); draw();
+    window.addEventListener("resize", function(){ resize(); makeParticles(); });
+  }
+
+})();
+</script>
+</body>
+</html>

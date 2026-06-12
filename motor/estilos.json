@@ -1,0 +1,24 @@
+{
+  "_doc": "Biblioteca de ESTILOS (layouts distintos). Cada estilo é um template próprio em motor/estilos/<arquivo>, todos lendo o mesmo window.SITE. 'porNicho' define quais estilos cada nicho pode usar; o gerador escolhe um por semente do nome (ou data.estilo força). Para adicionar estilo: crie o HTML em estilos/, registre aqui e inclua nos nichos desejados.",
+
+  "estilos": {
+    "dark-luxury":     { "arquivo": "dark-luxury.html",     "desc": "Premium escuro, dourado, sofisticado (editorial de moda dark)." },
+    "clean-editorial": { "arquivo": "clean-editorial.html", "desc": "Claro, arejado, editorial natural — muito espaço em branco, tipografia grande, serviços em lista-revista." },
+    "ink-bold":        { "arquivo": "ink-bold.html",        "desc": "Bruto, alto contraste, tipografia Anton gigante, faixa marquee e galeria de trabalhos como protagonista." }
+  },
+
+  "porNicho": {
+    "tatuagem":    ["ink-bold"],
+    "psicologia":  ["clean-editorial"],
+    "estetica":    ["clean-editorial", "dark-luxury"],
+    "barbearia":   ["dark-luxury", "ink-bold"],
+    "restaurante": ["clean-editorial", "dark-luxury"],
+    "odontologia": ["clean-editorial"],
+    "veterinaria": ["clean-editorial"],
+    "petshop":     ["clean-editorial"],
+    "automotivo":  ["dark-luxury"],
+    "academia":    ["dark-luxury"],
+    "generico":    ["clean-editorial", "dark-luxury"],
+    "_default":    ["dark-luxury"]
+  }
+}

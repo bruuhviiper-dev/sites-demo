@@ -1,0 +1,89 @@
+{
+  "categoria": "Estúdio de tatuagem",
+  "slug": "indio-tatoo-studio",
+
+  "brand": {
+    "name": "Indío Tatoo Studio",
+    "tagline": "Estúdio de Tatuagem · Rio Preto",
+    "nameHtml": "Indío <b>Tatoo</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Estúdio de Tatuagem · São José do Rio Preto",
+    "titleHtml": "Tinta que conta <span class=\"ac\">histórias</span>",
+    "sub": "Tatuagens autorais com técnica, segurança e identidade. Nota 4,9 no Google — arte na pele que você leva pra vida.",
+    "badge": "★ 4,9 · 89 avaliações",
+    "imageLabel": "Foto do estúdio aqui",
+    "ctaPrimary": { "label": "Fazer orçamento", "href": "#contato" },
+    "ctaGhost": { "label": "Ver trabalhos", "href": "#galeria" }
+  },
+
+  "about": {
+    "eyebrow": "O estúdio",
+    "titleHtml": "Arte, segurança e <span class=\"ac\">identidade</span>",
+    "paragraphs": [
+      "O Indío Tatoo Studio é um espaço dedicado à arte na pele, onde cada projeto é desenvolvido junto com o cliente para traduzir a sua história em traço.",
+      "Trabalhamos com material 100% descartável e protocolos rígidos de biossegurança, num ambiente acolhedor e profissional. Nota 4,9 com quase 90 avaliações reflete o nosso cuidado."
+    ],
+    "stats": [
+      { "num": 4, "suffix": ",9", "label": "Nota no Google" },
+      { "num": 89, "suffix": "+", "label": "Avaliações" },
+      { "num": 100, "suffix": "%", "label": "Material descartável" }
+    ],
+    "certs": [
+      { "label": "Biossegurança" },
+      { "label": "Material descartável" },
+      { "label": "Projetos autorais" },
+      { "label": "Cobertura / Cover-up" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Estilos",
+    "navLabel": "Estilos",
+    "titleHtml": "O que <span class=\"ac\">tatuamos</span>",
+    "intro": "Do traço fino ao preto pesado — encontramos o estilo certo para a sua ideia.",
+    "items": [
+      { "icon": "sparkle", "name": "Blackwork", "desc": "Preto sólido, contrastes fortes e impacto visual.", "price": "Sob orçamento" },
+      { "icon": "cut", "name": "Fineline", "desc": "Traço fino e delicado para desenhos minimalistas.", "price": "Sob orçamento" },
+      { "icon": "star", "name": "Realismo", "desc": "Sombreados e detalhes para resultados realistas.", "price": "Sob orçamento" },
+      { "icon": "shield", "name": "Old School", "desc": "Tradicional, traço marcado e cores vivas.", "price": "Sob orçamento" },
+      { "icon": "check", "name": "Cobertura (Cover-up)", "desc": "Transformamos tatuagens antigas em novas artes.", "price": "Sob orçamento" },
+      { "icon": "heart", "name": "Autoral & Retrato", "desc": "Projetos exclusivos criados junto com você.", "price": "Sob orçamento" }
+    ]
+  },
+
+  "products": { "show": false },
+
+  "testimonials": {
+    "eyebrow": "Depoimentos",
+    "titleHtml": "Quem confia",
+    "items": [
+      { "stars": 5, "quote": "Profissional excelente e ambiente impecável. Resultado ficou melhor do que eu imaginava.", "name": "Cliente Google", "meta": "Avaliação · 4,9 ★" },
+      { "stars": 5, "quote": "Atendimento atencioso do começo ao fim. Cuidado com a higiene e traço perfeito.", "name": "Cliente Google", "meta": "Avaliação · 4,9 ★" },
+      { "stars": 5, "quote": "Levei minha ideia e saí com uma arte única. Recomendo demais o estúdio.", "name": "Cliente Google", "meta": "Avaliação · 4,9 ★" }
+    ]
+  },
+
+  "instagram": {
+    "show": true,
+    "handle": "@indiotatoostudio",
+    "url": "https://instagram.com",
+    "titleHtml": "Nossos <span class=\"ac\">trabalhos</span>"
+  },
+
+  "contact": {
+    "eyebrow": "Contato",
+    "titleHtml": "Bora marcar a <span class=\"ac\">sua</span>",
+    "facebookUrl": "https://facebook.com",
+    "facebookLabel": "Indío Tatoo Studio",
+    "instagramUrl": "https://instagram.com",
+    "address": "R. Maj. João Batista França, 1845 - Parque Industrial, São José do Rio Preto - SP, 15025-610",
+    "hours": "Aberto · fecha às 18:00",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Maj.+Jo%C3%A3o+Batista+Fran%C3%A7a,+1845+-+Parque+Industrial,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15025-610&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Sua história, eternizada na pele."
+  }
+}
