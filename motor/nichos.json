@@ -248,6 +248,28 @@
     "footer": { "tagline": "Números organizados, decisões seguras." }
   },
 
+  "moda": {
+    "fonts": { "display": "\"Playfair Display\", serif", "body": "\"DM Sans\", sans-serif" },
+    "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;1,400;1,500", "DM+Sans:wght@300;400;500"],
+    "design": { "hero": "split-right", "shape": "soft", "display": "elegant" },
+    "schemes": [
+      { "bg":"#FAF6F4", "bgAlt":"#F2EBE7", "surface":"#FFFFFF", "accent":"#C97070", "accent2":"#EBC8C8", "text":"#1E1614", "muted":"#8A7A76", "border":"#E8DDD8" },
+      { "bg":"#FBF7F2", "bgAlt":"#F3EBE2", "surface":"#FFFFFF", "accent":"#C47D5C", "accent2":"#EBB99A", "text":"#1E1612", "muted":"#8A7A72", "border":"#E8DDD5" },
+      { "bg":"#F5F7F2", "bgAlt":"#ECF0E6", "surface":"#FFFFFF", "accent":"#7A9A6B", "accent2":"#BCDAAD", "text":"#161E14", "muted":"#7A8A78", "border":"#D8E4D3" }
+    ],
+    "hero": { "eyebrow":"Moda Feminina", "title":"Vista-se com quem você é", "sub":"Peças selecionadas com carinho para a mulher moderna que cuida do seu estilo sem abrir mão de conforto e autenticidade." },
+    "services": { "eyebrow":"Coleções", "navLabel":"Coleções", "title":"Encontre o seu estilo",
+      "items":[
+        {"icon":"tag","name":"Casual & Dia a Dia","desc":"Looks confortáveis e estilosos para o cotidiano com leveza e autenticidade.","price":"A partir de R$ 69"},
+        {"icon":"sparkle","name":"Festas & Eventos","desc":"Peças que fazem você brilhar em qualquer ocasião especial.","price":"A partir de R$ 129"},
+        {"icon":"star","name":"Trabalho & Estilo","desc":"Elegância versátil para o ambiente profissional sem perder a personalidade.","price":"A partir de R$ 89"},
+        {"icon":"heart","name":"Básicos Premium","desc":"Essenciais de qualidade que duram e combinam com tudo no guarda-roupa.","price":"A partir de R$ 49"},
+        {"icon":"check","name":"Plus Size","desc":"Moda inclusiva, linda e fashionista para todos os corpos.","price":"A partir de R$ 79"},
+        {"icon":"leaf","name":"Acessórios","desc":"Bolsas, lenços e complementos para finalizar o look com charme.","price":"A partir de R$ 29"}
+      ]},
+    "footer": { "tagline": "Moda que faz você se sentir você mesma." }
+  },
+
   "generico": {
     "fonts": { "display": "\"Cormorant Garamond\", serif", "body": "\"Jost\", sans-serif" },
     "fontsGoogle": ["Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500", "Jost:wght@300;400;500;600"],

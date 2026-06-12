@@ -7,6 +7,7 @@
 // Ordem importa: o primeiro padrão que casar vence.
 const REGRAS = [
   ["tatuagem",    /tatua|tattoo|tatoo|body ?piercing|ink studio/i],
+  ["moda",        /loja de roupa|loja de roupas|boutique|moda feminina|moda masculina|moda infantil|vestuário|clothing|roupa/i],
   ["psicologia",  /psic[oó]log|psicoterap|psican[aá]lis|terapia cognitiv/i],
   ["contabilidade", /contabil|cont[aá]beis|contador|escrit[oó]rio cont|fiscal e trib/i],
   ["barbearia",   /barbear|barber|navalha/i],

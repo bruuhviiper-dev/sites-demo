@@ -1,0 +1,71 @@
+{
+  "categoria": "Loja de Roupa",
+  "slug": "pz-moda-feminina",
+
+  "brand": {
+    "name": "PZ Moda Feminina",
+    "tagline": "Moda · São José do Rio Preto",
+    "nameHtml": "PZ <b>Moda</b> Feminina"
+  },
+
+  "hero": {
+    "eyebrow": "Moda Feminina · Talhado, São José do Rio Preto",
+    "titleHtml": "Vista-se com quem <em>você é</em>",
+    "sub": "Peças selecionadas com muito carinho para a mulher que cuida do seu estilo sem abrir mão de conforto e atitude.",
+    "badge": "★ 5,0 no Google",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost": { "label": "Ver coleções", "href": "#colecoes" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a PZ",
+    "titleHtml": "Moda com <em>propósito</em> e cuidado",
+    "paragraphs": [
+      "A PZ Moda Feminina nasceu do amor por estilo e pela mulher real. Aqui, cada peça é escolhida pensando em você: no seu conforto, na sua personalidade e no seu dia a dia.",
+      "Empresa fundada por empreendedoras para empoderar quem entra pela nossa porta. Porque moda não é superficialidade — é identidade."
+    ],
+    "stats": [
+      { "num": 15, "suffix": "+", "label": "Avaliações 5 estrelas" },
+      { "num": 5, "suffix": ",0", "label": "Nota no Google" }
+    ],
+    "certs": [
+      { "icon": "sparkle", "label": "Peças com curadoria semanal" },
+      { "icon": "heart",   "label": "Empresa de empreendedoras" },
+      { "icon": "tag",     "label": "Novidades toda semana" },
+      { "icon": "check",   "label": "Compra e retirada na loja" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Coleções",
+    "navLabel": "Coleções",
+    "titleHtml": "Encontre o seu <em>estilo</em>",
+    "items": [
+      { "name": "Casual & Dia a Dia",  "desc": "Peças confortáveis e estilosas para o seu cotidiano com leveza e autenticidade.",            "price": "A partir de R$ 69" },
+      { "name": "Festas & Eventos",    "desc": "Looks que fazem você brilhar em qualquer ocasião especial, do encontro ao casamento.",       "price": "A partir de R$ 129" },
+      { "name": "Trabalho & Estilo",   "desc": "Peças elegantes e versáteis para um visual profissional sem perder a personalidade.",        "price": "A partir de R$ 89" },
+      { "name": "Básicos Premium",     "desc": "Essenciais de qualidade que duram e combinam com tudo no seu guarda-roupa.",                 "price": "A partir de R$ 49" },
+      { "name": "Plus Size",           "desc": "Moda inclusiva, linda e fashionista para todos os corpos com a mesma dedicação.",            "price": "A partir de R$ 79" },
+      { "name": "Acessórios",          "desc": "Bolsas, lenços e complementos que finalizam o look com charme e personalidade.",            "price": "A partir de R$ 29" }
+    ]
+  },
+
+  "products":     { "show": false },
+  "testimonials": { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale conosco",
+    "titleHtml": "Venha conhecer a <em>PZ</em> pessoalmente",
+    "whatsapp": "5517988193650",
+    "phoneDisplay": "(17) 98819-3650",
+    "address": "R. Marechal Deodoro da Fonseca, 1679 - Sala 2 - Dist. Talhado, São José do Rio Preto - SP",
+    "hours": "Aberta · Fecha às 19h",
+    "cidade": "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=-20.8040548,-49.3908976&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Moda que faz você se sentir você mesma."
+  }
+}
