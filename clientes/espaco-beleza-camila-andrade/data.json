@@ -1,0 +1,81 @@
+{
+  "categoria": "Salão de Beleza",
+  "slug": "espaco-beleza-camila-andrade",
+
+  "brand": {
+    "name": "Espaço de Beleza Camila Andrade",
+    "tagline": "Salão de Beleza · São José do Rio Preto",
+    "nameHtml": "Espaço de Beleza <b>Camila Andrade</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Salão de Beleza · Vila Moreira, São José do Rio Preto",
+    "titleHtml": "Beleza que <em>transforma</em>",
+    "sub": "Profissionais dedicados, atendimento acolhedor e resultados que fazem você se sentir incrível a cada visita.",
+    "badge": "★ 5,0 no Google · 12 avaliações",
+    "ctaPrimary": { "label": "Agendar pelo WhatsApp", "href": "#contato" },
+    "ctaGhost": { "label": "Ver serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o Espaço",
+    "titleHtml": "Cuidado e <em>excelência</em> em cada detalhe",
+    "paragraphs": [
+      "O Espaço de Beleza Camila Andrade é um ambiente pensado para você se sentir bem desde a chegada. Atendimento personalizado, profissionais qualificados e um cuidado real com cada cliente.",
+      "Aqui você encontra qualidade, atenção e aquele toque especial que faz toda a diferença no resultado final."
+    ],
+    "stats": [
+      { "num": 12, "suffix": "+", "label": "Avaliações no Google" },
+      { "num": 5,  "suffix": ",0", "label": "Nota média" }
+    ],
+    "certs": [
+      { "icon": "sparkle", "label": "Profissionais qualificados" },
+      { "icon": "heart",   "label": "Atendimento personalizado" },
+      { "icon": "star",    "label": "★ 5,0 no Google" },
+      { "icon": "check",   "label": "Agendamento pelo WhatsApp" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Serviços",
+    "navLabel": "Serviços",
+    "titleHtml": "O que oferecemos",
+    "items": [
+      { "icon": "scissors", "name": "Corte Feminino",      "desc": "Cortes modernos e clássicos, personalizados para o seu rosto e estilo de vida.",            "price": "Sob consulta" },
+      { "icon": "sparkle",  "name": "Coloração",           "desc": "Mechas, luzes, balayage e colorações completas para realçar a sua beleza.",                  "price": "Sob consulta" },
+      { "icon": "heart",    "name": "Tratamentos Capilares","desc": "Hidratação, cauterização e reconstrução para cabelos saudáveis e radiantes.",               "price": "Sob consulta" },
+      { "icon": "star",     "name": "Escova & Finalização", "desc": "Modelagem profissional para você sair do salão com o visual impecável.",                    "price": "Sob consulta" },
+      { "icon": "leaf",     "name": "Progressiva",          "desc": "Redução do volume e frizz com produtos de qualidade e resultado duradouro.",                 "price": "Sob consulta" },
+      { "icon": "check",    "name": "Manicure & Pedicure",  "desc": "Cuidado completo para as mãos e pés com acabamento impecável.",                             "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": {
+    "show": true,
+    "eyebrow": "O que dizem nossas clientes",
+    "titleHtml": "Avaliações <em>reais</em>",
+    "items": [
+      { "name": "Beatriz Silva",   "text": "Amei o cuidado e paciência que teve comigo! Muito bom no que faz." },
+      { "name": "Cláudia Elaine",  "text": "Excelentes profissionais, ótimo atendimento, preço bom. Super indico!" },
+      { "name": "Letícia Moraes",  "text": "Tem ótimos profissionais! Atendimento com excelência!" }
+    ]
+  },
+
+  "products":  { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale conosco",
+    "titleHtml": "Agende o seu <em>horário</em>",
+    "whatsapp": "5517991409538",
+    "phoneDisplay": "(17) 99140-9538",
+    "address": "R. Oswaldo Cruz, 925 - Vila Moreira, São José do Rio Preto - SP",
+    "hours": "Aberto · Fecha às 18h",
+    "cidade": "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Oswaldo+Cruz,+925+Vila+Moreira+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Beleza que cuida de você de verdade."
+  }
+}

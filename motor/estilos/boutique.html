@@ -102,30 +102,36 @@ nav {
 /* Hero — lado imagem */
 .hero-visual {
   position: relative;
-  background: var(--bg-alt);
+  background: linear-gradient(152deg, var(--bg-alt) 0%, var(--accent2) 100%);
   overflow: hidden;
   min-height: calc(100vh - var(--nav-h));
 }
-/* Monograma gigante — marca d'água decorativa */
-.hero-monogram {
+/* Palavra editorial gigante — ocupa o lado visual */
+.hero-word {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-d); font-style: italic; font-weight: 400;
-  font-size: clamp(10rem, 22vw, 28rem); line-height: 1;
-  color: var(--text); opacity: .045;
+  font-size: clamp(8rem, 18vw, 24rem); line-height: 1;
+  color: #fff; opacity: .18;
   user-select: none; pointer-events: none; letter-spacing: -.02em;
+  padding: 0 16px; text-align: center;
 }
-/* Quadro interno — dá estrutura visual ao espaço de imagem */
+/* Quadro interno com sazonalidade */
 .hero-visual-frame {
   position: absolute;
-  inset: clamp(28px,4vw,52px);
-  border: 1px solid rgba(26,18,16,.10);
-  display: flex; align-items: flex-end; justify-content: flex-start;
-  padding: 20px 24px;
+  inset: clamp(24px,3.5vw,44px);
+  border: 1px solid rgba(255,255,255,.35);
+  display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: flex-end;
+  padding: 22px 26px; gap: 4px;
+}
+.hero-img-season {
+  font-size: .6rem; letter-spacing: .24em; text-transform: uppercase;
+  color: rgba(26,18,16,.45);
 }
 .hero-img-label {
-  font-size: .64rem; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--muted); opacity: .5;
+  font-size: .6rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--muted); opacity: .55;
 }
 .hero-tag {
   position: absolute; top: 28px; right: 28px;
@@ -316,9 +322,10 @@ footer {
     <div class="ctas" id="h-ctas"></div>
   </div>
   <div class="hero-visual">
-    <div class="hero-monogram" id="h-monogram"></div>
+    <div class="hero-word" id="h-word"></div>
     <div class="hero-visual-frame">
-      <span class="hero-img-label" id="h-img-label">Foto do espaço</span>
+      <span class="hero-img-season" id="h-season"></span>
+      <span class="hero-img-label">Foto do espaço</span>
     </div>
     <div class="hero-tag" id="h-tag"></div>
   </div>
@@ -442,10 +449,16 @@ footer {
   if(g('h-title'))   g('h-title').innerHTML     = h.titleHtml || h.title || niH.title || '';
   if(g('h-sub'))     g('h-sub').textContent     = h.sub || niH.sub || '';
   if(g('h-badge') && h.badge) g('h-badge').innerHTML = '<span style="color:var(--accent)">★</span>&nbsp;<strong>'+h.badge+'</strong>';
-  // Monograma: iniciais da marca (até 2 chars)
-  if(g('h-monogram')){
-    var initials = bName.split(/\s+/).slice(0,2).map(function(w){ return w[0]||''; }).join('');
-    g('h-monogram').textContent = initials || bName.slice(0,2);
+  // Palavra editorial no lado visual: primeira palavra da marca (ex: "PZ", "Espaço")
+  if(g('h-word')){
+    var firstWord = bName.split(/\s+/)[0] || bName;
+    g('h-word').textContent = firstWord;
+  }
+  if(g('h-season')){
+    var yr = new Date().getFullYear();
+    var mo = new Date().getMonth();
+    var saz = mo < 3 || mo === 11 ? 'Verão '+yr : mo < 6 ? 'Outono '+yr : mo < 9 ? 'Inverno '+yr : 'Primavera '+yr;
+    g('h-season').textContent = 'Coleção · ' + saz;
   }
   if(g('h-tag') && h.badge){ g('h-tag').textContent = h.badge; } else if(g('h-tag')){ g('h-tag').style.display='none'; }
   if(g('h-ctas')){
@@ -477,7 +490,7 @@ footer {
     g('ab-stats').innerHTML = ab.stats.map(function(st){
       // só anima se o sufixo for puramente não-numérico simples (ex: "+", "%"); sufixos com vírgula (ex: ",0") ficam estáticos
       var canAnim = /^[+%]?$/.test(String(st.suffix||''));
-      var numAttr = canAnim ? ' data-target="'+(st.num||0)+'"' : '';
+      var numAttr = canAnim ? ' data-target="'+(st.num||0)+'" data-suffix="'+(st.suffix||'')+'"' : '';
       return '<div class="stat rv"><div class="stat-n"'+numAttr+'>'+(st.num||'')+(st.suffix||'')+'</div><div class="stat-l">'+(st.label||'')+'</div></div>';
     }).join('');
   }
@@ -580,13 +593,13 @@ footer {
   },{threshold:0.08, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rv,.rv2').forEach(function(el){ obs.observe(el); });
 
-  // ── COUNTERS ─────────────────────────────────────
+  // ── COUNTERS (só para sufixos simples como + ou %) ───────────────
   var obsN = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(!e.isIntersecting) return;
       var el=e.target; var target=+(el.dataset.target||0);
-      var suf=el.textContent.replace(/[0-9]/g,'');
-      var v=0; var inc=target/75;
+      var suf=el.dataset.suffix||'';
+      var v=0; var inc=target/60;
       var t=setInterval(function(){ v=Math.min(v+inc,target); el.textContent=Math.floor(v)+suf; if(v>=target)clearInterval(t); },16);
       obsN.unobserve(el);
     });
