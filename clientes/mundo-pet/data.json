@@ -1,0 +1,82 @@
+{
+  "categoria": "Pet Shop",
+  "slug": "mundo-pet",
+  "scheme": 2,
+
+  "brand": {
+    "name": "Mundo Pet",
+    "tagline": "Pet Shop · São José do Rio Preto",
+    "nameHtml": "Mundo <b>Pet</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Pet Shop · Eldorado, São José do Rio Preto",
+    "titleHtml": "Um mundo de cuidado <em>pro seu pet</em>",
+    "sub": "Rações, produtos e atendimento veterinário humanizado, com a maior variedade e o preço justo que o seu melhor amigo merece.",
+    "badge": "★ 4,8 no Google · 387 avaliações",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o Mundo Pet",
+    "titleHtml": "Acolhimento, <em>variedade</em> e carinho",
+    "paragraphs": [
+      "O Mundo Pet é referência no Eldorado: uma casa de ração completa, com grande variedade de produtos, equipe veterinária excelente e um atendimento humanizado que conquista cada cliente.",
+      "Somos uma empresa de empreendedoras que acolhe toda a comunidade — aqui cada pet e cada pessoa são recebidos com respeito e muito carinho, do atendimento à entrega."
+    ],
+    "stats": [
+      { "num": 387, "suffix": "+", "label": "Avaliações no Google" },
+      { "num": 4,   "suffix": ",8", "label": "Nota média" }
+    ],
+    "certs": [
+      { "icon": "heart",   "label": "Atendimento humanizado" },
+      { "icon": "shield",  "label": "Veterinários excelentes" },
+      { "icon": "star",    "label": "★ 4,8 · 387 avaliações" },
+      { "icon": "truck",   "label": "Entrega e retirada na loja" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "O que fazemos",
+    "navLabel": "Serviços",
+    "titleHtml": "Tudo num só lugar",
+    "items": [
+      { "icon": "paw",      "name": "Casa de Ração",          "desc": "Grande variedade de rações premium para cães e gatos, com o melhor preço da região.",          "price": "Consulte" },
+      { "icon": "shield",   "name": "Atendimento Veterinário", "desc": "Equipe veterinária excelente e carinhosa para cuidar da saúde do seu pet com atenção real.",     "price": "Sob consulta" },
+      { "icon": "scissors", "name": "Banho & Tosa",           "desc": "Higiene e estética com todo o cuidado e o carinho que o seu melhor amigo merece.",              "price": "Sob consulta" },
+      { "icon": "truck",    "name": "Entrega em Casa",         "desc": "Pediu pelo WhatsApp, a gente entrega. Comodidade para o dia a dia de quem ama os pets.",        "price": "Consulte a taxa" },
+      { "icon": "gift",     "name": "Acessórios & Brinquedos", "desc": "Coleiras, caminhas, brinquedos e novidades para deixar seu pet feliz e bem cuidado.",          "price": "A partir de R$ 19" },
+      { "icon": "bag",      "name": "Retirada na Loja",        "desc": "Compre pelo WhatsApp e retire na loja, sem fila e com toda a praticidade.",                     "price": "Grátis" }
+    ]
+  },
+
+  "testimonials": {
+    "show": true,
+    "eyebrow": "O que dizem os clientes",
+    "titleHtml": "Quem conhece, <em>recomenda</em>",
+    "items": [
+      { "name": "Fernanda Silva", "meta": "Local Guide · Google", "text": "Que casa de ração top! Atendimento maravilhoso, humanizado, veterinários excelentes e muito carinhosos. Do atendimento à entrega, excepcional — produtos de qualidade." },
+      { "name": "Cliente Google", "text": "Ótimo lugar para produtos PET, preços bons. Recomendo!" },
+      { "name": "Cliente Google", "text": "Grande variedade de rações e atendimento top dos colaboradores." }
+    ]
+  },
+
+  "products":  { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale conosco",
+    "titleHtml": "Peça pelo <em>WhatsApp</em>",
+    "whatsapp":     "5517991504628",
+    "phoneDisplay": "(17) 99150-4628",
+    "address": "Av. São José do Rio Preto, 3529 - Eldorado, São José do Rio Preto - SP",
+    "hours":   "Aberto · Fecha às 21h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=-20.7868913,-49.4066119&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Um mundo de carinho para o seu melhor amigo."
+  }
+}
