@@ -15,6 +15,7 @@ const ROOT = path.resolve(__dirname, '..');
 const ESTILOS_DIR = path.join(__dirname, 'estilos');
 const ESTILOS = path.join(__dirname, 'estilos.json');
 const NICHOS = path.join(__dirname, 'nichos.json');
+const PAGES_BASE = 'https://bruuhviiper-dev.github.io/sites-demo';
 
 /* hash estável a partir de um texto (para variar entre empresas) */
 function hashStr(s){ let h=0; s=String(s||''); for(let i=0;i<s.length;i++){ h=(h*31 + s.charCodeAt(i))>>>0; } return h; }
@@ -42,6 +43,25 @@ function autoNameHtml(name){
   const parts = String(name||'').trim().split(/\s+/);
   if(parts.length < 2) return parts[0]||'';
   return parts[0] + ' <b>' + parts.slice(1).join(' ') + '</b>';
+}
+
+/* ---- link.md: link do GitHub Pages + abordagem de WhatsApp pronta ---- */
+function buildLinkMd(site, slug){
+  const url = PAGES_BASE + '/clientes/' + slug + '/' + slug + '.html';
+  const name = (site.brand && site.brand.name) || slug;
+  const cid = (site.contact && site.contact.cidade) ? String(site.contact.cidade).split(/[—-]/)[0].trim() : '';
+  const onde = cid ? (' em ' + cid) : '';
+  const hasContact = !!(site.contact && (site.contact.whatsapp || site.contact.phoneDisplay));
+  let md = '# ' + name + ' — Link & Abordagem\n\n';
+  md += '## 🔗 Link do site (GitHub Pages)\n' + url + '\n\n';
+  md += '## 📲 Abordagem pronta para WhatsApp\n';
+  md += '> Olá! Tudo bem? 😊\n';
+  md += '> Vi a ' + name + ' no Google e gostei muito do trabalho de vocês' + onde + '.\n';
+  md += '> Reparei que ainda não têm um site próprio, então **montei uma demonstração gratuita**, sem compromisso, de como ficaria:\n>\n';
+  md += '> 👉 ' + url + '\n>\n';
+  md += '> Dá uma olhada e me diz o que achou? Se gostar, a gente conversa. Se não, fica de presente. 🙏\n';
+  if(!hasContact) md += '\n## ⚠️ Atenção\n- O Google Maps não trouxe telefone/WhatsApp — encontre o contato antes de enviar.\n';
+  return md;
 }
 
 function main(){
@@ -110,7 +130,10 @@ function main(){
   const savedData = path.join(destDir, 'data.json');
   if(path.resolve(savedData) !== dataPath) fs.writeFileSync(savedData, JSON.stringify(data, null, 2), 'utf8');
 
+  fs.writeFileSync(path.join(destDir, 'link.md'), buildLinkMd(site, slug), 'utf8');
+
   console.log('✓ Site gerado: clientes/'+slug+'/'+slug+'.html');
+  console.log('  link.md criado com a abordagem de WhatsApp');
   console.log('  Nicho: '+nicheKey+'  |  Marca: '+site.brand.name);
   return htmlFile;
 }

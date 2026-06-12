@@ -1,0 +1,51 @@
+{
+  "categoria": "Escritório de contabilidade",
+  "slug": "caden-contabilidade",
+
+  "brand": {
+    "name": "Caden Contabilidade",
+    "tagline": "Contabilidade & Engenharia",
+    "nameHtml": "Caden <b>Contabilidade</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Contabilidade & Engenharia · São José do Rio Preto",
+    "titleHtml": "Contabilidade e engenharia para a sua <span class=\"ac\">tranquilidade</span>",
+    "sub": "Um escritório que une contabilidade e engenharia para cuidar das obrigações da sua empresa e dos seus projetos com a mesma seriedade.",
+    "badge": "Por que a Caden",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost": { "label": "Nossos serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Caden",
+    "titleHtml": "Duas áreas, um mesmo <span class=\"ac\">compromisso</span>",
+    "paragraphs": [
+      "A Caden une contabilidade e engenharia num só lugar, oferecendo soluções completas para empresas e profissionais que precisam de organização e segurança técnica.",
+      "Atendimento próximo, prazos respeitados e a tranquilidade de ter especialistas cuidando do que importa para o seu negócio."
+    ],
+    "certs": [
+      { "icon": "shield", "label": "Registro CRC / CREA" },
+      { "icon": "scale", "label": "Contábil + Engenharia" },
+      { "icon": "check", "label": "Empresas, MEI e Simples" },
+      { "icon": "hand", "label": "Atendimento próximo" }
+    ]
+  },
+
+  "products": { "show": false },
+  "testimonials": { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale conosco",
+    "titleHtml": "Vamos cuidar do seu <span class=\"ac\">negócio</span>",
+    "whatsapp": "5517991789562",
+    "phoneDisplay": "(17) 99178-9562",
+    "address": "R. Jorge Tibiriçá, 1124 - Sala 3 - Centro, São José do Rio Preto - SP, 15025-060",
+    "hours": "Seg a Sex · até 17h",
+    "cidade": "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Jorge+Tibiri%C3%A7%C3%A1,+1124+-+Centro,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15025-060&output=embed"
+  },
+
+  "footer": { "tagline": "Contabilidade e engenharia com seriedade." }
+}

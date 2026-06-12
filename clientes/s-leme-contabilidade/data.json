@@ -1,0 +1,55 @@
+{
+  "categoria": "Escritório de contabilidade",
+  "slug": "s-leme-contabilidade",
+
+  "brand": {
+    "name": "S Leme Contabilidade",
+    "tagline": "Assessoria & Consultoria Contábil · CRC SP-XXXXXX",
+    "nameHtml": "S <b>Leme</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Assessoria & Consultoria Contábil · São José do Rio Preto",
+    "titleHtml": "Contabilidade que <span class=\"ac\">impulsiona</span> o seu negócio",
+    "sub": "Assessoria e consultoria contábil com atendimento próximo e estratégico, para a sua empresa crescer com segurança e organização.",
+    "badge": "★ 5,0 no Google",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost": { "label": "Nossos serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre nós",
+    "titleHtml": "Assessoria contábil <span class=\"ac\">estratégica</span> e próxima",
+    "paragraphs": [
+      "A S Leme é um escritório de assessoria e consultoria contábil que vai além da obrigação: ajudamos a sua empresa a tomar decisões melhores com base em números claros.",
+      "Atendimento humano e estratégico, do MEI à empresa em crescimento, com a organização e a segurança que o seu negócio merece."
+    ],
+    "stats": [
+      { "num": 5, "suffix": ",0", "label": "Avaliação no Google" },
+      { "num": 100, "suffix": "%", "label": "Obrigações em dia" }
+    ],
+    "certs": [
+      { "icon": "shield", "label": "CRC SP-XXXXXX" },
+      { "icon": "star", "label": "Empresa liderada por empreendedoras" },
+      { "icon": "check", "label": "MEI, Simples e empresas" },
+      { "icon": "hand", "label": "Atendimento próximo e estratégico" }
+    ]
+  },
+
+  "products": { "show": false },
+  "testimonials": { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale conosco",
+    "titleHtml": "Vamos cuidar da sua <span class=\"ac\">contabilidade</span>",
+    "whatsapp": "5517992038306",
+    "phoneDisplay": "(17) 99203-8306",
+    "address": "R. Cap. José Verdi, 1215 - Boa Vista, São José do Rio Preto - SP, 15025-530",
+    "hours": "Seg a Sex · até 17h",
+    "cidade": "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Cap.+Jos%C3%A9+Verdi,+1215+-+Boa+Vista,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15025-530&output=embed"
+  },
+
+  "footer": { "tagline": "Números claros, decisões seguras." }
+}

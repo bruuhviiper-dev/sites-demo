@@ -237,6 +237,12 @@
         {"icon":"star","name":"Imposto de Renda","desc":"Declaração de pessoa física e jurídica com segurança.","price":"Sob consulta"},
         {"icon":"sparkle","name":"Consultoria","desc":"Orientação contábil e financeira para decisões melhores.","price":"Sob consulta"}
       ]},
+    "process": { "eyebrow":"Como funciona", "navLabel":"Como funciona", "title":"Simples do começo ao fim", "intro":"Um processo claro para você ter tranquilidade desde o primeiro dia.",
+      "steps":[
+        {"n":"01","name":"Diagnóstico","desc":"Entendemos a sua empresa e onde você quer chegar."},
+        {"n":"02","name":"Organização","desc":"Colocamos contabilidade, impostos e obrigações em ordem."},
+        {"n":"03","name":"Acompanhamento","desc":"Cuidamos do mês a mês e orientamos as suas decisões."}
+      ]},
     "testimonials": { "show": false },
     "instagram": { "show": false },
     "footer": { "tagline": "Números organizados, decisões seguras." }
