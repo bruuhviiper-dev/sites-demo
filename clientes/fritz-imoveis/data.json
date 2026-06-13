@@ -1,0 +1,134 @@
+{
+  "categoria": "Consultora de imóveis",
+  "slug": "fritz-imoveis",
+  "nicho": "generico",
+  "estilo": "dark-luxury",
+
+  "brand": {
+    "name": "Fritz Imóveis",
+    "nameHtml": "Fritz <i>Imóveis</i>",
+    "tagline": "Avaliação Mercadológica · Consultoria Imobiliária"
+  },
+
+  "theme": {
+    "bg":      "#0B1118",
+    "bgAlt":   "#0F1622",
+    "surface": "#141E30",
+    "accent":  "#C09B45",
+    "accent2": "#E8CC80",
+    "text":    "#EDF2F8",
+    "muted":   "#8A98AE",
+    "border":  "#1C2D44"
+  },
+
+  "design": {
+    "hero":    "split-right",
+    "shape":   "soft",
+    "display": "elegant"
+  },
+
+  "fontsGoogle": [
+    "Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500",
+    "Jost:wght@300;400;500;600"
+  ],
+
+  "meta": {
+    "title": "Fritz Imóveis — Avaliação Mercadológica e Consultoria Imobiliária · São José do Rio Preto",
+    "description": "Especialistas em avaliação mercadológica de imóveis, consultoria imobiliária e análise de terreno & construção em São José do Rio Preto – SP. 5,0 no Google."
+  },
+
+  "hero": {
+    "eyebrow": "Consultoria Imobiliária · São José do Rio Preto – SP",
+    "titleHtml": "O imóvel certo começa com a <span class=\"accent\">avaliação certa</span>",
+    "sub": "Especialistas em avaliação mercadológica, consultoria imobiliária e análise de terreno & construção. Segurança e precisão para o seu patrimônio.",
+    "badge": "★ 5,0 no Google · 16 avaliações",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Nossos serviços",   "href": "#servicos" },
+    "imageLabel": "Fritz Imóveis"
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Fritz Imóveis",
+    "titleHtml": "Consultoria com <span class=\"accent\">expertise</span> e dedicação",
+    "paragraphs": [
+      "A Fritz Imóveis é especializada em avaliação mercadológica de imóveis e consultoria imobiliária, orientando pessoas físicas e jurídicas a tomarem as melhores decisões sobre seu patrimônio.",
+      "Com atendimento personalizado em São José do Rio Preto e região, elaboramos laudos técnicos para compra, venda, financiamento bancário, partilha e processos judiciais — com precisão e ética."
+    ],
+    "stats": [
+      { "num": 5,  "suffix": ",0", "label": "Avaliação Google" },
+      { "num": 16,               "label": "Avaliações reais"  }
+    ],
+    "certs": [
+      { "icon": "shield", "label": "CRECI credenciada"             },
+      { "icon": "scale",  "label": "Avaliação Mercadológica oficial" },
+      { "icon": "star",   "label": "5,0 estrelas no Google"         },
+      { "icon": "home",   "label": "Terreno & Construção"           }
+    ]
+  },
+
+  "services": {
+    "eyebrow":  "Especialidades",
+    "titleHtml": "Soluções imobiliárias <span class=\"accent\">completas</span>",
+    "intro":    "Do laudo técnico à consultoria estratégica — expertise em cada etapa do seu processo imobiliário.",
+    "ctaLabel": "Solicitar orçamento",
+    "items": [
+      {
+        "icon": "scale",
+        "name": "Avaliação Mercadológica",
+        "desc": "Laudos técnicos precisos para compra, venda, financiamento bancário, partilha e processos judiciais.",
+        "price": "Sob consulta"
+      },
+      {
+        "icon": "hand",
+        "name": "Consultoria Imobiliária",
+        "desc": "Orientação especializada para as melhores decisões na compra, venda ou locação do seu imóvel.",
+        "price": "Sob consulta"
+      },
+      {
+        "icon": "home",
+        "name": "Terreno & Construção",
+        "desc": "Análise de viabilidade e avaliação de terrenos e projetos para uso residencial e comercial.",
+        "price": "Sob consulta"
+      }
+    ]
+  },
+
+  "products": { "show": false },
+
+  "testimonials": {
+    "show": true,
+    "eyebrow":   "Avaliações Google",
+    "titleHtml": "O que dizem <span class=\"accent\">nossos clientes</span>",
+    "items": [
+      {
+        "quote": "Atendimento maravilhoso. Muito satisfeita com a prestação de serviço.",
+        "name":  "Cintia Balieiro",
+        "meta":  "Avaliação Google",
+        "stars": 5
+      },
+      {
+        "quote": "Excelente avaliação. Parabéns pelo profissionalismo e dedicação em todo o atendimento.",
+        "name":  "Tiago Donaire",
+        "meta":  "Local Guide · Google",
+        "stars": 5
+      }
+    ]
+  },
+
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow":      "Vamos conversar",
+    "titleHtml":    "Entre em <span class=\"accent\">contato</span>",
+    "whatsapp":     "5517991047279",
+    "phoneDisplay": "(17) 99104-7279",
+    "address":      "R. Lafayete Spínola Castro, 1682 – Boa Vista, São José do Rio Preto – SP, 15025-510",
+    "hours":        "Segunda a Sexta · até 15h",
+    "cidade":       "São José do Rio Preto — SP",
+    "mapsEmbed":    "https://www.google.com/maps?q=R.+Lafayete+Sp%C3%ADnola+Castro%2C+1682%2C+Boa+Vista%2C+S%C3%A3o+Jos%C3%A9+do+Rio+Preto%2C+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Seu patrimônio nas mãos certas."
+  }
+}
