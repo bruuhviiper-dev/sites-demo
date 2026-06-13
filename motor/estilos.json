@@ -7,7 +7,8 @@
     "ink-bold":        { "arquivo": "ink-bold.html",        "desc": "Bruto, alto contraste, tipografia Anton gigante, faixa marquee e galeria de trabalhos como protagonista." },
     "corporate":       { "arquivo": "corporate.html",       "desc": "Premium corporativo: azul-marinho, estrutura em grid, sinais de confiança, seção de processo. Para contabilidade/consultoria/advocacia." },
     "boutique":        { "arquivo": "boutique.html",        "desc": "Moda editorial: único template de fundo claro (creme), Playfair Display itálico, grid de coleções estilo lookbook com overlay, marquee de categorias. Para moda, vestuário e boutiques." },
-    "petshop-modern":  { "arquivo": "petshop-modern.html",  "desc": "Pet shop moderno e amigável (DNA Petz/Cobasi/Petlove): fundo claro, cantos arredondados, sombras suaves, azul + acento quente, faixa de benefícios (entrega/leva-e-traz/retirada), cards de categorias com ícones, patinhas decorativas. Para pet shop e petstore." }
+    "petshop-modern":  { "arquivo": "petshop-modern.html",  "desc": "Pet shop moderno e amigável (DNA Petz/Cobasi/Petlove): fundo claro, cantos arredondados, sombras suaves, azul + acento quente, faixa de benefícios (entrega/leva-e-traz/retirada), cards de categorias com ícones, patinhas decorativas. Para pet shop e petstore." },
+    "imoveis-premium": { "arquivo": "imoveis-premium.html", "desc": "Imobiliária premium: dark navy + ouro, Playfair Display, cartão de credenciais no hero, banda de stats, processo de avaliação em 4 etapas, grid de diferenciais e depoimentos. Para consultoria imobiliária, avaliação e corretores." }
   },
 
   "porNicho": {
@@ -23,6 +24,7 @@
     "automotivo":  ["dark-luxury"],
     "academia":    ["dark-luxury"],
     "moda":        ["boutique"],
+    "imobiliaria": ["imoveis-premium"],
     "generico":    ["clean-editorial", "dark-luxury"],
     "_default":    ["dark-luxury"]
   }

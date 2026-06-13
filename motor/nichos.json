@@ -271,6 +271,34 @@
     "footer": { "tagline": "Moda que faz você se sentir você mesma." }
   },
 
+  "imobiliaria": {
+    "fonts": { "display": "\"Playfair Display\", serif", "body": "\"Outfit\", sans-serif" },
+    "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500", "Outfit:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "soft", "display": "elegant" },
+    "schemes": [
+      { "bg":"#0B1118", "bgAlt":"#0F1622", "surface":"#141E30", "accent":"#C09B45", "accent2":"#E8CC80", "text":"#EDF2F8", "muted":"#8292A8", "border":"#1C2D44" },
+      { "bg":"#0D1420", "bgAlt":"#10192A", "surface":"#162034", "accent":"#9B7EC8", "accent2":"#D4BAF0", "text":"#EFF0F8", "muted":"#8892AC", "border":"#1E2D46" },
+      { "bg":"#0E1410", "bgAlt":"#121A14", "surface":"#172118", "accent":"#6BA88C", "accent2":"#B8DFC8", "text":"#EDF4EF", "muted":"#8AA496", "border":"#1E2E22" }
+    ],
+    "hero": { "eyebrow":"Consultoria Imobiliária", "title":"O imóvel certo começa com a avaliação certa", "sub":"Especialistas em avaliação mercadológica e consultoria imobiliária. Decisões seguras para o seu patrimônio." },
+    "services": { "eyebrow":"Especialidades", "title":"Soluções imobiliárias completas", "intro":"Do laudo técnico à consultoria estratégica.", "ctaLabel":"Solicitar orçamento",
+      "items":[
+        {"icon":"scale","name":"Avaliação Mercadológica","desc":"Laudos técnicos para compra, venda, financiamento, partilha e processos judiciais.","price":"Sob consulta"},
+        {"icon":"hand","name":"Consultoria Imobiliária","desc":"Orientação especializada para as melhores decisões na compra, venda ou locação.","price":"Sob consulta"},
+        {"icon":"home","name":"Terreno & Construção","desc":"Análise de viabilidade e avaliação de terrenos para projetos residenciais e comerciais.","price":"Sob consulta"}
+      ]},
+    "process": { "eyebrow":"Como Avaliamos", "navLabel":"Como Avaliamos", "title":"Processo de avaliação", "intro":"Metodologia clara e técnica em cada etapa.", "ctaLabel":"Solicitar avaliação",
+      "steps":[
+        {"n":"01","name":"Contato Inicial","desc":"Entendemos a finalidade da avaliação e as características do imóvel."},
+        {"n":"02","name":"Visita Técnica","desc":"Vistoria presencial com levantamento de dados e documentos."},
+        {"n":"03","name":"Pesquisa de Mercado","desc":"Análise comparativa com imóveis similares da região."},
+        {"n":"04","name":"Laudo & Entrega","desc":"Relatório técnico detalhado entregue no prazo acordado."}
+      ]},
+    "testimonials": { "show": true },
+    "instagram": { "show": false },
+    "footer": { "tagline": "Seu patrimônio nas mãos certas." }
+  },
+
   "generico": {
     "fonts": { "display": "\"Cormorant Garamond\", serif", "body": "\"Jost\", sans-serif" },
     "fontsGoogle": ["Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500", "Jost:wght@300;400;500;600"],
