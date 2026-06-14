@@ -382,9 +382,19 @@
         {"n":"03","name":"Pesquisa de Mercado","desc":"Análise comparativa com imóveis similares da região."},
         {"n":"04","name":"Laudo & Entrega","desc":"Relatório técnico detalhado entregue no prazo acordado."}
       ]},
+    "imoveis": { "eyebrow":"Imóveis", "navLabel":"Imóveis", "title":"Imóveis disponíveis", "intro":"Seleção de imóveis para compra e locação. Fale com a gente para visitar.",
+      "filtros":[{"key":"todos","label":"Todos"},{"key":"venda","label":"À venda"},{"key":"aluguel","label":"Para alugar"}],
+      "items":[
+        {"tag":"venda","finalidade":"Venda","tipo":"Apartamento","titulo":"Apartamento 3 dormitórios mobiliado","bairro":"Redentora","preco":"R$ 690.000","quartos":3,"banheiros":2,"vagas":2,"area":"92 m²"},
+        {"tag":"venda","finalidade":"Venda","tipo":"Casa","titulo":"Casa térrea com edícula e quintal","bairro":"Boa Vista","preco":"R$ 520.000","quartos":3,"banheiros":2,"vagas":3,"area":"200 m²"},
+        {"tag":"venda","finalidade":"Venda","tipo":"Casa em condomínio","titulo":"Casa em condomínio fechado","bairro":"Damha","preco":"R$ 1.250.000","quartos":4,"banheiros":4,"vagas":4,"area":"320 m²"},
+        {"tag":"aluguel","finalidade":"Aluguel","tipo":"Apartamento","titulo":"Apartamento 2 dormitórios próximo ao centro","bairro":"Centro","preco":"R$ 1.800/mês","quartos":2,"banheiros":1,"vagas":1,"area":"65 m²"},
+        {"tag":"venda","finalidade":"Venda","tipo":"Apartamento","titulo":"Cobertura duplex com vista","bairro":"Higienópolis","preco":"R$ 980.000","quartos":3,"banheiros":3,"vagas":2,"area":"160 m²"},
+        {"tag":"aluguel","finalidade":"Aluguel","tipo":"Comercial","titulo":"Sala comercial em avenida","bairro":"Vila Imperial","preco":"R$ 2.500/mês","quartos":0,"banheiros":1,"vagas":2,"area":"80 m²"}
+      ]},
     "testimonials": { "show": true },
     "instagram": { "show": false },
-    "footer": { "tagline": "Seu patrimônio nas mãos certas." }
+    "footer": { "tagline": "O imóvel certo, pra você." }
   },
 
   "generico": {
