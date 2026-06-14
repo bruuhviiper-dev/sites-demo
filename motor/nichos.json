@@ -20,6 +20,14 @@
         {"icon":"hand","name":"Drenagem Linfática","desc":"Estímulo da circulação para reduzir inchaços e revitalizar.","price":"R$ 160"},
         {"icon":"sparkle","name":"Consultoria de Skincare","desc":"Diagnóstico de pele e montagem de uma rotina eficaz.","price":"R$ 120"}
       ]},
+    "antesDepois": { "eyebrow":"Resultados", "navLabel":"Resultados", "title":"Antes & depois", "intro":"Arraste para ver a transformação dos nossos tratamentos.",
+      "items":[
+        {"label":"Limpeza de pele"},
+        {"label":"Tratamento facial"},
+        {"label":"Design de sobrancelhas"}
+      ]},
+    "agenda": { "eyebrow":"Agendamento", "navLabel":"Agendar", "title":"Agende o seu horário", "intro":"Escolha o melhor dia e horário — é rápido e sem compromisso.",
+      "horarios":["Segunda a sexta · 9h às 19h","Sábado · 9h às 14h"], "cta":"Agendar pelo WhatsApp" },
     "footer": { "tagline": "Cuidar de você é a nossa forma de arte." }
   },
 

@@ -13,14 +13,15 @@
     "juris-classic":   { "arquivo": "juris-classic.html",   "desc": "Advocacia dedicada: banca clássica em marfim, serifa Cormorant (autoridade), cartão de credenciais no hero (OAB/áreas/WhatsApp + nota), ÁREAS DE ATUAÇÃO em índice numerado, processo em etapas (seção escura) e depoimento central. Para escritórios de advocacia e serviços jurídicos." },
     "solar-tech":      { "arquivo": "solar-tech.html",      "desc": "Energia solar dedicada: dark moderno (Poppins), card de economia no hero, faixa marquee de benefícios, banda de números, soluções em cards, 'como funciona' em 4 etapas e depoimento central. Para energia solar/fotovoltaica e instaladores." },
     "imobiliaria-vitrine": { "arquivo": "imobiliaria-vitrine.html", "desc": "Imobiliária portal claro: hero de vitrine com filtro Comprar/Alugar e CATÁLOGO DE IMÓVEIS como protagonista (cards com foto, preço, bairro e specs quartos/banheiros/vagas/área, filtrável). Lê SITE.imoveis. Bem diferente do imoveis-premium (dark/gold). Para imobiliárias e corretores com carteira de imóveis." },
-    "academia-power":  { "arquivo": "academia-power.html",  "desc": "Academia dedicada: dark enérgico, Oswald condensado, acento vivo. Protagonistas: TABELA DE PLANOS (preço + benefícios, com plano em destaque) e GRADE DE AULAS da semana; modalidades em cards. Lê SITE.planos e SITE.aulas. Para academias, crossfit, studios e box." }
+    "academia-power":  { "arquivo": "academia-power.html",  "desc": "Academia dedicada: dark enérgico, Oswald condensado, acento vivo. Protagonistas: TABELA DE PLANOS (preço + benefícios, com plano em destaque) e GRADE DE AULAS da semana; modalidades em cards. Lê SITE.planos e SITE.aulas. Para academias, crossfit, studios e box." },
+    "estetica-glow":   { "arquivo": "estetica-glow.html",   "desc": "Estética/beleza dedicada: editorial claro e sofisticado (Marcellus), SLIDER ANTES/DEPOIS interativo (arrasta pra revelar) e seção de AGENDAMENTO (embed ou WhatsApp) como protagonistas; serviços com preço, galeria de resultados. Lê SITE.antesDepois e SITE.agenda. Para clínicas de estética, salões e studios de beleza." }
   },
 
   "porNicho": {
     "tatuagem":    ["ink-bold", "dark-luxury"],
     "psicologia":  ["clean-editorial", "corporate"],
     "contabilidade": ["corporate", "imoveis-premium"],
-    "estetica":    ["clean-editorial", "dark-luxury", "boutique"],
+    "estetica":    ["estetica-glow", "clean-editorial", "dark-luxury"],
     "barbearia":   ["dark-luxury", "ink-bold"],
     "restaurante": ["menu-gourmet", "dark-luxury"],
     "odontologia": ["clean-editorial", "corporate"],
