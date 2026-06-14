@@ -1,0 +1,74 @@
+{
+  "categoria": "Serviços jurídicos",
+  "nicho": "advocacia",
+  "slug": "nugri-campos-advogados",
+  "estilo": "juris-classic",
+  "scheme": 2,
+
+  "brand": {
+    "name": "Nugri Campos Advogados",
+    "tagline": "Advocacia · Rio Preto",
+    "nameHtml": "Nugri Campos <b>Advogados</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Advocacia & Serviços Jurídicos · Rio Preto",
+    "titleHtml": "Advocacia <em>quando você precisar</em>",
+    "sub": "Atendimento jurídico próximo e disponível — inclusive em situações urgentes. Defendemos os seus direitos com seriedade e clareza, do primeiro contato à solução.",
+    "badge": "O escritório",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Áreas de atuação", "href": "#atuacao" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o escritório",
+    "titleHtml": "Do seu lado, <em>a qualquer hora</em>",
+    "paragraphs": [
+      "O Nugri Campos Advogados oferece atendimento jurídico sério e acessível em São José do Rio Preto, com um diferencial que faz diferença em momentos difíceis: disponibilidade 24 horas para urgências.",
+      "Cada caso é conduzido com estratégia e explicado de forma clara, sem juridiquês, para que você entenda seus direitos e decida com segurança em cada etapa."
+    ],
+    "stats": [
+      { "num": "4,7", "label": "Nota no Google" },
+      { "num": 7, "suffix": "+", "label": "Avaliações" },
+      { "num": 24, "suffix": "h", "label": "Atendimento disponível" }
+    ],
+    "certs": [
+      { "icon": "scale", "label": "OAB/SP",            "desc": "Registro profissional (preencher)" },
+      { "icon": "clock", "label": "Atendimento 24h",   "desc": "Inclusive urgências" },
+      { "icon": "check", "label": "Pessoas & Empresas", "desc": "Atuação em diversas áreas" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Áreas de atuação",
+    "navLabel": "Atuação",
+    "titleHtml": "Como podemos <em>defender você</em>",
+    "intro": "Atuação para pessoas e empresas, com atendimento próximo do início ao fim.",
+    "items": [
+      { "icon": "scale",  "name": "Direito Civil",          "desc": "Contratos, indenizações, cobranças e conflitos do dia a dia.",                  "price": "Sob consulta" },
+      { "icon": "shield", "name": "Direito Penal & Urgências","desc": "Atendimento em situações urgentes, com disponibilidade e agilidade.",           "price": "Sob consulta" },
+      { "icon": "hand",   "name": "Direito Trabalhista",     "desc": "Defesa de direitos nas relações de trabalho, para empregados e empresas.",      "price": "Sob consulta" },
+      { "icon": "heart",  "name": "Direito de Família",      "desc": "Divórcio, guarda, pensão e inventário com sensibilidade e respeito.",          "price": "Sob consulta" },
+      { "icon": "home",   "name": "Direito Empresarial",     "desc": "Assessoria jurídica para a sua empresa crescer com segurança.",                "price": "Sob consulta" },
+      { "icon": "check",  "name": "Consultoria Jurídica",    "desc": "Orientação clara sobre os seus direitos e o melhor caminho para o seu caso.",  "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale com o escritório",
+    "titleHtml": "Precisa de um <em>advogado</em>?",
+    "whatsapp":     "5517991196818",
+    "phoneDisplay": "(17) 99119-6818",
+    "address": "R. Maximiano Mendes - Vila Santa Cruz, São José do Rio Preto - SP, 15014-190",
+    "hours":   "Aberto 24 horas",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Maximiano+Mendes+Vila+Santa+Cruz+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Seus direitos, defendidos a qualquer hora."
+  }
+}
