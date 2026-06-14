@@ -1,0 +1,84 @@
+{
+  "categoria": "Advogado",
+  "nicho": "advocacia",
+  "slug": "advocacia-guilherme-gregorio",
+  "estilo": "corporate",
+  "scheme": 0,
+
+  "brand": {
+    "name": "Guilherme Gregório da Rosa",
+    "tagline": "Advocacia · Direito de Família",
+    "nameHtml": "Guilherme Gregório <b>da Rosa</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Advogado · Direito de Família · Rio Preto",
+    "titleHtml": "Direito de Família com <em>cuidado e respeito</em>",
+    "sub": "Orientação jurídica humana e próxima em divórcio, guarda, pensão, união estável e inventário — para você decidir com segurança nos momentos mais delicados.",
+    "badge": "★ 4,8 no Google · 6 avaliações",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Áreas de atuação", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o escritório",
+    "titleHtml": "Advocacia próxima e <em>sem juridiquês</em>",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsNKWU_Mb19a9kuMSKbFMdqQOEyjs9kbcL6-PjH39Z8-TGSIiROTxKGtbXsvYjyun2-L6Ps_tD7rXW_I0wepeIK_FmGL3vi-T0EnIZyXc6p5Vtuq5N8ztpe8R1SYGsNvJBnnVKrQ=w600-h760-k-no",
+    "paragraphs": [
+      "Guilherme Gregório da Rosa é advogado especialista em Direito de Família em São José do Rio Preto. O atendimento é próximo e didático: cada caso é explicado com calma e nos mínimos detalhes, para você entender seus direitos e cada passo do processo.",
+      "Um escritório que acolhe todas as famílias, com respeito e sensibilidade para tratar de divórcio, guarda, pensão, união estável e inventário — sempre buscando a melhor solução para você e quem você ama."
+    ],
+    "stats": [
+      { "num": "4,8", "label": "Nota no Google" },
+      { "num": 6, "suffix": "+", "label": "Avaliações" }
+    ],
+    "certs": [
+      { "icon": "scale", "label": "OAB/SP (preencher)" },
+      { "icon": "heart", "label": "Acolhe todas as famílias" },
+      { "icon": "check", "label": "Atendimento humanizado" },
+      { "icon": "star",  "label": "★ 4,8 no Google" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Áreas de atuação",
+    "navLabel": "Atuação",
+    "titleHtml": "Direito de Família, <em>do seu lado</em>",
+    "intro": "Atendimento próximo e estratégico em cada etapa da sua vida familiar.",
+    "items": [
+      { "icon": "scale",  "name": "Divórcio & Separação",          "desc": "Condução do divórcio consensual ou litigioso, com partilha justa e segurança.", "price": "Sob consulta" },
+      { "icon": "heart",  "name": "Guarda & Pensão Alimentícia",   "desc": "Definição de guarda, convivência e pensão sempre no melhor interesse dos filhos.", "price": "Sob consulta" },
+      { "icon": "home",   "name": "Inventário & Herança",          "desc": "Inventário e partilha de bens conduzidos com cuidado e respeito ao momento.",    "price": "Sob consulta" },
+      { "icon": "hand",   "name": "União Estável & Casamento",     "desc": "Reconhecimento e dissolução de união estável e pactos para proteger o casal.",   "price": "Sob consulta" },
+      { "icon": "face",   "name": "Reconhecimento de Paternidade", "desc": "Ações de reconhecimento e investigação de paternidade com sensibilidade.",       "price": "Sob consulta" },
+      { "icon": "shield", "name": "Consultoria Familiar",          "desc": "Orientação preventiva para você tomar as melhores decisões em família.",          "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": {
+    "show": true,
+    "eyebrow": "O que dizem os clientes",
+    "titleHtml": "Confiança de <em>quem foi atendido</em>",
+    "items": [
+      { "name": "Gustavo Bazzi", "meta": "Avaliação no Google", "quote": "Atendimento de alta qualidade, explicou tudo com calma e nos mínimos detalhes, sempre prestativo para qualquer dúvida. O local é super aconchegante!", "text": "Atendimento de alta qualidade, explicou tudo com calma e nos mínimos detalhes, sempre prestativo para qualquer dúvida. O local é super aconchegante!" },
+      { "name": "Evandro Pires da Silva", "meta": "Local Guide · Google", "quote": "Excelente profissional. Recomendo.", "text": "Excelente profissional. Recomendo." }
+    ]
+  },
+
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale com o advogado",
+    "titleHtml": "Agende uma <em>conversa</em>",
+    "whatsapp":     "5517991300501",
+    "phoneDisplay": "(17) 99130-0501",
+    "address": "R. Prudente de Moraes, 1134 - Parque Industrial, São José do Rio Preto - SP, 15025-045",
+    "hours":   "Seg a Sex · a partir das 9h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Prudente+de+Moraes,+1134+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Direito de Família com respeito e dedicação."
+  }
+}

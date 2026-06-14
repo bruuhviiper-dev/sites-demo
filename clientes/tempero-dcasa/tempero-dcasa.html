@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  ESTILO: MENU GOURMET  (restaurante — cardápio como protagonista)
+  Identidade própria de restaurante: hero apetitoso, faixa marquee de
+  destaques, e o CARDÁPIO em seção escura tipo ementa de bistrô, com
+  linha pontilhada do prato até o preço. Playfair Display + Jost.
+  Lê o MESMO window.SITE que os outros estilos. Só a cor de destaque
+  (--accent) vem do nicho (SITE.theme.accent); o resto é do ESTILO.
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" id="meta-desc" content="" />
+<title id="meta-title"></title>
+<script id="site-data">window.SITE = {"fonts":{"display":"\"Playfair Display\", serif","body":"\"Jost\", sans-serif"},"fontsGoogle":["Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500","Jost:wght@300;400;500;600"],"design":{"hero":"centered","shape":"round","display":"elegant"},"hero":{"eyebrow":"Comida caseira · Parque Industrial, Rio Preto","title":"Uma experiência para todos os sentidos","sub":"Self-service caseiro, farto e no capricho para o seu almoço no Parque Industrial. Coma no local, leve marmita ou receba com entrega sem contato.","titleHtml":"O gostinho de \u003cem>comida de casa\u003c/em>","badge":"★ 4,6 no Google · 98 avaliações","ctaPrimary":{"label":"Ver o cardápio","href":"#cardapio"},"ctaGhost":{"label":"Como chegar","href":"#contato"}},"services":{"eyebrow":"O que servimos","navLabel":"Cardápio","title":"Nossas Especialidades","ctaLabel":"Ver no cardápio","items":[{"icon":"fork","name":"Self-Service no Almoço","desc":"Buffet variado de pratos quentes, carnes, guarnições e saladas — monte o seu prato do seu jeito.","price":"R$ 20–40"},{"icon":"hand","name":"Marmitas & Para Viagem","desc":"Marmitas montadas na hora para levar o almoço caseiro com você.","price":"Consulte"},{"icon":"drop","name":"Delivery sem Contato","desc":"Peça o seu almoço e receba quentinho, com entrega sem contato.","price":"Consulte a taxa"},{"icon":"sparkle","name":"Refeições para Empresas","desc":"Atendimento de almoço para equipes e empresas do Parque Industrial.","price":"Sob consulta"}],"titleHtml":"Caseiro, \u003cem>fresquinho e farto\u003c/em>","intro":"Almoço self-service variado, com valores médios de R$ 20 a R$ 40 por pessoa."},"footer":{"tagline":"O gostinho de casa, no seu almoço."},"categoria":"Restaurante","slug":"tempero-dcasa","estilo":"menu-gourmet","scheme":1,"brand":{"name":"Tempero D'casa","tagline":"Comida Caseira · Rio Preto","nameHtml":"Tempero \u003cb>D'casa\u003c/b>"},"about":{"eyebrow":"Sobre o Tempero D'casa","titleHtml":"Almoço caseiro, \u003cem>todo dia útil\u003c/em>","paragraphs":["O Tempero D'casa serve aquele almoço caseiro de verdade no coração do Parque Industrial: comida fresca, variada e bem temperada, do jeitinho que lembra a comida de casa.","Prático para o seu dia de trabalho — coma no salão, leve a sua marmita ou peça o delivery sem contato. E para as empresas da região, também atendemos refeições no dia a dia."],"stats":[{"num":"4,6","label":"Nota no Google"},{"num":98,"suffix":"+","label":"Avaliações"},{"num":6,"suffix":" dias","label":"Almoço na semana"}],"certs":[{"icon":"leaf","label":"Comida caseira fresca"},{"icon":"fork","label":"Self-service à vontade"},{"icon":"drop","label":"Delivery sem contato"},{"icon":"star","label":"★ 4,6 no Google"}]},"testimonials":{"show":false},"products":{"show":false},"instagram":{"show":false},"contact":{"eyebrow":"Fale com a gente","titleHtml":"Faça o seu \u003cem>pedido\u003c/em>","phoneDisplay":"(17) 3212-5617","address":"Av. Cenobelino de Barro Serra, 1346 - Parque Industrial, São José do Rio Preto - SP, 15030-000","hours":"Almoço a partir das 11h","cidade":"São José do Rio Preto — SP","mapsEmbed":"https://www.google.com/maps?q=Av.+Cenobelino+de+Barro+Serra,+1346+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"},"theme":{"bg":"#0E0B0B","bgAlt":"#130E0E","surface":"#1A1313","accent":"#B23A3A","accent2":"#E59A8C","text":"#F4EAE6","muted":"#A89089","border":"#2A1F1E"},"meta":{"title":"Tempero D'casa — Comida Caseira · Rio Preto","description":"Self-service caseiro, farto e no capricho para o seu almoço no Parque Industrial. Coma no local, leve marmita ou receba com entrega sem contato."}};</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --cream:#FBF7EF; --cream2:#F3EBDD; --white:#FFFFFF;
+  --espresso:#241A12; --espresso2:#2E2218;
+  --ink:#2A2018; --ink2:#5B5044; --muted:#9A8B78; --line:#E6DBC8;
+  --accent:#A4724B;
+  --display:"Playfair Display", serif; --sans:"Jost", sans-serif;
+  --maxw:1180px; --ease:cubic-bezier(.16,.84,.34,1);
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{ background:var(--cream); color:var(--ink); font-family:var(--sans); font-weight:300; line-height:1.7; overflow-x:hidden; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; }
+h1,h2,h3,h4{ font-family:var(--display); font-weight:500; line-height:1.06; }
+::selection{ background:var(--accent); color:var(--white); }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+::-webkit-scrollbar{ width:9px; } ::-webkit-scrollbar-track{ background:var(--cream2); }
+::-webkit-scrollbar-thumb{ background:#c9bba2; } ::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
+
+.container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(22px,5vw,56px); }
+.section{ padding-block:clamp(70px,10vw,140px); }
+.kicker{ font-family:var(--sans); font-weight:500; font-size:.72rem; letter-spacing:.32em; text-transform:uppercase; color:var(--accent); display:inline-flex; align-items:center; gap:12px; }
+.kicker::before{ content:""; width:30px; height:1px; background:var(--accent); display:inline-block; }
+.sec-title{ font-family:var(--display); font-size:clamp(2.3rem,5.5vw,4.2rem); font-weight:500; margin-top:18px; }
+.sec-title em{ font-style:italic; color:var(--accent); }
+.sec-intro{ color:var(--ink2); max-width:540px; margin-top:18px; font-size:1.04rem; }
+
+/* botões */
+.btn{ font-family:var(--sans); font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; font-weight:500; padding:15px 32px; border:1px solid var(--ink); border-radius:4px; display:inline-flex; align-items:center; gap:10px; transition:all .35s var(--ease); }
+.btn:hover{ background:var(--ink); color:var(--cream); }
+.btn--solid{ background:var(--accent); border-color:var(--accent); color:var(--white); }
+.btn--solid:hover{ background:var(--ink); border-color:var(--ink); color:var(--cream); }
+.btn--ghost{ border-color:var(--line); color:var(--ink); }
+.btn svg{ width:16px; height:16px; }
+
+/* ---------- LOADER ---------- */
+#loader{ position:fixed; inset:0; z-index:9999; background:var(--espresso); display:grid; place-items:center; transition:opacity .8s var(--ease), visibility .8s; }
+#loader.hidden{ opacity:0; visibility:hidden; }
+.ld{ font-family:var(--display); font-size:clamp(2.4rem,7vw,4rem); font-style:italic; color:var(--cream); overflow:hidden; }
+.ld span{ display:inline-block; transform:translateY(110%); animation:ldup .9s var(--ease) forwards; }
+.ld span:nth-child(2){ animation-delay:.12s; }
+@keyframes ldup{ to{ transform:none; } }
+
+/* ---------- HEADER ---------- */
+.header{ position:fixed; top:0; left:0; width:100%; z-index:1000; transition:background .4s var(--ease), border-color .4s, padding .4s; border-bottom:1px solid transparent; }
+.header.scrolled{ background:rgba(251,247,239,.9); backdrop-filter:blur(14px); border-bottom-color:var(--line); }
+.nav{ display:flex; align-items:center; justify-content:space-between; padding-block:24px; }
+.header.scrolled .nav{ padding-block:14px; }
+.brand{ font-family:var(--display); font-size:1.55rem; letter-spacing:.01em; line-height:1; }
+.brand b{ font-weight:600; font-style:italic; color:var(--accent); }
+.brand .tag{ display:block; font-family:var(--sans); font-size:.55rem; letter-spacing:.34em; text-transform:uppercase; color:var(--muted); margin-top:4px; font-weight:400; }
+.nav-links{ display:flex; align-items:center; gap:36px; }
+.nav-links a{ font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:400; position:relative; }
+.nav-links a::after{ content:""; position:absolute; left:0; bottom:-5px; width:0; height:1px; background:var(--accent); transition:width .35s var(--ease); }
+.nav-links a:hover{ color:var(--accent); } .nav-links a:hover::after{ width:100%; }
+.nav-right{ display:flex; align-items:center; gap:22px; }
+.burger{ display:none; width:40px; height:40px; background:none; border:none; position:relative; z-index:1100; cursor:pointer; }
+.burger span{ position:absolute; left:8px; width:24px; height:1.5px; background:var(--ink); transition:.35s var(--ease); }
+.burger span:nth-child(1){ top:15px; } .burger span:nth-child(2){ top:22px; }
+.burger.open span:nth-child(1){ top:18px; transform:rotate(45deg); }
+.burger.open span:nth-child(2){ top:18px; transform:rotate(-45deg); }
+@media (max-width:900px){
+  .burger{ display:block; }
+  .nav-links{ position:fixed; inset:0; flex-direction:column; justify-content:center; gap:28px; background:var(--cream); transform:translateY(-100%); transition:transform .5s var(--ease); }
+  .nav-links.open{ transform:none; }
+  .nav-links a{ font-size:1.7rem; font-family:var(--display); text-transform:none; letter-spacing:0; }
+  .nav-right .btn{ display:none; }
+}
+
+/* ---------- HERO ---------- */
+.hero{ padding-top:clamp(120px,16vw,170px); padding-bottom:0; }
+.hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(36px,5vw,70px); align-items:center; }
+.hero h1{ font-size:clamp(2.9rem,7vw,5.4rem); font-weight:500; line-height:1.02; margin:20px 0 26px; }
+.hero h1 em{ font-style:italic; color:var(--accent); }
+.hero-lead{ color:var(--ink2); font-size:1.14rem; max-width:460px; margin-bottom:34px; }
+.hero-actions{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+.hero-visual{ position:relative; aspect-ratio:4/5; background:linear-gradient(135deg,var(--cream2),#e4d7c0); border-radius:8px; overflow:hidden; box-shadow:0 40px 80px -40px rgba(40,28,16,.5); }
+.hero-visual img{ width:100%; height:100%; object-fit:cover; }
+.hero-visual .vlabel{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--display); font-style:italic; color:var(--muted); font-size:1.2rem; }
+.hero-badge{ position:absolute; left:18px; bottom:18px; background:var(--white); color:var(--ink); border-radius:6px; padding:12px 18px; box-shadow:0 16px 30px -16px rgba(40,28,16,.55); font-family:var(--sans); }
+.hero-badge b{ font-family:var(--display); font-size:1.15rem; color:var(--accent); display:block; }
+.hero-badge small{ font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+@media (max-width:900px){
+  .hero-grid{ grid-template-columns:1fr; gap:34px; }
+  .hero-visual{ order:-1; aspect-ratio:4/3; max-height:360px; }
+}
+
+/* infobar (chips de info) */
+.infobar{ margin-top:clamp(34px,5vw,56px); border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:clamp(20px,4vw,48px); padding-block:22px; }
+.infobar .ib{ display:flex; gap:12px; align-items:center; }
+.infobar .ib svg{ width:22px; height:22px; stroke:var(--accent); fill:none; flex-shrink:0; }
+.infobar .ib h4{ font-family:var(--sans); font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+.infobar .ib p{ font-size:.98rem; color:var(--ink); font-weight:400; }
+
+/* ---------- MARQUEE ---------- */
+.marquee{ background:var(--accent); color:var(--white); overflow:hidden; padding-block:16px; white-space:nowrap; }
+.marquee-track{ display:inline-flex; gap:48px; animation:scroll 26s linear infinite; will-change:transform; }
+.marquee-track span{ font-family:var(--display); font-style:italic; font-size:1.35rem; display:inline-flex; align-items:center; gap:48px; }
+.marquee-track span::after{ content:"✦"; font-size:.8rem; font-style:normal; opacity:.8; }
+@keyframes scroll{ to{ transform:translateX(-50%); } }
+
+/* ---------- SOBRE ---------- */
+.about-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(40px,6vw,90px); align-items:center; }
+.about-media{ position:relative; aspect-ratio:4/5; background:linear-gradient(135deg,#e8dcc6,#d8c7a9); border-radius:8px; overflow:hidden; }
+.about-media img{ width:100%; height:100%; object-fit:cover; }
+.about-media .ml{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--display); font-style:italic; font-size:3rem; color:var(--muted); }
+.about-text h2{ font-size:clamp(2rem,4.5vw,3.4rem); margin:16px 0 22px; }
+.about-text p{ color:var(--ink2); margin-bottom:16px; max-width:520px; }
+.about-stats{ display:flex; flex-wrap:wrap; gap:clamp(26px,5vw,52px); margin:34px 0; }
+.about-stats .st .n{ font-family:var(--display); font-size:clamp(2.2rem,5vw,3.2rem); color:var(--accent); line-height:1; }
+.about-stats .st .l{ font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:8px; }
+.about-certs{ display:flex; flex-wrap:wrap; gap:10px; }
+.about-certs span{ font-size:.8rem; letter-spacing:.04em; padding:9px 16px; border:1px solid var(--line); border-radius:30px; color:var(--ink2); background:var(--white); }
+@media (max-width:900px){ .about-grid{ grid-template-columns:1fr; gap:38px; } .about-media{ max-width:430px; } }
+
+/* ---------- CARDÁPIO (seção escura, ementa) ---------- */
+.menu{ background:var(--espresso); color:var(--cream); position:relative; }
+.menu .kicker{ color:var(--accent); }
+.menu .sec-title{ color:var(--cream); }
+.menu .sec-title em{ color:var(--accent); }
+.menu-head{ text-align:center; max-width:680px; margin:0 auto clamp(40px,6vw,66px); }
+.menu-head .sec-intro{ margin-inline:auto; color:#c8baa6; }
+.menu-cat{ font-family:var(--display); font-style:italic; font-size:1.6rem; color:var(--accent); margin:clamp(30px,4vw,46px) 0 20px; padding-bottom:12px; border-bottom:1px solid rgba(230,219,200,.16); }
+.menu-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(20px,3.5vw,52px) clamp(40px,6vw,80px); }
+.menu-row{ padding-block:6px; }
+.menu-row-head{ display:flex; align-items:baseline; gap:10px; }
+.menu-row-head .mname{ font-family:var(--display); font-size:1.32rem; font-weight:500; color:var(--cream); }
+.menu-row-head .leader{ flex:1; border-bottom:1px dotted rgba(230,219,200,.4); transform:translateY(-4px); }
+.menu-row-head .mprice{ font-family:var(--display); font-size:1.2rem; color:var(--accent); white-space:nowrap; }
+.menu-row .mdesc{ color:#bfb09c; font-size:.92rem; margin-top:6px; max-width:90%; }
+@media (max-width:760px){ .menu-grid{ grid-template-columns:1fr; gap:24px; } }
+
+/* ---------- GALERIA / INSTAGRAM ---------- */
+.gal-grid{ display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:190px; gap:14px; margin-top:50px; }
+.gal-item{ background:linear-gradient(135deg,var(--cream2),#ddceb4); overflow:hidden; position:relative; border-radius:6px; }
+.gal-item:nth-child(1){ grid-column:span 2; grid-row:span 2; }
+.gal-item:nth-child(6){ grid-column:span 2; }
+.gal-item .g{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:14px; text-align:center; font-family:var(--display); font-style:italic; color:var(--accent); }
+.gal-item .g svg{ width:42px; height:42px; opacity:.5; }
+.gal-item .g em{ font-size:1rem; color:var(--ink2); line-height:1.2; }
+.gal-item:nth-child(1) .g svg{ width:64px; height:64px; } .gal-item:nth-child(1) .g em{ font-size:1.3rem; }
+.gal-item .ov{ position:absolute; inset:0; background:rgba(36,26,18,.4); opacity:0; display:grid; place-items:center; transition:opacity .4s; }
+.gal-item:hover .ov{ opacity:1; } .gal-item .ov svg{ width:26px; height:26px; stroke:var(--white); fill:none; }
+@media (max-width:760px){ .gal-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; } .gal-item:nth-child(1){ grid-column:span 2; } .gal-item:nth-child(6){ grid-column:span 1; } }
+
+/* ---------- DEPOIMENTOS ---------- */
+.quotes{ background:var(--cream2); text-align:center; }
+.qmark{ font-family:var(--display); font-size:5rem; line-height:.6; color:var(--accent); font-style:italic; }
+.qtrack{ max-width:800px; margin:0 auto; overflow:hidden; }
+.qslides{ display:flex; transition:transform .7s var(--ease); }
+.qslide{ min-width:100%; }
+.qquote{ font-family:var(--display); font-weight:400; font-size:clamp(1.4rem,3.2vw,2.2rem); line-height:1.4; font-style:italic; color:var(--ink); }
+.qauthor{ margin-top:26px; font-family:var(--sans); font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; color:var(--ink); }
+.qauthor span{ display:block; color:var(--muted); margin-top:5px; letter-spacing:.1em; }
+.qdots{ display:flex; gap:10px; justify-content:center; margin-top:38px; }
+.qdots button{ width:8px; height:8px; border-radius:50%; border:none; background:#cdbfa8; cursor:pointer; transition:.3s; }
+.qdots button.active{ background:var(--accent); width:26px; border-radius:8px; }
+
+/* ---------- CONTATO / RESERVA ---------- */
+.contact-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(40px,6vw,80px); margin-top:50px; }
+.cform{ display:grid; gap:24px; }
+.fld label{ display:block; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:9px; }
+.fld input,.fld select,.fld textarea{ width:100%; background:var(--white); border:1px solid var(--line); border-radius:5px; padding:13px 14px; font-family:var(--sans); font-size:1rem; font-weight:300; color:var(--ink); transition:border-color .3s; }
+.fld input:focus,.fld select:focus,.fld textarea:focus{ outline:none; border-color:var(--accent); }
+.fld textarea{ resize:vertical; min-height:96px; }
+.frow{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.cmsg{ font-size:.86rem; color:var(--accent); min-height:18px; }
+.cinfo{ display:grid; gap:4px; align-content:start; }
+.cinfo .it{ padding:20px 0; border-bottom:1px solid var(--line); display:flex; gap:16px; align-items:flex-start; }
+.cinfo .it h4{ font-family:var(--sans); font-weight:500; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
+.cinfo .it p{ font-size:1rem; color:var(--ink); }
+.cinfo .it svg{ width:20px; height:20px; stroke:var(--accent); fill:none; flex-shrink:0; margin-top:3px; }
+.cmap{ margin-top:10px; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+.cmap iframe{ width:100%; height:210px; border:0; display:block; filter:grayscale(.3) sepia(.1); }
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } .frow{ grid-template-columns:1fr; } }
+
+/* placeholder de foto (motivo de prato) */
+.ph{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; text-align:center; padding:24px;
+  background:radial-gradient(circle at 30% 22%, rgba(255,255,255,.45), transparent 60%), repeating-linear-gradient(45deg, rgba(36,26,18,.04) 0 14px, transparent 14px 28px); }
+.ph-motif svg{ width:clamp(54px,8vw,80px); height:clamp(54px,8vw,80px); color:var(--accent); opacity:.55; }
+.ph-name{ font-family:var(--display); font-style:italic; font-size:clamp(1.3rem,2.6vw,1.9rem); color:var(--ink2); line-height:1.1; }
+.ph-cap{ font-size:.6rem; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); }
+
+/* WhatsApp flutuante */
+.wa{ position:fixed; right:22px; bottom:22px; z-index:800; width:56px; height:56px; border-radius:50%; background:#25D366; display:grid; place-items:center; box-shadow:0 10px 26px -8px rgba(37,211,102,.55); transition:transform .3s; }
+.wa:hover{ transform:scale(1.08); } .wa svg{ width:28px; height:28px; fill:#fff; }
+
+/* ---------- FOOTER ---------- */
+.footer{ background:var(--espresso); color:var(--cream); padding-block:64px 28px; text-align:center; }
+.footer .fmark{ font-family:var(--display); font-size:clamp(2.2rem,5.5vw,3.6rem); font-style:italic; }
+.footer .ftag{ color:#c8baa6; max-width:440px; margin:12px auto 28px; font-family:var(--display); font-size:1.15rem; font-style:italic; }
+.fnav{ display:flex; gap:26px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
+.fnav a{ font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:#c8baa6; }
+.fnav a:hover{ color:var(--accent); }
+.fsoc{ display:flex; gap:14px; justify-content:center; margin-bottom:28px; }
+.fsoc a{ width:40px; height:40px; border:1px solid rgba(230,219,200,.22); border-radius:50%; display:grid; place-items:center; transition:.3s; }
+.fsoc a svg{ width:17px; height:17px; stroke:#c8baa6; fill:none; }
+.fsoc a:hover{ border-color:var(--accent); } .fsoc a:hover svg{ stroke:var(--accent); }
+.fcopy{ font-size:.74rem; color:var(--muted); border-top:1px solid rgba(230,219,200,.16); padding-top:22px; }
+
+[data-rev]{ opacity:0; transform:translateY(30px); transition:opacity 1s var(--ease), transform 1s var(--ease); }
+[data-rev].in{ opacity:1; transform:none; }
+[data-rev][data-d="1"]{ transition-delay:.1s; } [data-rev][data-d="2"]{ transition-delay:.2s; } [data-rev][data-d="3"]{ transition-delay:.3s; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } [data-rev]{ opacity:1; transform:none; } .marquee-track{ animation:none!important; } }
+</style>
+</head>
+<body>
+  <div id="loader"><div class="ld"></div></div>
+  <header class="header" id="header"></header>
+  <main id="app"></main>
+  <footer class="footer" id="footer"></footer>
+  <a class="wa" id="wa" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:none"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.4a10 10 0 01-1.6-5.4C5.6 9.8 10.2 5.3 16 5.3s10.4 4.5 10.4 10.2S21.8 25.7 16 25.7zm5.7-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.3 8.3 0 01-2.4-1.5 9 9 0 01-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5a.5.5 0 000-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 00-.8.4 3.3 3.3 0 00-1 2.5c0 1.5 1.1 2.9 1.2 3.1s2.1 3.3 5.2 4.6c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.3-.2-.5-.4z"/></svg></a>
+
+<script>
+(function(){
+  "use strict";
+  var S = window.SITE;
+  if(!S){ document.body.innerHTML='<p style="padding:40px;font-family:sans-serif">Erro: SITE não injetado.</p>'; return; }
+
+  function esc(s){ return (s==null?'':String(s)).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function ini(n){ return (n||'').split(/\s+/).filter(Boolean).slice(0,2).map(function(w){return w[0];}).join('').toUpperCase()||'•'; }
+
+  /* segurança: se algum 'title' vier com HTML, trata como titleHtml */
+  ['hero','about','services','testimonials','instagram','contact','footer'].forEach(function(k){
+    var o=S[k]; if(o && o.title && !o.titleHtml && /[<>]/.test(o.title)){ o.titleHtml=o.title; }
+  });
+
+  var IGS='<svg viewBox="0 0 24 24" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>';
+  var WAS='<svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M21 12a9 9 0 01-13 8l-5 1 1-5a9 9 0 1117-4z"/></svg>';
+  var MS='<svg viewBox="0 0 24 24" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>';
+  var PIN='<svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M12 21s-7-4.5-7-10a7 7 0 1114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>';
+  var CLK='<svg viewBox="0 0 24 24" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  var STAR='<svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6L3.4 9.4l6-.8z"/></svg>';
+  var ARR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var PLATE='<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="60" cy="58" r="33"/><circle cx="60" cy="58" r="23" stroke-dasharray="2 5"/><path d="M31 30v16a6 6 0 006 6V30M37 30v52"/><path d="M89 30c-5 0-8 6-8 15s3 9 8 9v28"/></svg>';
+  function emptyMedia(cap){ return '<div class="ph"><span class="ph-motif">'+PLATE+'</span><span class="ph-name">'+esc((S.brand&&S.brand.name)||'')+'</span>'+(cap?'<span class="ph-cap">'+esc(cap)+'</span>':'')+'</div>'; }
+
+  /* accent do nicho */
+  var acc = (S.theme && S.theme.accent) || '#A4724B';
+  document.documentElement.style.setProperty('--accent', acc);
+
+  document.getElementById('meta-title').textContent = (S.meta&&S.meta.title)||(S.brand&&S.brand.name)||'Restaurante';
+  document.getElementById('meta-desc').setAttribute('content',(S.meta&&S.meta.description)||'');
+  if(S.meta&&S.meta.lang) document.documentElement.lang=S.meta.lang;
+
+  var b=S.brand||{}, h=S.hero||{}, c=S.contact||{};
+  document.querySelector('.ld').innerHTML = ini(b.name).split('').map(function(ch){return '<span>'+esc(ch)+'</span>';}).join('');
+
+  /* navegação */
+  var nav=[{id:'inicio',label:'Início'}];
+  if(S.about) nav.push({id:'sobre',label:'Sobre'});
+  if(S.services) nav.push({id:'cardapio',label:(S.services.navLabel||'Cardápio')});
+  if(S.instagram&&S.instagram.show!==false&&S.instagram.url) nav.push({id:'galeria',label:'Galeria'});
+  nav.push({id:'contato',label:'Contato'});
+
+  var reservar = (h.ctaAgendar)||'Reservar';
+  var brandHtml='<a href="#inicio" class="brand">'+(b.nameHtml||esc(b.name))+(b.tagline?'<span class="tag">'+esc(b.tagline)+'</span>':'')+'</a>';
+  document.getElementById('header').innerHTML='<div class="container nav">'+brandHtml+
+    '<nav class="nav-links" id="navLinks">'+nav.map(function(n){return '<a href="#'+n.id+'">'+esc(n.label)+'</a>';}).join('')+'</nav>'+
+    '<div class="nav-right"><a href="#contato" class="btn btn--solid">'+esc(reservar)+'</a>'+
+    '<button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button></div></div>';
+
+  var html='';
+
+  /* HERO */
+  var heroImg = h.image ? '<img loading="lazy" src="'+esc(h.image)+'" alt="'+esc(b.name)+'">' : emptyMedia(h.imageLabel||'Espaço para a sua foto');
+  var heroBadge='';
+  if(h.badge){ var bp=String(h.badge).split('·'); var rm=bp[0].match(/[★\d.,\s]+/); var big=(rm?rm[0]:bp[0]).trim(); var small=bp[1]?bp[1].trim():(/google/i.test(bp[0])?'no Google':'Avaliação'); heroBadge='<div class="hero-badge"><b>'+esc(big)+'</b><small>'+esc(small)+'</small></div>'; }
+  var ib='';
+  if(h.badge) ib+='<div class="ib">'+STAR+'<div><h4>Avaliações</h4><p>'+esc(String(h.badge).replace(/^★\s*/,''))+'</p></div></div>';
+  if(c.hours) ib+='<div class="ib">'+CLK+'<div><h4>Horário</h4><p>'+esc(c.hours)+'</p></div></div>';
+  if(c.cidade||c.address) ib+='<div class="ib">'+PIN+'<div><h4>Onde estamos</h4><p>'+esc(c.cidade||c.address)+'</p></div></div>';
+  html+='<section class="hero" id="inicio"><div class="container">'+
+    '<div class="hero-grid">'+
+      '<div class="hero-text"><span class="kicker">'+esc(h.eyebrow||'Bem-vindo')+'</span>'+
+        '<h1>'+(h.titleHtml||esc(h.title||b.name))+'</h1>'+
+        (h.sub?'<p class="hero-lead">'+esc(h.sub)+'</p>':'')+
+        '<div class="hero-actions">'+
+          '<a href="'+esc((h.ctaPrimary&&h.ctaPrimary.href)||'#contato')+'" class="btn btn--solid">'+esc((h.ctaPrimary&&h.ctaPrimary.label)||'Reservar')+' '+ARR+'</a>'+
+          (h.ctaGhost?'<a href="'+esc(h.ctaGhost.href||'#cardapio')+'" class="btn btn--ghost">'+esc(h.ctaGhost.label)+'</a>':'')+
+        '</div></div>'+
+      '<div class="hero-visual">'+heroImg+heroBadge+'</div>'+
+    '</div>'+
+    (ib?'<div class="infobar">'+ib+'</div>':'')+
+    '</div></section>';
+
+  /* MARQUEE de destaques (a partir dos itens do cardápio) */
+  var hl = (h.highlights&&h.highlights.length)?h.highlights:((S.services&&S.services.items)?S.services.items.map(function(i){return i.name;}).slice(0,6):[]);
+  if(hl.length){
+    var one='<span>'+hl.map(esc).join('</span><span>')+'</span>';
+    html+='<div class="marquee" aria-hidden="true"><div class="marquee-track">'+one+one+'</div></div>';
+  }
+
+  /* SOBRE */
+  if(S.about){
+    var a=S.about;
+    var media = a.image ? '<img loading="lazy" src="'+esc(a.image)+'" alt="'+esc(b.name)+'">' : emptyMedia('Nosso espaço');
+    html+='<section class="section" id="sobre"><div class="container about-grid">'+
+      '<div class="about-media" data-rev>'+media+'</div>'+
+      '<div class="about-text"><span class="kicker" data-rev>'+esc(a.eyebrow||'Sobre')+'</span>'+
+      '<h2 data-rev data-d="1">'+(a.titleHtml||esc(a.title))+'</h2>'+
+      (a.paragraphs||[]).map(function(p){return '<p data-rev data-d="1">'+esc(p)+'</p>';}).join('')+
+      (a.stats&&a.stats.length?'<div class="about-stats" data-rev data-d="2">'+a.stats.map(function(s){var nn=String(s.num),num=/^\d+$/.test(nn);return '<div class="st"><div class="n"'+(num?' data-count="'+esc(nn)+'"':'')+(s.suffix?' data-suffix="'+esc(s.suffix)+'"':'')+'>'+(num?'0':esc(nn)+(s.suffix?esc(s.suffix):''))+'</div><div class="l">'+esc(s.label)+'</div></div>';}).join('')+'</div>':'')+
+      (a.certs&&a.certs.length?'<div class="about-certs" data-rev data-d="2">'+a.certs.map(function(cc){return '<span>'+esc(cc.label||cc)+'</span>';}).join('')+'</div>':'')+
+      '</div></div></section>';
+  }
+
+  /* CARDÁPIO (protagonista) */
+  if(S.services){
+    var sv=S.services, items=sv.items||[];
+    function row(it){ return '<div class="menu-row" data-rev>'+
+      '<div class="menu-row-head"><span class="mname">'+esc(it.name)+'</span><span class="leader"></span>'+
+      (it.price?'<span class="mprice">'+esc(it.price)+'</span>':'')+'</div>'+
+      (it.desc?'<p class="mdesc">'+esc(it.desc)+'</p>':'')+'</div>'; }
+    var hasCat=items.some(function(it){return it.cat;}), menuBody='';
+    if(hasCat){
+      var order=[],groups={};
+      items.forEach(function(it){ var k=it.cat||'Outros'; if(!groups[k]){groups[k]=[];order.push(k);} groups[k].push(it); });
+      menuBody=order.map(function(k){ return '<h3 class="menu-cat" data-rev>'+esc(k)+'</h3><div class="menu-grid">'+groups[k].map(row).join('')+'</div>'; }).join('');
+    } else {
+      menuBody='<div class="menu-grid">'+items.map(row).join('')+'</div>';
+    }
+    html+='<section class="section menu" id="cardapio"><div class="container">'+
+      '<div class="menu-head"><span class="kicker" data-rev>'+esc(sv.eyebrow||'Cardápio')+'</span>'+
+      '<h2 class="sec-title" data-rev data-d="1">'+(sv.titleHtml||esc(sv.title||'Nosso Cardápio'))+'</h2>'+
+      (sv.intro?'<p class="sec-intro" data-rev data-d="1">'+esc(sv.intro)+'</p>':'')+'</div>'+
+      menuBody+'</div></section>';
+  }
+
+  /* GALERIA / INSTAGRAM */
+  if(S.instagram&&S.instagram.show!==false&&S.instagram.url){
+    var ig=S.instagram;
+    var gcaps=(ig.captions&&ig.captions.length)?ig.captions:hl.slice(0);
+    var gimgs=ig.images||[];
+    var cells='';
+    for(var gi=0;gi<6;gi++){
+      var gc=gcaps.length?gcaps[gi%gcaps.length]:'';
+      var inner=gimgs[gi]?'<img loading="lazy" src="'+esc(gimgs[gi])+'" alt="'+esc(gc)+'">':'<span class="g">'+PLATE+(gc?'<em>'+esc(gc)+'</em>':'')+'</span>';
+      cells+='<a class="gal-item" href="'+esc(ig.url)+'" target="_blank" rel="noopener">'+inner+'<span class="ov">'+IGS+'</span></a>';
+    }
+    html+='<section class="section" id="galeria"><div class="container">'+
+      '<div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px">'+
+      '<div><span class="kicker" data-rev>'+esc(ig.handle||'@instagram')+'</span><h2 class="sec-title" data-rev data-d="1">'+(ig.titleHtml||esc(ig.title||'Da nossa cozinha'))+'</h2></div>'+
+      '<a href="'+esc(ig.url)+'" target="_blank" rel="noopener" class="btn btn--ghost" data-rev data-d="1">Seguir '+IGS+'</a></div>'+
+      '<div class="gal-grid" data-rev data-d="1">'+cells+'</div></div></section>';
+  }
+
+  /* DEPOIMENTOS */
+  if(S.testimonials&&S.testimonials.show!==false&&S.testimonials.items&&S.testimonials.items.length){
+    var te=S.testimonials;
+    html+='<section class="section quotes" id="depoimentos"><div class="container" style="text-align:center">'+
+      '<span class="kicker" data-rev>'+esc(te.eyebrow||'Depoimentos')+'</span>'+
+      '<div class="qmark" data-rev>&ldquo;</div>'+
+      '<div class="qtrack" data-rev data-d="1"><div class="qslides" id="qslides">'+
+      te.items.map(function(it){return '<div class="qslide"><p class="qquote">'+esc(it.quote||it.text)+'</p><div class="qauthor">'+esc(it.name)+'<span>'+esc(it.meta||'')+'</span></div></div>';}).join('')+
+      '</div></div><div class="qdots" id="qdots"></div></div></section>';
+  }
+
+  /* CONTATO / RESERVA */
+  var waLink=c.whatsapp?'https://wa.me/'+String(c.whatsapp).replace(/\D/g,''):(c.instagramUrl||'#');
+  var info='';
+  if(c.whatsapp||c.phoneDisplay) info+='<a class="it" href="'+esc(waLink)+'" target="_blank" rel="noopener">'+WAS+'<div><h4>WhatsApp</h4><p>'+esc(c.phoneDisplay||c.whatsapp)+'</p></div></a>';
+  if(c.instagramUrl) info+='<a class="it" href="'+esc(c.instagramUrl)+'" target="_blank" rel="noopener">'+IGS+'<div><h4>Instagram</h4><p>'+esc((S.instagram&&S.instagram.handle)||c.instagramUrl)+'</p></div></a>';
+  if(c.address) info+='<div class="it">'+PIN+'<div><h4>Endereço</h4><p>'+esc(c.address)+'</p></div></div>';
+  if(c.hours) info+='<div class="it">'+CLK+'<div><h4>Horário</h4><p>'+esc(c.hours)+'</p></div></div>';
+  var map=c.mapsEmbed?'<div class="cmap"><iframe loading="lazy" src="'+esc(c.mapsEmbed)+'"></iframe></div>':'';
+  var svcOpts=(S.services&&S.services.items?S.services.items.map(function(i){return i.name;}):[]);
+  html+='<section class="section" id="contato"><div class="container">'+
+    '<span class="kicker" data-rev>'+esc(c.eyebrow||'Contato')+'</span>'+
+    '<h2 class="sec-title" data-rev data-d="1">'+(c.titleHtml||esc(c.title||'Reserve a sua mesa'))+'</h2>'+
+    '<div class="contact-grid">'+
+    '<form class="cform" id="cform" data-rev novalidate>'+
+      '<div class="fld"><label>Nome completo</label><input type="text" name="nome" placeholder="Seu nome" required></div>'+
+      '<div class="frow"><div class="fld"><label>WhatsApp</label><input type="tel" name="whats" placeholder="(00) 00000-0000" required></div>'+
+      '<div class="fld"><label>Pessoas / Data</label><input type="text" name="data" placeholder="Ex.: 4 pessoas, sábado"></div></div>'+
+      (svcOpts.length?'<div class="fld"><label>O que procura</label><select name="servico"><option value="">Selecione</option>'+svcOpts.map(function(o){return '<option>'+esc(o)+'</option>';}).join('')+'</select></div>':'')+
+      '<div class="fld"><label>Mensagem</label><textarea name="msg" placeholder="Como podemos ajudar?"></textarea></div>'+
+      '<button type="submit" class="btn btn--solid" id="cbtn" style="justify-self:start">Enviar pelo WhatsApp</button>'+
+      '<p class="cmsg" id="cmsg"></p></form>'+
+    '<div class="cinfo" data-rev data-d="1">'+info+map+'</div>'+
+    '</div></div></section>';
+
+  document.getElementById('app').innerHTML=html;
+
+  /* FOOTER */
+  var foot=S.footer||{};
+  var soc='';
+  if(S.instagram&&S.instagram.url) soc+='<a href="'+esc(S.instagram.url)+'" target="_blank" rel="noopener" aria-label="Instagram">'+IGS+'</a>';
+  if(c.whatsapp) soc+='<a href="'+esc(waLink)+'" target="_blank" rel="noopener" aria-label="WhatsApp">'+WAS+'</a>';
+  if(c.email) soc+='<a href="mailto:'+esc(c.email)+'" aria-label="E-mail">'+MS+'</a>';
+  document.getElementById('footer').innerHTML='<div class="container"><div class="fmark">'+esc(b.name)+'</div>'+
+    (foot.tagline?'<p class="ftag">'+esc(foot.tagline)+'</p>':'')+
+    '<nav class="fnav">'+nav.map(function(n){return '<a href="#'+n.id+'">'+esc(n.label)+'</a>';}).join('')+'</nav>'+
+    (soc?'<div class="fsoc">'+soc+'</div>':'')+
+    '<p class="fcopy">© <span id="yr"></span> '+esc(b.name)+' · Todos os direitos reservados.</p></div>';
+
+  if(c.whatsapp){ var w=document.getElementById('wa'); w.href=waLink; w.style.display='grid'; }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* ====== INTERAÇÕES ====== */
+  window.addEventListener('load',function(){ setTimeout(function(){ document.getElementById('loader').classList.add('hidden'); },800); });
+  var header=document.getElementById('header');
+  addEventListener('scroll',function(){ header.classList.toggle('scrolled',scrollY>40); },{passive:true});
+
+  var burger=document.getElementById('burger'), navLinks=document.getElementById('navLinks');
+  function tm(f){ var o=f!==undefined?f:!navLinks.classList.contains('open'); navLinks.classList.toggle('open',o); burger.classList.toggle('open',o); document.body.style.overflow=o?'hidden':''; }
+  burger.addEventListener('click',function(){ tm(); });
+  navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ tm(false); }); });
+
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('[data-rev]').forEach(function(el){ io.observe(el); });
+
+  var cio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting)return; var el=e.target,t=+el.dataset.count,sf=el.dataset.suffix||'',st=performance.now(); (function tk(n){ var p=Math.min((n-st)/1500,1),k=1-Math.pow(1-p,3); el.textContent=Math.round(k*t)+sf; if(p<1)requestAnimationFrame(tk); })(st); cio.unobserve(el); }); },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(x){ cio.observe(x); });
+
+  /* carrossel depoimentos */
+  var qs=document.getElementById('qslides');
+  if(qs&&qs.children.length>1){
+    var n=qs.children.length, dots=document.getElementById('qdots'), cur=0, tmr;
+    for(var i=0;i<n;i++){ var d=document.createElement('button'); d.className=i===0?'active':''; d.dataset.i=i; dots.appendChild(d); }
+    function go(k){ cur=(k+n)%n; qs.style.transform='translateX(-'+(cur*100)+'%)'; [].forEach.call(dots.children,function(x,j){ x.classList.toggle('active',j===cur); }); }
+    dots.addEventListener('click',function(e){ if(e.target.dataset.i!==undefined){ go(+e.target.dataset.i); rs(); } });
+    function au(){ tmr=setInterval(function(){ go(cur+1); },5200); } function rs(){ clearInterval(tmr); au(); } au();
+  }
+
+  /* formulário -> WhatsApp */
+  var form=document.getElementById('cform');
+  if(form){ var btn=document.getElementById('cbtn'), msg=document.getElementById('cmsg');
+    form.addEventListener('submit',function(e){ e.preventDefault();
+      if(!form.nome.value.trim()||!form.whats.value.trim()){ msg.style.color='#C0392B'; msg.textContent='Preencha nome e WhatsApp.'; return; }
+      btn.textContent='Enviando...'; btn.disabled=true; msg.textContent='';
+      setTimeout(function(){ btn.textContent='Enviar pelo WhatsApp'; btn.disabled=false; msg.style.color=acc;
+        if(c.whatsapp){ var t='Olá! Meu nome é '+form.nome.value+'.'+(form.data&&form.data.value?' Reserva: '+form.data.value+'.':'')+(form.servico&&form.servico.value?' Interesse: '+form.servico.value+'.':'')+(form.msg.value?' '+form.msg.value:''); window.open(waLink+'?text='+encodeURIComponent(t),'_blank'); msg.textContent='✓ Te levamos para o WhatsApp!'; }
+        else msg.textContent='✓ Mensagem enviada! Em breve entramos em contato.';
+        form.reset();
+      },1100);
+    });
+  }
+})();
+</script>
+</body>
+</html>

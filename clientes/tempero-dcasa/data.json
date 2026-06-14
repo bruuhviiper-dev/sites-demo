@@ -1,0 +1,73 @@
+{
+  "categoria": "Restaurante",
+  "nicho": "restaurante",
+  "slug": "tempero-dcasa",
+  "estilo": "menu-gourmet",
+  "scheme": 1,
+
+  "brand": {
+    "name": "Tempero D'casa",
+    "tagline": "Comida Caseira · Rio Preto",
+    "nameHtml": "Tempero <b>D'casa</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Comida caseira · Parque Industrial, Rio Preto",
+    "titleHtml": "O gostinho de <em>comida de casa</em>",
+    "sub": "Self-service caseiro, farto e no capricho para o seu almoço no Parque Industrial. Coma no local, leve marmita ou receba com entrega sem contato.",
+    "badge": "★ 4,6 no Google · 98 avaliações",
+    "ctaPrimary": { "label": "Ver o cardápio", "href": "#cardapio" },
+    "ctaGhost":   { "label": "Como chegar", "href": "#contato" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o Tempero D'casa",
+    "titleHtml": "Almoço caseiro, <em>todo dia útil</em>",
+    "paragraphs": [
+      "O Tempero D'casa serve aquele almoço caseiro de verdade no coração do Parque Industrial: comida fresca, variada e bem temperada, do jeitinho que lembra a comida de casa.",
+      "Prático para o seu dia de trabalho — coma no salão, leve a sua marmita ou peça o delivery sem contato. E para as empresas da região, também atendemos refeições no dia a dia."
+    ],
+    "stats": [
+      { "num": "4,6", "label": "Nota no Google" },
+      { "num": 98, "suffix": "+", "label": "Avaliações" },
+      { "num": 6, "suffix": " dias", "label": "Almoço na semana" }
+    ],
+    "certs": [
+      { "icon": "leaf",  "label": "Comida caseira fresca" },
+      { "icon": "fork",  "label": "Self-service à vontade" },
+      { "icon": "drop",  "label": "Delivery sem contato" },
+      { "icon": "star",  "label": "★ 4,6 no Google" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "O que servimos",
+    "navLabel": "Cardápio",
+    "titleHtml": "Caseiro, <em>fresquinho e farto</em>",
+    "intro": "Almoço self-service variado, com valores médios de R$ 20 a R$ 40 por pessoa.",
+    "items": [
+      { "icon": "fork",    "name": "Self-Service no Almoço",      "desc": "Buffet variado de pratos quentes, carnes, guarnições e saladas — monte o seu prato do seu jeito.", "price": "R$ 20–40" },
+      { "icon": "hand",    "name": "Marmitas & Para Viagem",      "desc": "Marmitas montadas na hora para levar o almoço caseiro com você.",                                  "price": "Consulte" },
+      { "icon": "drop",    "name": "Delivery sem Contato",        "desc": "Peça o seu almoço e receba quentinho, com entrega sem contato.",                                   "price": "Consulte a taxa" },
+      { "icon": "sparkle", "name": "Refeições para Empresas",     "desc": "Atendimento de almoço para equipes e empresas do Parque Industrial.",                              "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale com a gente",
+    "titleHtml": "Faça o seu <em>pedido</em>",
+    "phoneDisplay": "(17) 3212-5617",
+    "address": "Av. Cenobelino de Barro Serra, 1346 - Parque Industrial, São José do Rio Preto - SP, 15030-000",
+    "hours":   "Almoço a partir das 11h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=Av.+Cenobelino+de+Barro+Serra,+1346+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "O gostinho de casa, no seu almoço."
+  }
+}

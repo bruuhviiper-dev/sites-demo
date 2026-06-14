@@ -1,0 +1,73 @@
+{
+  "categoria": "Serviços jurídicos",
+  "nicho": "advocacia",
+  "slug": "advocacia-secchieri-pesquero",
+  "estilo": "imoveis-premium",
+  "scheme": 1,
+
+  "brand": {
+    "name": "Secchieri & Pesquero",
+    "tagline": "Advocacia · Serviços Jurídicos",
+    "nameHtml": "Secchieri <b>& Pesquero</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Advocacia & Serviços Jurídicos · Rio Preto",
+    "titleHtml": "Soluções jurídicas com <em>seriedade e confiança</em>",
+    "sub": "Assessoria e representação jurídica para pessoas e empresas, com atendimento próximo e estratégico para defender o que é seu.",
+    "badge": "Por que a Secchieri & Pesquero",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Áreas de atuação", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a banca",
+    "titleHtml": "Experiência jurídica <em>ao seu lado</em>",
+    "paragraphs": [
+      "A Secchieri & Pesquero é um escritório de advocacia em São José do Rio Preto que une técnica e atendimento próximo para resolver as questões jurídicas de pessoas e empresas com clareza e segurança.",
+      "Cada caso é tratado com dedicação e estratégia, sempre explicando os caminhos sem juridiquês — para você decidir com confiança e tranquilidade."
+    ],
+    "stats": [
+      { "num": "5,0", "label": "Nota no Google" },
+      { "num": 2, "suffix": "+", "label": "Avaliações" }
+    ],
+    "certs": [
+      { "icon": "scale",  "label": "OAB/SP",            "desc": "Registro profissional (preencher)" },
+      { "icon": "shield", "label": "Atendimento",       "desc": "Próximo e estratégico" },
+      { "icon": "check",  "label": "Pessoas & Empresas", "desc": "Atuação cível, trabalhista e mais" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Áreas de atuação",
+    "navLabel": "Atuação",
+    "titleHtml": "Como podemos <em>defender você</em>",
+    "intro": "Atuação para pessoas e empresas, do primeiro contato à solução.",
+    "items": [
+      { "icon": "scale",  "name": "Direito Civil",            "desc": "Contratos, indenizações, cobranças e conflitos do dia a dia.",            "price": "Sob consulta" },
+      { "icon": "hand",   "name": "Direito Trabalhista",      "desc": "Defesa de direitos nas relações de trabalho, para empregados e empresas.", "price": "Sob consulta" },
+      { "icon": "heart",  "name": "Direito de Família",       "desc": "Divórcio, guarda, pensão e inventário com sensibilidade e respeito.",     "price": "Sob consulta" },
+      { "icon": "home",   "name": "Direito Empresarial",      "desc": "Assessoria jurídica para empresas crescerem com segurança.",              "price": "Sob consulta" },
+      { "icon": "shield", "name": "Consultoria & Contratos",  "desc": "Análise e elaboração de contratos e pareceres com segurança jurídica.",   "price": "Sob consulta" },
+      { "icon": "check",  "name": "Acordos & Mediação",       "desc": "Soluções negociadas para resolver conflitos de forma menos desgastante.", "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale com o escritório",
+    "titleHtml": "Agende uma <em>conversa</em>",
+    "whatsapp":     "5517996150073",
+    "phoneDisplay": "(17) 99615-0073",
+    "address": "Escritório - R. Tiradentes, 1235 - Parque Industrial, São José do Rio Preto - SP, 15025-050",
+    "hours":   "Seg a Sex · a partir das 9h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Tiradentes,+1235+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Seriedade e confiança em cada causa."
+  }
+}
