@@ -1,0 +1,74 @@
+{
+  "categoria": "Pet Shop",
+  "nicho": "petshop",
+  "slug": "pet-shop-felix",
+  "estilo": "petshop-modern",
+  "scheme": 1,
+
+  "brand": {
+    "name": "Pet Shop Felix",
+    "tagline": "Pet Shop · Rio Preto",
+    "nameHtml": "Pet Shop <b>Felix</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Pet Shop · Parque Industrial, Rio Preto",
+    "titleHtml": "Tudo para o seu pet, <em>com nota 5,0</em>",
+    "sub": "Loja completa de produtos para o seu melhor amigo, com atendimento nota máxima. Compre na loja, retire quando quiser ou receba com entrega.",
+    "badge": "★ 5,0 no Google · 32 avaliações",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver serviços", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o Pet Shop Felix",
+    "titleHtml": "Atendimento nota <em>5,0</em>",
+    "paragraphs": [
+      "O Pet Shop Felix é referência no Parque Industrial: uma loja completa de ração, acessórios e produtos de higiene, com aquele atendimento próximo que rendeu nota máxima no Google.",
+      "Você escolhe como prefere: compra na loja, retira no balcão ou recebe em casa com a nossa entrega. Comodidade total para você e para o seu pet."
+    ],
+    "stats": [
+      { "num": 5,  "suffix": ",0", "label": "Nota no Google" },
+      { "num": 32, "suffix": "+",  "label": "Avaliações" }
+    ],
+    "certs": [
+      { "icon": "paw",   "label": "Loja completa" },
+      { "icon": "check", "label": "Retirada na loja" },
+      { "icon": "truck", "label": "Entrega em casa" },
+      { "icon": "star",  "label": "★ 5,0 no Google" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "O que oferecemos",
+    "navLabel": "Serviços",
+    "titleHtml": "Tudo para o seu pet",
+    "items": [
+      { "icon": "paw",   "name": "Ração & Alimentos",       "desc": "Rações para cães e gatos de todos os portes, com qualidade e bom custo-benefício.",   "price": "Consulte" },
+      { "icon": "bone",  "name": "Petiscos & Snacks",       "desc": "Variedade de petiscos e ossinhos para recompensar o seu melhor amigo.",              "price": "A partir de R$ 9" },
+      { "icon": "drop",  "name": "Higiene & Cuidados",      "desc": "Shampoos, tapetes higiênicos e produtos de limpeza para o seu pet sempre em dia.",   "price": "Consulte" },
+      { "icon": "gift",  "name": "Acessórios & Brinquedos", "desc": "Coleiras, caminhas, comedouros e brinquedos para o conforto e a diversão do seu pet.","price": "A partir de R$ 15" },
+      { "icon": "check", "name": "Compre e Retire",         "desc": "Reserve pelo WhatsApp e retire no balcão na hora que for melhor para você.",          "price": "Sem taxa" },
+      { "icon": "truck", "name": "Entrega em Casa",         "desc": "Prefere receber? A gente entrega o pedido do seu pet na sua porta.",                  "price": "Consulte a taxa" }
+    ]
+  },
+
+  "products":     { "show": false },
+  "testimonials": { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Fale conosco",
+    "titleHtml": "Peça pelo <em>WhatsApp</em>",
+    "whatsapp":     "5517992207742",
+    "phoneDisplay": "(17) 99220-7742",
+    "address": "R. Jorge Tibiriçá, 2151c - Parque Industrial, São José do Rio Preto - SP, 15025-060",
+    "hours":   "Aberto a partir das 8h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Jorge+Tibiri%C3%A7%C3%A1,+2151+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Tudo para o seu pet, com o carinho que ele merece."
+  }
+}
