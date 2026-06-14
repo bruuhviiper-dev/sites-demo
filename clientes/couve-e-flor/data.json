@@ -17,7 +17,7 @@
     "sub": "Self-service variado, fresquinho e no capricho, de segunda a sábado no almoço, no coração da Boa Vista. Coma no local, leve a sua marmita ou receba em casa.",
     "badge": "★ 4,7 no Google · 212 avaliações",
     "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
-    "ctaGhost":   { "label": "Ver o cardápio", "href": "#servicos" }
+    "ctaGhost":   { "label": "Ver o cardápio", "href": "#cardapio" }
   },
 
   "about": {

@@ -7,6 +7,7 @@
     "gerar": "node motor/gerar.js",
     "publicar": "node motor/publicar.js",
     "disparar": "node motor/disparar.js",
+    "testar": "node motor/testar.js",
     "apresentar": "node motor/apresentar.js"
   },
   "keywords": [],

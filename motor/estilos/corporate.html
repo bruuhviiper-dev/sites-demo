@@ -245,7 +245,7 @@ h1,h2,h3,h4{ font-family:var(--head); font-weight:700; line-height:1.06; letter-
   var nav=[{id:'inicio',label:'Início'}];
   if(S.about) nav.push({id:'sobre',label:'Sobre'});
   if(S.services) nav.push({id:'servicos',label:(S.services.navLabel||'Serviços')});
-  if(S.process) nav.push({id:'processo',label:(S.process.navLabel||'Como funciona')});
+  if(S.process&&S.process.steps&&S.process.steps.length) nav.push({id:'processo',label:(S.process.navLabel||'Como funciona')});
   nav.push({id:'contato',label:'Contato'});
 
   var brandHtml='<a href="#inicio" class="brand">'+(b.nameHtml||esc(b.name))+(b.tagline?'<span class="tag">'+esc(b.tagline)+'</span>':'')+'</a>';
