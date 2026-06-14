@@ -45,22 +45,34 @@ function autoNameHtml(name){
   return parts[0] + ' <b>' + parts.slice(1).join(' ') + '</b>';
 }
 
-/* ---- link.md: link do GitHub Pages + abordagem de WhatsApp pronta ---- */
+/* ---- mensagem de abordagem (texto puro, usada no link.md e no disparo) ---- */
+function buildPitch(name, onde, url){
+  return 'Olá! Tudo bem? 😊\n'
+    + 'Vi a ' + name + ' no Google e gostei muito do trabalho de vocês' + onde + '.\n'
+    + 'Reparei que ainda não têm um site próprio, então montei uma demonstração gratuita, sem compromisso, de como ficaria:\n'
+    + '👉 ' + url + '\n'
+    + 'Dá uma olhada e me diz o que achou? Se gostar, a gente conversa. Se não, fica de presente. 🙏';
+}
+
+/* ---- link.md: link do GitHub Pages + abordagem + disparo assistido (1 clique) ---- */
 function buildLinkMd(site, slug){
   const url = PAGES_BASE + '/clientes/' + slug + '/' + slug + '.html';
   const name = (site.brand && site.brand.name) || slug;
   const cid = (site.contact && site.contact.cidade) ? String(site.contact.cidade).split(/[—-]/)[0].trim() : '';
   const onde = cid ? (' em ' + cid) : '';
-  const hasContact = !!(site.contact && (site.contact.whatsapp || site.contact.phoneDisplay));
+  const wa = (site.contact && site.contact.whatsapp) ? String(site.contact.whatsapp).replace(/\D/g, '') : '';
+  const pitch = buildPitch(name, onde, url);
   let md = '# ' + name + ' — Link & Abordagem\n\n';
   md += '## 🔗 Link do site (GitHub Pages)\n' + url + '\n\n';
   md += '## 📲 Abordagem pronta para WhatsApp\n';
-  md += '> Olá! Tudo bem? 😊\n';
-  md += '> Vi a ' + name + ' no Google e gostei muito do trabalho de vocês' + onde + '.\n';
-  md += '> Reparei que ainda não têm um site próprio, então **montei uma demonstração gratuita**, sem compromisso, de como ficaria:\n>\n';
-  md += '> 👉 ' + url + '\n>\n';
-  md += '> Dá uma olhada e me diz o que achou? Se gostar, a gente conversa. Se não, fica de presente. 🙏\n';
-  if(!hasContact) md += '\n## ⚠️ Atenção\n- O Google Maps não trouxe telefone/WhatsApp — encontre o contato antes de enviar.\n';
+  md += pitch.split('\n').map(function(l){ return '> ' + l; }).join('\n') + '\n';
+  if(wa){
+    md += '\n## ⚡ Disparo assistido (1 clique)\n';
+    md += 'Com o WhatsApp Web aberto, clique no link: a conversa abre com a mensagem pronta — é só apertar **Enter**.\n\n';
+    md += 'https://wa.me/' + wa + '?text=' + encodeURIComponent(pitch) + '\n';
+  } else {
+    md += '\n## ⚠️ Atenção\n- O Google Maps não trouxe WhatsApp — encontre o celular antes de enviar (fora do disparo).\n';
+  }
   return md;
 }
 

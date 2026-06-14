@@ -6,6 +6,7 @@
   "scripts": {
     "gerar": "node motor/gerar.js",
     "publicar": "node motor/publicar.js",
+    "disparar": "node motor/disparar.js",
     "apresentar": "node motor/apresentar.js"
   },
   "keywords": [],
