@@ -170,6 +170,21 @@
         {"icon":"check","name":"Personal Trainer","desc":"Treino 100% individualizado para os seus objetivos.","price":"Sob consulta"},
         {"icon":"sparkle","name":"Avaliação Física","desc":"Acompanhe sua evolução com dados precisos.","price":"Grátis"}
       ]},
+    "planos": { "eyebrow":"Planos", "navLabel":"Planos", "title":"Escolha o seu plano", "intro":"Sem pegadinha: escolha o plano e comece a treinar hoje mesmo.", "ctaLabel":"Quero esse plano",
+      "items":[
+        {"nome":"Musculação","preco":"89","periodo":"/mês","beneficios":["Acesso à musculação","Avaliação física","App de treino","Acompanhamento dos professores"]},
+        {"nome":"Completo","preco":"119","periodo":"/mês","destaque":true,"selo":"Mais escolhido","beneficios":["Tudo da Musculação","Aulas coletivas","Funcional e ginástica","Reavaliação mensal"]},
+        {"nome":"Black","preco":"159","periodo":"/mês","beneficios":["Tudo do Completo","Acesso 24 horas","Personal em grupo","Leve um convidado"]}
+      ]},
+    "aulas": { "eyebrow":"Grade de aulas", "navLabel":"Aulas", "title":"Aulas da semana", "intro":"Energia em grupo todos os dias da semana.",
+      "items":[
+        {"aula":"Funcional","dias":"Seg · Qua · Sex","horario":"07h · 18h · 19h"},
+        {"aula":"HIIT","dias":"Seg a Sex","horario":"06h · 12h"},
+        {"aula":"Ginástica","dias":"Ter · Qui","horario":"08h · 19h"},
+        {"aula":"Dança & Ritmos","dias":"Seg · Qua","horario":"20h"},
+        {"aula":"Treino de Força","dias":"Seg · Qua · Sex","horario":"17h"},
+        {"aula":"Alongamento","dias":"Ter · Qui","horario":"07h · 18h"}
+      ]},
     "footer": { "tagline": "Supere seus limites todos os dias." }
   },
 
