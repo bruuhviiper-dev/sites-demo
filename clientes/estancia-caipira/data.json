@@ -1,0 +1,82 @@
+{
+  "categoria": "Restaurante self-service",
+  "nicho": "restaurante",
+  "slug": "estancia-caipira",
+  "estilo": "menu-gourmet",
+  "scheme": 0,
+
+  "brand": {
+    "name": "Estância Caipira",
+    "tagline": "Comida Caipira · Rio Preto",
+    "nameHtml": "Estância <b>Caipira</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Comida caipira no fogão a lenha · Rio Preto",
+    "titleHtml": "O sabor da roça, <em>como antigamente</em>",
+    "sub": "Self-service de comida caipira típica feita no fogão a lenha, rodízio de pizza e aquele tempero de fazenda — num ambiente temático e acolhedor no Jardim Alto Alegre.",
+    "badge": "★ 4,5 no Google · 171 avaliações",
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver o cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Estância Caipira",
+    "titleHtml": "Cozinha de <em>fazenda de verdade</em>",
+    "paragraphs": [
+      "A Estância Caipira recria a autêntica cozinha de fazenda: pratos preparados no fogão a lenha, com receitas caipiras típicas e o tempero que lembra a comida da roça. Um ambiente temático e aconchegante para a família toda.",
+      "Liderada por mulheres empreendedoras e orgulhosamente acolhedora com toda a comunidade, é o lugar para um almoço farto, caseiro e cheio de afeto — do jeitinho que a gente gosta."
+    ],
+    "stats": [
+      { "num": "4,5", "label": "Nota no Google" },
+      { "num": 171, "suffix": "+", "label": "Avaliações" },
+      { "num": 42, "suffix": " mil", "label": "Seguidores no Instagram" }
+    ],
+    "certs": [
+      { "icon": "leaf",  "label": "Feito no fogão a lenha" },
+      { "icon": "fork",  "label": "Self-service à vontade" },
+      { "icon": "heart", "label": "Acolhe a comunidade LGBTQ+" },
+      { "icon": "star",  "label": "Liderado por mulheres" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Direto do <em>fogão a lenha</em>",
+    "intro": "Comida caipira típica, no capricho da cozinha de fazenda. Valores médios de R$ 40 a R$ 60 por pessoa.",
+    "items": [
+      { "cat": "Buffet Caipira",          "icon": "fork",    "name": "Buffet Self-Service",        "desc": "Comida caipira típica feita no fogão a lenha, à vontade, com tempero de fazenda.", "price": "R$ 40–60" },
+      { "cat": "Buffet Caipira",          "icon": "leaf",    "name": "Saladas & Conservas da Roça","desc": "Variedade de saladas fresquinhas e conservas caseiras para acompanhar.",          "price": "No buffet" },
+      { "cat": "Da Brasa & Fogão a Lenha","icon": "heart",   "name": "Carnes & Assados",           "desc": "Carnes assadas e na brasa, no capricho da cozinha caipira.",                       "price": "No buffet" },
+      { "cat": "Da Brasa & Fogão a Lenha","icon": "drop",    "name": "Caldos & Sopas Caipiras",    "desc": "Caldos encorpados e sopas para esquentar o dia, do jeito da fazenda.",            "price": "No buffet" },
+      { "cat": "Forno a Lenha",           "icon": "star",    "name": "Rodízio de Pizza",           "desc": "Pizzas assadas no forno a lenha, com sabores caipiras e os clássicos da casa.",   "price": "Consulte" },
+      { "cat": "Pra Fechar",              "icon": "sparkle", "name": "Sobremesas Caseiras",        "desc": "Doces de fazenda e sobremesas da casa para fechar o almoço com afeto.",           "price": "No buffet" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+
+  "instagram": {
+    "show":   true,
+    "handle": "@estancia_caipira_sjriopreto",
+    "url":    "https://www.instagram.com/estancia_caipira_sjriopreto/"
+  },
+
+  "contact": {
+    "eyebrow": "Fale com a gente",
+    "titleHtml": "Venha pra <em>nossa mesa</em>",
+    "whatsapp":     "5517996688558",
+    "phoneDisplay": "(17) 99668-8558",
+    "instagramUrl": "https://www.instagram.com/estancia_caipira_sjriopreto/",
+    "address": "Av. Nossa Sra. da Paz, 1363 - Jardim Alto Alegre, São José do Rio Preto - SP, 15055-500",
+    "hours":   "Aberto diariamente a partir das 11h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=Av.+Nossa+Sra.+da+Paz,+1363+Jardim+Alto+Alegre+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "O sabor da roça, pertinho de você."
+  }
+}

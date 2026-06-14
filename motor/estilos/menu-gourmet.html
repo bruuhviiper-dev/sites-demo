@@ -160,7 +160,10 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:500; line-height:1.06; }
 .gal-item{ background:linear-gradient(135deg,var(--cream2),#ddceb4); overflow:hidden; position:relative; border-radius:6px; }
 .gal-item:nth-child(1){ grid-column:span 2; grid-row:span 2; }
 .gal-item:nth-child(6){ grid-column:span 2; }
-.gal-item .g{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--display); font-style:italic; color:var(--muted); }
+.gal-item .g{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:14px; text-align:center; font-family:var(--display); font-style:italic; color:var(--accent); }
+.gal-item .g svg{ width:42px; height:42px; opacity:.5; }
+.gal-item .g em{ font-size:1rem; color:var(--ink2); line-height:1.2; }
+.gal-item:nth-child(1) .g svg{ width:64px; height:64px; } .gal-item:nth-child(1) .g em{ font-size:1.3rem; }
 .gal-item .ov{ position:absolute; inset:0; background:rgba(36,26,18,.4); opacity:0; display:grid; place-items:center; transition:opacity .4s; }
 .gal-item:hover .ov{ opacity:1; } .gal-item .ov svg{ width:26px; height:26px; stroke:var(--white); fill:none; }
 @media (max-width:760px){ .gal-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; } .gal-item:nth-child(1){ grid-column:span 2; } .gal-item:nth-child(6){ grid-column:span 1; } }
@@ -195,6 +198,13 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:500; line-height:1.06; }
 .cmap{ margin-top:10px; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
 .cmap iframe{ width:100%; height:210px; border:0; display:block; filter:grayscale(.3) sepia(.1); }
 @media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } .frow{ grid-template-columns:1fr; } }
+
+/* placeholder de foto (motivo de prato) */
+.ph{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; text-align:center; padding:24px;
+  background:radial-gradient(circle at 30% 22%, rgba(255,255,255,.45), transparent 60%), repeating-linear-gradient(45deg, rgba(36,26,18,.04) 0 14px, transparent 14px 28px); }
+.ph-motif svg{ width:clamp(54px,8vw,80px); height:clamp(54px,8vw,80px); color:var(--accent); opacity:.55; }
+.ph-name{ font-family:var(--display); font-style:italic; font-size:clamp(1.3rem,2.6vw,1.9rem); color:var(--ink2); line-height:1.1; }
+.ph-cap{ font-size:.6rem; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); }
 
 /* WhatsApp flutuante */
 .wa{ position:fixed; right:22px; bottom:22px; z-index:800; width:56px; height:56px; border-radius:50%; background:#25D366; display:grid; place-items:center; box-shadow:0 10px 26px -8px rgba(37,211,102,.55); transition:transform .3s; }
@@ -247,6 +257,8 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:500; line-height:1.06; }
   var CLK='<svg viewBox="0 0 24 24" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
   var STAR='<svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6L3.4 9.4l6-.8z"/></svg>';
   var ARR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var PLATE='<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="60" cy="58" r="33"/><circle cx="60" cy="58" r="23" stroke-dasharray="2 5"/><path d="M31 30v16a6 6 0 006 6V30M37 30v52"/><path d="M89 30c-5 0-8 6-8 15s3 9 8 9v28"/></svg>';
+  function emptyMedia(cap){ return '<div class="ph"><span class="ph-motif">'+PLATE+'</span><span class="ph-name">'+esc((S.brand&&S.brand.name)||'')+'</span>'+(cap?'<span class="ph-cap">'+esc(cap)+'</span>':'')+'</div>'; }
 
   /* accent do nicho */
   var acc = (S.theme && S.theme.accent) || '#A4724B';
@@ -276,7 +288,7 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:500; line-height:1.06; }
   var html='';
 
   /* HERO */
-  var heroImg = h.image ? '<img loading="lazy" src="'+esc(h.image)+'" alt="'+esc(b.name)+'">' : '<span class="vlabel">'+esc(h.imageLabel||'Foto do prato aqui')+'</span>';
+  var heroImg = h.image ? '<img loading="lazy" src="'+esc(h.image)+'" alt="'+esc(b.name)+'">' : emptyMedia(h.imageLabel||'Espaço para a sua foto');
   var heroBadge='';
   if(h.badge){ var bp=String(h.badge).split('·'); var rm=bp[0].match(/[★\d.,\s]+/); var big=(rm?rm[0]:bp[0]).trim(); var small=bp[1]?bp[1].trim():(/google/i.test(bp[0])?'no Google':'Avaliação'); heroBadge='<div class="hero-badge"><b>'+esc(big)+'</b><small>'+esc(small)+'</small></div>'; }
   var ib='';
@@ -307,7 +319,7 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:500; line-height:1.06; }
   /* SOBRE */
   if(S.about){
     var a=S.about;
-    var media = a.image ? '<img loading="lazy" src="'+esc(a.image)+'" alt="'+esc(b.name)+'">' : '<span class="ml">'+esc(ini(b.name))+'</span>';
+    var media = a.image ? '<img loading="lazy" src="'+esc(a.image)+'" alt="'+esc(b.name)+'">' : emptyMedia('Nosso espaço');
     html+='<section class="section" id="sobre"><div class="container about-grid">'+
       '<div class="about-media" data-rev>'+media+'</div>'+
       '<div class="about-text"><span class="kicker" data-rev>'+esc(a.eyebrow||'Sobre')+'</span>'+
@@ -343,12 +355,19 @@ h1,h2,h3,h4{ font-family:var(--display); font-weight:500; line-height:1.06; }
   /* GALERIA / INSTAGRAM */
   if(S.instagram&&S.instagram.show!==false&&S.instagram.url){
     var ig=S.instagram;
-    var cell='<a class="gal-item" href="'+esc(ig.url)+'" target="_blank" rel="noopener"><span class="g">'+esc(ini(b.name))+'</span><span class="ov">'+IGS+'</span></a>';
+    var gcaps=(ig.captions&&ig.captions.length)?ig.captions:hl.slice(0);
+    var gimgs=ig.images||[];
+    var cells='';
+    for(var gi=0;gi<6;gi++){
+      var gc=gcaps.length?gcaps[gi%gcaps.length]:'';
+      var inner=gimgs[gi]?'<img loading="lazy" src="'+esc(gimgs[gi])+'" alt="'+esc(gc)+'">':'<span class="g">'+PLATE+(gc?'<em>'+esc(gc)+'</em>':'')+'</span>';
+      cells+='<a class="gal-item" href="'+esc(ig.url)+'" target="_blank" rel="noopener">'+inner+'<span class="ov">'+IGS+'</span></a>';
+    }
     html+='<section class="section" id="galeria"><div class="container">'+
       '<div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px">'+
       '<div><span class="kicker" data-rev>'+esc(ig.handle||'@instagram')+'</span><h2 class="sec-title" data-rev data-d="1">'+(ig.titleHtml||esc(ig.title||'Da nossa cozinha'))+'</h2></div>'+
       '<a href="'+esc(ig.url)+'" target="_blank" rel="noopener" class="btn btn--ghost" data-rev data-d="1">Seguir '+IGS+'</a></div>'+
-      '<div class="gal-grid" data-rev data-d="1">'+Array(7).join(cell)+'</div></div></section>';
+      '<div class="gal-grid" data-rev data-d="1">'+cells+'</div></div></section>';
   }
 
   /* DEPOIMENTOS */
