@@ -14,6 +14,7 @@ const REGRAS = [
   ["advocacia",    /advog|advocac|escrit[oó]rio jur[ií]dic|assessoria jur[ií]dic|direito de fam|direito (?:civil|penal|trabalhist|tribut|de fam)/i],
   ["energia-solar",/energia solar|solar fotovolt|fotovolt|painel solar|painéis solar|placa solar|energia limpa|gera[çc][ãa]o (?:de )?energia/i],
   ["saude",        /fisioterap|nutricionist|nutri[çc][ãa]o cl[ií]nic|fonoaudi|podolog|reabilita[çc][ãa]o|cl[ií]nica de sa[uú]de|terapia ocupacional|quiropraxia|pilates cl[ií]nic/i],
+  ["fotografia",   /fot[oó]graf|fotografia|est[uú]dio fotogr|ensaio fotogr|photo ?studio|fotografo de casamento/i],
   ["barbearia",   /barbear|barber|navalha/i],
   ["automotivo",  /lava.?r[aá]pid|est[eé]tica automotiv|funilaria|polimento|martelinho|car ?wash|detailing|oficina|borracharia|auto ?center/i],
   ["estetica",    /est[eé]tic|sobrancelh|depila|spa|skincar|cl[ií]nica de beleza|sal[ãa]o de beleza|cabelo|manicure|nail|maquiag|micropigment|massag/i],

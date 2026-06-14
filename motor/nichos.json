@@ -360,6 +360,41 @@
     "footer": { "tagline": "Mais economia, mais energia limpa." }
   },
 
+  "fotografia": {
+    "fonts": { "display": "\"Space Grotesk\", sans-serif", "body": "\"Inter\", sans-serif" },
+    "fontsGoogle": ["Space+Grotesk:wght@400;500;600;700", "Inter:wght@300;400;500;600"],
+    "design": { "hero": "centered", "shape": "sharp", "display": "modern" },
+    "schemes": [
+      { "bg":"#0C0C0E", "bgAlt":"#111114", "surface":"#16161A", "accent":"#C9A24B", "accent2":"#E6CC8A", "text":"#F0EEE9", "muted":"#8C8A86", "border":"#222227" },
+      { "bg":"#0E0B0A", "bgAlt":"#13100E", "surface":"#1A1512", "accent":"#C07A52", "accent2":"#E6B596", "text":"#F1ECE8", "muted":"#8E847C", "border":"#241D18" },
+      { "bg":"#0A0D0C", "bgAlt":"#0E1211", "surface":"#141A18", "accent":"#8AA89E", "accent2":"#C2DDD4", "text":"#ECF1EF", "muted":"#849089", "border":"#1C2622" }
+    ],
+    "hero": { "eyebrow":"Fotografia", "title":"Eternize os seus melhores momentos", "sub":"Ensaios, casamentos e eventos registrados com sensibilidade e um olhar autoral." },
+    "services": { "eyebrow":"Pacotes", "navLabel":"Pacotes", "title":"Pacotes & Ensaios", "intro":"Cada projeto é único — escolha o ponto de partida e a gente personaliza.", "ctaLabel":"Pedir orçamento",
+      "items":[
+        {"icon":"heart","name":"Casamentos","desc":"Cobertura completa do seu grande dia, do making of à festa.","price":"Sob consulta"},
+        {"icon":"camera","name":"Ensaios","desc":"Ensaios individuais, de casal e família, em estúdio ou externa.","price":"A partir de R$ 350"},
+        {"icon":"star","name":"Newborn & Família","desc":"Os primeiros dias do bebê e a família reunida, com todo o cuidado.","price":"Sob consulta"},
+        {"icon":"sparkle","name":"Eventos","desc":"Aniversários, formaturas e eventos corporativos registrados.","price":"Sob consulta"}
+      ]},
+    "portfolio": { "eyebrow":"Portfólio", "navLabel":"Portfólio", "title":"Trabalhos recentes", "intro":"Uma seleção dos nossos registros favoritos.",
+      "filtros":[{"key":"todos","label":"Todos"},{"key":"casamento","label":"Casamentos"},{"key":"ensaio","label":"Ensaios"},{"key":"newborn","label":"Newborn"},{"key":"eventos","label":"Eventos"}],
+      "items":[
+        {"cat":"casamento","titulo":"Marina & Téo"},
+        {"cat":"ensaio","titulo":"Ensaio externo"},
+        {"cat":"newborn","titulo":"Bem-vindo, Theo"},
+        {"cat":"casamento","titulo":"Casamento no campo"},
+        {"cat":"eventos","titulo":"15 anos da Júlia"},
+        {"cat":"ensaio","titulo":"Ensaio de casal"},
+        {"cat":"newborn","titulo":"Primeiros dias"},
+        {"cat":"eventos","titulo":"Formatura"},
+        {"cat":"casamento","titulo":"Detalhes do dia"}
+      ]},
+    "testimonials": { "show": false },
+    "instagram": { "show": false },
+    "footer": { "tagline": "Memórias que ficam para sempre." }
+  },
+
   "moda": {
     "fonts": { "display": "\"Playfair Display\", serif", "body": "\"DM Sans\", sans-serif" },
     "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;1,400;1,500", "DM+Sans:wght@300;400;500"],

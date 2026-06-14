@@ -14,7 +14,8 @@
     "solar-tech":      { "arquivo": "solar-tech.html",      "desc": "Energia solar dedicada: dark moderno (Poppins), card de economia no hero, faixa marquee de benefícios, banda de números, soluções em cards, 'como funciona' em 4 etapas e depoimento central. Para energia solar/fotovoltaica e instaladores." },
     "imobiliaria-vitrine": { "arquivo": "imobiliaria-vitrine.html", "desc": "Imobiliária portal claro: hero de vitrine com filtro Comprar/Alugar e CATÁLOGO DE IMÓVEIS como protagonista (cards com foto, preço, bairro e specs quartos/banheiros/vagas/área, filtrável). Lê SITE.imoveis. Bem diferente do imoveis-premium (dark/gold). Para imobiliárias e corretores com carteira de imóveis." },
     "academia-power":  { "arquivo": "academia-power.html",  "desc": "Academia dedicada: dark enérgico, Oswald condensado, acento vivo. Protagonistas: TABELA DE PLANOS (preço + benefícios, com plano em destaque) e GRADE DE AULAS da semana; modalidades em cards. Lê SITE.planos e SITE.aulas. Para academias, crossfit, studios e box." },
-    "estetica-glow":   { "arquivo": "estetica-glow.html",   "desc": "Estética/beleza dedicada: editorial claro e sofisticado (Marcellus), SLIDER ANTES/DEPOIS interativo (arrasta pra revelar) e seção de AGENDAMENTO (embed ou WhatsApp) como protagonistas; serviços com preço, galeria de resultados. Lê SITE.antesDepois e SITE.agenda. Para clínicas de estética, salões e studios de beleza." }
+    "estetica-glow":   { "arquivo": "estetica-glow.html",   "desc": "Estética/beleza dedicada: editorial claro e sofisticado (Marcellus), SLIDER ANTES/DEPOIS interativo (arrasta pra revelar) e seção de AGENDAMENTO (embed ou WhatsApp) como protagonistas; serviços com preço, galeria de resultados. Lê SITE.antesDepois e SITE.agenda. Para clínicas de estética, salões e studios de beleza." },
+    "foto-portfolio":  { "arquivo": "foto-portfolio.html",  "desc": "Fotografia dedicada: dark minimal (Space Grotesk), hero imersivo e PORTFÓLIO MASONRY filtrável por categoria como protagonista (a imagem é o herói); pacotes, depoimentos e contato de orçamento. Lê SITE.portfolio. Para fotógrafos e estúdios." }
   },
 
   "porNicho": {
@@ -34,6 +35,7 @@
     "advocacia":   ["juris-classic", "corporate", "imoveis-premium"],
     "saude":       ["clean-editorial", "corporate"],
     "energia-solar": ["solar-tech", "corporate"],
+    "fotografia":  ["foto-portfolio", "dark-luxury"],
     "generico":    ["clean-editorial", "dark-luxury", "corporate"],
     "_default":    ["dark-luxury"]
   }
