@@ -277,6 +277,66 @@
     "footer": { "tagline": "O seu direito, defendido com seriedade." }
   },
 
+  "saude": {
+    "fonts": { "display": "\"Poppins\", sans-serif", "body": "\"Inter\", sans-serif" },
+    "fontsGoogle": ["Poppins:wght@500;600;700", "Inter:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "round", "display": "modern" },
+    "schemes": [
+      { "bg":"#FAFCFC", "bgAlt":"#EAF5F3", "surface":"#FFFFFF", "accent":"#2F8F83", "accent2":"#9FD8CF", "text":"#16302C", "muted":"#7A8C88", "border":"#E5EEEC" },
+      { "bg":"#FAFBFD", "bgAlt":"#EAF1F9", "surface":"#FFFFFF", "accent":"#3D7DBF", "accent2":"#A7C7E8", "text":"#16263A", "muted":"#7C8A9A", "border":"#E5EBF2" },
+      { "bg":"#FAFCFA", "bgAlt":"#ECF5EE", "surface":"#FFFFFF", "accent":"#4F9E76", "accent2":"#ABDCBF", "text":"#173024", "muted":"#7C8E84", "border":"#E6EFE9" }
+    ],
+    "hero": { "eyebrow":"Saúde & Bem-estar", "title":"Cuidar da sua saúde com atenção e acolhimento", "sub":"Atendimento humanizado e tratamentos personalizados para você viver com mais qualidade, equilíbrio e bem-estar." },
+    "services": { "eyebrow":"Tratamentos", "navLabel":"Tratamentos", "title":"Como podemos cuidar de você", "intro":"Atendimento próximo e individualizado em cada etapa do seu cuidado.", "ctaLabel":"Agendar avaliação",
+      "items":[
+        {"icon":"face","name":"Avaliação & Diagnóstico","desc":"Entendemos o seu caso a fundo para indicar o melhor tratamento.","price":"Sob consulta"},
+        {"icon":"hand","name":"Fisioterapia","desc":"Recuperação de lesões, dores e mobilidade com técnica e cuidado.","price":"Sob consulta"},
+        {"icon":"heart","name":"Reabilitação","desc":"Acompanhamento para você retomar as atividades com segurança.","price":"Sob consulta"},
+        {"icon":"leaf","name":"Prevenção & Bem-estar","desc":"Cuidados para manter a sua saúde em dia e evitar novas queixas.","price":"Sob consulta"},
+        {"icon":"check","name":"Acompanhamento","desc":"Evolução monitorada de perto, com ajustes ao longo do tratamento.","price":"Sob consulta"}
+      ]},
+    "process": { "eyebrow":"Como funciona", "navLabel":"Como funciona", "title":"Um cuidado em cada etapa", "intro":"Um caminho claro para você cuidar da sua saúde com tranquilidade.",
+      "steps":[
+        {"n":"01","name":"Avaliação","desc":"Ouvimos o seu caso e os seus objetivos com atenção."},
+        {"n":"02","name":"Plano de cuidado","desc":"Montamos um tratamento personalizado para você."},
+        {"n":"03","name":"Acompanhamento","desc":"Acompanhamos a sua evolução e ajustamos quando preciso."}
+      ]},
+    "testimonials": { "show": false },
+    "instagram": { "show": false },
+    "footer": { "tagline": "A sua saúde em boas mãos." }
+  },
+
+  "energia-solar": {
+    "fonts": { "display": "\"Poppins\", sans-serif", "body": "\"Inter\", sans-serif" },
+    "fontsGoogle": ["Poppins:wght@500;600;700;800", "Inter:wght@300;400;500;600"],
+    "design": { "hero": "split-right", "shape": "sharp", "display": "modern" },
+    "schemes": [
+      { "bg":"#0C1118", "bgAlt":"#111824", "surface":"#16202E", "accent":"#F2A33C", "accent2":"#FFD089", "text":"#EEF3F8", "muted":"#8B97A6", "border":"#1F2B3A" },
+      { "bg":"#0B1410", "bgAlt":"#0F1B15", "surface":"#15241C", "accent":"#2FB179", "accent2":"#9BE3C2", "text":"#EAF5EF", "muted":"#83968C", "border":"#1C2C24" },
+      { "bg":"#0B1118", "bgAlt":"#0F1822", "surface":"#15202E", "accent":"#2D8FD0", "accent2":"#9CCBEC", "text":"#EAF2F9", "muted":"#8593A4", "border":"#1C2A3A" }
+    ],
+    "hero": { "eyebrow":"Energia Solar Fotovoltaica", "title":"Energia solar para você economizar de verdade", "sub":"Reduza até 95% na conta de luz com um sistema dimensionado para o seu consumo — projeto, instalação e suporte do começo ao fim." },
+    "services": { "eyebrow":"Soluções", "navLabel":"Soluções", "title":"Energia solar para cada necessidade", "intro":"Sistemas sob medida para residências, empresas e produtores rurais.", "ctaLabel":"Fazer simulação",
+      "items":[
+        {"icon":"home","name":"Energia Residencial","desc":"Reduza a conta de luz da sua casa com um sistema dimensionado para você.","price":"Sob consulta"},
+        {"icon":"building","name":"Energia para Empresas","desc":"Corte custos fixos e valorize o seu negócio com geração própria.","price":"Sob consulta"},
+        {"icon":"leaf","name":"Energia Rural & Agro","desc":"Mais autonomia e economia para a sua propriedade no campo.","price":"Sob consulta"},
+        {"icon":"bolt","name":"Projeto & Instalação","desc":"Equipe própria do projeto à instalação, com segurança e agilidade.","price":"Sob consulta"},
+        {"icon":"wrench","name":"Manutenção & Limpeza","desc":"Manutenção e limpeza dos painéis para manter a máxima geração.","price":"Sob consulta"},
+        {"icon":"chart","name":"Simulação de Economia","desc":"Calculamos a sua economia a partir da sua conta de luz, sem compromisso.","price":"Gratuito"}
+      ]},
+    "process": { "eyebrow":"Como funciona", "navLabel":"Como funciona", "title":"Da simulação à economia", "intro":"Um processo simples e transparente, do primeiro contato à conta mais barata.",
+      "steps":[
+        {"n":"01","name":"Simulação","desc":"Analisamos a sua conta de luz e calculamos a sua economia."},
+        {"n":"02","name":"Projeto","desc":"Dimensionamos o sistema ideal para o seu consumo."},
+        {"n":"03","name":"Instalação","desc":"Nossa equipe instala com segurança, qualidade e agilidade."},
+        {"n":"04","name":"Economia","desc":"Você acompanha a economia na conta de luz todo mês."}
+      ]},
+    "testimonials": { "show": false },
+    "instagram": { "show": false },
+    "footer": { "tagline": "Mais economia, mais energia limpa." }
+  },
+
   "moda": {
     "fonts": { "display": "\"Playfair Display\", serif", "body": "\"DM Sans\", sans-serif" },
     "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;1,400;1,500", "DM+Sans:wght@300;400;500"],
