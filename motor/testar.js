@@ -61,15 +61,16 @@ function sites(){
       const header = document.querySelector('header');
       const nav = header ? [...header.querySelectorAll('a[href^="#"]')].map(check) : [];
       const ctas = [...document.querySelectorAll('main a[href^="#"]')].map(check);
-      const burger = document.querySelector('.burger, .brg');
-      const links = document.querySelector('.nav-links, .nl');
-      const open0 = links ? (links.classList.contains('open') || links.classList.contains('op')) : null;
+      const burger = document.querySelector('button[aria-label="Menu"], .burger, .brg, .nav-burger');
+      const menu = document.querySelector('.mobile-menu, .nav-menu, .nav-links, .nl');
+      function op(el){ return !!el && (el.classList.contains('open') || el.classList.contains('op') || el.classList.contains('active')); }
+      const before = op(burger) || op(menu);
       if (burger) burger.click();
-      const open1 = links ? (links.classList.contains('open') || links.classList.contains('op')) : null;
+      const after = op(burger) || op(menu);
       return {
         nav: nav, ctas: ctas,
         burgerVisible: burger ? getComputedStyle(burger).display !== 'none' : null,
-        toggled: (open0 === false && open1 === true),
+        toggled: (before === false && after === true),
         overflow: document.documentElement.scrollWidth - window.innerWidth
       };
     });
@@ -84,7 +85,7 @@ function sites(){
     await page.setViewportSize({ width: 1440, height: 900 });
     await sleep(200);
     const d = await page.evaluate(() => {
-      const burger = document.querySelector('.burger, .brg');
+      const burger = document.querySelector('button[aria-label="Menu"], .burger, .brg, .nav-burger');
       return { burgerVisible: burger ? getComputedStyle(burger).display !== 'none' : null,
                overflow: document.documentElement.scrollWidth - window.innerWidth };
     });

@@ -480,6 +480,19 @@ footer {
     g('nav-right').innerHTML = nr;
   }
 
+  // ── MENU MOBILE (faltava: popular #nav-menu + ligar o #nav-burger) ──
+  var nm = g('nav-menu'), bg = g('nav-burger');
+  if(nm){
+    var mm = '<a class="m-link" href="#sobre">Sobre</a>'
+      + '<a class="m-link" href="#colecoes">'+(sv.navLabel||'Coleções')+'</a>'
+      + '<a class="m-link" href="#contato">Contato</a>';
+    if(ph) mm += '<a class="m-cta" href="'+(wn?'https://wa.me/'+String(wn).replace(/\D/g,''):'tel:'+ph)+'">'+ico('phone')+ph+'</a>';
+    nm.innerHTML = mm;
+    var tmNav = function(f){ var o=(f!==undefined)?f:!nm.classList.contains('open'); nm.classList.toggle('open',o); if(bg) bg.classList.toggle('open',o); document.body.style.overflow=o?'hidden':''; };
+    if(bg) bg.addEventListener('click', function(){ tmNav(); });
+    nm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ tmNav(false); }); });
+  }
+
   // ── HERO ─────────────────────────────────────────
   var h = S.hero || {}; var niH = (ni.hero) || {};
   if(h.title && !h.titleHtml && /[<>]/.test(h.title)) h.titleHtml = h.title;
