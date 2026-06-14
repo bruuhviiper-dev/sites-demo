@@ -1,0 +1,75 @@
+{
+  "categoria": "Clínica de Fisioterapia",
+  "nicho": "saude",
+  "slug": "fisioterapia-vivien-zanfolin",
+  "estilo": "clean-editorial",
+  "scheme": 0,
+
+  "brand": {
+    "name": "Vivien Zanfolin",
+    "tagline": "Fisioterapia & Pilates · Rio Preto",
+    "nameHtml": "Vivien <b>Zanfolin</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Fisioterapia & Pilates · Boa Vista, Rio Preto",
+    "titleHtml": "Movimento e cuidado para <em>você viver melhor</em>",
+    "sub": "Fisioterapia e Pilates com atendimento humano e personalizado, na Boa Vista — para recuperar movimentos, aliviar dores e cuidar do seu corpo com quem entende.",
+    "badge": "★ 5,0 no Google · 3 avaliações",
+    "ctaPrimary": { "label": "Agendar avaliação", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver tratamentos", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a clínica",
+    "titleHtml": "Cuidado que respeita o <em>seu tempo</em>",
+    "paragraphs": [
+      "A clínica da fisioterapeuta Vivien Zanfolin une fisioterapia e Pilates num atendimento próximo e individualizado, pensado para a sua recuperação e o seu bem-estar.",
+      "Um espaço acolhedor, conduzido por mulheres empreendedoras, onde cada tratamento é montado para o seu caso — no seu ritmo e com a atenção que você merece."
+    ],
+    "stats": [
+      { "num": 5, "suffix": ",0", "label": "Nota no Google" },
+      { "num": 3, "suffix": "+",  "label": "Avaliações" }
+    ],
+    "certs": [
+      { "icon": "check", "label": "CREFITO 50026-F" },
+      { "icon": "heart", "label": "Atendimento humanizado" },
+      { "icon": "leaf",  "label": "Studio de Pilates" },
+      { "icon": "star",  "label": "★ 5,0 no Google" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Tratamentos",
+    "navLabel": "Tratamentos",
+    "titleHtml": "Como podemos <em>cuidar de você</em>",
+    "intro": "Atendimento individualizado, do diagnóstico ao acompanhamento da sua evolução.",
+    "items": [
+      { "icon": "hand",  "name": "Fisioterapia",            "desc": "Recuperação de lesões, dores e mobilidade com técnica e cuidado.",                "price": "Sob consulta" },
+      { "icon": "leaf",  "name": "Pilates",                 "desc": "Fortalecimento, postura e bem-estar com aulas personalizadas.",                   "price": "Sob consulta" },
+      { "icon": "drop",  "name": "Laserterapia",            "desc": "Tratamento de dores e inflamações com laser de baixa potência.",                  "price": "Sob consulta" },
+      { "icon": "dumbbell", "name": "Treinamento com Elásticos", "desc": "Fortalecimento e reabilitação com exercícios resistidos e seguros.",          "price": "Sob consulta" },
+      { "icon": "sparkle", "name": "ILIB",                  "desc": "Laser intravascular para melhora da circulação, imunidade e disposição.",          "price": "Sob consulta" },
+      { "icon": "face",  "name": "Avaliação Individual",    "desc": "Diagnóstico completo do seu caso para um plano de tratamento sob medida.",        "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Agende a sua avaliação",
+    "titleHtml": "Vamos cuidar de <em>você</em>",
+    "whatsapp":     "5517981371009",
+    "phoneDisplay": "(17) 98137-1009",
+    "address": "R. Cap. José Verdi, 1730 - Boa Vista, São José do Rio Preto - SP, 15025-530",
+    "hours":   "Seg a Sex · a partir das 7h30",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Cap.+Jos%C3%A9+Verdi,+1730+Boa+Vista+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Movimento, saúde e bem-estar para você."
+  }
+}

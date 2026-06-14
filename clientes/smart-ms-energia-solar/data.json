@@ -1,0 +1,51 @@
+{
+  "categoria": "Fornecedor de energia solar",
+  "nicho": "energia-solar",
+  "slug": "smart-ms-energia-solar",
+  "estilo": "solar-tech",
+  "scheme": 0,
+
+  "brand": {
+    "name": "SMART MS Energia Solar",
+    "tagline": "Energia Solar Fotovoltaica · Rio Preto",
+    "nameHtml": "SMART MS <b>Solar</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Energia Solar Fotovoltaica · Rio Preto",
+    "titleHtml": "Reduza até 95% na <em>sua conta de luz</em>",
+    "sub": "Energia solar para a sua casa, empresa ou propriedade rural em São José do Rio Preto — projeto, instalação e suporte completos, com atendimento próximo da sua região.",
+    "badge": "Simulação gratuita",
+    "cardTitle": "Por que energia solar",
+    "ctaPrimary": { "label": "Fazer simulação", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver soluções", "href": "#solucoes" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a SMART MS",
+    "titleHtml": "Energia solar com <em>atendimento local</em>",
+    "paragraphs": [
+      "A SMART MS leva energia solar para residências, empresas e produtores rurais de São José do Rio Preto e região, com projeto e instalação feitos sob medida para o seu consumo.",
+      "Mais economia na conta de luz, valorização do seu imóvel e energia limpa — com um atendimento próximo, do primeiro contato ao acompanhamento da sua economia."
+    ],
+    "certs": [
+      { "icon": "chart",  "label": "Até 95% de economia" },
+      { "icon": "shield", "label": "Projeto + instalação" },
+      { "icon": "leaf",   "label": "Energia limpa e renovável" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Contato",
+    "titleHtml": "Faça a sua <em>simulação gratuita</em>",
+    "whatsapp":     "5517992569100",
+    "phoneDisplay": "(17) 99256-9100",
+    "address": "R. Visc. de Ouro Preto, 1207 - Vila Boa Esperança, São José do Rio Preto - SP, 15030-300",
+    "hours":   "Aberto a partir das 8h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Visc.+de+Ouro+Preto,+1207+Vila+Boa+Esperan%C3%A7a+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  }
+}
