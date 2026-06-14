@@ -5,6 +5,7 @@
   "main": "motor/gerar.js",
   "scripts": {
     "gerar": "node motor/gerar.js",
+    "publicar": "node motor/publicar.js",
     "apresentar": "node motor/apresentar.js"
   },
   "keywords": [],

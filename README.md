@@ -53,14 +53,20 @@ veterinaria/
    node motor/gerar.js clientes/<slug>/data.json
    ```
    Saída: `clientes/<slug>/<slug>.html`
-4. **Gere a apresentação** (vídeo + prints):
+4. **Publique no GitHub Pages** (gera + commit + push num passo só):
+   ```bash
+   npm run publicar -- <slug>
+   ```
+   Imprime o **link no ar** + lembra do `link.md` (abordagem de WhatsApp).
+   Use depois de confirmar no Maps que a empresa **não tem site**.
+5. **Gere a apresentação** (vídeo + prints):
    ```bash
    node motor/apresentar.js clientes/<slug>/<slug>.html
    ```
    Saída: `clientes/<slug>/apresentacao/`
 
-> Atalhos: `npm run gerar -- clientes/<slug>/data.json` e
-> `npm run apresentar -- clientes/<slug>/<slug>.html`
+> Atalhos: `npm run gerar -- clientes/<slug>/data.json`,
+> `npm run publicar -- <slug>` e `npm run apresentar -- clientes/<slug>/<slug>.html`
 
 ---
 

@@ -8,24 +8,25 @@
     "corporate":       { "arquivo": "corporate.html",       "desc": "Premium corporativo: azul-marinho, estrutura em grid, sinais de confiança, seção de processo. Para contabilidade/consultoria/advocacia." },
     "boutique":        { "arquivo": "boutique.html",        "desc": "Moda editorial: único template de fundo claro (creme), Playfair Display itálico, grid de coleções estilo lookbook com overlay, marquee de categorias. Para moda, vestuário e boutiques." },
     "petshop-modern":  { "arquivo": "petshop-modern.html",  "desc": "Pet shop moderno e amigável (DNA Petz/Cobasi/Petlove): fundo claro, cantos arredondados, sombras suaves, azul + acento quente, faixa de benefícios (entrega/leva-e-traz/retirada), cards de categorias com ícones, patinhas decorativas. Para pet shop e petstore." },
-    "imoveis-premium": { "arquivo": "imoveis-premium.html", "desc": "Imobiliária premium: dark navy + ouro, Playfair Display, cartão de credenciais no hero, banda de stats, processo de avaliação em 4 etapas, grid de diferenciais e depoimentos. Para consultoria imobiliária, avaliação e corretores." }
+    "imoveis-premium": { "arquivo": "imoveis-premium.html", "desc": "Imobiliária premium: dark navy + ouro, Playfair Display, cartão de credenciais no hero, banda de stats, processo de avaliação em 4 etapas, grid de diferenciais e depoimentos. Para consultoria imobiliária, avaliação e corretores." },
+    "menu-gourmet":    { "arquivo": "menu-gourmet.html",    "desc": "Restaurante dedicado: hero apetitoso com foto e selo de nota, faixa marquee de destaques, CARDÁPIO como protagonista em seção escura tipo ementa de bistrô (prato → linha pontilhada → preço, agrupável por categoria), galeria da cozinha e contato estilo reserva. Playfair Display + Jost, base creme quente. Para restaurante, pizzaria, lanchonete, cafeteria." }
   },
 
   "porNicho": {
-    "tatuagem":    ["ink-bold"],
-    "psicologia":  ["clean-editorial"],
-    "contabilidade": ["corporate"],
-    "estetica":    ["clean-editorial", "dark-luxury"],
+    "tatuagem":    ["ink-bold", "dark-luxury"],
+    "psicologia":  ["clean-editorial", "corporate"],
+    "contabilidade": ["corporate", "imoveis-premium"],
+    "estetica":    ["clean-editorial", "dark-luxury", "boutique"],
     "barbearia":   ["dark-luxury", "ink-bold"],
-    "restaurante": ["clean-editorial", "dark-luxury"],
-    "odontologia": ["clean-editorial"],
-    "veterinaria": ["clean-editorial"],
-    "petshop":     ["petshop-modern"],
-    "automotivo":  ["dark-luxury"],
-    "academia":    ["dark-luxury"],
-    "moda":        ["boutique"],
-    "imobiliaria": ["imoveis-premium"],
-    "generico":    ["clean-editorial", "dark-luxury"],
+    "restaurante": ["menu-gourmet", "dark-luxury"],
+    "odontologia": ["clean-editorial", "corporate"],
+    "veterinaria": ["clean-editorial", "petshop-modern"],
+    "petshop":     ["petshop-modern", "clean-editorial"],
+    "automotivo":  ["dark-luxury", "ink-bold"],
+    "academia":    ["dark-luxury", "ink-bold"],
+    "moda":        ["boutique", "dark-luxury"],
+    "imobiliaria": ["imoveis-premium", "corporate"],
+    "generico":    ["clean-editorial", "dark-luxury", "corporate"],
     "_default":    ["dark-luxury"]
   }
 }

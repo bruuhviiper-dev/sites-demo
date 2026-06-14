@@ -52,6 +52,22 @@ nav {
 }
 .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
 
+/* ═══ NAV — burger + menu mobile ═══ */
+.nav-burger {
+  display: none; width: 42px; height: 42px; flex-shrink: 0;
+  border: 1px solid var(--border); border-radius: 50%;
+  background: var(--surface); position: relative; cursor: pointer;
+}
+.nav-burger span {
+  position: absolute; left: 11px; width: 20px; height: 1.5px;
+  background: var(--text); transition: .35s var(--ease);
+}
+.nav-burger span:nth-child(1) { top: 17px; }
+.nav-burger span:nth-child(2) { top: 23px; }
+.nav-burger.open span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.nav-burger.open span:nth-child(2) { top: 20px; transform: rotate(-45deg); }
+.nav-menu { display: none; }
+
 /* ═══ HERO ═══ */
 #hero {
   min-height: 100vh;
@@ -294,6 +310,26 @@ footer {
   footer { grid-template-columns: 1fr; gap: 12px; }
   .ft-tagline,.ft-copy { text-align: left; }
   .nav-group.hide-sm { display: none; }
+  #nav-right { display: none; }
+  .nav-burger { display: block; }
+  .nav-menu {
+    display: flex; position: fixed; inset: 0; z-index: 190;
+    flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    padding: 90px 24px 40px; background: var(--bg);
+    opacity: 0; visibility: hidden; transform: translateY(-12px);
+    transition: opacity .38s var(--ease), transform .38s var(--ease), visibility .38s;
+  }
+  .nav-menu.open { opacity: 1; visibility: visible; transform: none; }
+  .nav-menu a.m-link {
+    font-family: var(--font-d); font-style: italic; font-size: 2rem;
+    color: var(--text); padding: 10px;
+  }
+  .nav-menu a.m-link:hover { color: var(--accent); }
+  .nav-menu .m-cta {
+    margin-top: 22px; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--text); border: 1px solid var(--border); padding: 14px 26px; border-radius: 100px;
+    display: flex; align-items: center; gap: 8px;
+  }
 }
 @media(max-width:540px){
   .col-grid { grid-template-columns: 1fr 1fr; }
@@ -310,7 +346,9 @@ footer {
   <div class="nav-group hide-sm" id="nav-left"></div>
   <a class="nav-brand" href="#" id="nav-brand"></a>
   <div class="nav-group" id="nav-right"></div>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span></button>
 </nav>
+<div class="nav-menu" id="nav-menu"></div>
 
 <!-- HERO -->
 <section id="hero">
