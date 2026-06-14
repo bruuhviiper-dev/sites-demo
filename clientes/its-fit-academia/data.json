@@ -1,0 +1,73 @@
+{
+  "categoria": "Academia",
+  "nicho": "academia",
+  "slug": "its-fit-academia",
+  "estilo": "academia-power",
+  "scheme": 0,
+
+  "brand": {
+    "name": "It's Fit Academia",
+    "tagline": "Academia · Parque Industrial · Rio Preto",
+    "nameHtml": "It's <b>Fit</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Academia · Parque Industrial, Rio Preto",
+    "titleHtml": "Sua evolução <em>começa aqui</em>",
+    "sub": "Estrutura completa de musculação e treino funcional, com professores presentes e o ambiente certo para você sair do lugar — no Parque Industrial.",
+    "chips": ["Musculação", "Funcional", "Aceita Gympass"],
+    "ctaPrimary": { "label": "Ver planos", "href": "#planos" },
+    "ctaGhost":   { "label": "Aula experimental grátis", "href": "#contato" }
+  },
+
+  "services": {
+    "eyebrow": "Modalidades",
+    "navLabel": "Modalidades",
+    "titleHtml": "Treine do <em>seu jeito</em>",
+    "items": [
+      { "icon": "dumbbell", "name": "Musculação",        "desc": "Equipamentos modernos e acompanhamento dos professores na sua ficha." },
+      { "icon": "fire",     "name": "Treino Funcional",  "desc": "Força, resistência e condicionamento em treinos dinâmicos." },
+      { "icon": "heart",    "name": "Treino Localizado", "desc": "Foco nos grupos musculares que você quer trabalhar." },
+      { "icon": "sparkle",  "name": "Avaliação Física",  "desc": "Acompanhe a sua evolução com dados precisos, do início ao fim." }
+    ]
+  },
+
+  "planos": {
+    "eyebrow": "Planos",
+    "navLabel": "Planos",
+    "titleHtml": "Escolha o seu <em>plano</em>",
+    "intro": "Comece a treinar hoje mesmo. Valores ilustrativos — confirme as condições atuais com a academia.",
+    "ctaLabel": "Quero esse plano",
+    "items": [
+      { "nome": "Fit",   "preco": "99",  "periodo": "/mês", "beneficios": ["Acesso à musculação", "Treino funcional", "Avaliação física", "App de treino"] },
+      { "nome": "Total", "preco": "129", "periodo": "/mês", "destaque": true, "selo": "Mais escolhido", "beneficios": ["Tudo do Plano Fit", "Treino localizado", "Reavaliação mensal", "Acesso livre nos horários"] },
+      { "nome": "Anual", "preco": "79",  "periodo": "/mês", "beneficios": ["Tudo do Plano Total", "Melhor custo-benefício", "12x sem juros", "Aceitamos Gympass / Wellhub"] }
+    ]
+  },
+
+  "aulas": { "items": [] },
+
+  "testimonials": { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "@itsfitacademia",
+    "url": "https://www.instagram.com/itsfitacademia/"
+  },
+
+  "contact": {
+    "eyebrow": "Comece hoje",
+    "titleHtml": "Bora <em>treinar</em>?",
+    "whatsapp":     "5517992559997",
+    "phoneDisplay": "(17) 99255-9997",
+    "instagramUrl": "https://www.instagram.com/itsfitacademia/",
+    "address": "R. Siqueira Campos, 2177 - Parque Industrial, São José do Rio Preto - SP, 15025-055",
+    "hours":   "Seg a Sex a partir das 6h · Sáb 9h às 13h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Siqueira+Campos,+2177+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Supere seus limites todos os dias."
+  }
+}
