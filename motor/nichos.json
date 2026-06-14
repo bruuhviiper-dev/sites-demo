@@ -249,6 +249,34 @@
     "footer": { "tagline": "Números organizados, decisões seguras." }
   },
 
+  "advocacia": {
+    "fonts": { "display": "\"Fraunces\", serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Fraunces:ital,wght@0,400;0,500;1,400", "Jost:wght@300;400;500"],
+    "design": { "hero": "split-right", "shape": "round", "display": "modern" },
+    "schemes": [
+      { "bg":"#0C0D12", "bgAlt":"#101117", "surface":"#16171F", "accent":"#9A5B5B", "accent2":"#D8AFAF", "text":"#EFEBE6", "muted":"#9A9088", "border":"#23252F" },
+      { "bg":"#0B0D12", "bgAlt":"#0E111A", "surface":"#141823", "accent":"#A6864E", "accent2":"#E2CB97", "text":"#EFEDE7", "muted":"#969286", "border":"#222634" },
+      { "bg":"#0A0E12", "bgAlt":"#0D1218", "surface":"#121822", "accent":"#3E6E86", "accent2":"#A9CEDC", "text":"#E9F0F3", "muted":"#869199", "border":"#1C2530" }
+    ],
+    "hero": { "eyebrow":"Advocacia & Assessoria Jurídica", "title":"Seus direitos em mãos seguras", "sub":"Orientação jurídica clara, próxima e humana para resolver o seu caso com a atenção e o cuidado que ele merece." },
+    "services": { "eyebrow":"Áreas de atuação", "navLabel":"Atuação", "title":"Como podemos ajudar você", "intro":"Atendimento próximo e estratégico, do primeiro contato à solução.", "ctaLabel":"Falar com o advogado",
+      "items":[
+        {"icon":"scale","name":"Consultoria Jurídica","desc":"Orientação clara sobre os seus direitos e o melhor caminho para o seu caso.","price":"Sob consulta"},
+        {"icon":"shield","name":"Assessoria & Contratos","desc":"Análise e elaboração de contratos e acordos com segurança jurídica.","price":"Sob consulta"},
+        {"icon":"hand","name":"Acordos & Mediação","desc":"Soluções negociadas para resolver conflitos de forma menos desgastante.","price":"Sob consulta"},
+        {"icon":"home","name":"Ações Judiciais","desc":"Representação e acompanhamento do seu processo do início ao fim.","price":"Sob consulta"}
+      ]},
+    "process": { "eyebrow":"Como funciona", "navLabel":"Como funciona", "title":"Do primeiro contato à solução", "intro":"Um caminho claro para você entender cada etapa do seu caso.",
+      "steps":[
+        {"n":"01","name":"Atendimento","desc":"Ouvimos o seu caso com atenção e analisamos a melhor estratégia."},
+        {"n":"02","name":"Plano de ação","desc":"Explicamos os caminhos, prazos e o que esperar — sem juridiquês."},
+        {"n":"03","name":"Acompanhamento","desc":"Conduzimos o caso e mantemos você informado em cada passo."}
+      ]},
+    "testimonials": { "show": false },
+    "instagram": { "show": false },
+    "footer": { "tagline": "O seu direito, defendido com seriedade." }
+  },
+
   "moda": {
     "fonts": { "display": "\"Playfair Display\", serif", "body": "\"DM Sans\", sans-serif" },
     "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;1,400;1,500", "DM+Sans:wght@300;400;500"],

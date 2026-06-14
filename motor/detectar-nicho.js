@@ -11,6 +11,7 @@ const REGRAS = [
   ["psicologia",  /psic[oó]log|psicoterap|psican[aá]lis|terapia cognitiv/i],
   ["contabilidade", /contabil|cont[aá]beis|contador|escrit[oó]rio cont|fiscal e trib/i],
   ["imobiliaria",  /imobili[aá]ri|corretor|corret(?:or)?a de im[oó]veis|im[oó]veis|loca[çc][ãa]o de im[oó]veis|aluguel de im[oó]veis|avalia[çc][ãa]o imobili/i],
+  ["advocacia",    /advog|advocac|escrit[oó]rio jur[ií]dic|assessoria jur[ií]dic|direito de fam|direito (?:civil|penal|trabalhist|tribut|de fam)/i],
   ["barbearia",   /barbear|barber|navalha/i],
   ["automotivo",  /lava.?r[aá]pid|est[eé]tica automotiv|funilaria|polimento|martelinho|car ?wash|detailing|oficina|borracharia|auto ?center/i],
   ["estetica",    /est[eé]tic|sobrancelh|depila|spa|skincar|cl[ií]nica de beleza|sal[ãa]o de beleza|cabelo|manicure|nail|maquiag|micropigment|massag/i],

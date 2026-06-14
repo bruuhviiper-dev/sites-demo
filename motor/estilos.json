@@ -26,6 +26,7 @@
     "academia":    ["dark-luxury", "ink-bold"],
     "moda":        ["boutique", "dark-luxury"],
     "imobiliaria": ["imoveis-premium", "corporate"],
+    "advocacia":   ["corporate", "imoveis-premium"],
     "generico":    ["clean-editorial", "dark-luxury", "corporate"],
     "_default":    ["dark-luxury"]
   }
