@@ -1,0 +1,82 @@
+{
+  "categoria": "Loja de açaí e sorveteria",
+  "nicho": "acai",
+  "slug": "capi-acai",
+  "estilo": "acai-bold",
+  "scheme": 1,
+
+  "brand": {
+    "name": "Capi Açaí",
+    "tagline": "Açaí & Sorvetes · Boa Vista, Rio Preto",
+    "nameHtml": "Capi <b>Açaí</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Açaí & Sorvetes · Boa Vista, Rio Preto",
+    "titleHtml": "Açaí cremoso, <em>do seu jeito</em>",
+    "image": "img/u1.jpg",
+    "sub": "Açaí caprichado, sorvetes e um monte de acompanhamentos fresquinhos. Peça online ou no WhatsApp e receba onde você estiver.",
+    "badge": "★ 5,0 no Google · 45 avaliações",
+    "ratingNum": "5,0",
+    "ratingLabel": "no Google · 45 avaliações",
+    "highlights": ["Nota 5,0", "Monte o seu", "Pedido online"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Capi Açaí",
+    "titleHtml": "Açaí que vira <em>vício do bem</em>",
+    "image": "img/u8.jpg",
+    "paragraphs": [
+      "A Capi Açaí é o ponto certo do Parque Industrial, em São José do Rio Preto, pra um açaí cremoso e sorvetes que conquistam — nota 5,0 com os clientes.",
+      "Peça online em poucos cliques ou chame no WhatsApp. Monte o seu do jeitinho que você gosta e aproveite."
+    ],
+    "stats": [
+      { "num": 5,  "suffix": ",0", "label": "Nota no Google" },
+      { "num": 45, "suffix": "+",  "label": "Avaliações" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>cardápio</em>",
+    "items": [
+      { "cat": "Açaí",     "name": "Açaí 300ml",          "desc": "Cremoso, com acompanhamentos à sua escolha.",     "price": "R$ 15" },
+      { "cat": "Açaí",     "name": "Açaí 500ml",          "desc": "O queridinho, pra matar a vontade.",              "price": "R$ 20" },
+      { "cat": "Açaí",     "name": "Açaí 700ml",          "desc": "Bem servido, capricha nos adicionais.",           "price": "R$ 26" },
+      { "cat": "Sorvetes", "name": "Sorvete (bola)",      "desc": "Vários sabores cremosos.",                        "price": "a partir de R$ 8" },
+      { "cat": "Sorvetes", "name": "Milk-shake",          "desc": "Cremoso, no tamanho que você quiser.",            "price": "a partir de R$ 12" },
+      { "cat": "Extras",   "name": "Adicionais",          "desc": "Morango, leite ninho, granola, paçoca e mais.",   "price": "a partir de R$ 3" },
+      { "cat": "Bebidas",  "name": "Bebidas",             "desc": "Sucos, refrigerantes e mais.",                    "price": "a partir de R$ 6" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "Capi Açaí 🍇",
+    "url": "https://wa.me/5517991545121",
+    "titleHtml": "De dar <em>água na boca</em>",
+    "images": ["img/u2.jpg", "img/u3.jpg", "img/u5.jpg", "img/u6.jpg", "img/u4.jpg", "img/u7.jpg"]
+  },
+
+  "contact": {
+    "eyebrow": "Peça o seu",
+    "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517991545121",
+    "phoneDisplay": "(17) 99154-5121",
+    "cardapioUrl":  "https://instadelivery.com.br/capiacaiesorvetes",
+    "address": "R. Silva Jardim, 2159 - Parque Industrial, São José do Rio Preto - SP, 15025-065",
+    "hours":   "Todos os dias · até as 22h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Silva+Jardim,+2159+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Açaí cremoso e sorvetes — em Rio Preto."
+  }
+}
