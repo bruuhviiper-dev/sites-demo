@@ -16,6 +16,7 @@
     "academia-power":  { "arquivo": "academia-power.html",  "desc": "Academia dedicada: dark enérgico, Oswald condensado, acento vivo. Protagonistas: TABELA DE PLANOS (preço + benefícios, com plano em destaque) e GRADE DE AULAS da semana; modalidades em cards. Lê SITE.planos e SITE.aulas. Para academias, crossfit, studios e box." },
     "estetica-glow":   { "arquivo": "estetica-glow.html",   "desc": "Estética/beleza dedicada: editorial claro e sofisticado (Marcellus), SLIDER ANTES/DEPOIS interativo (arrasta pra revelar) e seção de AGENDAMENTO (embed ou WhatsApp) como protagonistas; serviços com preço, galeria de resultados. Lê SITE.antesDepois e SITE.agenda. Para clínicas de estética, salões e studios de beleza." },
     "foto-portfolio":  { "arquivo": "foto-portfolio.html",  "desc": "Fotografia dedicada: dark minimal (Space Grotesk), hero imersivo e PORTFÓLIO MASONRY filtrável por categoria como protagonista (a imagem é o herói); pacotes, depoimentos e contato de orçamento. Lê SITE.portfolio. Para fotógrafos e estúdios." },
+    "acai-bold":       { "arquivo": "acai-bold.html",       "desc": "Açaí dedicado (estrutura dos grandes tipo Oakberry): hero bold com foto + 'Monte o seu açaí' (tamanhos), diferenciais superfood, cardápio, mosaico de fotos e banda de delivery (WhatsApp/iFood/Rappi). Branco + roxo açaí vibrante, drawer mobile. Para açaí e sorveterias." },
     "smile-clinic":    { "arquivo": "smile-clinic.html",    "desc": "Odontologia dedicada (mobile-first): branco clínico + azul/verde-água, Poppins+Inter, hero com chips de confiança (nota/24h) e card com selo de avaliação, faixa de confiança escura, CARDS de tratamentos com ícones, banda de emergência/CTA, menu mobile em drawer com botão de WhatsApp. Profissional e chamativo. Para dentistas e clínicas odontológicas." }
   },
 
@@ -27,7 +28,7 @@
     "barbearia":   ["dark-luxury", "ink-bold"],
     "restaurante": ["menu-gourmet", "dark-luxury"],
     "pizzaria":    ["menu-gourmet", "dark-luxury"],
-    "acai":        ["menu-gourmet", "dark-luxury"],
+    "acai":        ["acai-bold", "menu-gourmet", "dark-luxury"],
     "odontologia": ["smile-clinic", "clean-editorial", "corporate"],
     "veterinaria": ["clean-editorial", "petshop-modern"],
     "petshop":     ["petshop-modern", "clean-editorial"],

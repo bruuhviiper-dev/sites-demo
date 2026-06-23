@@ -2,7 +2,7 @@
   "categoria": "Açaí & Pastéis",
   "nicho": "acai",
   "slug": "lambuza-acai",
-  "estilo": "menu-gourmet",
+  "estilo": "acai-bold",
   "scheme": 0,
 
   "brand": {
@@ -17,6 +17,8 @@
     "image": "img/u8.jpg",
     "sub": "Açaí cremoso do jeito que você ama, pastéis quentinhos e entrega rápida — com drive-through e aberto até meia-noite. Monte o seu e lambuze-se!",
     "badge": "★ 5,0 no Google · 23 avaliações",
+    "ratingNum": "5,0",
+    "ratingLabel": "no Google · 23 avaliações",
     "highlights": ["Açaí cremoso", "Pastéis quentinhos", "Drive-through", "Delivery", "Monte o seu", "Aberto até 00h"],
     "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
     "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
@@ -75,6 +77,7 @@
     "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
     "whatsapp":     "5517992276414",
     "phoneDisplay": "(17) 99227-6414",
+    "rappi": "https://www.rappi.com.br/restaurantes/900613597-lambuza-acai-e-pasteis",
     "address": "Av. São José do Rio Preto, 3929 - Solo Sagrado, São José do Rio Preto - SP, 15044-155",
     "hours":   "Todos os dias · até meia-noite",
     "cidade":  "São José do Rio Preto — SP",
