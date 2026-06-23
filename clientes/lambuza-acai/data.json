@@ -14,6 +14,7 @@
   "hero": {
     "eyebrow": "Açaí & Pastéis · Solo Sagrado, Rio Preto",
     "titleHtml": "O açaí que faz você <em>se lambuzar</em>",
+    "image": "img/u8.jpg",
     "sub": "Açaí cremoso do jeito que você ama, pastéis quentinhos e entrega rápida — com drive-through e aberto até meia-noite. Monte o seu e lambuze-se!",
     "badge": "★ 5,0 no Google · 23 avaliações",
     "highlights": ["Açaí cremoso", "Pastéis quentinhos", "Drive-through", "Delivery", "Monte o seu", "Aberto até 00h"],
@@ -24,6 +25,7 @@
   "about": {
     "eyebrow": "Sobre a Lambuza",
     "titleHtml": "Açaí de verdade, <em>do jeitinho que você gosta</em>",
+    "image": "img/u6.jpg",
     "paragraphs": [
       "A Lambuza Açaí & Pastéis é o ponto certo pra matar a vontade em São José do Rio Preto: açaí cremoso, pastéis na hora e aquele atendimento que acolhe todo mundo.",
       "Refeição no local, drive-through ou entrega — do seu jeito, até meia-noite. Monte o seu açaí com os acompanhamentos que mais ama."
@@ -60,7 +62,13 @@
 
   "testimonials": { "show": false },
   "products":     { "show": false },
-  "instagram":    { "show": false },
+  "instagram": {
+    "show": true,
+    "handle": "Nosso açaí 🍇",
+    "url": "https://wa.me/5517992276414",
+    "titleHtml": "Direto da <em>nossa casa</em>",
+    "images": ["img/u7.jpg", "img/u1.jpg", "img/u2.jpg", "img/u5.jpg", "img/u3.jpg", "img/u4.jpg"]
+  },
 
   "contact": {
     "eyebrow": "Peça o seu",
