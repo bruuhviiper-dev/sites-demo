@@ -1,0 +1,80 @@
+{
+  "categoria": "Loja de açaí",
+  "nicho": "acai",
+  "slug": "acai-do-chef",
+  "estilo": "acai-bold",
+  "scheme": 1,
+
+  "brand": {
+    "name": "Açaí do Chef",
+    "tagline": "Loja de Açaí · Rio Preto",
+    "nameHtml": "Açaí do <b>Chef</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Loja de Açaí · Solo Sagrado, Rio Preto",
+    "titleHtml": "Açaí de chef, <em>do seu jeito</em>",
+    "image": "img/u2.jpg",
+    "sub": "Açaí cremoso, acompanhamentos fresquinhos e aquele capricho de chef. Refeição no local, retirada ou entrega — monte o seu e aproveite!",
+    "badge": "★ 4,8 no Google · 31 avaliações",
+    "ratingNum": "4,8",
+    "ratingLabel": "no Google · 31 avaliações",
+    "highlights": ["Monte o seu", "Açaí cremoso", "Delivery"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Açaí do Chef",
+    "titleHtml": "Açaí feito com <em>capricho de chef</em>",
+    "image": "img/u3.jpg",
+    "paragraphs": [
+      "A Açaí do Chef é o ponto certo pra um açaí cremoso e bem servido em São José do Rio Preto, no Solo Sagrado — refeição no local, retirada ou entrega.",
+      "Monte o seu do jeitinho que você gosta, com os acompanhamentos que mais ama. Atendimento que acolhe todo mundo."
+    ],
+    "stats": [
+      { "num": 4,  "suffix": ",8", "label": "Nota no Google" },
+      { "num": 31, "suffix": "+",  "label": "Avaliações" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>cardápio</em>",
+    "items": [
+      { "cat": "Açaí",        "name": "Açaí 300ml",          "desc": "Cremoso, com acompanhamentos à sua escolha.",   "price": "R$ 15" },
+      { "cat": "Açaí",        "name": "Açaí 500ml",          "desc": "O queridinho, pra matar a vontade.",            "price": "R$ 20" },
+      { "cat": "Açaí",        "name": "Açaí 700ml",          "desc": "Tamanho família, capricha nos adicionais.",     "price": "R$ 26" },
+      { "cat": "Açaí",        "name": "Açaí 1 Litro",        "desc": "Pra dividir (ou não 😏).",                       "price": "R$ 36" },
+      { "cat": "Complementos","name": "Adicionais",          "desc": "Morango, leite ninho, granola, paçoca e mais.", "price": "a partir de R$ 3" },
+      { "cat": "Bebidas",     "name": "Refrigerante lata",   "desc": "Geladinho pra acompanhar.",                     "price": "R$ 6" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "Açaí do Chef 🍇",
+    "url": "https://wa.me/5517982279544",
+    "titleHtml": "De dar <em>água na boca</em>",
+    "images": ["img/u1.jpg", "img/u5.jpg", "img/u8.jpg", "img/u4.jpg", "img/u6.jpg", "img/u7.jpg"]
+  },
+
+  "contact": {
+    "eyebrow": "Peça o seu",
+    "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517982279544",
+    "phoneDisplay": "(17) 98227-9544",
+    "address": "R. Maria Sacaroli, 431 - Solo Sagrado, São José do Rio Preto - SP, 15044-350",
+    "hours":   "Todos os dias · até as 22h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Maria+Sacaroli,+431+Solo+Sagrado+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Açaí cremoso, do seu jeito — em Rio Preto."
+  }
+}
