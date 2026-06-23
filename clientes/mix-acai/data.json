@@ -1,0 +1,90 @@
+{
+  "categoria": "Loja de açaí",
+  "nicho": "acai",
+  "slug": "mix-acai",
+  "estilo": "acai-bold",
+  "scheme": 2,
+
+  "brand": {
+    "name": "Mix Açaí",
+    "tagline": "Loja de Açaí · Rio Preto",
+    "nameHtml": "Mix <b>Açaí</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Loja de Açaí · Jardim Antunes, Rio Preto",
+    "titleHtml": "O açaí que conquista <em>na primeira visita</em>",
+    "image": "img/u1.jpg",
+    "sub": "Açaí cremoso, bem servido e com um monte de acompanhamentos fresquinhos. Refeição no local, para viagem ou entrega — e aberto até as 2h da manhã!",
+    "badge": "★ 5,0 no Google · 44 avaliações",
+    "ratingNum": "5,0",
+    "ratingLabel": "no Google · 44 avaliações",
+    "highlights": ["Aberto até 2h", "Monte o seu", "Delivery"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o Mix Açaí",
+    "titleHtml": "Aquele açaí que <em>vira rotina</em>",
+    "image": "img/u8.jpg",
+    "paragraphs": [
+      "O Mix Açaí é o ponto certo de São José do Rio Preto pra quem ama açaí cremoso, bem recheado e com atendimento que acolhe — no Jardim Antunes.",
+      "Refeição no local, para viagem ou entrega, e aberto até tarde pra matar a vontade a qualquer hora. Monte o seu do jeitinho que você gosta!"
+    ],
+    "stats": [
+      { "num": 5,  "suffix": ",0", "label": "Nota no Google" },
+      { "num": 44, "suffix": "+",  "label": "Avaliações" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>cardápio</em>",
+    "items": [
+      { "cat": "Açaí",        "name": "Açaí 300ml",            "desc": "Cremoso, com acompanhamentos à sua escolha.",       "price": "R$ 15" },
+      { "cat": "Açaí",        "name": "Açaí 500ml",            "desc": "O queridinho, pra matar a vontade.",                "price": "R$ 20" },
+      { "cat": "Açaí",        "name": "Açaí 700ml",            "desc": "Bem recheado, capricha nos adicionais.",            "price": "R$ 26" },
+      { "cat": "Açaí",        "name": "Açaí 1 Litro",          "desc": "Tamanho família, pra dividir.",                     "price": "R$ 36" },
+      { "cat": "Extras",      "name": "Sorvete Ituzinho",      "desc": "A novidade da casa, super em conta.",               "price": "R$ 0,99" },
+      { "cat": "Extras",      "name": "Adicionais",            "desc": "Morango, leite ninho, granola, paçoca e mais.",     "price": "a partir de R$ 3" },
+      { "cat": "Bebidas",     "name": "Refrigerante lata",     "desc": "Geladinho pra acompanhar.",                         "price": "R$ 6" }
+    ]
+  },
+
+  "testimonials": {
+    "eyebrow": "Avaliações",
+    "titleHtml": "Quem prova, <em>volta sempre</em>",
+    "items": [
+      { "stars": 5, "quote": "O Mix Açaí é aquele lugar que conquista logo na primeira visita. Delicioso, bem servido e com várias opções de acompanhamentos, tudo sempre fresco.", "name": "Miguel Lourenço", "meta": "Avaliação no Google" },
+      { "stars": 5, "quote": "Açaí muito bem recheado e saboroso, atendimento excelente e muito educado. Melhor lugar pra pedir açaí!", "name": "Samuel Gustavo", "meta": "Avaliação no Google" },
+      { "stars": 5, "quote": "Melhor açaí da região, nota 10!", "name": "Cliente", "meta": "Avaliação no Google" }
+    ]
+  },
+
+  "products":  { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "Mix Açaí 🍇",
+    "url": "https://wa.me/5517981160418",
+    "titleHtml": "De dar <em>água na boca</em>",
+    "images": ["img/u2.jpg", "img/u3.jpg", "img/u5.jpg", "img/u6.jpg", "img/u4.jpg", "img/u7.jpg"]
+  },
+
+  "contact": {
+    "eyebrow": "Peça o seu",
+    "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517981160418",
+    "phoneDisplay": "(17) 98116-0418",
+    "address": "R. Manoel Moreno, 425 - Jardim Antunes, São José do Rio Preto - SP, 15047-050",
+    "hours":   "Todos os dias · até as 2h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Manoel+Moreno,+425+Jardim+Antunes+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Açaí cremoso e bem recheado — em Rio Preto."
+  }
+}
