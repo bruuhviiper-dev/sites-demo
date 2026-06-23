@@ -1,0 +1,85 @@
+{
+  "categoria": "Depilação a laser",
+  "nicho": "estetica",
+  "slug": "kay-laser-clinic",
+  "estilo": "estetica-glow",
+  "theme": { "accent": "#A85B79" },
+
+  "brand": {
+    "name": "Kay Laser Clinic",
+    "tagline": "Depilação a Laser & Estética · Rio Preto",
+    "nameHtml": "Kay <b>Laser Clinic</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Depilação a Laser & Estética · Boa Vista, Rio Preto",
+    "titleHtml": "Sua pele lisa e <em>renovada</em>",
+    "sub": "Depilação a laser, clareamento íntimo e remoção de tatuagem com tecnologia segura e produtos de alta qualidade. Atendimento acolhedor, feito por quem entende de autoestima.",
+    "imageLabel": "Kay Laser Clinic",
+    "ctaPrimary": { "label": "Agendar avaliação", "href": "#agenda" },
+    "ctaGhost":   { "label": "Ver serviços", "href": "#servicos" }
+  },
+
+  "antesDepois": {
+    "eyebrow": "Resultados",
+    "navLabel": "Resultados",
+    "titleHtml": "Resultados que <em>renovam</em>",
+    "intro": "Arraste para comparar. Pele mais lisa, uniforme e cuidada.",
+    "items": [
+      { "label": "Axilas" },
+      { "label": "Pernas" },
+      { "label": "Buço" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Serviços",
+    "navLabel": "Serviços",
+    "titleHtml": "O que <em>fazemos por você</em>",
+    "intro": "Tecnologia segura e produtos de excelente qualidade.",
+    "items": [
+      { "icon": "sparkle", "name": "Depilação a laser",    "desc": "Adeus pelos: tecnologia segura para todo o corpo.",        "price": "Sob consulta" },
+      { "icon": "heart",   "name": "Clareamento íntimo",   "desc": "Mais uniformidade na pele e autoestima em alta.",          "price": "Sob consulta" },
+      { "icon": "drop",    "name": "Remoção de tatuagem",  "desc": "Remoção de tatuagens a laser, sessão a sessão.",           "price": "Sob consulta" },
+      { "icon": "hand",    "name": "Axilas & Virilha",     "desc": "As áreas que mais incomodam, lisinhas e sem irritação.",   "price": "Sob consulta" },
+      { "icon": "star",    "name": "Pernas & Corpo",       "desc": "Pacotes completos com ótimo custo-benefício.",             "price": "Sob consulta" },
+      { "icon": "face",    "name": "Buço & Rosto",         "desc": "Resultados delicados e precisos para o rosto.",            "price": "Sob consulta" }
+    ]
+  },
+
+  "agenda": {
+    "eyebrow": "Agendamento",
+    "navLabel": "Agendar",
+    "titleHtml": "Agende sua <em>avaliação</em>",
+    "intro": "Atendimento acolhedor na Boa Vista, em Rio Preto. Tire suas dúvidas e descubra o tratamento ideal pra você.",
+    "horarios": ["Segunda a Sábado · até as 22h"],
+    "cardTitle": "Agende pelo WhatsApp",
+    "cardText": "Resposta rápida pra marcar a sua avaliação no melhor horário pra você.",
+    "cta": "Agendar pelo WhatsApp"
+  },
+
+  "instagram": { "show": false },
+
+  "testimonials": {
+    "eyebrow": "Depoimentos",
+    "items": [
+      { "quote": "Excelente profissional. Super recomendo. Só usa produtos de excelente qualidade. Atendimento nota 1000!", "name": "Tatiana Domingos", "meta": "Avaliação no Google" },
+      { "quote": "Top!", "name": "Marco Aurélio", "meta": "Local Guide · Google" }
+    ]
+  },
+
+  "contact": {
+    "eyebrow": "Agende sua avaliação",
+    "titleHtml": "Vamos cuidar da <em>sua pele</em>",
+    "whatsapp":     "5517981867394",
+    "phoneDisplay": "(17) 98186-7394",
+    "address": "R. Tiradentes, 2449 - Boa Vista, São José do Rio Preto - SP, 15025-075",
+    "hours":   "Segunda a Sábado · até as 22h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Tiradentes,+2449+Boa+Vista+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Pele lisa, renovada e cuidada — em Rio Preto."
+  }
+}
