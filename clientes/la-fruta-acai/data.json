@@ -1,0 +1,81 @@
+{
+  "categoria": "Loja de açaí e sorveteria",
+  "nicho": "acai",
+  "slug": "la-fruta-acai",
+  "estilo": "acai-bold",
+  "scheme": 0,
+
+  "brand": {
+    "name": "LA Fruta Açaí",
+    "tagline": "Açaí & Sorvetes · Rio Preto",
+    "nameHtml": "LA Fruta <b>Açaí</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Açaí & Sorvetes · Jardim Seyon, Rio Preto",
+    "titleHtml": "Fruta de verdade, <em>açaí cremoso</em>",
+    "image": "img/u1.jpg",
+    "sub": "Açaí encorpado, sorvetes e um monte de acompanhamentos fresquinhos. Refeição no local, para viagem ou entrega — o queridinho do Jardim Seyon.",
+    "badge": "★ 4,3 no Google · 414 avaliações",
+    "ratingNum": "4,3",
+    "ratingLabel": "no Google · 414 avaliações",
+    "highlights": ["+400 avaliações", "Monte o seu", "Delivery"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a LA Fruta",
+    "titleHtml": "O açaí que o <em>bairro ama</em>",
+    "image": "img/u8.jpg",
+    "paragraphs": [
+      "A LA Fruta Açaí é referência em São José do Rio Preto: açaí cremoso, sorvetes e acompanhamentos fresquinhos, com mais de 400 avaliações de clientes.",
+      "Refeição no local, para viagem ou entrega. Monte o seu açaí do jeitinho que você gosta e aproveite."
+    ],
+    "stats": [
+      { "num": 4,   "suffix": ",3", "label": "Nota no Google" },
+      { "num": 414, "suffix": "+",  "label": "Avaliações" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>cardápio</em>",
+    "items": [
+      { "cat": "Açaí",     "name": "Açaí 300ml",          "desc": "Cremoso, com acompanhamentos à sua escolha.",   "price": "R$ 14" },
+      { "cat": "Açaí",     "name": "Açaí 500ml",          "desc": "O queridinho, pra matar a vontade.",            "price": "R$ 19" },
+      { "cat": "Açaí",     "name": "Açaí 700ml",          "desc": "Bem servido, capricha nos adicionais.",         "price": "R$ 25" },
+      { "cat": "Sorvetes", "name": "Sorvete (bola)",      "desc": "Vários sabores cremosos.",                      "price": "a partir de R$ 8" },
+      { "cat": "Sorvetes", "name": "Milk-shake",          "desc": "Cremoso, no tamanho que você quiser.",          "price": "a partir de R$ 12" },
+      { "cat": "Extras",   "name": "Adicionais",          "desc": "Morango, leite ninho, granola, paçoca e mais.", "price": "a partir de R$ 3" },
+      { "cat": "Bebidas",  "name": "Refrigerante lata",   "desc": "Geladinho pra acompanhar.",                     "price": "R$ 6" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "LA Fruta Açaí 🍇",
+    "url": "https://wa.me/5517991597448",
+    "titleHtml": "De dar <em>água na boca</em>",
+    "images": ["img/u2.jpg", "img/u3.jpg", "img/u5.jpg", "img/u6.jpg", "img/u4.jpg", "img/u7.jpg"]
+  },
+
+  "contact": {
+    "eyebrow": "Peça o seu",
+    "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517991597448",
+    "phoneDisplay": "(17) 99159-7448",
+    "address": "Av. Danilo Galeazzi, 2052 - Jardim Seyon, São José do Rio Preto - SP, 15051-155",
+    "hours":   "Todos os dias · até as 23h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=Av.+Danilo+Galeazzi,+2052+Jardim+Seyon+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Açaí cremoso e sorvetes — em Rio Preto."
+  }
+}
