@@ -71,6 +71,29 @@
     "footer": { "tagline": "Sabor que vira memória." }
   },
 
+  "pizzaria": {
+    "fonts": { "display": "\"Playfair Display\", serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "centered", "shape": "round", "display": "elegant" },
+    "schemes": [
+      { "bg":"#0E0B0B", "bgAlt":"#130E0E", "surface":"#1A1313", "accent":"#C5392E", "accent2":"#F0A08C", "text":"#F4EAE6", "muted":"#A89089", "border":"#2A1F1E" },
+      { "bg":"#0C0E0B", "bgAlt":"#10130E", "surface":"#161A13", "accent":"#5C8A2E", "accent2":"#AED57F", "text":"#EFF2E6", "muted":"#9AA386", "border":"#222820" },
+      { "bg":"#100C0A", "bgAlt":"#16100D", "surface":"#1C1512", "accent":"#D98438", "accent2":"#F0B97D", "text":"#F4ECE3", "muted":"#A89384", "border":"#2C2220" }
+    ],
+    "hero": { "eyebrow":"Pizzaria Artesanal", "title":"A pizza que abraça a sua noite", "sub":"Massa artesanal, ingredientes frescos e o sabor de forno que fideliza. Peça já a sua e receba quentinha." },
+    "services": { "eyebrow":"Cardápio", "navLabel":"Cardápio", "title":"Nosso Cardápio", "ctaLabel":"Ver cardápio", "intro":"Sabores clássicos e especiais, do salgado ao doce.",
+      "items":[
+        {"icon":"fork","cat":"Pizzas Salgadas","name":"Mussarela","desc":"Molho artesanal, mussarela e orégano.","price":"R$ 45"},
+        {"icon":"fork","cat":"Pizzas Salgadas","name":"Calabresa","desc":"Calabresa fatiada, cebola e mussarela.","price":"R$ 49"},
+        {"icon":"fork","cat":"Pizzas Salgadas","name":"Portuguesa","desc":"Presunto, ovos, ervilha, cebola e mussarela.","price":"R$ 55"},
+        {"icon":"star","cat":"Pizzas Salgadas","name":"Frango c/ Catupiry","desc":"Frango desfiado e catupiry cremoso.","price":"R$ 55"},
+        {"icon":"heart","cat":"Pizzas Doces","name":"Chocolate","desc":"Chocolate ao leite com granulado.","price":"R$ 45"},
+        {"icon":"heart","cat":"Pizzas Doces","name":"Romeu e Julieta","desc":"Goiabada cremosa com mussarela.","price":"R$ 48"},
+        {"icon":"drop","cat":"Bebidas","name":"Refrigerante 2L","desc":"Coca-Cola, Guaraná e mais.","price":"R$ 12"}
+      ]},
+    "footer": { "tagline": "Massa artesanal, sabor de verdade." }
+  },
+
   "automotivo": {
     "fonts": { "display": "\"Rajdhani\", sans-serif", "body": "\"Inter\", sans-serif" },
     "fontsGoogle": ["Rajdhani:wght@400;500;600;700", "Inter:wght@300;400;500;600"],

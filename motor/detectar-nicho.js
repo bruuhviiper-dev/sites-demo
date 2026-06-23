@@ -21,7 +21,8 @@ const REGRAS = [
   ["odontologia", /odonto|dentist|dental|sorriso|ortodont/i],
   ["veterinaria", /veterin[aá]ri|cl[ií]nica animal/i],
   ["petshop",     /pet ?shop|pet ?store|ra[çc][ãa]o|banho e tosa|agropet|casa de ra/i],
-  ["restaurante", /restaurant|pizzar|lanchonet|hamburgu|burger|churrasc|cafeteria|bistr[oô]|comida|gastronom|a[çc]a[íi]|sorveter|padaria|confeitar|doceria|food/i],
+  ["pizzaria",    /pizzar|pizza/i],
+  ["restaurante", /restaurant|lanchonet|hamburgu|burger|churrasc|cafeteria|bistr[oô]|comida|gastronom|a[çc]a[íi]|sorveter|padaria|confeitar|doceria|food/i],
   ["academia",    /academ|crossfit|fitness|musculaç|pilates|treinament|studio de treino/i],
 ];
 

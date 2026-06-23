@@ -1,0 +1,85 @@
+{
+  "categoria": "Pizzaria",
+  "nicho": "pizzaria",
+  "slug": "dnorte-foods",
+  "estilo": "menu-gourmet",
+  "scheme": 0,
+
+  "brand": {
+    "name": "D'Norte Food's",
+    "tagline": "Pizzaria & Restaurante · Rio Preto",
+    "nameHtml": "D'Norte <b>Food's</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Pizzaria & Restaurante · Jardim Santa Lúcia, Rio Preto",
+    "titleHtml": "A pizza que abraça <em>a sua noite</em>",
+    "sub": "Massa artesanal, ingredientes frescos e aquele sabor de forno que fideliza. Venha viver a experiência D'Norte ou peça a sua pelo WhatsApp.",
+    "image": "img/maps.jpg",
+    "imageLabel": "D'Norte Food's",
+    "highlights": ["Pizzas artesanais", "Massa fresca", "Chopp gelado", "Ambiente aconchegante", "Pizzas doces", "Salgadas especiais"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a D'Norte",
+    "titleHtml": "Sabor que vira <em>ponto de encontro</em>",
+    "image": "img/p2.jpg",
+    "paragraphs": [
+      "A D'Norte Food's é pizzaria e restaurante em São José do Rio Preto, com massa artesanal, ingredientes frescos e um ambiente perfeito pra reunir a família e os amigos.",
+      "Do clássico ao especial — pizzas salgadas, doces e o chopp gelado — tudo preparado com capricho pra você voltar sempre."
+    ],
+    "certs": [
+      { "label": "Massa artesanal" },
+      { "label": "Pizzas doces e salgadas" },
+      { "label": "Chopp gelado" },
+      { "label": "Ambiente aconchegante" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>Cardápio</em>",
+    "intro": "Uma seleção de sabores — peça a sua pelo WhatsApp.",
+    "items": [
+      { "cat": "Pizzas Salgadas", "name": "Mussarela",            "desc": "Molho artesanal, mussarela e orégano.",          "price": "R$ 45" },
+      { "cat": "Pizzas Salgadas", "name": "Calabresa",            "desc": "Calabresa fatiada, cebola e mussarela.",         "price": "R$ 49" },
+      { "cat": "Pizzas Salgadas", "name": "Portuguesa",           "desc": "Presunto, ovos, ervilha, cebola e mussarela.",   "price": "R$ 55" },
+      { "cat": "Pizzas Salgadas", "name": "Frango c/ Catupiry",   "desc": "Frango desfiado com catupiry cremoso.",          "price": "R$ 55" },
+      { "cat": "Pizzas Salgadas", "name": "Pizza Gigante D'Norte","desc": "A insana pra dividir com a galera. Peça e surpreenda.", "price": "Sob consulta" },
+      { "cat": "Pizzas Doces",    "name": "Chocolate",            "desc": "Chocolate ao leite com granulado.",              "price": "R$ 45" },
+      { "cat": "Pizzas Doces",    "name": "Romeu e Julieta",      "desc": "Goiabada cremosa com mussarela.",                "price": "R$ 48" },
+      { "cat": "Bebidas",         "name": "Chopp Itaipava",       "desc": "Gelado, na pressão. A partir de.",               "price": "R$ 6,99" },
+      { "cat": "Bebidas",         "name": "Refrigerante 2L",      "desc": "Coca-Cola, Guaraná e mais.",                     "price": "R$ 12" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "@pizzariadnorte",
+    "url": "https://www.instagram.com/pizzariadnorte/",
+    "titleHtml": "Direto da nossa <em>cozinha</em>",
+    "images": ["img/p2.jpg", "img/p4.jpg", "img/p6.jpg", "img/p3.jpg", "img/p1.jpg", "img/maps.jpg"]
+  },
+
+  "contact": {
+    "eyebrow": "Peça a sua",
+    "titleHtml": "Bateu a fome? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517981667171",
+    "phoneDisplay": "(17) 98166-7171",
+    "instagramUrl": "https://www.instagram.com/pizzariadnorte/",
+    "address": "Av. Dr. Ernani Pires Domingues, 3450 - Jardim Santa Lucia, São José do Rio Preto - SP, 15040-150",
+    "hours":   "Aberto todos os dias · até as 23h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=Av.+Dr.+Ernani+Pires+Domingues,+3450+Jardim+Santa+Lucia+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Massa artesanal, sabor de verdade."
+  }
+}

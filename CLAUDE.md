@@ -19,9 +19,10 @@ Faça SEMPRE, na ordem, sem perguntar de volta (a não ser que falte algo críti
 
 ### 1. Detectar o nicho
 Pela categoria do Maps. Nichos válidos:
-`estetica, barbearia, restaurante, automotivo, odontologia, veterinaria,
+`estetica, barbearia, restaurante, pizzaria, automotivo, odontologia, veterinaria,
 petshop, academia, tatuagem, moda, psicologia, contabilidade, imobiliaria`
-(fallback: `generico`). Confira com `node motor/detectar-nicho.js "<categoria>"`.
+(fallback: `generico`). Pizzaria é nicho próprio (≠ restaurante): cardápio de
+pizzas por categoria, cores de forno a lenha. Confira com `node motor/detectar-nicho.js "<categoria>"`.
 Se a detecção errar, ponha `"nicho": "<chave>"` no `data.json`.
 
 ### 2. Ler o brief do nicho
@@ -34,7 +35,10 @@ Use `WebSearch`/`WebFetch` para achar Instagram/Facebook/site do lugar pelo
 nome + cidade. Objetivo: deixar a demo **com a cara real do estabelecimento**:
 - **@ real do Instagram** e link (o Maps às vezes só dá "instagram.com").
 - **Pratos/serviços reais, especialidades, vibe** → vira copy específica.
-- **Fotos reais** (URL pública) p/ `hero.image`/`about.image` quando der.
+- **SEMPRE tente pegar fotos reais** (3–6): URL pública / `og:image` do Instagram
+  ou do Maps → use em `hero.image`, `about.image` e `instagram.images[]` (galeria).
+  Foto real é o que mais vende a demo. Se não achar URL estável (Instagram costuma
+  expirar/bloquear hotlink), use placeholder e **peça os prints ao cliente**.
 - Confirmar horário, bairro, diferencial ("ao vivo", "delivery", "pet friendly"...).
 Só use o que achar de fonte real. Nada confirmado → não inventa (ver regra abaixo).
 
