@@ -1,0 +1,83 @@
+{
+  "categoria": "Clínica odontológica",
+  "nicho": "odontologia",
+  "slug": "dra-tatiane-suzan",
+  "estilo": "smile-clinic",
+  "scheme": 1,
+
+  "brand": {
+    "name": "Dra. Tatiane Suzan",
+    "tagline": "Clínica Odontológica · Rio Preto",
+    "nameHtml": "Dra. Tatiane <b>Suzan</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Clínica Odontológica · Vila Imperial, Rio Preto",
+    "titleHtml": "O sorriso dos seus sonhos <em>começa aqui</em>",
+    "sub": "Odontologia completa e humanizada no Imperial Office, em Rio Preto. Mais de 500 pacientes já confiaram seus sorrisos à Dra. Tatiane Suzan — venha fazer parte.",
+    "badge": "★ 5,0 no Google · 505 avaliações",
+    "ratingNum": "5,0",
+    "ratingLabel": "505 avaliações no Google",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver tratamentos", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a clínica",
+    "titleHtml": "Cuidado que conquistou <em>mais de 500 sorrisos</em>",
+    "paragraphs": [
+      "A clínica da Dra. Tatiane Suzan oferece odontologia completa em um ambiente acolhedor e moderno, no Imperial Office, em São José do Rio Preto.",
+      "Com nota máxima e centenas de avaliações 5 estrelas, cada paciente é atendido com atenção, técnica e o cuidado humano que faz toda a diferença — do diagnóstico ao resultado final."
+    ],
+    "stats": [
+      { "num": 5, "suffix": ",0", "label": "Nota no Google" },
+      { "num": 505, "suffix": "+", "label": "Avaliações" }
+    ],
+    "certs": [
+      { "icon": "star",  "label": "★ 5,0 no Google" },
+      { "icon": "check", "label": "505 avaliações" },
+      { "icon": "heart", "label": "Atendimento humanizado" },
+      { "icon": "tooth", "label": "Odontologia completa" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Tratamentos",
+    "navLabel": "Tratamentos",
+    "titleHtml": "Tudo para o seu <em>melhor sorriso</em>",
+    "intro": "Da prevenção à estética, com tecnologia e cuidado em cada detalhe.",
+    "items": [
+      { "icon": "tooth",   "name": "Limpeza e prevenção",   "desc": "Avaliação, limpeza e cuidados de rotina para manter sua saúde bucal em dia.", "price": "Sob consulta" },
+      { "icon": "sparkle", "name": "Clareamento dental",    "desc": "Dentes mais brancos com técnicas seguras para um sorriso radiante.",          "price": "Sob consulta" },
+      { "icon": "scale",   "name": "Ortodontia",            "desc": "Aparelhos e alinhadores para corrigir o sorriso com conforto.",              "price": "Sob consulta" },
+      { "icon": "shield",  "name": "Implantes",             "desc": "Reposição de dentes com naturalidade, segurança e durabilidade.",            "price": "Sob consulta" },
+      { "icon": "check",   "name": "Próteses",              "desc": "Próteses sob medida para devolver função e estética ao seu sorriso.",        "price": "Sob consulta" },
+      { "icon": "heart",   "name": "Odontologia estética",  "desc": "Lentes, restaurações e harmonização para valorizar o seu sorriso.",          "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "@dratatianesuzan",
+    "url": "https://www.instagram.com/dratatianesuzan/"
+  },
+
+  "contact": {
+    "eyebrow": "Agende sua avaliação",
+    "titleHtml": "Vamos cuidar do <em>seu sorriso</em>",
+    "whatsapp":     "5517992097373",
+    "phoneDisplay": "(17) 99209-7373",
+    "instagramUrl": "https://www.instagram.com/dratatianesuzan/",
+    "address": "R. Imperial, 59 - sala 14 - Vila Imperial, São José do Rio Preto - SP, 15015-610 (Imperial Office)",
+    "hours":   "Seg. a Sex. · até as 18h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Imperial,+59+Vila+Imperial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Odontologia completa e humanizada em Rio Preto."
+  }
+}

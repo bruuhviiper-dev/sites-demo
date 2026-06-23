@@ -52,13 +52,12 @@ function artigoNome(name){
   return 'a ';
 }
 
-/* ---- mensagem de abordagem (texto puro, usada no link.md e no disparo) ---- */
+/* ---- mensagem de abordagem: DIRETA + curiosidade (link.md e disparo) ---- */
 function buildPitch(name, onde, url){
-  return 'Olá! Tudo bem? 😊\n'
-    + 'Vi ' + artigoNome(name) + name + ' no Google e gostei muito do trabalho de vocês' + onde + '.\n'
-    + 'Hoje muita gente pesquisa no Google antes de escolher, e quem não tem site acaba perdendo esses clientes pra concorrência. Por isso montei uma demonstração gratuita, só pra você ver como ficaria:\n'
+  return 'Oi, tudo bem? 👋\n'
+    + 'Vi ' + artigoNome(name) + name + ' no Google e fiz uma coisa que acho que vocês vão querer ver 👇\n'
     + '👉 ' + url + '\n'
-    + 'Dá uma olhada quando puder e me diz o que achou? Se gostar, a gente coloca no ar com o seu domínio — sem compromisso nenhum. 🙏';
+    + 'Levei alguns minutos montando, é sem compromisso. Me diz o que achou? 🙂';
 }
 
 /* ---- link.md: link do GitHub Pages + abordagem + disparo assistido (1 clique) ---- */
