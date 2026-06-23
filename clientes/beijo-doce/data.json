@@ -1,0 +1,83 @@
+{
+  "categoria": "Sorveteria e açaí",
+  "nicho": "acai",
+  "slug": "beijo-doce",
+  "estilo": "acai-bold",
+  "scheme": 2,
+
+  "brand": {
+    "name": "Beijo Doce",
+    "tagline": "Sorvetes & Açaí · Rio Preto",
+    "nameHtml": "Beijo <b>Doce</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Sorvetes & Açaí · Costa do Sol, Rio Preto",
+    "titleHtml": "Sorvetes e açaí <em>pra adoçar o seu dia</em>",
+    "image": "img/u1.jpg",
+    "sub": "Sorvetes cremosos, açaí caprichado e um monte de acompanhamentos. Refeição no local, para viagem ou entrega — o docinho que o bairro ama.",
+    "badge": "★ 4,5 no Google · 254 avaliações",
+    "ratingNum": "4,5",
+    "ratingLabel": "no Google · 254 avaliações",
+    "highlights": ["+250 avaliações", "Sorvetes & açaí", "Delivery"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Beijo Doce",
+    "titleHtml": "O docinho <em>favorito do bairro</em>",
+    "image": "img/u8.jpg",
+    "paragraphs": [
+      "A Beijo Doce é sorveteria e açaiteria em São José do Rio Preto, com mais de 250 avaliações de clientes: sorvetes cremosos, açaí caprichado e aquele atendimento que adoça o dia.",
+      "Refeição no local, para viagem ou entrega. Monte o seu do jeitinho que você gosta e aproveite."
+    ],
+    "stats": [
+      { "num": 4,   "suffix": ",5", "label": "Nota no Google" },
+      { "num": 254, "suffix": "+",  "label": "Avaliações" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>cardápio</em>",
+    "items": [
+      { "cat": "Açaí",     "name": "Açaí 300ml",          "desc": "Cremoso, com acompanhamentos à sua escolha.",     "price": "R$ 15" },
+      { "cat": "Açaí",     "name": "Açaí 500ml",          "desc": "O queridinho, pra matar a vontade.",              "price": "R$ 20" },
+      { "cat": "Açaí",     "name": "Açaí 700ml",          "desc": "Bem servido, capricha nos adicionais.",           "price": "R$ 26" },
+      { "cat": "Sorvetes", "name": "Sorvete (bola)",      "desc": "Vários sabores cremosos.",                        "price": "a partir de R$ 8" },
+      { "cat": "Sorvetes", "name": "Milk-shake",          "desc": "Cremoso, no tamanho que você quiser.",            "price": "a partir de R$ 12" },
+      { "cat": "Sorvetes", "name": "Sundae / Banana split","desc": "A sobremesa pra dividir (ou não 😏).",            "price": "a partir de R$ 14" },
+      { "cat": "Extras",   "name": "Adicionais",          "desc": "Morango, leite ninho, granola, paçoca e mais.",   "price": "a partir de R$ 3" },
+      { "cat": "Bebidas",  "name": "Bebidas",             "desc": "Sucos, refrigerantes e mais.",                    "price": "a partir de R$ 6" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "Beijo Doce 🍦",
+    "url": "https://wa.me/5517991196640",
+    "titleHtml": "De dar <em>água na boca</em>",
+    "images": ["img/u2.jpg", "img/u3.jpg", "img/u5.jpg", "img/u6.jpg", "img/u4.jpg", "img/u7.jpg"]
+  },
+
+  "contact": {
+    "eyebrow": "Peça o seu",
+    "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517991196640",
+    "phoneDisplay": "(17) 99119-6640",
+    "cardapioUrl":  "https://beijo-doce-sorvetes.ola.click",
+    "address": "Av. Mirassolândia, 664 - Conj. Hab. Costa do Sol, São José do Rio Preto - SP, 15045-000",
+    "hours":   "Todos os dias · até as 22h30",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=Av.+Mirassol%C3%A2ndia,+664+Costa+do+Sol+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Sorvetes e açaí pra adoçar o seu dia — em Rio Preto."
+  }
+}
