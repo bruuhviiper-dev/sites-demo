@@ -1,0 +1,79 @@
+{
+  "categoria": "Açaí & Pastéis",
+  "nicho": "acai",
+  "slug": "lambuza-acai",
+  "estilo": "menu-gourmet",
+  "scheme": 0,
+
+  "brand": {
+    "name": "Lambuza Açaí & Pastéis",
+    "tagline": "Açaí & Pastéis · Rio Preto",
+    "nameHtml": "Lambuza <b>Açaí</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Açaí & Pastéis · Solo Sagrado, Rio Preto",
+    "titleHtml": "O açaí que faz você <em>se lambuzar</em>",
+    "sub": "Açaí cremoso do jeito que você ama, pastéis quentinhos e entrega rápida — com drive-through e aberto até meia-noite. Monte o seu e lambuze-se!",
+    "badge": "★ 5,0 no Google · 23 avaliações",
+    "highlights": ["Açaí cremoso", "Pastéis quentinhos", "Drive-through", "Delivery", "Monte o seu", "Aberto até 00h"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Lambuza",
+    "titleHtml": "Açaí de verdade, <em>do jeitinho que você gosta</em>",
+    "paragraphs": [
+      "A Lambuza Açaí & Pastéis é o ponto certo pra matar a vontade em São José do Rio Preto: açaí cremoso, pastéis na hora e aquele atendimento que acolhe todo mundo.",
+      "Refeição no local, drive-through ou entrega — do seu jeito, até meia-noite. Monte o seu açaí com os acompanhamentos que mais ama."
+    ],
+    "stats": [
+      { "num": 5,  "suffix": ",0", "label": "Nota no Google" },
+      { "num": 23, "suffix": "+",  "label": "Avaliações" }
+    ],
+    "certs": [
+      { "label": "★ 5,0 no Google" },
+      { "label": "Drive-through" },
+      { "label": "Delivery" },
+      { "label": "Aberto até 00h" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>Cardápio</em>",
+    "intro": "Monte o seu açaí e escolha seus pastéis — peça pelo WhatsApp.",
+    "items": [
+      { "cat": "Açaí",    "name": "Açaí 300ml",            "desc": "Cremoso, com acompanhamentos à sua escolha.",        "price": "R$ 15" },
+      { "cat": "Açaí",    "name": "Açaí 500ml",            "desc": "O queridinho, pra matar a vontade.",                 "price": "R$ 20" },
+      { "cat": "Açaí",    "name": "Açaí 700ml",            "desc": "Tamanho família, capricha nos adicionais.",          "price": "R$ 26" },
+      { "cat": "Açaí",    "name": "Açaí 1 Litro",          "desc": "Pra dividir (ou não 😏).",                            "price": "R$ 36" },
+      { "cat": "Pastéis", "name": "Pastel de Carne",       "desc": "Massa crocante e recheio generoso.",                 "price": "R$ 12" },
+      { "cat": "Pastéis", "name": "Pastel de Queijo",      "desc": "Recheado de muito queijo derretido.",                "price": "R$ 12" },
+      { "cat": "Pastéis", "name": "Pastel de Frango c/ Catupiry", "desc": "Frango cremoso com catupiry.",               "price": "R$ 13" },
+      { "cat": "Bebidas", "name": "Refrigerante lata",     "desc": "Geladinho pra acompanhar.",                          "price": "R$ 6" },
+      { "cat": "Bebidas", "name": "Suco natural",          "desc": "Feito na hora.",                                     "price": "R$ 8" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Peça o seu",
+    "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517992276414",
+    "phoneDisplay": "(17) 99227-6414",
+    "address": "Av. São José do Rio Preto, 3929 - Solo Sagrado, São José do Rio Preto - SP, 15044-155",
+    "hours":   "Todos os dias · até meia-noite",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=Av.+S%C3%A3o+Jos%C3%A9+do+Rio+Preto,+3929+Solo+Sagrado+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Lambuze-se de felicidade."
+  }
+}

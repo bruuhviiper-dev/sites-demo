@@ -22,7 +22,8 @@ const REGRAS = [
   ["veterinaria", /veterin[aá]ri|cl[ií]nica animal/i],
   ["petshop",     /pet ?shop|pet ?store|ra[çc][ãa]o|banho e tosa|agropet|casa de ra/i],
   ["pizzaria",    /pizzar|pizza/i],
-  ["restaurante", /restaurant|lanchonet|hamburgu|burger|churrasc|cafeteria|bistr[oô]|comida|gastronom|a[çc]a[íi]|sorveter|padaria|confeitar|doceria|food/i],
+  ["acai",        /a[çc]a[íi]|acai/i],
+  ["restaurante", /restaurant|lanchonet|hamburgu|burger|churrasc|cafeteria|bistr[oô]|comida|gastronom|sorveter|padaria|confeitar|doceria|food/i],
   ["academia",    /academ|crossfit|fitness|musculaç|pilates|treinament|studio de treino/i],
 ];
 

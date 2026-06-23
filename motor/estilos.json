@@ -27,6 +27,7 @@
     "barbearia":   ["dark-luxury", "ink-bold"],
     "restaurante": ["menu-gourmet", "dark-luxury"],
     "pizzaria":    ["menu-gourmet", "dark-luxury"],
+    "acai":        ["menu-gourmet", "dark-luxury"],
     "odontologia": ["smile-clinic", "clean-editorial", "corporate"],
     "veterinaria": ["clean-editorial", "petshop-modern"],
     "petshop":     ["petshop-modern", "clean-editorial"],

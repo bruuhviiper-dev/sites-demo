@@ -19,10 +19,10 @@ Faça SEMPRE, na ordem, sem perguntar de volta (a não ser que falte algo críti
 
 ### 1. Detectar o nicho
 Pela categoria do Maps. Nichos válidos:
-`estetica, barbearia, restaurante, pizzaria, automotivo, odontologia, veterinaria,
+`estetica, barbearia, restaurante, pizzaria, acai, automotivo, odontologia, veterinaria,
 petshop, academia, tatuagem, moda, psicologia, contabilidade, imobiliaria`
-(fallback: `generico`). Pizzaria é nicho próprio (≠ restaurante): cardápio de
-pizzas por categoria, cores de forno a lenha. Confira com `node motor/detectar-nicho.js "<categoria>"`.
+(fallback: `generico`). Pizzaria e açaí (`acai`) são nichos próprios (≠ restaurante):
+cardápio por categoria; pizzaria = cores de forno; acai = roxo/açaí. Confira com `node motor/detectar-nicho.js "<categoria>"`.
 Se a detecção errar, ponha `"nicho": "<chave>"` no `data.json`.
 
 ### 2. Ler o brief do nicho

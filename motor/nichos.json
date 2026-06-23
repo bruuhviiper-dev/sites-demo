@@ -94,6 +94,28 @@
     "footer": { "tagline": "Massa artesanal, sabor de verdade." }
   },
 
+  "acai": {
+    "fonts": { "display": "\"Playfair Display\", serif", "body": "\"Jost\", sans-serif" },
+    "fontsGoogle": ["Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500", "Jost:wght@300;400;500;600"],
+    "design": { "hero": "centered", "shape": "round", "display": "elegant" },
+    "schemes": [
+      { "bg":"#120A16", "bgAlt":"#170E1C", "surface":"#1E1325", "accent":"#9B4DCA", "accent2":"#D7A8F0", "text":"#F3EAF7", "muted":"#A593AE", "border":"#2A1E33" },
+      { "bg":"#0F0A16", "bgAlt":"#140D1C", "surface":"#1A1226", "accent":"#7A3FB0", "accent2":"#C3A0E6", "text":"#F0E9F7", "muted":"#9F90B0", "border":"#241B30" },
+      { "bg":"#160A12", "bgAlt":"#1C0E18", "surface":"#241320", "accent":"#C0395B", "accent2":"#F0A0B5", "text":"#F7EAEF", "muted":"#AE909A", "border":"#331E27" }
+    ],
+    "hero": { "eyebrow":"Açaí & Pastéis", "title":"O açaí mais cremoso da cidade", "sub":"Açaí na tigela do jeito que você ama, pastéis quentinhos e entrega rápida. Monte o seu e lambuze-se!" },
+    "services": { "eyebrow":"Cardápio", "navLabel":"Cardápio", "title":"Nosso Cardápio", "intro":"Monte o seu açaí e escolha seus pastéis.",
+      "items":[
+        {"icon":"heart","cat":"Açaí","name":"Açaí 300ml","desc":"Cremoso, com acompanhamentos à sua escolha.","price":"R$ 15"},
+        {"icon":"star","cat":"Açaí","name":"Açaí 500ml","desc":"O queridinho, pra matar a vontade.","price":"R$ 20"},
+        {"icon":"sparkle","cat":"Açaí","name":"Açaí 700ml","desc":"Tamanho família, capricha nos adicionais.","price":"R$ 26"},
+        {"icon":"fork","cat":"Pastéis","name":"Pastel de Carne","desc":"Massa crocante e recheio generoso.","price":"R$ 12"},
+        {"icon":"fork","cat":"Pastéis","name":"Pastel de Queijo","desc":"Recheado de muito queijo derretido.","price":"R$ 12"},
+        {"icon":"drop","cat":"Bebidas","name":"Refrigerante lata","desc":"Geladinho pra acompanhar.","price":"R$ 6"}
+      ]},
+    "footer": { "tagline": "Lambuze-se de felicidade." }
+  },
+
   "automotivo": {
     "fonts": { "display": "\"Rajdhani\", sans-serif", "body": "\"Inter\", sans-serif" },
     "fontsGoogle": ["Rajdhani:wght@400;500;600;700", "Inter:wght@300;400;500;600"],
