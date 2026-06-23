@@ -1,0 +1,77 @@
+{
+  "categoria": "Dentista - Ortodontia e Estética",
+  "nicho": "odontologia",
+  "slug": "dr-marcelo-almeida",
+  "estilo": "smile-clinic",
+  "scheme": 3,
+
+  "brand": {
+    "name": "Dr. Marcelo Almeida",
+    "tagline": "Ortodontia e Estética · Rio Preto",
+    "nameHtml": "Dr. Marcelo <b>Almeida</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Ortodontia e Estética · Vila Redentora, Rio Preto",
+    "titleHtml": "O sorriso alinhado que você <em>sempre quis</em>",
+    "sub": "Ortodontia e estética dental em São José do Rio Preto. Alinhe, clareie e transforme o seu sorriso com um atendimento nota máxima e centenas de pacientes satisfeitos.",
+    "badge": "★ 5,0 no Google · 100 avaliações",
+    "ratingNum": "5,0",
+    "ratingLabel": "100 avaliações no Google",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver tratamentos", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o Dr. Marcelo",
+    "titleHtml": "Especialista no seu <em>melhor sorriso</em>",
+    "paragraphs": [
+      "O Dr. Marcelo Almeida une ortodontia e estética dental para transformar sorrisos em São José do Rio Preto, com atendimento próximo e personalizado.",
+      "Nota máxima e 100 avaliações de pacientes que confiam no resultado — do alinhamento à estética, cada detalhe pensado para o seu sorriso."
+    ],
+    "stats": [
+      { "num": 5,   "suffix": ",0", "label": "Nota no Google" },
+      { "num": 100, "suffix": "+",  "label": "Avaliações" }
+    ],
+    "certs": [
+      { "icon": "star",    "label": "★ 5,0 no Google" },
+      { "icon": "scale",   "label": "Ortodontia" },
+      { "icon": "sparkle", "label": "Estética dental" },
+      { "icon": "heart",   "label": "Atendimento humanizado" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Tratamentos",
+    "navLabel": "Tratamentos",
+    "titleHtml": "Alinhe e transforme <em>seu sorriso</em>",
+    "intro": "Da correção dos dentes à estética, com tecnologia e cuidado em cada detalhe.",
+    "items": [
+      { "icon": "scale",   "name": "Aparelho ortodôntico",  "desc": "Aparelhos fixos e estéticos para alinhar o sorriso com segurança.",          "price": "Sob consulta" },
+      { "icon": "check",   "name": "Alinhadores invisíveis","desc": "Corrija os dentes de forma discreta e confortável.",                         "price": "Sob consulta" },
+      { "icon": "drop",    "name": "Clareamento dental",     "desc": "Dentes mais brancos com técnicas seguras para um sorriso radiante.",         "price": "Sob consulta" },
+      { "icon": "tooth",   "name": "Lentes de resina",       "desc": "Transforme o seu sorriso com lentes de aparência natural.",                  "price": "Sob consulta" },
+      { "icon": "face",    "name": "Harmonização do sorriso","desc": "Realce a harmonia do seu sorriso e da sua autoestima.",                      "price": "Sob consulta" },
+      { "icon": "heart",   "name": "Clínica geral",          "desc": "Limpeza, prevenção e cuidados de rotina para a saúde do seu sorriso.",       "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": { "show": false },
+  "products":     { "show": false },
+  "instagram":    { "show": false },
+
+  "contact": {
+    "eyebrow": "Agende sua avaliação",
+    "titleHtml": "Vamos alinhar o <em>seu sorriso</em>",
+    "whatsapp":     "5517996577833",
+    "phoneDisplay": "(17) 99657-7833",
+    "address": "R. Dr. Raul Silva, 219 - sala 02 - Vila Redentora, São José do Rio Preto - SP, 15015-020",
+    "hours":   "Seg. a Sex. · até as 19h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Dr.+Raul+Silva,+219+Vila+Redentora+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Ortodontia e estética dental em Rio Preto."
+  }
+}
