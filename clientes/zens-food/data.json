@@ -1,0 +1,91 @@
+{
+  "categoria": "Loja de açaí",
+  "nicho": "acai",
+  "slug": "zens-food",
+  "estilo": "acai-bold",
+  "scheme": 1,
+
+  "brand": {
+    "name": "Zens Food",
+    "tagline": "Açaí · Cupuaçu · Sorvete · Tapioca",
+    "nameHtml": "Zens <b>Food</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Açaí, Cupuaçu & Tapioca · Vila Imperial, Rio Preto",
+    "titleHtml": "O melhor açaí (e cupuaçu) <em>de Rio Preto</em>",
+    "image": "img/u1.jpg",
+    "sub": "Açaí caprichado, cupuaçu cremoso, sorvetes e tapiocas recheadas. Retirada ou entrega, aberto até meia-noite — do jeitinho que você ama.",
+    "badge": "★ 5,0 no Google · 29 avaliações",
+    "ratingNum": "5,0",
+    "ratingLabel": "no Google · 29 avaliações",
+    "highlights": ["Açaí caprichado", "Cupuaçu cremoso", "Tapiocas"],
+    "ctaPrimary": { "label": "Pedir no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver cardápio", "href": "#cardapio" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a Zens Food",
+    "titleHtml": "Sabor que vira <em>favorito da cidade</em>",
+    "image": "img/u8.jpg",
+    "paragraphs": [
+      "A Zens Food é referência em São José do Rio Preto pra quem ama açaí caprichado, cupuaçu cremoso, sorvetes e tapiocas bem recheadas — tudo com aquele atendimento atencioso.",
+      "Retirada ou entrega, aberto até meia-noite. Monte o seu do jeitinho que você gosta e descubra por que tanta gente diz que é o melhor da cidade."
+    ],
+    "stats": [
+      { "num": 5,  "suffix": ",0", "label": "Nota no Google" },
+      { "num": 29, "suffix": "+",  "label": "Avaliações" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Cardápio",
+    "navLabel": "Cardápio",
+    "titleHtml": "Nosso <em>cardápio</em>",
+    "items": [
+      { "cat": "Açaí",     "name": "Açaí 300ml",            "desc": "Cremoso e caprichado, com acompanhamentos.",       "price": "R$ 16" },
+      { "cat": "Açaí",     "name": "Açaí 500ml",            "desc": "O queridinho, com creme de ninho maravilhoso.",    "price": "R$ 22" },
+      { "cat": "Açaí",     "name": "Açaí 700ml",            "desc": "Bem servido, capricha nos adicionais.",            "price": "R$ 28" },
+      { "cat": "Cupuaçu",  "name": "Cupuaçu cremoso",       "desc": "Azedinho na medida, consistente e cremoso.",       "price": "R$ 22" },
+      { "cat": "Tapiocas", "name": "Tapioca de Frango",     "desc": "Massa no ponto, bem recheada e saborosa.",         "price": "R$ 18" },
+      { "cat": "Tapiocas", "name": "Tapioca de Carne Seca", "desc": "Recheio generoso de carne seca.",                  "price": "R$ 20" },
+      { "cat": "Sorvetes", "name": "Sorvete & Milk-shake",  "desc": "Cremosos, vários sabores.",                        "price": "a partir de R$ 8" },
+      { "cat": "Bebidas",  "name": "Bebidas",               "desc": "Sucos, refrigerantes e mais.",                     "price": "a partir de R$ 6" }
+    ]
+  },
+
+  "testimonials": {
+    "eyebrow": "Avaliações",
+    "titleHtml": "Quem prova, <em>vira fã</em>",
+    "items": [
+      { "stars": 5, "quote": "É o melhor açaí de Rio Preto! Já provei vários e esse continua sendo o meu favorito. O creme de ninho é maravilhoso e sempre vem bem caprichado.", "name": "Laís M.", "meta": "Avaliação no Google" },
+      { "stars": 5, "quote": "Melhor cupuaçu de Rio Preto. Azedinho como tem que ser, bem consistente e cremoso. Está no topo da minha lista há meses.", "name": "Ana", "meta": "Local Guide · Google" },
+      { "stars": 5, "quote": "Tapioca simplesmente deliciosa! Massa no ponto certo, bem recheada e muito saborosa. Atendimento ótimo.", "name": "Verônica R.", "meta": "Avaliação no Google" }
+    ]
+  },
+
+  "products":  { "show": false },
+
+  "instagram": {
+    "show": true,
+    "handle": "Zens Food 🍇",
+    "url": "https://wa.me/5517981117337",
+    "titleHtml": "De dar <em>água na boca</em>",
+    "images": ["img/u2.jpg", "img/u3.jpg", "img/u5.jpg", "img/u6.jpg", "img/u4.jpg", "img/u7.jpg"]
+  },
+
+  "contact": {
+    "eyebrow": "Peça o seu",
+    "titleHtml": "Bateu a vontade? <em>Chama no WhatsApp</em>",
+    "whatsapp":     "5517981117337",
+    "phoneDisplay": "(17) 98111-7337",
+    "address": "Rua Penita, 2869 - Vila Imperial, São José do Rio Preto - SP, 15015-820",
+    "hours":   "Todos os dias · até meia-noite",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=Rua+Penita,+2869+Vila+Imperial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Açaí, cupuaçu, sorvete e tapioca — em Rio Preto."
+  }
+}
