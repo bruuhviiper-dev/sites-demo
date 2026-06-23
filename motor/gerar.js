@@ -45,13 +45,20 @@ function autoNameHtml(name){
   return parts[0] + ' <b>' + parts.slice(1).join(' ') + '</b>';
 }
 
+/* ---- artigo certo p/ o nome (Dr. -> "o", Dra. -> "a", senão "a" p/ clínica) ---- */
+function artigoNome(name){
+  var n = String(name||'').trim();
+  if(/^dr\.?\s/i.test(n) && !/^dra\.?\s/i.test(n)) return 'o ';
+  return 'a ';
+}
+
 /* ---- mensagem de abordagem (texto puro, usada no link.md e no disparo) ---- */
 function buildPitch(name, onde, url){
   return 'Olá! Tudo bem? 😊\n'
-    + 'Vi a ' + name + ' no Google e gostei muito do trabalho de vocês' + onde + '.\n'
-    + 'Reparei que ainda não têm um site próprio, então montei uma demonstração gratuita, sem compromisso, de como ficaria:\n'
+    + 'Vi ' + artigoNome(name) + name + ' no Google e gostei muito do trabalho de vocês' + onde + '.\n'
+    + 'Hoje muita gente pesquisa no Google antes de escolher, e quem não tem site acaba perdendo esses clientes pra concorrência. Por isso montei uma demonstração gratuita, só pra você ver como ficaria:\n'
     + '👉 ' + url + '\n'
-    + 'Dá uma olhada e me diz o que achou? Se gostar, a gente conversa. Se não, fica de presente. 🙏';
+    + 'Dá uma olhada quando puder e me diz o que achou? Se gostar, a gente coloca no ar com o seu domínio — sem compromisso nenhum. 🙏';
 }
 
 /* ---- link.md: link do GitHub Pages + abordagem + disparo assistido (1 clique) ---- */
