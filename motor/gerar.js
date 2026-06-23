@@ -52,33 +52,46 @@ function artigoNome(name){
   return 'a ';
 }
 
-/* ---- mensagem de abordagem: DIRETA + curiosidade (link.md e disparo) ---- */
+/* ---- MENSAGEM 1 (abertura): pede pra mandar o link, gera o "pode!" ----
+   Não leva o link de propósito — o link vem na msg 2, depois do sim. */
 function buildPitch(name, onde, url){
   return 'Oi, tudo bem? 👋\n'
-    + 'Vi ' + artigoNome(name) + name + ' no Google e fiz uma coisa que acho que vocês vão querer ver 👇\n'
-    + '👉 ' + url + '\n'
-    + 'Levei alguns minutos montando, é sem compromisso. Me diz o que achou? 🙂';
+    + 'Vi ' + artigoNome(name) + name + ' no Google e fiquei impressionado com o trabalho de vocês! 👏\n'
+    + 'Sou daqui de Rio Preto e fiz um presente: montei uma demonstração de site pra vocês, de graça. Posso te mandar o link pra ver? 👀';
 }
 
-/* ---- link.md: link do GitHub Pages + abordagem + disparo assistido (1 clique) ---- */
+/* ---- link.md: link + SEQUÊNCIA DE FECHAMENTO (3 msgs) + objeções ---- */
 function buildLinkMd(site, slug){
   const url = PAGES_BASE + '/clientes/' + slug + '/' + slug + '.html';
   const name = (site.brand && site.brand.name) || slug;
   const cid = (site.contact && site.contact.cidade) ? String(site.contact.cidade).split(/[—-]/)[0].trim() : '';
   const onde = cid ? (' em ' + cid) : '';
   const wa = (site.contact && site.contact.whatsapp) ? String(site.contact.whatsapp).replace(/\D/g, '') : '';
-  const pitch = buildPitch(name, onde, url);
-  let md = '# ' + name + ' — Link & Abordagem\n\n';
+  const m1 = buildPitch(name, onde, url);
+  const m2 = 'Aqui ó 👇 (abre direto no celular)\n'
+    + '👉 ' + url + '\n\n'
+    + 'Reparei que vocês já têm ótimas avaliações — o atendimento é excelente. Só falta isso aparecer no Google quando alguém pesquisa o serviço de vocês aqui' + onde + '. Quem não tem site acaba caindo no concorrente.\n'
+    + 'Te ligo 5 minutinhos pra te explicar a ideia? Qual o melhor horário, manhã ou tarde?';
+  const m3 = 'Funciona assim: o site fica no ar com o seu domínio (seunome.com.br), botão de WhatsApp e seu perfil otimizado no Google.\n'
+    + 'Tô começando aqui' + onde + ' e quero alguns casos de sucesso, então a condição de lançamento tá:\n'
+    + '• Setup R$ 397 (à vista ou em 3x)\n'
+    + '• R$ 69/mês (hospedagem + domínio + ajustes sempre que precisar)\n'
+    + 'E você só paga se gostar — coloco no ar, você vê funcionando, aí acertamos. Posso reservar a sua vaga?';
+
+  let md = '# ' + name + ' — Link & Fechamento\n\n';
   md += '## 🔗 Link do site (GitHub Pages)\n' + url + '\n\n';
-  md += '## 📲 Abordagem pronta para WhatsApp\n';
-  md += pitch.split('\n').map(function(l){ return '> ' + l; }).join('\n') + '\n';
+  md += '## 🎯 Sequência de fechamento (mande na ordem)\n\n';
+  md += '### 1) Abertura — gera o "pode!"\n' + m1.split('\n').map(l=>'> '+l).join('\n') + '\n';
   if(wa){
-    md += '\n## ⚡ Disparo assistido (1 clique)\n';
-    md += 'Com o WhatsApp Web aberto, clique no link: a conversa abre com a mensagem pronta — é só apertar **Enter**.\n\n';
-    md += 'https://wa.me/' + wa + '?text=' + encodeURIComponent(pitch) + '\n';
-  } else {
-    md += '\n## ⚠️ Atenção\n- O Google Maps não trouxe WhatsApp — encontre o celular antes de enviar (fora do disparo).\n';
+    md += '\n**⚡ Disparo 1 clique (abertura):** https://wa.me/' + wa + '?text=' + encodeURIComponent(m1) + '\n';
   }
+  md += '\n### 2) Quando ele responder — manda o link + leva pra ligação\n' + m2.split('\n').map(l=>'> '+l).join('\n') + '\n';
+  md += '\n### 3) Fechamento — oferta com risco zero\n' + m3.split('\n').map(l=>'> '+l).join('\n') + '\n';
+  md += '\n## 🛡️ Objeções\n';
+  md += '- **"Já tenho Instagram"** → Perfeito! O site puxa quem pesquisa no Google e deixa seu Insta em destaque. Um alimenta o outro.\n';
+  md += '- **"Quanto custa?" (cedo)** → Bem menos que agência. Mas antes te mostro funcionando — posso te ligar rapidinho?\n';
+  md += '- **"Sem tempo"** → Por isso já deixei tudo pronto 🙂 Você só aprova. 5 minutinhos.\n';
+  if(!wa) md += '\n## ⚠️ Atenção\n- O Google Maps não trouxe WhatsApp — ache o celular antes de enviar.\n';
   return md;
 }
 

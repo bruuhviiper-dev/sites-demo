@@ -1,15 +1,32 @@
-# Dra. Tatiane Suzan — Link & Abordagem
+# Dra. Tatiane Suzan — Link & Fechamento
 
 ## 🔗 Link do site (GitHub Pages)
 https://bruuhviiper-dev.github.io/sites-demo/clientes/dra-tatiane-suzan/dra-tatiane-suzan.html
 
-## 📲 Abordagem pronta para WhatsApp
+## 🎯 Sequência de fechamento (mande na ordem)
+
+### 1) Abertura — gera o "pode!"
 > Oi, tudo bem? 👋
-> Vi a Dra. Tatiane Suzan no Google e fiz uma coisa que acho que vocês vão querer ver 👇
+> Vi a Dra. Tatiane Suzan no Google e fiquei impressionado com o trabalho de vocês! 👏
+> Sou daqui de Rio Preto e fiz um presente: montei uma demonstração de site pra vocês, de graça. Posso te mandar o link pra ver? 👀
+
+**⚡ Disparo 1 clique (abertura):** https://wa.me/5517992097373?text=Oi%2C%20tudo%20bem%3F%20%F0%9F%91%8B%0AVi%20a%20Dra.%20Tatiane%20Suzan%20no%20Google%20e%20fiquei%20impressionado%20com%20o%20trabalho%20de%20voc%C3%AAs!%20%F0%9F%91%8F%0ASou%20daqui%20de%20Rio%20Preto%20e%20fiz%20um%20presente%3A%20montei%20uma%20demonstra%C3%A7%C3%A3o%20de%20site%20pra%20voc%C3%AAs%2C%20de%20gra%C3%A7a.%20Posso%20te%20mandar%20o%20link%20pra%20ver%3F%20%F0%9F%91%80
+
+### 2) Quando ele responder — manda o link + leva pra ligação
+> Aqui ó 👇 (abre direto no celular)
 > 👉 https://bruuhviiper-dev.github.io/sites-demo/clientes/dra-tatiane-suzan/dra-tatiane-suzan.html
-> Levei alguns minutos montando, é sem compromisso. Me diz o que achou? 🙂
+> 
+> Reparei que vocês já têm ótimas avaliações — o atendimento é excelente. Só falta isso aparecer no Google quando alguém pesquisa o serviço de vocês aqui em São José do Rio Preto. Quem não tem site acaba caindo no concorrente.
+> Te ligo 5 minutinhos pra te explicar a ideia? Qual o melhor horário, manhã ou tarde?
 
-## ⚡ Disparo assistido (1 clique)
-Com o WhatsApp Web aberto, clique no link: a conversa abre com a mensagem pronta — é só apertar **Enter**.
+### 3) Fechamento — oferta com risco zero
+> Funciona assim: o site fica no ar com o seu domínio (seunome.com.br), botão de WhatsApp e seu perfil otimizado no Google.
+> Tô começando aqui em São José do Rio Preto e quero alguns casos de sucesso, então a condição de lançamento tá:
+> • Setup R$ 397 (à vista ou em 3x)
+> • R$ 69/mês (hospedagem + domínio + ajustes sempre que precisar)
+> E você só paga se gostar — coloco no ar, você vê funcionando, aí acertamos. Posso reservar a sua vaga?
 
-https://wa.me/5517992097373?text=Oi%2C%20tudo%20bem%3F%20%F0%9F%91%8B%0AVi%20a%20Dra.%20Tatiane%20Suzan%20no%20Google%20e%20fiz%20uma%20coisa%20que%20acho%20que%20voc%C3%AAs%20v%C3%A3o%20querer%20ver%20%F0%9F%91%87%0A%F0%9F%91%89%20https%3A%2F%2Fbruuhviiper-dev.github.io%2Fsites-demo%2Fclientes%2Fdra-tatiane-suzan%2Fdra-tatiane-suzan.html%0ALevei%20alguns%20minutos%20montando%2C%20%C3%A9%20sem%20compromisso.%20Me%20diz%20o%20que%20achou%3F%20%F0%9F%99%82
+## 🛡️ Objeções
+- **"Já tenho Instagram"** → Perfeito! O site puxa quem pesquisa no Google e deixa seu Insta em destaque. Um alimenta o outro.
+- **"Quanto custa?" (cedo)** → Bem menos que agência. Mas antes te mostro funcionando — posso te ligar rapidinho?
+- **"Sem tempo"** → Por isso já deixei tudo pronto 🙂 Você só aprova. 5 minutinhos.
