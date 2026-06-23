@@ -1,0 +1,86 @@
+{
+  "categoria": "Dentista - Implantes e Periodontia",
+  "nicho": "odontologia",
+  "slug": "dr-thiago-vinha",
+  "estilo": "smile-clinic",
+  "scheme": 2,
+
+  "brand": {
+    "name": "Dr. Thiago Vinha",
+    "tagline": "Implantes e Periodontia · Rio Preto",
+    "nameHtml": "Dr. Thiago <b>Vinha</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Implantes e Periodontia · Parque Industrial, Rio Preto",
+    "titleHtml": "Recupere seu sorriso com <em>implantes de confiança</em>",
+    "sub": "Especialista em implantes dentários e periodontia em São José do Rio Preto. Tratamentos seguros, com a confiança de quem mexe nos seus dentes com responsabilidade e cuidado.",
+    "badge": "★ 4,9 no Google · 30 avaliações",
+    "ratingNum": "4,9",
+    "ratingLabel": "30 avaliações no Google",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver tratamentos", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre o Dr. Thiago",
+    "titleHtml": "Confiança para cuidar do <em>seu sorriso</em>",
+    "paragraphs": [
+      "O Dr. Thiago Vinha é especialista em implantes dentários e periodontia, com atendimento atencioso e uma equipe que cuida de cada paciente em São José do Rio Preto.",
+      "Do diagnóstico ao resultado, um trabalho técnico e humano — o lugar onde os pacientes confiam para mexer nos seus dentes."
+    ],
+    "stats": [
+      { "num": 4, "suffix": ",9", "label": "Nota no Google" },
+      { "num": 30, "suffix": "+", "label": "Avaliações" }
+    ],
+    "certs": [
+      { "icon": "star",  "label": "★ 4,9 no Google" },
+      { "icon": "tooth", "label": "Especialista em Implantes" },
+      { "icon": "shield","label": "Periodontia" },
+      { "icon": "heart", "label": "Atendimento humanizado" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Tratamentos",
+    "navLabel": "Tratamentos",
+    "titleHtml": "Especialidade em <em>implantes e gengiva</em>",
+    "intro": "Soluções para repor dentes e tratar a gengiva com segurança e naturalidade.",
+    "items": [
+      { "icon": "tooth",  "name": "Implantes dentários",       "desc": "Reposição de dentes perdidos com implantes seguros, fixos e duradouros.",      "price": "Sob consulta" },
+      { "icon": "shield", "name": "Periodontia",               "desc": "Tratamento de gengiva, gengivite e periodontite para uma base saudável.",     "price": "Sob consulta" },
+      { "icon": "clock",  "name": "Carga imediata",            "desc": "Em casos indicados, dente novo no mesmo dia do implante.",                     "price": "Sob consulta" },
+      { "icon": "check",  "name": "Enxerto ósseo",             "desc": "Reconstrução óssea para viabilizar implantes com segurança.",                  "price": "Sob consulta" },
+      { "icon": "scale",  "name": "Prótese sobre implante",    "desc": "Coroas e próteses fixas com aparência e função naturais.",                     "price": "Sob consulta" },
+      { "icon": "heart",  "name": "Cirurgia gengival estética","desc": "Harmonia do sorriso com cirurgia periodontal estética.",                       "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": {
+    "eyebrow": "O que dizem os pacientes",
+    "titleHtml": "Confiança que vem dos <em>pacientes</em>",
+    "items": [
+      { "stars": 5, "quote": "O único lugar que tenho confiança para mexer nos meus dentes.", "name": "Paciente", "meta": "Avaliação no Google" },
+      { "stars": 5, "quote": "Muito educado e atencioso, ótimo profissional.",                 "name": "Paciente", "meta": "Avaliação no Google" },
+      { "stars": 5, "quote": "A equipe toda é maravilhosa.",                                    "name": "Paciente", "meta": "Avaliação no Google" }
+    ]
+  },
+
+  "products":  { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Agende sua avaliação",
+    "titleHtml": "Vamos cuidar do <em>seu sorriso</em>",
+    "whatsapp":     "5517996133456",
+    "phoneDisplay": "(17) 99613-3456",
+    "address": "R. Rubião Júnior, 702 - Parque Industrial, São José do Rio Preto - SP, 15025-080",
+    "hours":   "Seg. a Sex. · até as 19h",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Rubi%C3%A3o+J%C3%BAnior,+702+Parque+Industrial+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Implantes e periodontia com confiança, em Rio Preto."
+  }
+}
