@@ -1,0 +1,87 @@
+{
+  "categoria": "Dentista",
+  "nicho": "odontologia",
+  "slug": "dr-bruno-budaibes",
+  "estilo": "clean-editorial",
+  "scheme": 0,
+
+  "brand": {
+    "name": "Dr. Bruno Budaibes",
+    "tagline": "Odontologia 24h · Rio Preto",
+    "nameHtml": "Dr. Bruno <b>Budaibes</b>"
+  },
+
+  "hero": {
+    "eyebrow": "Dentista 24 horas · Vila Maceno, Rio Preto",
+    "titleHtml": "Seu sorriso cuidado <em>a qualquer hora</em>",
+    "sub": "Atendimento odontológico humanizado e disponível 24 horas, todos os dias, na Vila Maceno. Da emergência à estética do sorriso, com atenção e profissionalismo do começo ao fim.",
+    "badge": "★ 5,0 no Google · 47 avaliações",
+    "ctaPrimary": { "label": "Falar no WhatsApp", "href": "#contato" },
+    "ctaGhost":   { "label": "Ver tratamentos", "href": "#servicos" }
+  },
+
+  "about": {
+    "eyebrow": "Sobre a clínica",
+    "titleHtml": "Cuidado de verdade, <em>na hora que você precisa</em>",
+    "paragraphs": [
+      "A clínica do Dr. Bruno Budaibes oferece atendimento odontológico completo e acolhedor em São José do Rio Preto, com a tranquilidade de ter um dentista disponível 24 horas para emergências.",
+      "Profissionais atenciosos e comunicativos, que têm paciência com todas as suas dúvidas e acompanham você do diagnóstico ao fim do tratamento — para você cuidar do sorriso com confiança."
+    ],
+    "stats": [
+      { "num": 5, "suffix": ",0", "label": "Nota no Google" },
+      { "num": 47, "suffix": "+", "label": "Avaliações" },
+      { "num": 24, "suffix": "h", "label": "Atendimento" }
+    ],
+    "certs": [
+      { "icon": "clock",  "label": "Atendimento 24 horas" },
+      { "icon": "tooth",  "label": "Clínica geral e estética" },
+      { "icon": "heart",  "label": "Atendimento humanizado" },
+      { "icon": "star",   "label": "★ 5,0 no Google" }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "Tratamentos",
+    "navLabel": "Tratamentos",
+    "titleHtml": "Como podemos <em>cuidar do seu sorriso</em>",
+    "intro": "Do atendimento de urgência aos tratamentos estéticos, com conforto e segurança.",
+    "items": [
+      { "icon": "clock",   "name": "Emergência 24h",        "desc": "Dor de dente, trauma ou urgência? Atendimento a qualquer hora, todos os dias.", "price": "Sob consulta" },
+      { "icon": "tooth",   "name": "Clínica geral",         "desc": "Limpeza, restaurações e tratamento de cáries com conforto e cuidado.",          "price": "Sob consulta" },
+      { "icon": "sparkle", "name": "Clareamento dental",     "desc": "Dentes mais brancos com técnicas seguras para um sorriso radiante.",            "price": "Sob consulta" },
+      { "icon": "shield",  "name": "Placa para bruxismo",    "desc": "Placas sob medida para proteger seus dentes do ranger noturno.",                "price": "Sob consulta" },
+      { "icon": "check",   "name": "Extração de siso",       "desc": "Remoção de sisos com segurança e acompanhamento de perto.",                     "price": "Sob consulta" },
+      { "icon": "heart",   "name": "Odontologia estética",   "desc": "Tratamentos para harmonizar e valorizar o seu sorriso.",                        "price": "Sob consulta" }
+    ]
+  },
+
+  "testimonials": {
+    "eyebrow": "Quem já cuidou do sorriso aqui",
+    "items": [
+      {
+        "stars": 5,
+        "quote": "Fiz minha placa para bruxismo nesta clínica. Demonstraram extremo profissionalismo, foram pacientes com todas as minhas perguntas e preocupações e muito simpáticos.",
+        "name": "Luisa Sant'Anna",
+        "meta": "Avaliação no Google"
+      }
+    ]
+  },
+
+  "products":  { "show": false },
+  "instagram": { "show": false },
+
+  "contact": {
+    "eyebrow": "Agende seu horário",
+    "titleHtml": "Cuidar do seu sorriso é <em>simples</em>",
+    "whatsapp":     "5514997459495",
+    "phoneDisplay": "(14) 99745-9495",
+    "address": "R. Bernardino de Campos, 1620 - Vila Maceno, São José do Rio Preto - SP, 15060-010",
+    "hours":   "Aberto 24 horas · todos os dias",
+    "cidade":  "São José do Rio Preto — SP",
+    "mapsEmbed": "https://www.google.com/maps?q=R.+Bernardino+de+Campos,+1620+Vila+Maceno+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+  },
+
+  "footer": {
+    "tagline": "Odontologia 24 horas, humanizada, em Rio Preto."
+  }
+}
