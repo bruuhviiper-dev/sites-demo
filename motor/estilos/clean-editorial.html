@@ -71,7 +71,7 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:400; line-height:1.05; letter
 
 /* ---------- HEADER ---------- */
 .header{ position:fixed; top:0; left:0; width:100%; z-index:1000; transition:background .4s var(--ease), border-color .4s, padding .4s; border-bottom:1px solid transparent; }
-.header.scrolled{ background:rgba(245,241,234,.85); backdrop-filter:blur(14px); border-bottom-color:var(--line); }
+.header.scrolled{ background:rgba(245,241,234,.97); border-bottom-color:var(--line); }
 .nav{ display:flex; align-items:center; justify-content:space-between; padding-block:26px; }
 .header.scrolled .nav{ padding-block:16px; }
 .brand{ font-family:var(--serif); font-size:1.5rem; letter-spacing:.01em; }
@@ -83,14 +83,15 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:400; line-height:1.05; letter
 .nav-links a:hover{ color:var(--accent); } .nav-links a:hover::after{ width:100%; }
 .nav-right{ display:flex; align-items:center; gap:24px; }
 .burger{ display:none; width:40px; height:40px; background:none; border:none; position:relative; z-index:1100; cursor:pointer; }
-.burger span{ position:absolute; left:8px; width:24px; height:1.5px; background:var(--ink); transition:.35s var(--ease); }
-.burger span:nth-child(1){ top:15px; } .burger span:nth-child(2){ top:22px; }
-.burger.open span:nth-child(1){ top:18px; transform:rotate(45deg); }
-.burger.open span:nth-child(2){ top:18px; transform:rotate(-45deg); }
+.burger span{ position:absolute; left:8px; width:24px; height:2px; background:var(--ink); border-radius:2px; transition:.3s var(--ease); }
+.burger span:nth-child(1){ top:14px; } .burger span:nth-child(2){ top:20px; } .burger span:nth-child(3){ top:26px; }
+.burger.open span:nth-child(1){ top:20px; transform:rotate(45deg); }
+.burger.open span:nth-child(2){ opacity:0; }
+.burger.open span:nth-child(3){ top:20px; transform:rotate(-45deg); }
 @media (max-width:900px){
   .burger{ display:block; }
-  .nav-links{ position:fixed; inset:0; flex-direction:column; justify-content:center; gap:30px; background:var(--paper); transform:translateY(-100%); transition:transform .5s var(--ease); }
-  .nav-links.open{ transform:none; }
+  .nav-links{ position:fixed; inset:0; flex-direction:column; justify-content:center; gap:30px; background:var(--paper); transform:translateY(-100%); visibility:hidden; transition:transform .5s var(--ease), visibility .5s; }
+  .nav-links.open{ transform:none; visibility:visible; }
   .nav-links a{ font-size:1.6rem; font-family:var(--serif); text-transform:none; letter-spacing:0; }
   .nav-right .pill{ display:none; }
 }
@@ -291,7 +292,7 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:400; line-height:1.05; letter
   document.getElementById('header').innerHTML='<div class="container nav">'+brandHtml+
     '<nav class="nav-links" id="navLinks">'+nav.map(function(n){return '<a href="#'+n.id+'">'+esc(n.label)+'</a>';}).join('')+'</nav>'+
     '<div class="nav-right"><a href="#contato" class="pill pill--solid">'+esc((S.hero&&S.hero.ctaAgendar)||'Agendar')+'</a>'+
-    '<button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button></div></div>';
+    '<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></div></div>';
 
   var html='';
   var h=S.hero||{};
