@@ -3,12 +3,13 @@
   "nicho": "acai",
   "slug": "capi-acai",
   "estilo": "acai-bold",
-  "scheme": 1,
+  "theme": { "accent": "#F50062", "accent2": "#FF6FA8" },
 
   "brand": {
     "name": "Capi Açaí",
     "tagline": "Açaí & Sorvetes · Boa Vista, Rio Preto",
-    "nameHtml": "Capi <b>Açaí</b>"
+    "nameHtml": "Capi <b>Açaí</b>",
+    "logo": "img/logo.jpg"
   },
 
   "hero": {
